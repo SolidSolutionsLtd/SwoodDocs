@@ -1,0 +1,170 @@
+/* SSMClient: Solid Solutions */
+
+/*	================ 
+	  	 Print
+	================ */
+
+	:root {
+		--PrintFontSize: 10pt;
+	}
+	
+	@page {
+		/* size: A4 Portrait; */
+		/* size: A4 Landscape; */
+		margin: 1cm;
+	}
+
+	*{
+		/* background: transparent; */
+		color: black !important;
+		/* font-family: Times New Roman !important; */
+		font-size: var(--PrintFontSize);
+		text-decoration: none;
+	}
+
+	body {
+		display: block;
+		-webkit-print-color-adjust: exact;
+		margin: 0px;
+	}
+
+	#Menu-id,
+	.Footer-Container,
+	.Report_Header,
+	#FrameToggleSwitch,
+	#MaterialToggleSwitch,
+	#ToggleSwitch_1,
+	#filter-field,
+	#filter-type,
+	#filter-value,
+	#filter-clear,
+	.PrintButton,
+	.Swipe {
+		display: none;
+	}
+
+	#SearchBar {
+		display: none;
+	}
+
+/* Print Header  */
+
+	table.PrintHeader {
+		display: table;
+		margin-bottom: 5pt;	
+	}
+
+	/* .PrintHeader tr{width:100%} */
+	
+	.PrintTitle {
+		margin: 0pt;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.8em;
+		/* font-size: 20px; */
+	}
+
+
+	table.PrintHeader,
+	.PrintHeader td{
+		border:none;
+		border-collapse: collapse;
+		padding: 0px;
+		padding-left: 2px;
+	}
+	
+	td.PrintInfoCell{
+		width: 25%;
+	}
+
+	.PrintInfo{
+		text-align: left;
+		border-collapse: collapse;
+		border:none;
+		word-wrap: break-word;
+	}
+	
+
+	.PrintInfo td{
+		vertical-align: top;
+		font-size: 0.9em;
+		
+	}
+
+	td.PrintInfoPrefix {
+		font-size: 0.9em;
+		font-weight: bold;
+		white-space: nowrap;
+		width: 50px;
+	}
+	
+	td.PrintInfoItem {
+		font-size: 0.9em;
+		/* font-weight: bold; */
+		white-space: nowrap;
+		width: 50px;
+	}
+
+	td {break-inside: avoid;}
+
+	table,tr, td, th{background-color: white !important;}
+
+	/* td.img-stock {width: 100px;} */
+
+	
+	.tabulator-print-table-row td{
+		font-size: var(--PrintFontSize) !important;
+	  }
+
+	.tabulator-print-table .tabulator-data-tree-control {
+		display: none;
+	  }
+
+	/* Table Header  */
+	.tabulator-print-table thead tr th{
+		font-size: var(--PrintFontSize) !important;	
+	}
+
+	/* The Container table in "Details" pages is always the second one. This is also needed for the Panels and Program Detailed List page */
+	.ContainerTable:not(:nth-of-type(2)) {break-inside: avoid;}
+	/* .NestedTable:not(:first-of-type) {break-inside: avoid;} */
+	/* .TableListGroup:not(:first-of-type) {break-inside: avoid;} */
+	
+	/* Images  */
+
+	img.img-MainFrameDetails{height: 150px;}
+	img.img-Home {height: 400px;}
+	img.ProgramIndicator {height: 15px;}
+	
+	img.img-PanelDetails,
+	img.img-MainProgramDetails,
+	img.img-MainNestingDetails,
+	img.img-img-MainPanelDetails {height: 300px;}
+
+	.TotalResults,
+	.TableResults,
+	.MainTableResults{
+		font-size: 10pt !important;
+	}
+
+	.TotalResults,
+	.TableResults,
+	.MainTableResults{
+		display: none !important;
+	}
+
+
+	div.tabulator-cell,
+	div.tabulator-row {break-inside: avoid;}
+
+	.PageBreak{page-break-after: always;}
+
+	.img-MainPanelDetails,
+	.img-MainFramelDetails,
+	.img-MainNestingDetails{
+		display: block;
+	}
+
+	.modelCanvas{
+		display: none;
+	}
