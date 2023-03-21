@@ -134,3 +134,14 @@ highlight {
 a.TransferLink{
     color:rgb(0, 102, 255)
 }
+
+pro{
+    background-color: rgb(0, 110, 255);
+    border-radius: 7px;
+    vertical-align: super;
+    font-size: 0.6em;
+    font-style: italic;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white
+}
