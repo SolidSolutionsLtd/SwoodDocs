@@ -7,39 +7,18 @@
 :root {
 	--ThemeColour: #edbc1a;
 	--ReportHeaderColour: #323232;
-	--TableHeaderColour: rgba(0, 0, 0, 0.493);
-	--TableBorderColour: black;
-	--BackgroundColour: #e1e1e1;
-	--FontColor: black;
-	--TableBackgroundColour: white;
-	--TableBackgroundColour2: #d8d8d8;
-	--MenuFontColor: #333333;
-	--LinkFontColor: blue;
-	--CornerRadius: 50px;
-	--HoverRowBackground: #edbc1ade;
-	--TableResultsColor: black;
-	--PanelDetailsImg: 300px;
-}
-
-/* 	================
-		Dark Mode 
-	================ */
-
-:root {
-	--ThemeColour: #edbc1a;
-	--ReportHeaderColour: #323232;
-	--TableHeaderColour: rgba(0, 0, 0, 0.493);
+	/* --TableHeaderColour: rgba(0, 0, 0, 0.493); */
 	--TableBorderColour: rgb(43, 42, 42);
 	--BackgroundColour: rgb(35, 36, 36);
 	/* --BackgroundColour: #161819; */
 	--FontColor: white;
-	--TableBackgroundColour: rgba(141, 129, 129, 0.829);
-	--TableBackgroundColour2: rgba(121, 110, 110, 0.829);
+	--TableBackgroundColour: white;
+	--TableBackgroundColour2: #dfdfdf;
 	--MenuFontColor: #cccacae5;
 	--LinkFontColor: white;
 	--CornerRadius: 50px;
 	--HoverRowBackground: #edbc1ada;
-	--TableResultsColor: gray;
+	--TableResultsColor: grey;
 	--PanelDetailsImg: 300px;
 }
 
@@ -134,6 +113,9 @@ p {
 x-yellow {
     color:#edbc1a
 }
+x-red {
+    color:#f55f45
+}
 
 a.TransferLink{
     color:rgb(0, 102, 255)
@@ -154,10 +136,6 @@ x-pro{
 .MainList li {
     padding: 10px
 }
-
-/* table, th, td {
-    border:1px solid white;
-  } */
 
 .ScriptTable {
 font-family: Arial, Helvetica, sans-serif;
@@ -182,4 +160,21 @@ padding-bottom: 12px;
 text-align: left;
 background-color: #757575;
 color: white;
+}
+
+.CP {
+    color: blue
+}
+.value {
+    color: red
+}
+
+.String {
+    color: blue
+}
+.Boolean {
+    color:purple
+}
+.Number {
+    color:green
 }
