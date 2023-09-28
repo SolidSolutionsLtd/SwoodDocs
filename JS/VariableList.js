@@ -115,6 +115,7 @@ let PanelProperties = [
     {Name: 'NameTrimStart', Type: 'String', Source: 'Report', Pro: true, Description: 'Trim the filename from the last underscore. If filename is <span class="CP">Assembly_SubAssembly_Component</span>, result will be <span class="CP">Component</span>'},
     {Name: 'NameTrimEnd', Type: 'String', Source: 'Report', Pro: true, Description: 'Trim the filename until the first underscore. If filename is <span class="CP">Component_SubAssembly_Assembly</span>, result will be <span class="CP">Component</span>'},
     {Name: 'ProgramNameList', Type: 'String', Source: 'Report', Pro: true, Description: 'List of program names separated by comas in the format <span class="CP">Top Milling, Bottom Milling, Side Milling</span>'},
+    {Name: 'ProgramFileNameList', Type: 'String', Source: 'Report', Pro: true, Description: 'List of program file names separated by new line characters in the format <br><span class="CP">Top Milling.cnc<br>Bottom Milling.cnc<br>Side Milling.cnc</span>'},
     {Name: 'Part_STR_1 to Part_STR_10', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'Series of string placeholders for custom properties'},
     {Name: 'Part_BOO_1 to Part_BOO_5', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties'},
     {Name: 'Part_REA_1 to Part_REA_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties'},
