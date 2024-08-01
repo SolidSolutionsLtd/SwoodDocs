@@ -13,18 +13,21 @@
 	<body>
 		<div id="PrintContainer">
 			<div class="title">
-				<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
+				<a href="../index.html">
+					<img src="../Images/Home.png" class="homeIcon center" />
+				</a>
 				<h1>Hardware Length</h1>
 			</div>
 
 			<ul>
 				<li><a href="#Overview">Overview</a></li>
-				<li><a href="#Define">How to display Hardware length in the report</a></li>
+				<li><a href="#Define">How to Display Hardware Length in the Report</a></li>
 			</ul>
 
 			<h2 id="Overview">Overview</h2>
-			<p>The report provides functionality for displaying the <x-yellow>Length</x-yellow> custom property of hardware components, which is particularly useful for items such as hanging rails where the length may vary between projects.</p>
-			<h2 id="Define">How to display the Hardware Length custom property</h2>
+			<p>The report provides functionality for displaying the <x-yellow>Length</x-yellow> custom property of hardware components. This feature is particularly useful for items such as hanging rails where the length may vary between projects.</p>
+
+			<h2 id="Define">How to Display the Hardware Length Custom Property</h2>
 			<p>The report will automatically append the Hardware Length custom property to the Name property. To ensure this works correctly, the Length custom property must be properly linked to the length dimension of the model. For instance, in the example below, the Length custom property is linked to a sketch dimension set to 500.</p>
 			<img src="../Resources/HardwareLengthCustomProperty.png" style="height: 400px" class="center" />
 			<p>When a hardware component has a Length custom property, the report will automatically include this value in the <x-yellow>Name</x-yellow> property, as demonstrated below.</p>

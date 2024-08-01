@@ -13,56 +13,57 @@
 	<body>
 		<div id="PrintContainer">
 			<div class="title">
-				<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
-				<h1>Issues with long file names</h1>
+				<a href="../index.html"><img src="../Images/Home.png" class="homeIcon center" /></a>
+				<h1>Issues with Long File Names</h1>
 			</div>
 
 			<ul>
 				<li><a href="#Overview">Overview</a></li>
-				<li><a href="#">Ways to approach the problem</a></li>
-				<ul>
-					<li><a href="#RemovePath">Rename or move DAT folder</a></li>
-					<li><a href="#SimpleName">Define a simplified naming convention</a></li>
-					<li><a href="#AutoNumber">Swood Automatic Numbering System</a></li>
-				</ul>
+				<li>
+					<a href="#">Ways to Approach the Problem</a>
+					<ul>
+						<li><a href="#RemovePath">Rename or Move DAT Folder</a></li>
+						<li><a href="#SimpleName">Define a Simplified Naming Convention</a></li>
+						<li><a href="#AutoNumber">Swood Automatic Numbering System</a></li>
+					</ul>
+				</li>
 			</ul>
 
 			<h2 id="Overview">Overview</h2>
-			<p>Microsoft Windows has a maximum path limit of 260 character. If the length of the path and filename combined reach this limit, Windows will not be able to save the file to the directory.</p>
-			<p>The way Swood creates filenames is by concatenating the names of parts and assemblies. Whilst this generates a unique filename, it also tends to create a long filename.</p>
-			<p>There are a few way to approach this:</p>
+			<p>Microsoft Windows has a maximum path limit of 260 characters. If the length of the path and filename combined reach this limit, Windows will not be able to save the file to the directory.</p>
+			<p>The way Swood creates filenames is by concatenating the names of parts and assemblies. While this generates a unique filename, it also tends to create a long filename.</p>
+			<p>There are a few ways to approach this:</p>
 
 			<ul>
-				<li><a href="#RemovePath">Rename or move DAT folder</a></li>
-				<li><a href="#SimpleName">Define a simplified naming convention</a></li>
-				<li><a href="#RemovePath">User the automatic numbering system from Swood</a></li>
+				<li><a href="#RemovePath">Rename or Move DAT Folder</a></li>
+				<li><a href="#SimpleName">Define a Simplified Naming Convention</a></li>
+				<li><a href="#AutoNumber">Use the Automatic Numbering System from Swood</a></li>
 			</ul>
 
-			<h2>Rename or move DAT folder</h2>
+			<h2 id="RemovePath">Rename or Move DAT Folder</h2>
 			<p>Rename or move the <x-yellow>Swood Data Directory</x-yellow> folder closer to the root folder of your PC to avoid unnecessary nested directories.</p>
 
-			<h2 id="SimpleName">Define a simplified naming convention</h2>
-			<p>Create a simplified naming convention for Parts and Assemblies, something compromised of a couple of letters and numbers.</p>
-
-			<p>As a simple example, “HC1_DR1_T” instead of “High Cabinet Type 1_Drawer Runner Type 1_Top”</p>
-			<p>A simplified naming conventions will not allow for a descriptive name. However, you can add a Description custom property to the file and show it in the Swood Task Pane. You will need to enable this setting in Tools > SWOOD Design > Settings > Design > Frames > Show descriptions</p>
+			<h2 id="SimpleName">Define a Simplified Naming Convention</h2>
+			<p>Create a simplified naming convention for Parts and Assemblies, something comprised of a couple of letters and numbers.</p>
+			<p>As a simple example, “HC1_DR1_T” instead of “High Cabinet Type 1_Drawer Runner Type 1_Top”.</p>
+			<p>A simplified naming convention will not allow for a descriptive name. However, you can add a Description custom property to the file and show it in the Swood Task Pane. You will need to enable this setting in Tools > SWOOD Design > Settings > Design > Frames > Show Descriptions.</p>
 
 			<h2 id="AutoNumber">Swood Automatic Numbering System</h2>
 			<h3>Limitations</h3>
 			<ul>
-				<li>The <x-yellow>Swood Data Directory</x-yellow> cannot be shared in Dropbox or any similar file sharing service due to latency.</li>
-				<li>Used counters cannot be retrieved/reused. Once they are used, it cannot be undone.</li>
-				<li>The counters carry on from the previous project, it cannot be reset to 1 for a new project.</li>
+				<li>The <x-yellow>Swood Data Directory</x-yellow> cannot be shared in Dropbox or any similar file-sharing service due to latency.</li>
+				<li>Used counters cannot be retrieved or reused. Once they are used, it cannot be undone.</li>
+				<li>The counters carry on from the previous project; they cannot be reset to 1 for a new project.</li>
 			</ul>
 			<h3>Overview</h3>
-			<p>The Swood Automatic Numbering System automatically assigns names/numbers to components. The tool lets you define prefixes to 3 categories, Assemblies, Sub-Assemblies and Parts; in the example below we have “Frame”, “SubFrame” and “Panel” respectively. Each category has its own counter that increments each time a component is created.</p>
+			<p>The Swood Automatic Numbering System automatically assigns names/numbers to components. The tool lets you define prefixes for three categories: Assemblies, Sub-Assemblies, and Parts. In the example below, we have “Frame”, “SubFrame”, and “Panel” respectively. Each category has its own counter that increments each time a component is created.</p>
 			<p>You can assign counters to all components when using the "Insert Copy" option for Frames and SwoodBoxes.</p>
 			<img src="../Resources/Numbering1.png" style="height: 400px" class="center" />
 
-			<p>Selecting the <x-yellow>User Serial Number</x-yellow> option will rename each component using the predefined prefix and the next serial number in the sequence. Notice that this method ensures that each component has a unique name, so there is no longer the need to append the assembly name.</p>
+			<p>Selecting the <x-yellow>Use Serial Number</x-yellow> option will rename each component using the predefined prefix and the next serial number in the sequence. Notice that this method ensures that each component has a unique name, so there is no longer the need to append the assembly name.</p>
 			<img src="../Resources/Numbering2.png" style="height: 400px" class="center" />
 
-			<p>To assign a counter to a panel when using the <x-yellow>Create a new panel</x-yellow> option, use the <x-yellow>Use EPDM SerialNumber</x-yellow> tick option.</p>
+			<p>To assign a counter to a panel when using the <x-yellow>Create a New Panel</x-yellow> option, use the <x-yellow>Use EPDM SerialNumber</x-yellow> tick option.</p>
 			<img src="../Resources/Numbering4.png" style="height: 400px" class="center" />
 			<p>If you believe this is the correct solution for you, please contact SWOODApps@solidsolutions.co.uk.</p>
 		</div>

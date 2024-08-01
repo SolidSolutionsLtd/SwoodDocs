@@ -11,7 +11,9 @@
 	<body>
 		<div id="PrintContainer">
 			<div class="title">
-				<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
+				<a href="../index.html">
+					<img src="../Images/Home.png" class="homeIcon center" />
+				</a>
 				<h1>Concatenate/Evaluate Properties <x-pro>Pro</x-pro></h1>
 			</div>
 
@@ -22,20 +24,19 @@
 				<li><a href="#ConcatenateEvaluate">How to Concatenate and Evaluate Properties</a></li>
 			</ul>
 
-			<h2 id="#Overview">Overview</h2>
-			<p>Properties can be concatenated or evaluated when showing them on a table. This allows users to create custom properties to be displayed on a table</p>
+			<h2 id="Overview">Overview</h2>
+			<p>Properties can be concatenated or evaluated when displayed in a table. This allows users to create custom properties for better visualization.</p>
 
 			<h2 id="Concatenate">How to Concatenate Properties</h2>
-
-			<p>To concatenate properties, define a new property in the SwoodEditor and wrap the properties to be concatenated between chevron characters, for example <x-yellow>Panel Dimensions: «Length» x «Width»</x-yellow>. In this example, for a 1000x500 panel, the table will display <x-yellow>Panel Dimensions: 1000 x 500</x-yellow>.</p>
-			<p>To add the opening chevron character use <x-yellow>Alt+174</x-yellow>.</p>
-			<p>To add the closing chevron character use <x-yellow>Alt+175</x-yellow>.</p>
+			<p>To concatenate properties, define a new property in the SwoodEditor and wrap the properties to be concatenated between chevron characters. For example, <x-yellow>Panel Dimensions: «Length» x «Width»</x-yellow>. For a 1000x500 panel, the table will display <x-yellow>Panel Dimensions: 1000 x 500</x-yellow>.</p>
+			<p>To add the opening chevron character, use <x-yellow>Alt+174</x-yellow>.</p>
+			<p>To add the closing chevron character, use <x-yellow>Alt+175</x-yellow>.</p>
 
 			<h2 id="Evaluate">How to Evaluate Properties</h2>
-			<p>To evaluate properties, define a new property in the SwoodEditor and wrap the properties with <x-yellow>«EVAL("PropertiesToEvaluate")»</x-yellow>, for example <x-yellow>Panel Area: «EVAL(«Length»*«Width»)»</x-yellow>. In this example, for a 1000x500 panel, the table will display <x-yellow>Panel Area: 500000</x-yellow>.</p>
+			<p>To evaluate properties, define a new property in the SwoodEditor and wrap the properties with <x-yellow>«EVAL("PropertiesToEvaluate")»</x-yellow>. For example, <x-yellow>Panel Area: «EVAL(«Length»*«Width»)»</x-yellow>. For a 1000x500 panel, the table will display <x-yellow>Panel Area: 500000</x-yellow>.</p>
 
 			<h2 id="ConcatenateEvaluate">How to Concatenate and Evaluate Properties</h2>
-			<p>Users can use a combination of concatenate and evaluate, for example <x-yellow>Panel Dimensions: «Length» x «Width», Panel Area: «EVAL(«Length»*«Width»)»</x-yellow>. In this example, for a 1000x500 panel, the table will display <x-yellow>Panel Dimensions: 1000 x 500, Panel Area: 500000</x-yellow>.</p>
+			<p>Users can combine concatenation and evaluation. For example, <x-yellow>Panel Dimensions: «Length» x «Width», Panel Area: «EVAL(«Length»*«Width»)»</x-yellow>. For a 1000x500 panel, the table will display <x-yellow>Panel Dimensions: 1000 x 500, Panel Area: 500000</x-yellow>.</p>
 		</div>
 	</body>
 </html>

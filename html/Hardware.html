@@ -13,22 +13,23 @@
 	<body>
 		<div id="PrintContainer">
 			<div class="title">
-				<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
+				<a href="../index.html"><img src="../Images/Home.png" class="homeIcon center" /></a>
 				<h1>Define Component as Hardware</h1>
 			</div>
 
 			<ul>
 				<li><a href="#Overview">Overview</a></li>
-				<li><a href="#Define">How to define a Hardware</a></li>
+				<li><a href="#Define">How to Define Hardware</a></li>
 			</ul>
 
 			<h2 id="Overview">Overview</h2>
-			<p>The Report allows users to classify Parts or Assemblies as <x-yellow>Hardware</x-yellow>.</p>
-			<p>The Hardware tab will appear if there are 1 or more Hardware components in a project.</p>
-			<h2 id="Define">How to define a Hardware</h2>
-			<p>The <x-yellow>Hardware</x-yellow> classification will be assign to Parts and Assemblies if their Filepath contains <x-red>/Hardwares/</x-red>. This means that a component will be defined as <x-yellow>Hardware</x-yellow> if it is saved inside a folder (or any of its subfolders) called <x-red>Hardwares</x-red>. Note that by default Swood saves all Hardware components in ".../Swood Data Directory/SWOODDesign<x-red>/Hardwares/</x-red>"</p>
-			<p>The <x-yellow>Hardware</x-yellow> classification will all be assign is component's Filepath contains <x-red>\SOLIDWORKS DATA</x-red>. This is to ensure that all Toolbox components are classified as <x-yellow>Hardware</x-yellow>.</p>
-			<p>To manualy define a <x-yellow>Hardware</x-yellow>, add the custom property <x-red>Hardware</x-red> and set the value to <x-red>Yes</x-red>.</p>
+			<p>The report allows users to classify Parts or Assemblies as <x-yellow>Hardware</x-yellow>.</p>
+			<p>The Hardware tab will appear if there are one or more hardware components in a project.</p>
+
+			<h2 id="Define">How to Define Hardware</h2>
+			<p>A component will be classified as <x-yellow>Hardware</x-yellow> if its filepath contains <x-red>/Hardwares/</x-red>. This means that a component will be defined as <x-yellow>Hardware</x-yellow> if it is saved inside a folder (or any of its subfolders) called <x-red>Hardwares</x-red>. Note that by default, Swood saves all hardware components in ".../Swood Data Directory/SWOODDesign<x-red>/Hardwares/</x-red>".</p>
+			<p>The <x-yellow>Hardware</x-yellow> classification will also be assigned if a component's filepath contains <x-red>\SOLIDWORKS DATA</x-red>. This ensures that all Toolbox components are classified as <x-yellow>Hardware</x-yellow>.</p>
+			<p>To manually define a <x-yellow>Hardware</x-yellow> component, add the custom property <x-red>Hardware</x-red> and set the value to <x-red>Yes</x-red>.</p>
 		</div>
 	</body>
 </html>
