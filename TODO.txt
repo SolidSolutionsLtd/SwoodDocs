@@ -1,0 +1,9 @@
+x - Add images for Hardware Type
+x - Add images for Concatenate/Evaluate Properties
+x - Add instructions to display a custom SolidWorks custom property
+x - Add instructions to add Hardware Cost
+x - Add instructions to add Hardware Length
+x - Add instructions for Hardware Type
+x - Add instructions for Harware Length
+x - change the download link to the global download link https://solidsolutions.azureedge.net/swood/SwoodEditor-Setup-1.1.0.exe
+x - document to talk about Display All edgebands, EFICAD already has an article on this https://eficad.sharepoint.com/sites/SWOOD/Shared%20Documents/Forms/Knowlege%20base%20articles.aspx?viewid=c998299e%2D8df7%2D41f6%2D880b%2D99c6486922c6&siteid=%7B72ADC3AE%2DFD4B%2D45E1%2DADB5%2D1C8A55C1E786%7D&webid=%7BABE48F96%2DBDE3%2D45F9%2DB16E%2D0BD8E8DA67D8%7D&uniqueid=%7BC16EE40F%2D0340%2D466F%2D99CB%2DE8F679B547A9%7D

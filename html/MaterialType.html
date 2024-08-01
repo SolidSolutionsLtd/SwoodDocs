@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Material Type</title>
-	<link rel="icon" type="image/png" href="../Images/TabIcon.png"/>
-	<link href="../CSS/Styles.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" media="print" href="../CSS/Print.css"/>
-	<script type="text/javascript" src="JS/jquery.js"></script>
-</head>
+	<head>
+		<title>Material Type</title>
+		<link rel="icon" type="image/png" href="../Images/TabIcon.png" />
+		<link href="../CSS/Styles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" media="print" href="../CSS/Print.css" />
+		<script type="text/javascript" src="JS/jquery.js"></script>
+	</head>
 
-<body>
+	<body>
+		<div id="PrintContainer">
+			<div class="title">
+				<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
+				<h1>Group by Material Type <x-pro>Pro</x-pro></h1>
+			</div>
 
-<div id="PrintContainer">
+			<ul>
+				<li><a href="#Overview">Overview</a></li>
+				<li><a href="#ExtendedProperties">Creating the Material Type property</a></li>
+				<li><a href="#Defining">How to Define a Material Type</a></li>
+				<li><a href="#DesignReport">Grouping by Material Type in the Report</a></li>
+			</ul>
 
-    <h1>Group by Material Type</h1>
-    <ul>
-        <li><a href="#Overview">Overview</a></li>
-        <li><a href="#ExtendedProperties">Creating the Material Type property</a></li>
-        <li><a href="#Defining">How to Define a Material Type</a></li>
-        <li><a href="#DesignReport">Grouping by Material Type in the Report</a></li>
-    </ul>
-    
-    <h2 id="#Overview">Overview</h2>
-    <p>
-        Material can be grouped by using the Material's Extended Custom Property <x-yellow>Material Type</x-yellow>. Grouping materials in this way allows a clearer breakdown of your panels in the report and summary.
-    </p>
-    
-    <h2 id="ExtendedProperties">Creating the Material Type property</h2>
-        <p>
-            The <x-yellow>Material Type</x-yellow> property can be created in <x-yellow>Extended Properties</x-yellow>, which is found in the <x-yellow>Materials Library</x-yellow>. You can create the new property by filling in the blank row in the name column. The property needs to be a <x-yellow>String</x-yellow> Type and the default value should be <x-yellow>Core</x-yellow>.
-    
-        </p>
-        <p>
-            Note that adding a Material Extended Property will require a SolidWorks restart.
-        </p>
-        <img src="../Resources/Extended Properties.png" style="height:400px;" class="center">
+			<h2 id="#Overview">Overview</h2>
+			<p>Materials can be grouped using the Material's Extended Custom Property <x-yellow>Material Type</x-yellow>. This grouping provides a clearer breakdown of your panels in the report and summary.</p>
 
-    <h2 id="Defining">How to Define a Material Type</h2>
-        <p>
-            To define the <x-yellow>Material Type</x-yellow> of a specific material, you need to edit the material in your <x-yellow>Material Library</x-yellow>. Scroll down to the <x-yellow>Extended Properties</x-yellow> menu, tick the checkbox next to <x-yellow>Material Type</x-yellow> and define your <x-yellow>Material Type</x-yellow> name in the input field.
-        </p>
-        <p>
-            The group names are case sensitive, so if you want it to join an existing <x-yellow>Material Type</x-yellow>, it needs to have the same spelling and capitalisation.
-        </p>
-        <img src="../Resources/Materials Library.png" style="height:400px;" class="center">
-   
-    <h2 id="DesignReport">Grouping by Material Type in the Report</h2>
-        <p>
-            If two or more <x-yellow>Material Types</x-yellow> are present in the report, you will notice a toggle option in the top right corner of the <x-yellow>Panel</x-yellow> and <x-yellow>Stock</x-yellow> page. Using the toggle will group the panels into their corresponding <x-yellow>Material Types</x-yellow> as shown below.
-        </p>
-        <img src="../Resources/Material Type Panels.png" style="height:400px;" class="center">
-        
-        <p>
-            The <x-yellow>Material Type</x-yellow> also controls the grouping on the <x-yellow>Summary</x-yellow> page, showing you total costs of the different <x-yellow>Material Types</x-yellow>.    
-        </p>
-        <img src="../Resources/Material Type Summary.png" style="height:400px;" class="center">
-  
+			<h2 id="ExtendedProperties">Creating the Material Type property</h2>
+			<p>To create the <x-yellow>Material Type</x-yellow> property, go to the <x-yellow>Extended Properties</x-yellow> in the <x-yellow>Swood Materials Library</x-yellow>. Create a new property by filling in the blank row in the Name column. The property should be a <x-yellow>String</x-yellow> Type with a default value of <x-yellow>Core</x-yellow>.</p>
 
-</div>
-</body>
+			<p>Note that adding a Material Extended Property requires restarting SolidWorks.</p>
+			<img src="../Resources/Extended Properties.png" style="height: 400px" class="center" />
+
+			<h2 id="Defining">How to Define a Material Type</h2>
+			<p>To define the <x-yellow>Material Type</x-yellow> of a specific material, you need to edit the material in your <x-yellow>Material Library</x-yellow>. Scroll down to the <x-yellow>Extended Properties</x-yellow> menu, tick the checkbox next to <x-yellow>Material Type</x-yellow> and define your <x-yellow>Material Type</x-yellow> name in the input field.</p>
+
+			<p>To define the <x-yellow>Material Type</x-yellow> for a specific material, edit the material in your <x-yellow>Swood Materials Library</x-yellow>. Scroll down to the Extended Properties menu, check the box next to <x-yellow>Material Type</x-yellow>, and enter your <x-yellow>Material Type</x-yellow> name in the input field.</p>
+			<p>Note that <x-yellow>Material Type</x-yellow> names are case-sensitive</p>
+
+			<img src="../Resources/Materials Library.png" style="height: 400px" class="center" />
+
+			<h2 id="DesignReport">Grouping by Material Type in the Report</h2>
+			<p>When two or more <x-yellow>Material Types</x-yellow> are present in the report, a toggle option will appear in the top right corner of the <x-yellow>Panel</x-yellow> and <x-yellow>Stock</x-yellow>. Using this toggle will group the panels by their corresponding <x-yellow>Material Types</x-yellow>, as shown below.</p>
+			<img src="../Resources/Material Type Panels.png" style="height: 400px" class="center" />
+
+			<p><x-yellow>Material Types</x-yellow> also controls grouping on the <x-yellow>Summary</x-yellow>, displaying the total costs for the different <x-yellow>Material Types</x-yellow>.</p>
+			<img src="../Resources/Material Type Summary.png" style="height: 400px" class="center" />
+		</div>
+	</body>
 </html>

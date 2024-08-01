@@ -1,71 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Swood Properties</title>
-	<link rel="icon" type="image/png" href="../Images/TabIcon.png"/>
-	<link href="../CSS/SWOODReport.css" rel="stylesheet" type="text/css"/>
-	<link href="../CSS/Styles.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" type="text/css" media="print" href="../CSS/Print.css"/>
-	<script type="text/javascript" src="../JS/jquery.js"></script>
-	<script type="text/javascript" src="../JS/CommonFunctions.js"></script>
-	<script type="text/javascript" src="../JS/VariableList.js"></script>
-	<script type="text/javascript" src="../JS/TableFunctions.js"></script>
-	<script type="text/javascript" src="../JS/Search.js"></script>
-    <!-- <link href="https://unpkg.com/tabulator-tables@5.4.4/dist/css/tabulator.min.css" rel="stylesheet"> -->
-    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.4/dist/js/tabulator.min.js"></script>
-</head>
+	<head>
+		<title>Swood Properties</title>
+		<link rel="icon" type="image/png" href="../Images/TabIcon.png" />
+		<link href="../CSS/SWOODReport.css" rel="stylesheet" type="text/css" />
+		<link href="../CSS/Styles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" media="print" href="../CSS/Print.css" />
+		<script type="text/javascript" src="../JS/jquery.js"></script>
+		<script type="text/javascript" src="../JS/CommonFunctions.js"></script>
+		<script type="text/javascript" src="../JS/VariableList.js"></script>
+		<script type="text/javascript" src="../JS/TableFunctions.js"></script>
+		<script type="text/javascript" src="../JS/Search.js"></script>
+		<!-- <link href="https://unpkg.com/tabulator-tables@5.4.4/dist/css/tabulator.min.css" rel="stylesheet"> -->
+		<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.4/dist/js/tabulator.min.js"></script>
+	</head>
 
-<body>
+	<body>
+		<div class="title">
+			<a href="../index.html"> <img src="../Images/Home.png" class="homeIcon" class="center" /></a>
+			<h1>List of Swood Properties</h1>
+		</div>
 
+		<div id="PrintContainer">
+			<script>
+				var PrintReport = false
+				var ResourcesPath = '..'
 
-    <h1>List of Swood Properties</h1>
+				var PropertyColumns = [
+					//define the table columns
+					{ Header: 'Name', Property: 'Name', width: 260, headerHozAlign: 'center', hozAlign: 'left', Search: true },
+					{ Header: 'Type', Property: 'Type', width: 100, headerHozAlign: 'center', hozAlign: 'center', Search: true, formatter: 'html' },
+					{ Header: 'Source', Property: 'Source', width: 180, headerHozAlign: 'center', hozAlign: 'center', Search: true },
+					{ Header: 'Pro', Property: 'Pro', width: 80, headerHozAlign: 'center', hozAlign: 'center', Search: false, formatter: 'tickCross', formatterParams: { crossElement: false } },
+					{ Header: 'Description', headerHozAlign: 'center', Property: 'Description', Search: true, formatter: 'html' },
+				]
 
-<div id="PrintContainer">
+				var PanelGroupBy = ['Type']
+				var PanelGroupByTitle = ['Type']
+				var SortByPanel = [{ Property: 'Type', Type: -1 }]
 
+				// TableOptions.data = ProjectProperties
+				// var table = new Tabulator("#Project-Properties", TableOptions);
+				// TableOptions.data = FrameProperties
+				// var table = new Tabulator("#Frame-Properties", TableOptions);
+				// TableOptions.data = PanelProperties
+				// var table = new Tabulator("#Panel-Properties", TableOptions);
+				// TableOptions.data = LaminateProperties
+				// var table = new Tabulator("#Laminate-Properties", TableOptions);
+				// TableOptions.data = EdgebandProperties
+				// var table = new Tabulator("#Edgeband-Properties", TableOptions);
+				// TableOptions.data = HardwareProperties
+				// var table = new Tabulator("#Hardware-Properties", TableOptions);
 
-	<script>
-
-        var PrintReport = false
-        var ResourcesPath = '..'
-
-        var PropertyColumns = [                 //define the table columns
-                {Header:"Name", Property: "Name", width: 260, headerHozAlign: 'center', hozAlign:"left", Search: true},
-                {Header:"Type", Property: "Type", width: 100, headerHozAlign: 'center', hozAlign:"center", Search: true, formatter:"html"},
-                {Header:"Source", Property: "Source", width: 180, headerHozAlign: 'center', hozAlign:"center", Search: true},
-                {Header:"Pro", Property: "Pro", width: 80, headerHozAlign: 'center', hozAlign:"center", Search: false, formatter:"tickCross", formatterParams:{crossElement: false}},
-                {Header:"Description", headerHozAlign: 'center', Property: "Description", Search: true, formatter:"html"},
-            ]
-
-
-
-        var PanelGroupBy = ["Type"]
-        var PanelGroupByTitle = ["Type"]
-        var SortByPanel = [
-		    {Property: "Type", Type: -1},
-	    ]
-
-
-        // TableOptions.data = ProjectProperties
-        // var table = new Tabulator("#Project-Properties", TableOptions);
-        // TableOptions.data = FrameProperties
-        // var table = new Tabulator("#Frame-Properties", TableOptions);
-        // TableOptions.data = PanelProperties
-        // var table = new Tabulator("#Panel-Properties", TableOptions);
-        // TableOptions.data = LaminateProperties
-        // var table = new Tabulator("#Laminate-Properties", TableOptions);
-        // TableOptions.data = EdgebandProperties
-        // var table = new Tabulator("#Edgeband-Properties", TableOptions);
-        // TableOptions.data = HardwareProperties
-        // var table = new Tabulator("#Hardware-Properties", TableOptions);
-
-        TableGenerator("ProjectProperties", "Properties", 'PropertyColumns', "SortByPanel", "PanelGroupBy", PanelGroupByTitle)
-        // TableGenerator("Panels", "Panels", "PanelColumns", "SortByPanel", "PanelGroupBy", PanelGroupByTitles)
-
-    </script>
-
-
-</div>
-
-
-</body>
+				TableGenerator('ProjectProperties', 'Properties', 'PropertyColumns', 'SortByPanel', 'PanelGroupBy', PanelGroupByTitle)
+				// TableGenerator("Panels", "Panels", "PanelColumns", "SortByPanel", "PanelGroupBy", PanelGroupByTitles)
+			</script>
+		</div>
+	</body>
 </html>
