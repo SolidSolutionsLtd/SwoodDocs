@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Swood Utils</title>
+		<link rel="icon" type="image/png" href="../Images/TabIcon.png" />
+		<link href="../CSS/Styles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" media="print" href="../CSS/Print.css" />
+		<script type="text/javascript" src="JS/jquery.js"></script>
+
+		<style>
+			.SubSection {
+				padding-left: 50px;
+			}
+
+			.highlight {
+				color: #edbc1a;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="PrintContainer">
+			<div class="title">
+				<a href="../index.html"><img src="../Images/Home.png" class="homeIcon center" alt="Home Icon" /></a>
+				<h1>Swood Utils</h1>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="#Overview">Overview</a></li>
+					<li><a href="#Features">Features</a></li>
+					<li><a href="#Types">Types of IDs</a></li>
+					<li>
+						<a href="#Controls">Controls</a>
+						<ul>
+							<li><a href="#RefreshData">Refresh Data</a></li>
+							<li><a href="#TempIDs">Assign TempIDs</a></li>
+							<li><a href="#SaveTempIDs">Save TempIDs to Models</a></li>
+							<li><a href="#RemoveTempIDs">Remove TempIDs from Models</a></li>
+							<li><a href="#UpdateViewOrientation">Update View Orientation</a></li>
+						</ul>
+					</li>
+					<li><a href="#Workflow">Workflow</a></li>
+					<li><a href="#IDSettings">ID Settings</a></li>
+				</ul>
+			</nav>
+
+			<section id="Overview">
+				<h2>Overview</h2>
+				<p>Swood Utils streamlines the ID assignment process for panels, providing a user-friendly interface. It also identifies identical panels, removing the need for the “Combine Panels” macro.</p>
+			</section>
+
+			<section id="Features">
+				<h2>Features</h2>
+				<ul>
+					<li>Assign IDs to panels</li>
+					<li>Remove IDs from panels</li>
+					<li>Identify identical panels and assign the same ID</li>
+					<li>Modify custom properties related to the Swood Report (e.g., Frame, Hardware, Exclude)</li>
+				</ul>
+			</section>
+
+			<section id="Types">
+				<h2>Types of IDs</h2>
+				<p>Swood Utils supports two ID schemas: Flat and Nested.</p>
+
+				<div class="SubSection">
+					<h3 id="Flat">Flat IDs</h3>
+					<p>Flat IDs assign sequential IDs to panels.</p>
+					<img src="../Resources/SwoodUtilsFlat.png" alt="Flat IDs Example" class="center" style="height: 600px" />
+
+					<h3 id="Nested">Nested IDs</h3>
+					<p>Nested IDs also assign sequential IDs, but include a reference to the parent frame.</p>
+					<img src="../Resources/SwoodUtilsNested.png" alt="Nested IDs Example" class="center" style="height: 600px" />
+				</div>
+			</section>
+
+			<section id="Controls">
+				<h2>Controls</h2>
+				<img src="../Resources/SwoodUtilsControls.png" alt="Controls Overview" class="center" style="height: 75px" />
+
+				<ol>
+					<li><a href="#RefreshData">Refresh Data</a></li>
+					<li><a href="#TempIDs">Assign TempIDs</a></li>
+					<li><a href="#SaveTempIDs">Save TempIDs to Models</a></li>
+					<li><a href="#RemoveTempIDs">Remove TempIDs from Models</a></li>
+					<li><a href="#UpdateViewOrientation">Update View Orientation</a></li>
+				</ol>
+
+				<div class="SubSection">
+					<h3 id="RefreshData">Refresh Data</h3>
+					<p>Refreshes data from SolidWorks, for example, after adding new components to an assembly or changing the active model.</p>
+
+					<h3 id="TempIDs">Assign TempIDs</h3>
+					<p>Assigns Temporary IDs to models. This process automatically runs after using <span class="highlight">Refresh Data</span>.</p>
+
+					<h3 id="SaveTempIDs">Save TempIDs to Models</h3>
+					<p>Saves Temporary IDs as custom properties in the model.</p>
+
+					<h3 id="RemoveTempIDs">Remove TempIDs from Models</h3>
+					<p>Removes ID custom properties from models.</p>
+
+					<h3 id="UpdateViewOrientation">Update View Orientation</h3>
+					<p>This option reorients all active models to align with the Front view normal to Z-axis. Use this only when "CombineIdentical" is enabled and if a warning appears on one or more panels.</p>
+					<img src="../Resources/SwoodUtilsViewOrientation.png" alt="View Orientation Warning" class="center" style="height: 200px" />
+				</div>
+			</section>
+
+			<section id="Workflow">
+				<h2>Workflow</h2>
+				<ol>
+					<li>Open the assembly containing the panels to which you want to add IDs.</li>
+					<li>Click the <span class="highlight">Refresh Data</span> button to load data into Swood Utils.</li>
+					<li>Once loaded, Swood Utils automatically assigns TempIDs to each panel based on your settings. These TempIDs serve as a preview and are not yet saved to the panel.</li>
+					<li>After reviewing the TempIDs, click <span class="highlight">Save TempIDs</span> to save them as custom properties for all panels.</li>
+				</ol>
+			</section>
+
+			<section id="IDSettings">
+				<h2>ID Settings</h2>
+				<div class="SubSection">
+					<h3>Nested IDs</h3>
+					<p>Select between Nested or Flat IDs.</p>
+
+					<h3>Persistent IDs</h3>
+					<p>Available for Flat IDs only. Keeps the current panel ID instead of overwriting it.</p>
+
+					<h3>Reuse IDs</h3>
+					<p>Available for Flat IDs only. Reuses unused IDs.</p>
+
+					<h3>Combine Identical</h3>
+					<p>Combines identical panels (based on geometry, material, edgebands, laminates, and grain direction) and assigns the same ID to all.</p>
+
+					<h3>Order Type</h3>
+					<p>Specifies how IDs are ordered:</p>
+					<ul>
+						<li>None: Random order (fastest method)</li>
+						<li>SortSettings: Order IDs based on model custom properties, such as Thickness or Material</li>
+						<li>FeatureTreeOrder: Follows the feature tree order (slower method)</li>
+					</ul>
+
+					<h3>ID Separator</h3>
+					<p>Character(s) used to separate IDs.</p>
+
+					<h3>Frame Alpha ID</h3>
+					<p>Uses letters for Frame IDs.</p>
+
+					<h3>Frame Starting ID</h3>
+					<p>Specifies the starting value for Frame IDs.</p>
+
+					<h3>Frame Increment Value</h3>
+					<p>Value used to increment Frame IDs.</p>
+
+					<h3>Frame ID Format</h3>
+					<p>Defines the format for numeric Frame IDs.</p>
+
+					<h3>Frame Fixed Prefix</h3>
+					<p>Fixed prefix added to all Frame IDs.</p>
+
+					<h3>Frame Sort Order</h3>
+					<p>Specifies the order used to sort the feature tree.</p>
+
+					<h3>Panel Starting ID</h3>
+					<p>Specifies the starting value for Panel IDs.</p>
+
+					<h3>Panel Increment Value</h3>
+					<p>Value used to increment Panel IDs.</p>
+
+					<h3>Panel ID Format</h3>
+					<p>Defines the format for numeric Panel IDs.</p>
+
+					<h3>Panel Fixed Prefix</h3>
+					<p>Fixed prefix added to all Panel IDs.</p>
+
+					<h3>Panel Sort Order</h3>
+					<p>Specifies the order used to sort the panel list.</p>
+
+					<h3>Top-Level Property Prefix</h3>
+					<p>Prefix for top-level properties.</p>
+
+					<h3>Frame Level Property Prefix</h3>
+					<p>Prefix for frame-level properties.</p>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
