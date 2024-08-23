@@ -42,6 +42,9 @@
 					</li>
 					<li><a href="#Workflow">Workflow</a></li>
 					<li><a href="#IDSettings">ID Settings</a></li>
+					<li><a href="#Colours">What do the Colours Mean?</a></li>
+					<li><a href="#Colors">How to modify custom properties</a></li>
+					<li><a href="#WarningIcons">Warning Icons</a></li>
 				</ul>
 			</nav>
 
@@ -116,6 +119,36 @@
 				</ol>
 			</section>
 
+			<section id="Colours">
+				<h2>What do the Colours Mean?</h2>
+				<img src="../Resources/Colours.png" alt="Colour Legend" class="center" style="height: 400px" />
+				<ol class="SubSection">
+					<li>Frame Component</li>
+					<li>Uncategorized Model</li>
+					<li>Panel Component</li>
+					<li>SubFrame Component</li>
+					<li>Model Excluded by Custom Property: Exclude = "Yes"</li>
+					<li>Model Excluded by Custom Property: ExcludeID = "Yes"</li>
+					<li>Suppressed Component</li>
+					<li>Hardware Component</li>
+				</ol>
+			</section>
+
+			<section id="WarningIcons">
+				<h2>Warning Icons</h2>
+				<div class="SubSection">
+					<h3>ID Mismatch</h3>
+					<img src="../Resources/IDMismatch.png" alt="ID Mismatch Icon" style="height: 50px" />
+					<p>This warning indicates that there is at least one mismatch between the TempID and the assigned ID for the component. See the example below.</p>
+					<img src="../Resources/IDMismatchTable.png" alt="ID Mismatch Example Table" class="center" style="height: 400px" />
+
+					<h3>ID Duplicate</h3>
+					<img src="../Resources/IDDuplicate.png" alt="ID Duplicate Icon" style="height: 50px" />
+					<p>This warning indicates that there is at least one duplicate ID in the components. See the example below.</p>
+					<img src="../Resources/IDDuplicateTable.png" alt="ID Duplicate Example Table" class="center" style="height: 400px" />
+				</div>
+			</section>
+
 			<section id="IDSettings">
 				<h2>ID Settings</h2>
 				<div class="SubSection">
@@ -123,10 +156,10 @@
 					<p>Select between Nested or Flat IDs.</p>
 
 					<h3>Persistent IDs</h3>
-					<p>Available for Flat IDs only. Keeps the current panel ID instead of overwriting it.</p>
+					<p>Keeps the current panel ID instead of overwriting it. Available for Flat IDs only.</p>
 
 					<h3>Reuse IDs</h3>
-					<p>Available for Flat IDs only. Reuses unused IDs.</p>
+					<p>Reuses unused IDs. Available for Flat IDs only.</p>
 
 					<h3>Combine Identical</h3>
 					<p>Combines identical panels (based on geometry, material, edgebands, laminates, and grain direction) and assigns the same ID to all.</p>
