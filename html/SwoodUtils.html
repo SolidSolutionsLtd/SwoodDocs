@@ -138,6 +138,8 @@
 				<ul>
 					<li><a href="#Overview">Overview</a></li>
 					<li><a href="#Features">Features</a></li>
+					<li><a href="#Installation">Installation</a></li>
+					<li><a href="#Licensing">Licensing</a></li>
 					<li><a href="#Workflow">Workflow</a></li>
 					<li><a href="#Controls">Main Controls</a></li>
 					<li><a href="#Types">Types of IDs</a></li>
@@ -151,7 +153,6 @@
 					<li><a href="#AppSettings">App Settings</a></li>
 					<li><a href="#IDSettings">ID Settings</a></li>
 					<li><a href="#CopySettings">Copy Settings between Users</a></li>
-					<li><a href="#Licensing">Licensing</a></li>
 					<li><a href="#FutureDevelopment">Future Development</a></li>
 				</ul>
 			</nav>
@@ -183,13 +184,43 @@
 
 			<hr />
 
+			<section id="Installation">
+				<div class="container">
+					<a href="#"><span class="GoTop">#</span></a>
+					<h2>Installation</h2>
+				</div>
+				<ol>
+					<li>Begin by downloading the installer from this <a class="TransferLink" href="https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.0.0.exe">link</a>. If the download doesn’t start automatically, copy and paste the following URL into a new browser tab: <span style="text-decoration: underline">https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.0.0.exe</span>.</li>
+					<li>Close SolidWorks before proceeding.</li>
+					<li>Run the installer and follow the on-screen instructions to complete the installation.</li>
+					<li>Once the installation is complete, open SolidWorks.</li>
+					<li>Activate the SwoodUtils Add-in from the Add-ins menu.</li>
+					<li>Navigate to the <span class="highlight">SwoodUtils</span> tab in the SolidWorks Command Manager and click on <span class="highlight">Open SwoodUtils</span> to start using the tool.</li>
+					<img src="../Resources/SwoodUtils/CommandManagerTabs.png" alt="Controls Overview" class="center" style="height: 300px" />
+					<li>When you run <span class="highlight">SwoodUtils</span> for the first time, you’ll need to activate your license. Simply copy and paste the provided license key into the field shown below.</li>
+					<img src="../Resources/SwoodUtils/ActivateLicense.png" alt="Controls Overview" class="center" style="height: 500px" />
+				</ol>
+			</section>
+
+			<hr />
+
+			<section id="Licensing">
+				<div class="container">
+					<a href="#"><span class="GoTop">#</span></a>
+					<h2>Licensing</h2>
+				</div>
+				<p>SwoodUtils uses the same licensing scheme as the <span class="highlight">SwoodEditor</span>, for more information click <a class="TransferLink" href="SwoodLicensing.html">here</a></p>
+			</section>
+
+			<hr />
+
 			<section id="Workflow">
 				<div class="container">
 					<a href="#"><span class="GoTop">#</span></a>
 					<h2>Workflow</h2>
 				</div>
 				<ol>
-					<li>Open the assembly containing the panels you want to assign IDs to. Be sure not to use SwoodUtils on a nesting assembly.</li>
+					<li>Open the assembly containing the panels you want to assign IDs to.</li>
 					<li>Enable the SwoodUtils Add-in. Go to the Swood Utils Tab and click on <span class="highlight">Open SwoodUtils</span></li>
 					<li>Click the <span class="highlight">Refresh Data</span> button to load models into SwoodUtils.</li>
 					<li>Once the data is loaded, SwoodUtils will automatically assign TempIDs to each panel based on your settings. These TempIDs act as a preview and are not yet saved to the model.</li>
@@ -679,16 +710,6 @@
 				</div>
 				<p>Settings are stored locally on each machine, they cannot be placed on a server.</p>
 				<p>To share settings between users, simply copy the files in <span class="highlight">C:\ProgramData\Solid Solutions\SwoodUtils</span> and paste them into the same directory on the second user's system.</p>
-			</section>
-
-			<hr />
-
-			<section id="Licensing">
-				<div class="container">
-					<a href="#"><span class="GoTop">#</span></a>
-					<h2>Licensing</h2>
-				</div>
-				<p>SwoodUtils uses the same licensing scheme as the <span class="highlight">SwoodEditor</span>, for more information click <a class="TransferLink" href="SwoodLicensing.html">here</a></p>
 			</section>
 
 			<hr />
