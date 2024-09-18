@@ -5,10 +5,6 @@ import { NavLink } from 'react-router-dom'
 import { Section } from '../components/Section'
 
 export const SwoodReportQuickstart = () => {
-
-	console.log('QuickStart Location:' + location.pathname)
-	console.log('QuickStart:' + location.hash)
-
 	return (
 		<>
 			<PageTitle title="Swood Report Quickstart" />
