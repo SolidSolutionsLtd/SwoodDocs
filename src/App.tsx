@@ -36,6 +36,7 @@ import { CreatingDATBackups } from './pages/CreatingDATBackups'
 import { SwoodUtils } from './pages/SwoodUtils'
 import { SwoodUtilsReleaseNotes } from './pages/SwoodUtilsReleaseNotes'
 import ScrollToSection from './helper/ScrollToSection'
+import { PageNotFound } from './pages/PageNotFound'
 
 export const App = () => {
 	return (
@@ -76,6 +77,7 @@ export const App = () => {
 				<Route path="/html/SwoodUtils.html" element={<SwoodUtils />} />
 				<Route path="/SwoodUtilsReleaseNotes" element={<SwoodUtilsReleaseNotes />} />
 				{/* <Route path="/Sandbox" element={<Sandbox />} /> */}
+				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 		</BrowserRouter>
 	)
