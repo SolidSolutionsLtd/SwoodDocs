@@ -38,7 +38,7 @@ import { SwoodUtilsReleaseNotes } from './pages/SwoodUtilsReleaseNotes'
 
 function App() {
 	return (
-		<BrowserRouter basename="/SwoodDocsV2">
+		<BrowserRouter basename="/SwoodDocs">
 			<Routes>
 				<Route path="/" element={<Index />} />
 				<Route path="/index.html" element={<Index />} />
