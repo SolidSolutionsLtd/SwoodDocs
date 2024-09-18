@@ -1,5 +1,10 @@
 import { Box, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
+import { messages404Page } from '../data/Messages404Page'
+
+const randomMessage = () => {
+	return messages404Page[Math.floor(Math.random() * messages404Page.length)]
+}
 
 export const PageNotFound = () => {
 	return (
@@ -7,7 +12,11 @@ export const PageNotFound = () => {
 			<Typography variant="h4" style={{ fontWeight: 'bold', paddingBottom: '50px' }}>
 				404 - Page Not Found
 			</Typography>
-			<Typography>Sorry, the page you are looking for does not exist.</Typography>
+
+			<Typography variant="h6" style={{ paddingBottom: '30px' }}>
+				{randomMessage()}
+			</Typography>
+
 			<Typography>
 				Go back to <NavLink to="/">Home</NavLink>.
 			</Typography>
