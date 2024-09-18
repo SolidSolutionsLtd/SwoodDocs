@@ -1,8 +1,14 @@
 import { Typography } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
 import { SectionDivider } from '../components/SectionDivider'
+import { useLocation } from 'react-router-dom';
 
 export const Index = () => {
+	const location = useLocation();
+	
+	console.log('Home Location:' + location.pathname)
+	console.log('Home:' + location.hash)
+
 	return (
 		<>
 			<Typography variant="h3" style={{ fontWeight: 'bold' }}>
