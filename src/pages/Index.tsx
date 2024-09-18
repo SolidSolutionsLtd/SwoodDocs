@@ -4,7 +4,7 @@ import { SectionDivider } from '../components/SectionDivider'
 
 export const Index = () => {
 	return (
-		<div id="PrintContainer">
+		<>
 			<Typography variant="h3" style={{ fontWeight: 'bold' }}>
 				Swood Docs
 			</Typography>
@@ -63,6 +63,6 @@ export const Index = () => {
 					</ul>
 				</li>
 			</ul>
-		</div>
+		</>
 	)
 }
