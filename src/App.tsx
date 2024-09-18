@@ -35,10 +35,12 @@ import { CreatingDATBackups } from './pages/CreatingDATBackups'
 // SwoodUtils
 import { SwoodUtils } from './pages/SwoodUtils'
 import { SwoodUtilsReleaseNotes } from './pages/SwoodUtilsReleaseNotes'
+import ScrollToSection from './helper/ScrollToSection'
 
-function App() {
+export const App = () => {
 	return (
 		<BrowserRouter basename="/SwoodDocs">
+			<ScrollToSection />
 			<Routes>
 				<Route path="/" element={<Index />} />
 				<Route path="/index.html" element={<Index />} />
@@ -78,5 +80,3 @@ function App() {
 		</BrowserRouter>
 	)
 }
-
-export default App
