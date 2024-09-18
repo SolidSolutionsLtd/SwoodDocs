@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="refresh" content="0; url=./index.html" />
+		<meta charset="utf-8" />
+		<title>Redirecting...</title>
+		<script type="text/javascript">
+			// Redirect all paths to index.html so React Router can handle it
+			var path = window.location.pathname
+			var redirect = '/SwoodDocs' + path
+			window.location.replace(redirect)
+		</script>
 	</head>
 	<body></body>
 </html>
