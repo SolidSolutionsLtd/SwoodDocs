@@ -13,7 +13,7 @@ export const PageNotFound = () => {
 			</Typography>
 
 			<Box display="flex" justifyContent="center" className="imageBox">
-				<img src="./images/404dino.png" style={{ height: '200px', borderRadius: '200px' }} />
+				<img src="./images/dino.gif" style={{ height: '200px' }} />
 			</Box>
 		</Box>
 	)
