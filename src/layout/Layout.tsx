@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
 		},
 		'&::-webkit-scrollbar-thumb': {
 			backgroundColor: 'rgb(104,104,104)', // Black scroll bar
-			// borderRadius: '10px',
+			borderRadius: '5px',
 		},
 		'&::-webkit-scrollbar-track': {
 			backgroundColor: 'rgb(66,66,66)',
@@ -107,7 +107,7 @@ export const Layout = () => {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
-			<AppBar position="fixed" open={open}>
+			<AppBar position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
 				<Toolbar>
 					<IconButton
 						color="inherit"
@@ -123,7 +123,7 @@ export const Layout = () => {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography variant="h6" noWrap component="div">
+					<Typography variant="h5" noWrap component="div">
 						<strong>SwoodDocs</strong>
 					</Typography>
 				</Toolbar>
