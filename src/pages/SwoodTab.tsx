@@ -6,7 +6,7 @@ import { Section } from '../components/Section'
 export const SwoodTab = () => {
 	return (
 		<>
-			<PageTitle title="Swood Data Directory" />
+			<PageTitle title="Reset Swood Tabs" />
 			<nav>
 				<ul>
 					<li>
