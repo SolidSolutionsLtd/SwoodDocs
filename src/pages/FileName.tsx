@@ -56,7 +56,9 @@ const FileName = () => {
 			<Section id="SimpleName" title="Define a Simplified Naming Convention">
 				<Typography>Create a simplified naming convention for Parts and Assemblies, something comprised of a couple of letters and numbers.</Typography>
 				<Typography>As a simple example, “HC1_DR1_T” instead of “High Cabinet Type 1_Drawer Runner Type 1_Top”.</Typography>
-				<Typography>A simplified naming convention will not allow for a descriptive name. However, you can add a Description custom property to the file and show it in the Swood Task Pane. You will need to enable this setting in Tools &gt; SWOOD Design &gt; Settings &gt; Design &gt; Frames &gt; Show Descriptions.</Typography>
+				<Typography>
+					A simplified naming convention will not allow for a descriptive name. However, you can add a Description custom property to the file and show it in the Swood Task Pane. You will need to enable this setting in <span className="param">Tools &gt; SWOOD Design &gt; Settings &gt; Design &gt; Frames &gt; Show Descriptions</span>.
+				</Typography>
 			</Section>
 
 			<Section id="AutoNumber" title="Swood Automatic Numbering System">
@@ -82,7 +84,9 @@ const FileName = () => {
 					To assign a counter to a panel when using the <span className="highlight">Create a New Panel</span> option, use the <span className="highlight">Use EPDM SerialNumber</span> tick option.
 				</Typography>
 				<ImageComponent source="./images/Numbering4.png" size="400px" />
-				<Typography>If you believe this is the correct solution for you, please contact SWOODApps@solidsolutions.co.uk.</Typography>
+				<Typography>
+					If you believe this is the correct solution for you, please contact <a href="mailto:SwoodApps@solidsolutions.co.uk">SwoodApps@solidsolutions.co.uk</a>.
+				</Typography>
 			</Section>
 		</>
 	)

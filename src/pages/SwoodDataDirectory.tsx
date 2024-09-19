@@ -27,7 +27,7 @@ const SwoodDataDirectory = () => {
 
 			<Section id="FindSDD" title="How to Find Your Swood Data Directory">
 				<Typography>
-					You can find the location of the <span className="highlight">Swood Data Directory</span> by opening SolidWorks, then using the top menu to navigate to Tools &gt; SWOOD Design &gt; Settings.
+					You can find the location of the <span className="highlight">Swood Data Directory</span> by opening SolidWorks, then using the top menu to navigate to <span className="param">Tools &gt; SWOOD Design &gt; Settings</span>.
 				</Typography>
 				<Typography>
 					Please make sure to restart SolidWorks if the <span className="highlight">Swood Data Directory</span> is changed.

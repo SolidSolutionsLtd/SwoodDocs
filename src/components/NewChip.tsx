@@ -15,6 +15,7 @@ export const NewChip = ({ big }: { big?: boolean }) => {
 				position: 'relative',
 				top: big ? '-10px' : '-5px', // Raises the chip slightly
 				fontWeight: 'bold',
+				px: '1px',
 			}}
 		/>
 	)

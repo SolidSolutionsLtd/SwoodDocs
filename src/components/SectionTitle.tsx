@@ -7,7 +7,7 @@ export const SectionTitle = ({ title, pro }: { title: string; pro?: boolean }) =
 			<Typography variant="h4" style={{ fontWeight: 'bold' }}>
 				{title}
 			</Typography>
-			{pro && <ProChip />}
+			{pro && <ProChip big={true} />}
 		</Stack>
 	)
 }

@@ -58,7 +58,7 @@ const CustomProperties = () => {
 
 			<Section id="CustomPropertyCapture" title="Capturing a custom property">
 				<Typography>
-					To capture properties for display in the report, navigate to the <span className="highlight">SwoodEditor</span> and go to Report &gt; Custom Properties. This section includes various levels and a list of placeholder properties that can be populated.
+					To capture properties for display in the report, navigate to the <span className="highlight">SwoodEditor</span> and go to <span className="param">Report &gt; Custom Properties</span>. This section includes various levels and a list of placeholder properties that can be populated.
 				</Typography>
 
 				<Typography>
@@ -72,7 +72,7 @@ const CustomProperties = () => {
 				<Typography>Captured properties can be displayed in various parts of the report, with a common example being a table column.</Typography>
 
 				<Typography>
-					In this case, we want to display the <span className="highlight">Part_STR_1</span> placeholder property in the panel's table. To do this, navigate to Tables &gt; Panels, click on <span className="highlight">Add Column</span> <span className="red">(1)</span>, and then define the property using the placeholder name <span className="red">(2)</span>.
+					In this case, we want to display the <span className="highlight">Part_STR_1</span> placeholder property in the panel's table. To do this, navigate to <span className="param">Report &gt; Panels</span>, click on <span className="highlight">Add Column</span> <span className="red">(1)</span>, and then define the property using the placeholder name <span className="red">(2)</span>.
 				</Typography>
 
 				<ImageComponent source="./images/CustomPropertyColumn.png" size="500px" />

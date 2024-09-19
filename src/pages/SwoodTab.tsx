@@ -28,7 +28,9 @@ const SwoodTab = () => {
 					<li>
 						Right click the SolidWorks Command Manager and select <span className="highlight">Customize</span>.
 					</li>
-					<li>Delete the Swood Design and Cam Tabs by right click &gt; Delete.</li>
+					<li>
+						Delete the Swood Design and Cam Tabs by <span className="param">Right Click &gt; Delete</span>.
+					</li>
 					<ImageComponent source="./images/DeleteTabs.png" />
 
 					<li>

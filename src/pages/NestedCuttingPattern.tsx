@@ -45,7 +45,7 @@ const NestedCuttingPattern = () => {
 				<Typography>To define the property that enables nesting, follow these steps:</Typography>
 				<ol>
 					<li>
-						Open <span className="highlight">SwoodEditor</span> and navigate to Report &gt; Custom Properties.
+						Open <span className="highlight">SwoodEditor</span> and navigate to <span className="param">Report &gt; Custom Properties</span>.
 					</li>
 					<li>Create a new Panel Custom Property.</li>
 					<li>

@@ -18,7 +18,7 @@ const PageNotFound = () => {
 			</Typography>
 
 			<Typography>
-				Go back to <NavLink to="/">Home</NavLink>.
+				Go back to <NavLink to="/">Home Page</NavLink>.
 			</Typography>
 
 			<Box display="flex" justifyContent="center" className="imageBox">

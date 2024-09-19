@@ -14,4 +14,13 @@ export const darkTheme = createTheme({
 			primary: '#ffffff', // Text color
 		},
 	},
+	components: {
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					marginTop: '16px', // Adjust the value as needed
+				},
+			},
+		},
+	},
 })

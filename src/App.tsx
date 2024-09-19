@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import ScrollToSection from './helper/ScrollToSection'
 import PageNotFound from './pages/PageNotFound'
 import Layout from './layout/Layout'
-import Sandbox from './pages/Sandbox'
+// import Sandbox from './pages/Sandbox'
 import Loading from './components/Loading'
 
 const SwoodPerformance = lazy(() => import('./pages/SwoodPerformance'))
@@ -21,9 +21,11 @@ const SwoodDataDirectory = lazy(() => import('./pages/SwoodDataDirectory'))
 const Matrix = lazy(() => import('./pages/Matrix'))
 const SwoodProperties = lazy(() => import('./pages/SwoodProperties'))
 const MaterialExtendedProperties = lazy(() => import('./pages/MaterialExtendedProperties'))
+const PanelsAndStocks = lazy(() => import('./pages/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/ConcatenateProperties'))
 const Frames = lazy(() => import('./pages/Frames'))
+const FrameType = lazy(() => import('./pages/FrameType'))
 const CuttingPattern = lazy(() => import('./pages/CuttingPattern'))
 const NestedCuttingPattern = lazy(() => import('./pages/NestedCuttingPattern'))
 const Hardware = lazy(() => import('./pages/Hardware'))
@@ -66,9 +68,11 @@ export const App = () => {
 					<Route path="/Matrix" element={<Matrix />} />
 					<Route path="/SwoodProperties" element={<SwoodProperties />} />
 					<Route path="/MaterialExtendedProperties" element={<MaterialExtendedProperties />} />
+					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />
 					<Route path="/Frames" element={<Frames />} />
+					<Route path="/FrameType" element={<FrameType />} />
 					<Route path="/CuttingPattern" element={<CuttingPattern />} />
 					<Route path="/NestedCuttingPattern" element={<NestedCuttingPattern />} />
 					<Route path="/Hardware" element={<Hardware />} />
@@ -89,7 +93,7 @@ export const App = () => {
 
 					<Route path="/Loading" element={<Loading />} />
 				</Route>
-				<Route path="/sandbox" element={<Sandbox />} />
+				{/* <Route path="/sandbox" element={<Sandbox />} /> */}
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 			{/* </Suspense> */}

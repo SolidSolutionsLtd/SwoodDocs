@@ -191,7 +191,7 @@ const SwoodPerformance = () => {
 				<Typography>The SOLIDWORKS Performance Evaluation tool provides insights and suggestions to enhance performance. For SWOOD, some suggestions may need to be disregarded (e.g., using Lightweight Mode), but others can be critical.</Typography>
 
 				<Typography>
-					To open <strong>Performance Evaluation</strong> go to <strong>Tools &gt; Evaluate &gt; Tools &gt; Performance Evaluation</strong>.
+					To open <strong>Performance Evaluation</strong> go to <span className="param">Tools &gt; Evaluate &gt; Tools &gt; Performance Evaluation</span>.
 				</Typography>
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Key Areas to Investigate:
@@ -230,7 +230,7 @@ const SwoodPerformance = () => {
 				</Typography>
 				<ol>
 					<li>
-						Open <strong>Tools &gt; SWOOD Design &gt; Tools &gt; Performance Analyzer</strong>.
+						Open <span className="param">Tools &gt; SWOOD Design &gt; Tools &gt; Performance Analyzer</span>.
 					</li>
 					<li>
 						In your assembly model, press <strong>Ctrl + Q</strong> to force a rebuild.
@@ -256,7 +256,7 @@ const SwoodPerformance = () => {
 						Right-click an empty area on the <strong>Command Manager</strong>.
 					</li>
 					<li>
-						Select <strong>Toolbars &gt; Rebuild Modes</strong>.
+						Select <span className="param">Toolbars &gt; Rebuild Modes</span>.
 					</li>
 				</ol>
 
@@ -322,11 +322,13 @@ const SwoodPerformance = () => {
 							<li>Screen recordings of the issue.</li>
 						</ul>
 					</li>
-					<li>Attach your system information (System Information &gt; Save As).</li>
+					<li>
+						Attach your system information <span className="param">System Information &gt; Save As</span>.
+					</li>
 				</ol>
 
 				<Typography>
-					Email your support request to <strong>Support@SolidSolutions.co.uk</strong>, and we will investigate further.
+					Email your support request to <a href="mailto:Support@SolidSolutions.co.uk">Support@SolidSolutions.co.uk</a>, and we will investigate further.
 				</Typography>
 			</Section>
 		</>

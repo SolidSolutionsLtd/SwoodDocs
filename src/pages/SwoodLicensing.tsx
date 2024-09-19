@@ -80,7 +80,9 @@ export const SwoodLicensing = () => {
 			</Section>
 			<Section id="Troubleshooting" title="Troubleshooting">
 				<Typography>Licenses are linked to a machine using a machine identifier. This identifier can change under certain circumstances, typically due to a hardware change.</Typography>
-				<Typography>If the machine identifier changes, the license will no longer be considered active on your machine. Attempting to re-activate the license will result in an error message stating the activation count has been exceeded. Please contact SWOODApps@solidsolutions.co.uk for assistance in such cases.</Typography>
+				<Typography>
+					If the machine identifier changes, the license will no longer be considered active on your machine. Attempting to re-activate the license will result in an error message stating the activation count has been exceeded. Please contact <a href="mailto:SwoodApps@solidsolutions.co.uk">SwoodApps@solidsolutions.co.uk</a> for assistance in such cases.
+				</Typography>
 			</Section>
 		</>
 	)

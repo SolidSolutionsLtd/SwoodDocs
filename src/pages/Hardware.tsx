@@ -18,7 +18,6 @@ const Hardware = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				Overview
 				<Typography>
 					The report allows users to classify Parts or Assemblies as <span className="highlight">Hardware</span>.
 				</Typography>
