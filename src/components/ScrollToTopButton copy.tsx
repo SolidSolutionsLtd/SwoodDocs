@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Fab } from '@mui/material'
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export const ScrollToTopButton = () => {
 	const [isVisible, setIsVisible] = useState(false)
@@ -35,12 +35,12 @@ export const ScrollToTopButton = () => {
 			size="small"
 			sx={{
 				position: 'fixed',
-				bottom: isVisible ? 16 : -60, // Adjust the hidden position as needed
+				bottom: 16,
 				right: 16,
-				transition: 'bottom 0.2s ease-in-out',
+				display: isVisible ? 'inline-flex' : 'none',
 			}}
 		>
-			<KeyboardDoubleArrowUpIcon />
+			<ArrowUpwardIcon />
 		</Fab>
 	)
 }
