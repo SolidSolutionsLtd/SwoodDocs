@@ -495,14 +495,14 @@ export const SwoodUtils = () => {
 						<img src="./images/SwoodUtils/IDMismatch.png" style={{ display: 'inline', marginLeft: '15px', borderRadius: '50%', height: '50px' }} />
 					</Box>
 					<Typography>This warning indicates that there is at least one mismatch between the TempID and the assigned ID for the component. See the example below.</Typography>
-					<ImageComponent source="./images/SwoodUtils/IDMismatchTable.png" size="400px" />
+					<ImageComponent source="./images/SwoodUtils/IDMismatchTable.png" size="300px" />
 
 					<Box style={{ display: 'flex', alignItems: 'center' }}>
 						<Typography variant="h6">Duplicate IDs</Typography>
 						<img src="./images/SwoodUtils/IDDuplicate.png" style={{ display: 'inline', marginLeft: '15px', borderRadius: '50%', height: '50px' }} />
 					</Box>
 					<Typography>This warning indicates that there is at least one duplicate ID in the components. See the example below.</Typography>
-					<ImageComponent source="./images/SwoodUtils/IDDuplicateTable.png" size="400px" />
+					<ImageComponent source="./images/SwoodUtils/IDDuplicateTable.png" size="300px" />
 				</Box>
 			</Section>
 

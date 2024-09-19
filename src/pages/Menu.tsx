@@ -1,19 +1,14 @@
-import { Typography } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
-import { SectionDivider } from '../components/SectionDivider'
 
-export const Index = () => {
+export const Menu = () => {
 	return (
 		<>
-			<Typography variant="h3" style={{ fontWeight: 'bold' }}>
-				Swood Docs
-			</Typography>
-
-			<SectionDivider />
 			<ul>
+				<IndexItem to="/" title="Home" />
 				<li>
 					Swood
 					<ul>
+						<IndexItem to="/SwoodPerformance" title="How to Enhance SWOOD Performance" postDate="18/09/2024" />
 						<IndexItem to="/SwoodCompatibility" title="Swood Compatibility" />
 						<IndexItem to="/ScriptParameters" title="List of Swood Script Parameters" />
 						<IndexItem to="/SwoodTab" title="Reset Swood Tabs" />
@@ -31,6 +26,7 @@ export const Index = () => {
 						<IndexItem to="/SwoodDataDirectory" title="How to find the Swood Data Directory" />
 						<IndexItem to="/Matrix" title="Swood Report matrix" />
 						<IndexItem to="/SwoodProperties" title="List of Swood properties" />
+						<IndexItem to="/MaterialExtendedProperties" title="List of Swood Material Extended Properties" postDate="18/09/2024" />
 						<IndexItem to="/ConcatenateProperties" title="How to concatenate/evaluate properties" pro={true} postDate="18/09/2024" />
 						<IndexItem to="/Frames" title="How to define a component as a Frame" pro={true} />
 						<IndexItem to="/CuttingPattern" title="How to generate a Cutting Pattern" postDate="18/09/2024" />

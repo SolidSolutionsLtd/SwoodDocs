@@ -66,10 +66,10 @@ export const SwoodReportQuickstart = () => {
 					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <span className="highlight">Swood Data Directory</span>. <NavLink to="/SwoodDataDirectory">Learn More.</NavLink>
 				</Typography>
 				<Typography>
-					Launch the <span className="highlight">Swood Editor</span> app and ensure that the <span className="highlight">DAT</span> folder is within your <span className="highlight">Swood Data Directory</span>. The app will automatically search for the <span className="highlight">DAT</span> folder, but you can also manually define it by clicking or dragging and dropping the folder into the specified field.
+					Launch the <span className="highlight">Swood Editor</span> app and ensure that the <span className="highlight">DAT</span> folder is within your <span className="highlight">Swood Data Directory</span> <span className="red">(1)</span>. The app will automatically search for the <span className="highlight">DAT</span> folder, but you can also manually define it by clicking or dragging and dropping the folder into the specified field <span className="red">(2)</span>.
 				</Typography>
 				<Typography>
-					You can then click the <span className="highlight">Reset Report</span> option to install a fresh instance of the report, or select <span className="highlight">Update Report</span> to keep your previous settings. In both cases, the app will create a backup of your current <span className="highlight">DAT</span> folder.
+					You can then click the <span className="highlight">Reset Report</span> <span className="red">(3)</span> option to install a fresh instance of the report, or select <span className="highlight">Update Report</span> <span className="red">(4)</span> to keep your previous settings. In both cases, the app will create a backup of your current <span className="highlight">DAT</span> folder.
 				</Typography>
 				<Typography>Please make sure to restart SolidWorks for the changes to take effect.</Typography>
 

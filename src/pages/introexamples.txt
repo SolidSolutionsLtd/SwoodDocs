@@ -1,0 +1,30 @@
+Welcome to Swood Docs!
+
+At Swood Docs, we provide comprehensive guides and resources to help you get the most out of your Swood software. Whether you’re looking to enhance performance, troubleshoot compatibility issues, or explore advanced features, our detailed documentation has you covered.
+
+What You’ll Find Here
+Swood: Learn how to optimize your Swood setup, manage script parameters, and resolve common issues.
+Swood Report: Get started quickly with Swood Report, understand licensing, and explore compatibility. Dive into advanced topics like generating cutting patterns and managing hardware components.
+Swood Editor: Discover how to license your Swood Editor, read release notes, and back up your report settings.
+Our goal is to make your experience with Swood as smooth and efficient as possible. Explore our articles, follow our step-by-step guides, and unlock the full potential of your Swood software.
+
+
+
+=============================
+Certainly! Here's a more formal version of the introduction:
+
+---
+
+**Welcome to the SWOOD Documentation and Support Portal**
+
+This site provides a comprehensive suite of resources to help you maximize the performance and efficiency of your SWOOD software. Whether you are seeking to enhance system performance, resolve compatibility issues, or access advanced features, our documentation offers the guidance you need.
+
+Explore in-depth tutorials on topics such as optimizing SWOOD performance, managing script parameters, and generating cutting patterns. You will also find solutions to common challenges, such as handling long file names and resetting SWOOD tabs.
+
+Recent updates include detailed guides on defining components, managing hardware, and working with SWOOD Material Extended Properties. Additionally, our advanced reporting capabilities offer tools for grouping materials and automating report generation.
+
+Whether you are new to SWOOD or an experienced user, the information provided here will assist you in enhancing your workflow and achieving optimal results with SWOOD software.
+
+--- 
+
+This version maintains professionalism while clearly outlining the key sections of the site.

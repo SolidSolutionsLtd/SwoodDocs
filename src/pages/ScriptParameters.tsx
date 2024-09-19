@@ -1,4 +1,3 @@
-import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { BasicTable } from '../components/BasicTable'
 import { SwoodScriptParameters, ListOfIFStatements, ListOfConditions, MiscellaneousParameters } from '../data/ScriptData'
@@ -26,19 +25,38 @@ export const ScriptParameters = () => {
 		<>
 			<PageTitle title="List of Swood Script Parameters" />
 
-			<SectionDivider />
+			<nav>
+				<ul>
+					<li>
+						<a href="#Functions">Functions</a>
+					</li>
 
-			<BasicTable columns={columns} data={SwoodScriptParameters} />
+					<li>
+						<a href="#IFStatements">IF Statements</a>
+					</li>
 
-			<Section id="#" title="List of IF Statements">
+					<li>
+						<a href="#Conditions">List of Conditions</a>
+					</li>
+
+					<li>
+						<a href="#Miscellaneous">Miscellaneous</a>
+					</li>
+				</ul>
+			</nav>
+
+			<Section id="Functions" title="Functions">
+				<BasicTable columns={columns} data={SwoodScriptParameters} />
+			</Section>
+			<Section id="IFStatements" title="List of IF Statements">
 				<BasicTable columns={columnsIF} data={ListOfIFStatements} />
 			</Section>
 
-			<Section id="#" title="List of Conditions">
+			<Section id="Conditions" title="List of Conditions">
 				<BasicTable columns={columnsConditions} data={ListOfConditions} />
 			</Section>
 
-			<Section id="#" title="Miscellaneous">
+			<Section id="Miscellaneous" title="Miscellaneous">
 				<BasicTable columns={columnsConditions} data={MiscellaneousParameters} />
 			</Section>
 		</>

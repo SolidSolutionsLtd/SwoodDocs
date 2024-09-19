@@ -5,7 +5,7 @@ import { SwoodCompatibilityData } from '../data/Compatibility'
 
 const columns = [
 	{ header: 'Swood Version', property: 'SwoodVersion', width: '30%' },
-	{ header: 'SolidWorksVersion', property: 'SolidWorksVersion', width: '30%' },
+	{ header: 'SolidWorks Version', property: 'SolidWorksVersion', width: '30%' },
 	{ header: 'Release Date', property: 'ReleaseDate', width: '30%' },
 ]
 
