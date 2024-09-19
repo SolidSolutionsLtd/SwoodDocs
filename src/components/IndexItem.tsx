@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { differenceInDays, parse } from 'date-fns'
 import { ProChip } from './ProChip'
 import { NewChip } from './NewChip'
+import { UpdatedChip } from './UpdatedChip'
 
 const isNew = (dateStr: string) => {
 	const today = new Date()
@@ -14,13 +15,14 @@ interface Props {
 	title: string
 	pro?: boolean
 	postDate?: string
+	updateDate?: string
 }
 
-export const IndexItem: React.FC<Props> = ({ to, title, pro, postDate }) => {
+export const IndexItem: React.FC<Props> = ({ to, title, pro, postDate, updateDate }) => {
 	return (
 		<li>
 			<NavLink to={to}>
-				{title} {pro && <ProChip />} {postDate && isNew(postDate) && <NewChip />}
+				{title} {pro && <ProChip />} {postDate && isNew(postDate) && <NewChip />} {updateDate && isNew(updateDate) && <UpdatedChip />}
 			</NavLink>
 		</li>
 	)

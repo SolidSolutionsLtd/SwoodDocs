@@ -16,6 +16,7 @@ import { SwoodDataDirectory } from './pages/SwoodDataDirectory'
 import { Matrix } from './pages/Matrix'
 import { SwoodProperties } from './pages/SwoodProperties'
 import { MaterialExtendedProperties } from './pages/MaterialExtendedProperties'
+import { CustomProperties } from './pages/CustomProperties'
 import { ConcatenateProperties } from './pages/ConcatenateProperties'
 import { Frames } from './pages/Frames'
 import { CuttingPattern } from './pages/CuttingPattern'
@@ -65,6 +66,7 @@ export const App = () => {
 					<Route path="/Matrix" element={<Matrix />} />
 					<Route path="/SwoodProperties" element={<SwoodProperties />} />
 					<Route path="/MaterialExtendedProperties" element={<MaterialExtendedProperties />} />
+					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />
 					<Route path="/Frames" element={<Frames />} />
 					<Route path="/CuttingPattern" element={<CuttingPattern />} />

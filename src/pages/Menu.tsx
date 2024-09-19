@@ -25,8 +25,9 @@ export const Menu = () => {
 						<IndexItem to="/ReportCompatibility" title="Swood Report Compatibility" />
 						<IndexItem to="/SwoodDataDirectory" title="How to find the Swood Data Directory" />
 						<IndexItem to="/Matrix" title="Swood Report matrix" />
-						<IndexItem to="/SwoodProperties" title="List of Swood properties" />
+						<IndexItem to="/SwoodProperties" title="List of Swood properties" postDate="18/09/2024" />
 						<IndexItem to="/MaterialExtendedProperties" title="List of Swood Material Extended Properties" postDate="18/09/2024" />
+						<IndexItem to="/CustomProperties" title="How to display Custom Properties" pro={false} postDate="19/09/2024" />
 						<IndexItem to="/ConcatenateProperties" title="How to concatenate/evaluate properties" pro={true} postDate="18/09/2024" />
 						<IndexItem to="/Frames" title="How to define a component as a Frame" pro={true} />
 						<IndexItem to="/CuttingPattern" title="How to generate a Cutting Pattern" postDate="18/09/2024" />
