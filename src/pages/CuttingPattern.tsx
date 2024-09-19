@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const CuttingPattern = () => {
+const CuttingPattern = () => {
 	return (
 		<>
 			<PageTitle title="Cutting Patterns" />
@@ -50,3 +50,4 @@ export const CuttingPattern = () => {
 		</>
 	)
 }
+export default CuttingPattern

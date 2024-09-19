@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const MaterialType = () => {
+const MaterialType = () => {
 	return (
 		<>
 			<PageTitle title="Group by Material Type" pro={true} />
@@ -62,3 +62,5 @@ export const MaterialType = () => {
 		</>
 	)
 }
+
+export default MaterialType

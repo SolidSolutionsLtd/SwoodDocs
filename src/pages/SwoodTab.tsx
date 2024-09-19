@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const SwoodTab = () => {
+const SwoodTab = () => {
 	return (
 		<>
 			<PageTitle title="Reset Swood Tabs" />
@@ -42,3 +42,5 @@ export const SwoodTab = () => {
 		</>
 	)
 }
+
+export default SwoodTab

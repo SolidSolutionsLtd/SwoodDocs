@@ -1,53 +1,53 @@
+import { lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Home } from './pages/Home'
+import Home from './pages/Home'
+import ScrollToSection from './helper/ScrollToSection'
+import PageNotFound from './pages/PageNotFound'
+import Layout from './layout/Layout'
+import Sandbox from './pages/Sandbox'
+import Loading from './components/Loading'
 
-// Swood imports
-import { SwoodPerformance } from './pages/SwoodPerformance'
-import { SwoodCompatibility } from './pages/SwoodCompatibility'
-import { ScriptParameters } from './pages/ScriptParameters'
-import { SwoodTab } from './pages/SwoodTab'
-import { FileName } from './pages/FileName'
+const SwoodPerformance = lazy(() => import('./pages/SwoodPerformance'))
+const SwoodCompatibility = lazy(() => import('./pages/SwoodCompatibility'))
+const ScriptParameters = lazy(() => import('./pages/ScriptParameters'))
+const SwoodTab = lazy(() => import('./pages/SwoodTab'))
+const FileName = lazy(() => import('./pages/FileName'))
 
 // Swood Report imports
-import { SwoodReportQuickstart } from './pages/SwoodReportQuickstart'
-import { SwoodLicensing } from './pages/SwoodLicensing'
-import { ReportCompatibility } from './pages/ReportCompatibility'
-import { SwoodDataDirectory } from './pages/SwoodDataDirectory'
-import { Matrix } from './pages/Matrix'
-import { SwoodProperties } from './pages/SwoodProperties'
-import { MaterialExtendedProperties } from './pages/MaterialExtendedProperties'
-import { CustomProperties } from './pages/CustomProperties'
-import { ConcatenateProperties } from './pages/ConcatenateProperties'
-import { Frames } from './pages/Frames'
-import { CuttingPattern } from './pages/CuttingPattern'
-import { NestedCuttingPattern } from './pages/NestedCuttingPattern'
-import { Hardware } from './pages/Hardware'
-import { HardwareLength } from './pages/HardwareLength'
-import { HardwareType } from './pages/HardwareType'
-import { BeamSaw } from './pages/BeamSaw'
-import { SaveToPDF } from './pages/SaveToPDF'
-import { Exclude } from './pages/Exclude'
-import { MaterialType } from './pages/MaterialType'
-import { SwoodReportReleaseNotes } from './pages/SwoodReportReleaseNotes'
+const SwoodReportQuickStart = lazy(() => import('./pages/SwoodReportQuickStart'))
+const SwoodLicensing = lazy(() => import('./pages/SwoodLicensing'))
+const ReportCompatibility = lazy(() => import('./pages/ReportCompatibility'))
+const SwoodDataDirectory = lazy(() => import('./pages/SwoodDataDirectory'))
+const Matrix = lazy(() => import('./pages/Matrix'))
+const SwoodProperties = lazy(() => import('./pages/SwoodProperties'))
+const MaterialExtendedProperties = lazy(() => import('./pages/MaterialExtendedProperties'))
+const CustomProperties = lazy(() => import('./pages/CustomProperties'))
+const ConcatenateProperties = lazy(() => import('./pages/ConcatenateProperties'))
+const Frames = lazy(() => import('./pages/Frames'))
+const CuttingPattern = lazy(() => import('./pages/CuttingPattern'))
+const NestedCuttingPattern = lazy(() => import('./pages/NestedCuttingPattern'))
+const Hardware = lazy(() => import('./pages/Hardware'))
+const HardwareLength = lazy(() => import('./pages/HardwareLength'))
+const HardwareType = lazy(() => import('./pages/HardwareType'))
+const BeamSaw = lazy(() => import('./pages/BeamSaw'))
+const SaveToPDF = lazy(() => import('./pages/SaveToPDF'))
+const Exclude = lazy(() => import('./pages/Exclude'))
+const MaterialType = lazy(() => import('./pages/MaterialType'))
+const SwoodReportReleaseNotes = lazy(() => import('./pages/SwoodReportReleaseNotes'))
 
 // Swood Editor imports
-import { SwoodEditorReleaseNotes } from './pages/SwoodEditorReleaseNotes'
-import { CreatingDATBackups } from './pages/CreatingDATBackups'
+const SwoodEditorReleaseNotes = lazy(() => import('./pages/SwoodEditorReleaseNotes'))
+const CreatingDATBackups = lazy(() => import('./pages/CreatingDATBackups'))
 
 // SwoodUtils imports
-import { SwoodUtils } from './pages/SwoodUtils'
-import { SwoodUtilsReleaseNotes } from './pages/SwoodUtilsReleaseNotes'
-import ScrollToSection from './helper/ScrollToSection'
-import { PageNotFound } from './pages/PageNotFound'
-
-import { Layout } from './layout/Layout'
-
-import { Sandbox } from './pages/Sandbox'
+const SwoodUtils = lazy(() => import('./pages/SwoodUtils'))
+const SwoodUtilsReleaseNotes = lazy(() => import('./pages/SwoodUtilsReleaseNotes'))
 
 export const App = () => {
 	return (
 		<BrowserRouter basename="/SwoodDocs">
 			<ScrollToSection />
+			{/* <Suspense fallback={<div>Loading...</div>}> */}
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />
@@ -58,8 +58,8 @@ export const App = () => {
 					<Route path="/SwoodTab" element={<SwoodTab />} />
 					<Route path="/FileName" element={<FileName />} />
 
-					<Route path="/SwoodReportQuickstart" element={<SwoodReportQuickstart />} />
-					<Route path="/html/SwoodReportQuickstart.html" element={<SwoodReportQuickstart />} />
+					<Route path="/SwoodReportQuickStart" element={<SwoodReportQuickStart />} />
+					<Route path="/html/SwoodReportQuickstart.html" element={<SwoodReportQuickStart />} />
 					<Route path="/SwoodLicensing" element={<SwoodLicensing />} />
 					<Route path="/ReportCompatibility" element={<ReportCompatibility />} />
 					<Route path="/SwoodDataDirectory" element={<SwoodDataDirectory />} />
@@ -86,10 +86,13 @@ export const App = () => {
 					<Route path="/SwoodUtils" element={<SwoodUtils />} />
 					<Route path="/html/SwoodUtils.html" element={<SwoodUtils />} />
 					<Route path="/SwoodUtilsReleaseNotes" element={<SwoodUtilsReleaseNotes />} />
+
+					<Route path="/Loading" element={<Loading />} />
 				</Route>
 				<Route path="/sandbox" element={<Sandbox />} />
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
+			{/* </Suspense> */}
 		</BrowserRouter>
 	)
 }

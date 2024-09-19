@@ -80,7 +80,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 	justifyContent: 'flex-end',
 }))
 
-export const Sandbox = () => {
+const Sandbox = () => {
 	const theme = useTheme()
 	const [open, setOpen] = React.useState(false)
 
@@ -169,3 +169,5 @@ export const Sandbox = () => {
 		</Box>
 	)
 }
+
+export default Sandbox

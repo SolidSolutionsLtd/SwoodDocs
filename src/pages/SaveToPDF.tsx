@@ -4,7 +4,7 @@ import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 import { ProChip } from '../components/ProChip'
 
-export const SaveToPDF = () => {
+const SaveToPDF = () => {
 	return (
 		<>
 			<PageTitle title="Saving Drawings to PDF" />
@@ -96,3 +96,5 @@ export const SaveToPDF = () => {
 		</>
 	)
 }
+
+export default SaveToPDF

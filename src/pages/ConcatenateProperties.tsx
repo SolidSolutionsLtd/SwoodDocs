@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const ConcatenateProperties = () => {
+const ConcatenateProperties = () => {
 	return (
 		<>
 			<PageTitle title="Concatenate/Evaluate Properties" pro={true} />
@@ -52,3 +52,5 @@ export const ConcatenateProperties = () => {
 		</>
 	)
 }
+
+export default ConcatenateProperties

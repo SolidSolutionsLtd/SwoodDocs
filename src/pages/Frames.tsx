@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const Frames = () => {
+const Frames = () => {
 	return (
 		<>
 			<PageTitle title="Frames" pro={true} />
@@ -33,3 +33,5 @@ export const Frames = () => {
 		</>
 	)
 }
+
+export default Frames

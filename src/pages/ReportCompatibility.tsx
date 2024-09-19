@@ -9,7 +9,7 @@ const columns = [
 	{ header: 'Release Date', property: 'ReleaseDate', width: '30%' },
 ]
 
-export const ReportCompatibility = () => {
+const ReportCompatibility = () => {
 	return (
 		<>
 			<PageTitle title="Report Compatibility" />
@@ -19,3 +19,5 @@ export const ReportCompatibility = () => {
 		</>
 	)
 }
+
+export default ReportCompatibility

@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const BeamSaw = () => {
+const BeamSaw = () => {
 	return (
 		<>
 			<PageTitle title="Beam Saw Panels" pro={true} />
@@ -37,3 +37,5 @@ export const BeamSaw = () => {
 		</>
 	)
 }
+
+export default BeamSaw

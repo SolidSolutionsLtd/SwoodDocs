@@ -1,20 +1,18 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import CssBaseline from '@mui/material/CssBaseline'
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { makeStyles } from '@mui/styles'
 import { Menu } from '../pages/Menu'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
 import { Outlet } from 'react-router-dom'
+import Loading from '../components/Loading'
+import TopBar from './TopBar'
 
 const drawerWidth = 350
 
@@ -60,31 +58,6 @@ const Main = styled('main', { shouldForwardProp: (prop: string) => prop !== 'ope
 	],
 }))
 
-interface AppBarProps extends MuiAppBarProps {
-	open?: boolean
-}
-const AppBar = styled(MuiAppBar, {
-	shouldForwardProp: (prop: string) => prop !== 'open',
-})<AppBarProps>(({ theme }) => ({
-	transition: theme.transitions.create(['margin', 'width'], {
-		easing: theme.transitions.easing.sharp,
-		duration: theme.transitions.duration.leavingScreen,
-	}),
-	variants: [
-		{
-			props: ({ open }) => open,
-			style: {
-				width: `calc(100% - ${drawerWidth}px)`,
-				marginLeft: `${drawerWidth}px`,
-				transition: theme.transitions.create(['margin', 'width'], {
-					easing: theme.transitions.easing.easeOut,
-					duration: theme.transitions.duration.enteringScreen,
-				}),
-			},
-		},
-	],
-}))
-
 const DrawerHeader = styled('div')(({ theme }) => ({
 	display: 'flex',
 	alignItems: 'center',
@@ -94,7 +67,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 	justifyContent: 'flex-end',
 }))
 
-export const Layout = () => {
+const Layout = () => {
 	const theme = useTheme()
 	const [open, setOpen] = useState(true)
 
@@ -107,28 +80,7 @@ export const Layout = () => {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
-			<AppBar position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
-				<Toolbar>
-					<IconButton
-						color="inherit"
-						aria-label="open drawer"
-						onClick={handleDrawerOpen}
-						edge="start"
-						sx={[
-							{
-								mr: 2,
-							},
-							open && { display: 'none' },
-						]}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Typography variant="h5" noWrap component="div">
-						<strong>SwoodDocs</strong>
-					</Typography>
-				</Toolbar>
-			</AppBar>
-			{/* Menu */}
+			<TopBar open={open} handleDrawerOpen={handleDrawerOpen} />
 			<Drawer
 				sx={{
 					width: drawerWidth,
@@ -144,7 +96,7 @@ export const Layout = () => {
 				classes={{ paper: classes.drawerPaper }}
 			>
 				<DrawerHeader>
-					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}</IconButton>
+					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeftIcon color="primary" /> : <ChevronRightIcon color="primary" />}</IconButton>
 				</DrawerHeader>
 				<Divider />
 				<Menu />
@@ -152,11 +104,15 @@ export const Layout = () => {
 
 			{/* Main Content */}
 			<Main open={open}>
-				<Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: `${drawerWidth}px`, m: 0 }}>
-					<ScrollToTopButton />
-					<Outlet />
-				</Box>
+				<Suspense fallback={<Loading />}>
+					<Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: `${drawerWidth}px`, m: 0 }}>
+						<ScrollToTopButton />
+						<Outlet />
+					</Box>
+				</Suspense>
 			</Main>
 		</Box>
 	)
 }
+
+export default Layout

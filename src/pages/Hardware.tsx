@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const Hardware = () => {
+const Hardware = () => {
 	return (
 		<>
 			<PageTitle title="Define Component as Hardware" />
@@ -40,3 +40,5 @@ export const Hardware = () => {
 		</>
 	)
 }
+
+export default Hardware

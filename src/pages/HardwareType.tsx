@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const HardwareType = () => {
+const HardwareType = () => {
 	return (
 		<>
 			<PageTitle title="Group Hardware by Type" pro={true} />
@@ -36,3 +36,5 @@ export const HardwareType = () => {
 		</>
 	)
 }
+
+export default HardwareType

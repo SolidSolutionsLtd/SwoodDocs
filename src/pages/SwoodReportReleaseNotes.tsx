@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ProChip } from '../components/ProChip'
 import { Release } from '../components/Release'
 
-export const SwoodReportReleaseNotes = () => {
+const SwoodReportReleaseNotes = () => {
 	return (
 		<>
 			<PageTitle title="Swood Report Release Notes" />
@@ -818,3 +818,5 @@ export const SwoodReportReleaseNotes = () => {
 		</>
 	)
 }
+
+export default SwoodReportReleaseNotes

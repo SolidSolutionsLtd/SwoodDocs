@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Release } from '../components/Release'
 
-export const SwoodUtilsReleaseNotes = () => {
+const SwoodUtilsReleaseNotes = () => {
 	return (
 		<>
 			<PageTitle title="SwoodUtils Release Notes" />
@@ -39,3 +39,5 @@ export const SwoodUtilsReleaseNotes = () => {
 		</>
 	)
 }
+
+export default SwoodUtilsReleaseNotes

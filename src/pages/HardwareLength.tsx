@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const HardwareLength = () => {
+const HardwareLength = () => {
 	return (
 		<>
 			<PageTitle title="Hardware Length" />
@@ -35,3 +35,5 @@ export const HardwareLength = () => {
 		</>
 	)
 }
+
+export default HardwareLength

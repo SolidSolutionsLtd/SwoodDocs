@@ -10,7 +10,7 @@ const columns = [
 	{ header: 'Description', property: 'Description' },
 ]
 
-export const Matrix = () => {
+const Matrix = () => {
 	return (
 		<>
 			<PageTitle title="Swood Report Matrix" />
@@ -20,3 +20,5 @@ export const Matrix = () => {
 		</>
 	)
 }
+
+export default Matrix

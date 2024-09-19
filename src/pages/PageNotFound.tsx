@@ -6,7 +6,7 @@ const randomMessage = () => {
 	return messages404Page[Math.floor(Math.random() * messages404Page.length)]
 }
 
-export const PageNotFound = () => {
+const PageNotFound = () => {
 	return (
 		<Box style={{ textAlign: 'center', padding: '50px' }}>
 			<Typography variant="h4" style={{ fontWeight: 'bold', paddingBottom: '50px' }}>
@@ -27,3 +27,5 @@ export const PageNotFound = () => {
 		</Box>
 	)
 }
+
+export default PageNotFound

@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const SwoodPerformance = () => {
+const SwoodPerformance = () => {
 	return (
 		<>
 			<PageTitle title="How to Enhance SWOOD Performance" />
@@ -332,3 +332,5 @@ export const SwoodPerformance = () => {
 		</>
 	)
 }
+
+export default SwoodPerformance

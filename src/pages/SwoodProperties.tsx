@@ -11,7 +11,7 @@ const columns = [
 	{ header: 'Description', property: 'Description', width: '50%' },
 ]
 
-export const SwoodProperties = () => {
+const SwoodProperties = () => {
 	return (
 		<>
 			<PageTitle title="Swood Properties" />
@@ -118,3 +118,5 @@ export const SwoodProperties = () => {
 		</>
 	)
 }
+
+export default SwoodProperties

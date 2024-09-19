@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ProChip } from '../components/ProChip'
 import { Release } from '../components/Release'
 
-export const SwoodEditorReleaseNotes = () => {
+const SwoodEditorReleaseNotes = () => {
 	return (
 		<>
 			<PageTitle title="Swood Editor Release Notes" />
@@ -174,3 +174,5 @@ export const SwoodEditorReleaseNotes = () => {
 		</>
 	)
 }
+
+export default SwoodEditorReleaseNotes

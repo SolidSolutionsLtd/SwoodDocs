@@ -4,7 +4,7 @@ import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 import { ProChip } from '../components/ProChip'
 
-export const CustomProperties = () => {
+const CustomProperties = () => {
 	return (
 		<>
 			<PageTitle title="How to display SolidWorks Custom Properties in the Report" />
@@ -80,3 +80,5 @@ export const CustomProperties = () => {
 		</>
 	)
 }
+
+export default CustomProperties

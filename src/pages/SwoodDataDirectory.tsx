@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const SwoodDataDirectory = () => {
+const SwoodDataDirectory = () => {
 	return (
 		<>
 			<PageTitle title="Swood Data Directory" />
@@ -37,3 +37,5 @@ export const SwoodDataDirectory = () => {
 		</>
 	)
 }
+
+export default SwoodDataDirectory

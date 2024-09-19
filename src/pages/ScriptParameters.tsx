@@ -20,7 +20,8 @@ const columnsConditions = [
 	{ header: 'Description', property: 'description', width: '40%' },
 	{ header: '	Example of Use', property: 'example', width: '40%' },
 ]
-export const ScriptParameters = () => {
+
+const ScriptParameters = () => {
 	return (
 		<>
 			<PageTitle title="List of Swood Script Parameters" />
@@ -62,3 +63,5 @@ export const ScriptParameters = () => {
 		</>
 	)
 }
+
+export default ScriptParameters

@@ -4,7 +4,7 @@ import { ImageComponent } from '../components/ImageComponent'
 import { NavLink } from 'react-router-dom'
 import { Section } from '../components/Section'
 
-export const SwoodReportQuickstart = () => {
+const SwoodReportQuickStart = () => {
 	return (
 		<>
 			<PageTitle title="Swood Report Quickstart" />
@@ -78,3 +78,5 @@ export const SwoodReportQuickstart = () => {
 		</>
 	)
 }
+
+export default SwoodReportQuickStart

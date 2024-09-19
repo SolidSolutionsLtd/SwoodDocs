@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const NestedCuttingPattern = () => {
+const NestedCuttingPattern = () => {
 	return (
 		<>
 			<PageTitle title="Nested or Beam Sawed" />
@@ -94,3 +94,5 @@ export const NestedCuttingPattern = () => {
 		</>
 	)
 }
+
+export default NestedCuttingPattern

@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const FileName = () => {
+const FileName = () => {
 	return (
 		<>
 			<PageTitle title="Issues with Long File Names" />
@@ -87,3 +87,5 @@ export const FileName = () => {
 		</>
 	)
 }
+
+export default FileName

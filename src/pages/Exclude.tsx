@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const Exclude = () => {
+const Exclude = () => {
 	return (
 		<>
 			<PageTitle title="Exclude Components from Report" />
@@ -36,3 +36,5 @@ export const Exclude = () => {
 		</>
 	)
 }
+
+export default Exclude

@@ -3,7 +3,7 @@ import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
 
-export const CreatingDATBackups = () => {
+const CreatingDATBackups = () => {
 	return (
 		<>
 			<PageTitle title="Creating Backups" />
@@ -44,3 +44,5 @@ export const CreatingDATBackups = () => {
 		</>
 	)
 }
+
+export default CreatingDATBackups

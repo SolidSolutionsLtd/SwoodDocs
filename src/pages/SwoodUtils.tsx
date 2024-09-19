@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 
-export const SwoodUtils = () => {
+const SwoodUtils = () => {
 	return (
 		<>
 			<PageTitle title="SwoodUtils" />
@@ -681,3 +681,5 @@ export const SwoodUtils = () => {
 		</>
 	)
 }
+
+export default SwoodUtils

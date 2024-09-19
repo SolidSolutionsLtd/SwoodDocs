@@ -1,13 +1,13 @@
 import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 
-export const Home = () => {
+const Home = () => {
 	return (
 		// import { Typography, Box, List, ListItem, ListItemText, Divider } from '@mui/material';
 
 		<Box sx={{ padding: '20px' }}>
 			{/* Title */}
-			<Typography variant="h4" gutterBottom style={{ fontWeight: 'bold' }}>
+			<Typography variant="h3" gutterBottom style={{ fontWeight: 'bold' }}>
 				Welcome to the SwoodDocs!
 			</Typography>
 
@@ -44,3 +44,5 @@ export const Home = () => {
 		</Box>
 	)
 }
+
+export default Home

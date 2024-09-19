@@ -11,7 +11,7 @@ const columns = [
 	{ header: 'Description', property: 'description', width: '50%' },
 ]
 
-export const MaterialExtendedProperties = () => {
+const MaterialExtendedProperties = () => {
 	return (
 		<>
 			<PageTitle title="Swood Material Extended Properties" />
@@ -44,3 +44,5 @@ export const MaterialExtendedProperties = () => {
 		</>
 	)
 }
+
+export default MaterialExtendedProperties

@@ -9,7 +9,7 @@ const columns = [
 	{ header: 'Release Date', property: 'ReleaseDate', width: '30%' },
 ]
 
-export const SwoodCompatibility = () => {
+const SwoodCompatibility = () => {
 	return (
 		<>
 			<PageTitle title="Swood Compatibility" />
@@ -19,3 +19,5 @@ export const SwoodCompatibility = () => {
 		</>
 	)
 }
+
+export default SwoodCompatibility
