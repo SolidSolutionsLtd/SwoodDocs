@@ -72,7 +72,7 @@ export const NestedCuttingPattern = () => {
 					</li>
 					<li>Save your settings.</li>
 				</ol>
-				<ImageComponent source="./images/NestedOrBeamSawDisableCuttingPattern.png" size="600px" />
+				<ImageComponent source="./images/NestedOrBeamSawDisableCuttingPattern.png" size="500px" />
 			</Section>
 
 			<Section id="EnableNesting" title="Enabling Panels in Nesting">

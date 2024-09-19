@@ -30,7 +30,7 @@ export const HardwareLength = () => {
 				<Typography>
 					When a hardware component has a Length custom property, the report will automatically include this value in the <span className="highlight">Name</span> property, as demonstrated below.
 				</Typography>
-				<ImageComponent source="./images/HardwareLengthTable.png" size="200px" />
+				<ImageComponent source="./images/HardwareLengthTable.png" size="150px" />
 			</Section>
 		</>
 	)

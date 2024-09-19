@@ -13,7 +13,7 @@ const columns = [
 export const Matrix = () => {
 	return (
 		<>
-			<PageTitle title="Matrix" />
+			<PageTitle title="Swood Report Matrix" />
 			<SectionDivider />
 
 			<BasicTable columns={columns} data={MatrixVariables} />

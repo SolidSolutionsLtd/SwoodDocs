@@ -187,17 +187,17 @@ export const SwoodUtils = () => {
 						Flat IDs
 					</Typography>
 					<Typography>Flat IDs assign sequential IDs to panels.</Typography>
-					<ImageComponent source="./images/SwoodUtils/Flat.png" size="600px" />
+					<ImageComponent source="./images/SwoodUtils/Flat.png" size="500px" />
 
 					<Typography>
 						Flat IDs also assign sequential IDs to Frames. To view the table below you must click on the <span className="highlight">Assemblies</span> tab.
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/FlatAssemblies.png" size="450px" />
+					<ImageComponent source="./images/SwoodUtils/FlatAssemblies.png" size="350px" />
 
 					<Typography variant="h6" id="Nested">
 						Nested IDs
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/Nested.png" size="600px" />
+					<ImageComponent source="./images/SwoodUtils/Nested.png" size="500px" />
 					<Typography>Nested IDs also assign sequential IDs, but includes a reference to the parent frame.</Typography>
 				</Box>
 			</Section>
@@ -471,7 +471,7 @@ export const SwoodUtils = () => {
 
 			<Section id="Colours" title="Table Row Colours">
 				<Typography>Rows are colour coded to easily identify the different types of components. See example below for legend.</Typography>
-				<ImageComponent source="./images/SwoodUtils/Colours.png" size="450px" />
+				<ImageComponent source="./images/SwoodUtils/Colours.png" size="350px" />
 
 				<Box className="SubSection">
 					<ol>
