@@ -7,7 +7,7 @@ import { Section } from '../components/Section'
 const SwoodUtils = () => {
 	return (
 		<>
-			<PageTitle title="SwoodUtils" />
+			<PageTitle title="SwoodUtils" pro={true} beta={true} />
 
 			<nav>
 				<ul>
@@ -63,9 +63,6 @@ const SwoodUtils = () => {
 						<a href="#CopySettings">Copy Settings between Users</a>
 					</li>
 					<li>
-						<a href="https://solidsolutionsltd.github.io/SwoodApps/SwoodUtils.html">SwoodUtils Releases</a>
-					</li>
-					<li>
 						<a href="#KnownBugs">Known Bugs</a>
 					</li>
 					<li>
@@ -75,7 +72,10 @@ const SwoodUtils = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography variant="body1">SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface. It also identifies identical panels, removing the need for the “Combine Panels” macro.</Typography>
+				<Typography variant="body1">
+					SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface. It also identifies identical panels, removing the need for the <span className="highlight">Combine Panels</span> macro.
+				</Typography>
+				<Typography variant="body1">Please note that SwoodUtils is currently in its Beta stage.</Typography>
 			</Section>
 
 			<Section id="Features" title="Features">

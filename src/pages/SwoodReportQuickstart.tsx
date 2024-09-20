@@ -55,8 +55,7 @@ const SwoodReportQuickStart = () => {
 
 			<Section id="License" title="Solid Solutions License Manager">
 				<Typography>
-					To activate the provided license, launch the <span className="highlight">Solid Solutions License Manager</span> and press the <span className="highlight">Add License</span> button as shown in the image below.
-					<NavLink to="/SwoodLicensing">Learn More.</NavLink>
+					To activate the provided license, launch the <span className="highlight">Solid Solutions License Manager</span> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
 				</Typography>
 				<ImageComponent source="./images/Licensing1.png" size="400px" />
 			</Section>

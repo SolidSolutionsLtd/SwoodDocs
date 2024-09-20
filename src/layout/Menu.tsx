@@ -46,7 +46,7 @@ const Menu: React.FC = () => {
 						<IndexItem to="/SaveToPDF" title="How to automatically save Drawings to PDF" postDate="18/09/2024" />
 						<IndexItem to="/Exclude" title="How to exclude a component from the Report" />
 						<IndexItem to="/MaterialType" title="How to group materials by Type" pro={true} />
-						<IndexItem to="/SwoodReportReleaseNotes" title="Swood Report release notes" />
+						<IndexItem to="/SwoodReportReleaseNotes" title="Swood Report Release Notes" />
 					</ul>
 				</li>
 				<br />
@@ -54,8 +54,16 @@ const Menu: React.FC = () => {
 					Swood Editor
 					<ul>
 						<IndexItem to="/SwoodLicensing" title="Swood Editor licensing" />
-						<IndexItem to="/SwoodEditorReleaseNotes" title="Swood Editor release notes" />
+						<IndexItem to="/SwoodEditorReleaseNotes" title="Swood Editor Release Notes" />
 						<IndexItem to="/CreatingDATBackups" title="How to backup Report Settings" />
+					</ul>
+				</li>
+				<br />
+				<li>
+					SwoodUtils
+					<ul>
+						<IndexItem to="/SwoodUtils" title="SwoodUtils" pro={true} beta={true} />
+						<IndexItem to="/SwoodUtilsReleaseNotes" title="SwoodUtils Release Notes" />
 					</ul>
 				</li>
 			</ul>
