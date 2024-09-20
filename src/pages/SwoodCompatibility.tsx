@@ -4,9 +4,9 @@ import { BasicTable } from '../components/BasicTable'
 import { SwoodCompatibilityData } from '../data/Compatibility'
 
 const columns = [
-	{ header: 'Swood Version', property: 'SwoodVersion', width: '30%' },
-	{ header: 'SolidWorks Version', property: 'SolidWorksVersion', width: '30%' },
-	{ header: 'Release Date', property: 'ReleaseDate', width: '30%' },
+	{ header: 'Swood Version', property: 'SwoodVersion', width: '20%' },
+	{ header: 'SolidWorks Version', property: 'SolidWorksVersion', width: '60%' },
+	{ header: 'Release Date', property: 'ReleaseDate', width: '20%' },
 ]
 
 const SwoodCompatibility = () => {
@@ -15,7 +15,7 @@ const SwoodCompatibility = () => {
 			<PageTitle title="Swood Compatibility" />
 			<SectionDivider />
 
-			<BasicTable columns={columns} data={SwoodCompatibilityData} />
+			<BasicTable columns={columns} data={SwoodCompatibilityData} width={700} />
 		</>
 	)
 }

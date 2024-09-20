@@ -37,11 +37,27 @@ const darkTheme = createTheme({
 })
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const BasicTable = ({ columns, data }: { columns: IColumn[]; data: any[] }) => {
+export const BasicTable = ({ columns, data, width }: { columns: IColumn[]; data: any[]; width?: number }) => {
 	return (
 		<ThemeProvider theme={darkTheme}>
-			<TableContainer component={Paper}>
-				<Table sx={{ minWidth: 650 }} aria-label="simple table">
+			<TableContainer
+				component={Paper}
+				sx={{
+					width,
+					maxHeight: 800,
+					'&::-webkit-scrollbar': {
+						width: '8px', // Scrollbar width
+					},
+					'&::-webkit-scrollbar-thumb': {
+						backgroundColor: '#888', // Scrollbar color
+						borderRadius: '4px', // Rounded corners
+					},
+					'&::-webkit-scrollbar-thumb:hover': {
+						backgroundColor: '#555', // Color when hovering
+					},
+				}}
+			>
+				<Table stickyHeader sx={{ width }} aria-label="simple table">
 					<TableHead>
 						<TableRow>
 							{columns.map(column => (

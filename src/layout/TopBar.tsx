@@ -1,11 +1,12 @@
 // src/components/TopBar.tsx
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { styled } from '@mui/material/styles'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
+import { useLocation } from 'react-router-dom'
 
 const drawerWidth = 350
 
@@ -36,7 +37,69 @@ interface TopBarProps {
 }
 
 const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
-	// const theme = useTheme()
+	const [pageTitle, setPageTitle] = useState('')
+
+	const location = useLocation()
+
+	console.log(location.pathname)
+
+	// useEffect(() => {
+	// 	// Fetch the text content of the first element with the class "PageTitle"
+	// 	const titleElement = document.querySelector('.PageTitle')
+	// 	if (titleElement) {
+	// 		setPageTitle(titleElement.textContent || '')
+	// 	}
+	// }, [location]) // Empty dependency array to run this effect only once after the initial render
+
+	useEffect(() => {
+		// Function to observe changes in the DOM
+		const observer = new MutationObserver(mutations => {
+			mutations.forEach(mutation => {
+				if (mutation.type === 'childList' || mutation.type === 'characterData') {
+					// Check if the PageTitle element exists and update the state
+					const titleElement = document.querySelector('.PageTitle')
+					if (titleElement) {
+						setPageTitle(titleElement.textContent || 'Home')
+					}
+				}
+			})
+		})
+
+		// Function to observe the PageTitle element and its content
+		const observePageTitle = () => {
+			const titleElement = document.querySelector('.PageTitle')
+			if (titleElement) {
+				// Observe changes to the content of the .PageTitle element
+				observer.observe(titleElement, {
+					childList: true,
+					characterData: true,
+					subtree: true, // Includes changes to child nodes
+				})
+				setPageTitle(titleElement.textContent || 'Home')
+			}
+		}
+
+		// Start by observing the whole document for PageTitle creation
+		const bodyObserver = new MutationObserver(mutations => {
+			mutations.forEach(() => {
+				observePageTitle()
+			})
+		})
+
+		bodyObserver.observe(document.body, {
+			childList: true,
+			subtree: true, // Observe the entire body and its descendants
+		})
+
+		// Initial check to see if the .PageTitle is already rendered
+		observePageTitle()
+
+		// Cleanup the observers on component unmount
+		return () => {
+			observer.disconnect()
+			bodyObserver.disconnect()
+		}
+	}, [])
 
 	return (
 		<AppBar position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
@@ -55,9 +118,10 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 				>
 					<MenuIcon color="primary" />
 				</IconButton>
-				<Typography variant="h5" noWrap component="div" color="primary">
+				<Typography variant="h5" noWrap component="div" color="primary" paddingRight="5px">
 					<strong>SwoodDocs</strong>
 				</Typography>
+				<Typography color="textDisabled"> &gt; {pageTitle}</Typography>
 			</Toolbar>
 		</AppBar>
 	)

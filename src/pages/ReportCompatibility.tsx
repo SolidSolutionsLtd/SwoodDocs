@@ -15,7 +15,7 @@ const ReportCompatibility = () => {
 			<PageTitle title="Report Compatibility" />
 			<SectionDivider />
 
-			<BasicTable columns={columns} data={ReportCompatibilityData} />
+			<BasicTable columns={columns} data={ReportCompatibilityData} width={600} />
 		</>
 	)
 }

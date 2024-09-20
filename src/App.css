@@ -130,20 +130,20 @@ hr {
 }
 
 .CP {
-	color: blue;
+	color: rgb(0, 110, 255);
 }
 .value {
-	color: red;
+	color: #f55f45;
 }
 
 .String {
-	color: blue;
+	color: rgb(0, 110, 255);
 }
 .Boolean {
-	color: purple;
+	color: rgb(128, 0, 70);
 }
 .Number {
-	color: green;
+	color: rgb(0, 128, 0);
 }
 
 .Date {

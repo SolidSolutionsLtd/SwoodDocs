@@ -5,10 +5,10 @@ export const PageTitle = ({ title, pro }: { title: string; pro?: boolean }) => {
 	return (
 		<>
 			<Stack direction="row" alignItems="center" spacing={2}>
-				<Typography variant="h3" style={{ fontWeight: 'bold' }}>
+				<Typography className="PageTitle" variant="h3" style={{ fontWeight: 'bold' }}>
 					{title}
-					{pro && <ProChip big={true} />}
 				</Typography>
+				{pro && <ProChip big={true} />}
 			</Stack>
 		</>
 	)

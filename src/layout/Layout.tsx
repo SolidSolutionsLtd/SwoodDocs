@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { makeStyles } from '@mui/styles'
-import { Menu } from '../layout/Menu'
+import Menu from '../layout/Menu'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
 import { Outlet } from 'react-router-dom'
 import Loading from '../components/Loading'
@@ -80,6 +80,8 @@ const Layout = () => {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
+
+			{/* Top Bar */}
 			<TopBar open={open} handleDrawerOpen={handleDrawerOpen} />
 			<Drawer
 				sx={{
@@ -95,6 +97,7 @@ const Layout = () => {
 				open={open}
 				classes={{ paper: classes.drawerPaper }}
 			>
+				{/* Menu */}
 				<DrawerHeader>
 					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeftIcon color="primary" /> : <ChevronRightIcon color="primary" />}</IconButton>
 				</DrawerHeader>

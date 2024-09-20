@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
+import { PageTitle } from '../components/PageTitle'
 
 const Home = () => {
 	return (
@@ -7,9 +8,7 @@ const Home = () => {
 
 		<Box sx={{ padding: '20px' }}>
 			{/* Title */}
-			<Typography variant="h3" gutterBottom style={{ fontWeight: 'bold' }}>
-				Welcome to the SwoodDocs!
-			</Typography>
+			<PageTitle title="Welcome to the SwoodDocs!" />
 
 			{/* Introduction Text */}
 			<Typography variant="body1" paragraph>

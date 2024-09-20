@@ -1,6 +1,6 @@
 import { IndexItem } from '../components/IndexItem'
 
-export const Menu = () => {
+const Menu: React.FC = () => {
 	return (
 		<>
 			<ul>
@@ -62,3 +62,5 @@ export const Menu = () => {
 		</>
 	)
 }
+
+export default Menu
