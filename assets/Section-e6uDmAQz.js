@@ -1,1 +1,0 @@
-import{j as s,S as o,B as n}from"./index-K2LUy6ws.js";import{S as x}from"./SectionTitle-CXaW9APP.js";const j=({title:r,id:t,children:e,pro:i})=>s.jsxs(s.Fragment,{children:[s.jsx(o,{}),s.jsxs(n,{id:t,sx:{py:3},children:[s.jsx(x,{title:r,pro:i}),e]})]});export{j as S};
