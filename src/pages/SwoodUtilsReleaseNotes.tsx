@@ -29,6 +29,10 @@ const SwoodUtilsReleaseNotes = () => {
 						<li>Fixed issue where it would not recognize panels due to Swood library name</li>
 						<li>Fixed issue where status message would display "Combining Data..." when no data was available</li>
 					</ul>
+					<Typography variant="h6">Known Bugs</Typography>
+					<ul>
+						<li>Unable to manually change the feature tree order by dragging and dropping the rows</li>
+					</ul>
 				</ul>
 			</Release>
 			<Release version="0.1.1.0" ReleaseDate="28/08/2024">
