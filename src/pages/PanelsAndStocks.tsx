@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { Section } from '../components/Section'
 import { ProChip } from '../components/ProChip'
+import { ImageComponent } from '../components/ImageComponent'
 
 const PanelsAndStocks = () => {
 	return (
@@ -47,6 +48,7 @@ const PanelsAndStocks = () => {
 				<Typography>
 					To enable combined stocks, use the <span className="highlight">SwoodEditor</span> and navigate to <span className="param">Tables &gt; Stocks</span>, and enable the <span className="highlight">Combine Stocks</span> option.
 				</Typography>
+				<ImageComponent source="./images/CombinedStock.png" size="150px" />
 			</Section>
 
 			<Section id="Panels" title="Panels List">
@@ -58,6 +60,8 @@ const PanelsAndStocks = () => {
 				<Typography>
 					To achieve this, a macro must be run to identify identical panels. For further information, please contact <a href="mailto:SwoodApps@solidsolutions.co.uk">SwoodApps@solidsolutions.co.uk</a>.
 				</Typography>
+
+				<ImageComponent source="./images/CombinedPanel.png" size="250px" />
 			</Section>
 		</>
 	)

@@ -55,7 +55,7 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 				>
 					<MenuIcon color="primary" />
 				</IconButton>
-				<Typography variant="h5" noWrap component="div">
+				<Typography variant="h5" noWrap component="div" color="primary">
 					<strong>SwoodDocs</strong>
 				</Typography>
 			</Toolbar>
