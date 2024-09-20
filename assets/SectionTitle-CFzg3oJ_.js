@@ -1,1 +1,0 @@
-import{j as t,T as s,n as i}from"./index-ux7UYbZm.js";import{S as e}from"./PageTitle-C0IDVnnr.js";const p=({title:r,pro:o})=>t.jsxs(e,{direction:"row",alignItems:"center",spacing:2,style:{marginBottom:"20px"},children:[t.jsx(s,{variant:"h4",style:{fontWeight:"bold"},children:r}),o&&t.jsx(i,{})]});export{p as S};
