@@ -6,7 +6,7 @@ import { Section } from '../components/Section'
 const ProjectQuantity = () => {
 	return (
 		<>
-			<PageTitle title="How to Change the Report Project Name" />
+			<PageTitle title="How to Change the Report Project Quantity" />
 
 			<nav>
 				<ul>
@@ -14,31 +14,34 @@ const ProjectQuantity = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#ProjectQuantityCustomProperty">Adding a Custom Project Name Property</a>
+						<a href="#ProjectQuantityCustomProperty">Adding a Project Quantity Property</a>
 					</li>
 					<li>
-						<a href="#ProjectQuantityCustomDisplay">Displaying the Project Name</a>
+						<a href="#ProjectQuantityCustomDisplay">Displaying the Project Quantity</a>
 					</li>
 				</ul>
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>By default, the SWOOD Report uses the model's name as the project name. However, this can be changed to reference a custom property in the model.</Typography>
-			</Section>
-
-			<Section id="ProjectQuantityCustomProperty" title="Adding a Custom Project Name Property">
+				<Typography>Users can modify the Project Quantity by adding a custom property. Changing this value will cause the report to multiply all item quantities by the specified Project Quantity. This is especially useful when the same project needs to be accounted for multiple times.</Typography>
 				<Typography>
-					To specify a custom project name, add a custom property called <span className="highlight">Project Name</span> to the top-level assembly (the one used to generate the report).
-					<ImageComponent source="./images/ProjectQuantityCustomProperty.png" size="200px" />
+					<span className="red">Note: This option is not recommended for nesting projects, as the nesting optimization will not account for the adjusted quantities.</span>
 				</Typography>
 			</Section>
 
-			<Section id="ProjectQuantityCustomDisplay" title="Displaying the Project Name">
+			<Section id="ProjectQuantityCustomProperty" title="Adding a Project Quantity Property">
 				<Typography>
-					Once set, the <span className="highlight">Project Name</span> will appear at the top of the report and in the print header, as shown in the examples below.
+					To define a project quantity, add a custom property named <span className="highlight">Project Quantity</span> to the top-level assembly (the one used to generate the report).
+					<ImageComponent source="./images/ProjectQuantityCustomProperty.png" size="300px" />
 				</Typography>
-				<ImageComponent source="./images/ProjectQuantityReport.png" size="600px" />
-				<ImageComponent source="./images/ProjectQuantityPrint.png" size="600px" />
+			</Section>
+
+			<Section id="ProjectQuantityCustomDisplay" title="Displaying the Project Quantity">
+				<Typography>
+					Once set, the <span className="highlight">Project Quantity</span> will be shown on the report's home screen and will multiply all item quantities in the tables and on the <span className="highlight">Summary Page</span>.
+				</Typography>
+				<ImageComponent source="./images/ProjectQuantityHome.png" size="600px" />
+				<ImageComponent source="./images/ProjectQuantityTable.png" size="300px" />
 			</Section>
 		</>
 	)

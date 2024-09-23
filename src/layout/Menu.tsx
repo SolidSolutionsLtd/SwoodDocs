@@ -8,7 +8,8 @@ const Menu: React.FC = () => {
 				<li>
 					Swood
 					<ul>
-						<IndexItem to="/SwoodPerformance" title="How to Enhance SWOOD Performance" postDate="18/09/2024" />
+						<IndexItem to="/SwoodPerformance" title="How to Enhance Swood Performance" postDate="18/09/2024" />
+						<IndexItem to="/SwoodRX" title="How to create a Swood RX" postDate="23/09/2024" />
 						<IndexItem to="/SwoodCompatibility" title="Swood Compatibility" />
 						<IndexItem to="/ScriptParameters" title="List of Swood Script Parameters" />
 						<IndexItem to="/SwoodTab" title="Reset Swood Tabs" />
@@ -27,6 +28,7 @@ const Menu: React.FC = () => {
 						<IndexItem to="/SwoodProperties" title="List of Swood properties" postDate="18/09/2024" />
 						<IndexItem to="/MaterialExtendedProperties" title="List of Swood Material Extended Properties" postDate="18/09/2024" />
 						<IndexItem to="/ProjectName" title="How to Change the Report Project Name" postDate="23/09/2024" />
+						<IndexItem to="/ProjectQuantity" title="How to Change the Report Project Quantity" postDate="23/09/2024" />
 						<IndexItem to="/PanelsAndStocks" title="Difference between Panels and Stocks List" postDate="18/09/2024" />
 						<IndexItem to="/CustomProperties" title="How to display Custom Properties" pro={false} postDate="19/09/2024" />
 						<IndexItem to="/ConcatenateProperties" title="How to concatenate/evaluate properties" pro={true} postDate="18/09/2024" />

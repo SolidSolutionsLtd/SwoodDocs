@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../components/PageTitle'
 import { ImageComponent } from '../components/ImageComponent'
 import { Section } from '../components/Section'
+import { NavLink } from 'react-router-dom'
 
 const SwoodPerformance = () => {
 	return (
@@ -318,7 +319,9 @@ const SwoodPerformance = () => {
 					<li>
 						Include any relevant data:
 						<ul>
-							<li>Multiple SWOOD RX reports.</li>
+							<li>
+								Multiple SWOOD RX files. For more information on how to generate them, please click <NavLink to="/SwoodRx">here</NavLink>.
+							</li>
 							<li>Screen recordings of the issue.</li>
 						</ul>
 					</li>

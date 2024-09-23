@@ -8,6 +8,7 @@ import Layout from './layout/Layout'
 import Loading from './components/Loading'
 
 const SwoodPerformance = lazy(() => import('./pages/SwoodPerformance'))
+const SwoodRX = lazy(() => import('./pages/SwoodRX'))
 const SwoodCompatibility = lazy(() => import('./pages/SwoodCompatibility'))
 const ScriptParameters = lazy(() => import('./pages/ScriptParameters'))
 const SwoodTab = lazy(() => import('./pages/SwoodTab'))
@@ -22,6 +23,7 @@ const Matrix = lazy(() => import('./pages/Matrix'))
 const SwoodProperties = lazy(() => import('./pages/SwoodProperties'))
 const MaterialExtendedProperties = lazy(() => import('./pages/MaterialExtendedProperties'))
 const ProjectName = lazy(() => import('./pages/ProjectName'))
+const ProjectQuantity = lazy(() => import('./pages/ProjectQuantity'))
 const PanelsAndStocks = lazy(() => import('./pages/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/ConcatenateProperties'))
@@ -55,8 +57,9 @@ export const App = () => {
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />
 					<Route path="/index.html" element={<Home />} />
-					<Route path="/SwoodCompatibility" element={<SwoodCompatibility />} />
 					<Route path="/SwoodPerformance" element={<SwoodPerformance />} />
+					<Route path="/SwoodRX" element={<SwoodRX />} />
+					<Route path="/SwoodCompatibility" element={<SwoodCompatibility />} />
 					<Route path="/ScriptParameters" element={<ScriptParameters />} />
 					<Route path="/SwoodTab" element={<SwoodTab />} />
 					<Route path="/FileName" element={<FileName />} />
@@ -70,6 +73,7 @@ export const App = () => {
 					<Route path="/SwoodProperties" element={<SwoodProperties />} />
 					<Route path="/MaterialExtendedProperties" element={<MaterialExtendedProperties />} />
 					<Route path="/ProjectName" element={<ProjectName />} />
+					<Route path="/ProjectQuantity" element={<ProjectQuantity />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />
