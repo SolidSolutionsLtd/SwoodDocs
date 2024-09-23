@@ -21,6 +21,7 @@ const SwoodDataDirectory = lazy(() => import('./pages/SwoodDataDirectory'))
 const Matrix = lazy(() => import('./pages/Matrix'))
 const SwoodProperties = lazy(() => import('./pages/SwoodProperties'))
 const MaterialExtendedProperties = lazy(() => import('./pages/MaterialExtendedProperties'))
+const ProjectName = lazy(() => import('./pages/ProjectName'))
 const PanelsAndStocks = lazy(() => import('./pages/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/ConcatenateProperties'))
@@ -68,6 +69,7 @@ export const App = () => {
 					<Route path="/Matrix" element={<Matrix />} />
 					<Route path="/SwoodProperties" element={<SwoodProperties />} />
 					<Route path="/MaterialExtendedProperties" element={<MaterialExtendedProperties />} />
+					<Route path="/ProjectName" element={<ProjectName />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />

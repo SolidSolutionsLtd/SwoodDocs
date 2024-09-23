@@ -26,6 +26,7 @@ const Menu: React.FC = () => {
 						<IndexItem to="/Matrix" title="Swood Report matrix" />
 						<IndexItem to="/SwoodProperties" title="List of Swood properties" postDate="18/09/2024" />
 						<IndexItem to="/MaterialExtendedProperties" title="List of Swood Material Extended Properties" postDate="18/09/2024" />
+						<IndexItem to="/ProjectName" title="How to Change the Report Project Name" postDate="23/09/2024" />
 						<IndexItem to="/PanelsAndStocks" title="Difference between Panels and Stocks List" postDate="18/09/2024" />
 						<IndexItem to="/CustomProperties" title="How to display Custom Properties" pro={false} postDate="19/09/2024" />
 						<IndexItem to="/ConcatenateProperties" title="How to concatenate/evaluate properties" pro={true} postDate="18/09/2024" />
