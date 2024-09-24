@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { menuItems } from '../data/menuData'
-import { ExpandLess, ExpandMore } from '@mui/icons-material'
-import { ListItem, Collapse, List } from '@mui/material'
+import { ArrowDropDown, ArrowRight, ExpandLess, ExpandMore } from '@mui/icons-material'
+import { ListItem, Collapse, List, ListSubheader } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
 
 interface MenuItemType {
@@ -34,19 +34,26 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, filter }) => {
 
 	return (
 		<>
-			<ListItem onClick={handleClick} component="li">
-				<IndexItem to={item.to} title={item.title} pro={item.pro} beta={item.beta} postDate={item.postDate} updateDate={item.updateDate} />
-				{/* <ListItemText primary={item.title} /> */}
-				{item.children ? open ? <ExpandLess /> : <ExpandMore /> : null}
-			</ListItem>
-			{item.children && (
-				<Collapse in={open} timeout="auto" unmountOnExit>
-					<List component="div" disablePadding sx={{ pl: 4 }}>
-						{item.children.map((child, index) => (
-							<MenuItem key={index} item={child} filter={filter} />
-						))}
-					</List>
-				</Collapse>
+			{item.children ? (
+				<>
+					<ListSubheader component="div" sx={{ position: 'sticky', top: 0, zIndex: 1, bgcolor: 'background.paper', p: 0, m: 0 }}>
+						<ListItem onClick={handleClick} component="li" sx={{ fontSize: 16 }}>
+							<IndexItem to={item.to} title={item.title} pro={item.pro} beta={item.beta} postDate={item.postDate} updateDate={item.updateDate} />
+							{item.children ? open ? <ArrowDropDown color="info" /> : <ArrowRight /> : null}
+						</ListItem>
+					</ListSubheader>
+					<Collapse in={open} timeout="auto" unmountOnExit>
+						<List component="div" disablePadding sx={{ pl: 4 }}>
+							{item.children.map((child, index) => (
+								<MenuItem key={index} item={child} filter={filter} />
+							))}
+						</List>
+					</Collapse>
+				</>
+			) : (
+				<ListItem onClick={handleClick} component="li">
+					<IndexItem to={item.to} title={item.title} pro={item.pro} beta={item.beta} postDate={item.postDate} updateDate={item.updateDate} />
+				</ListItem>
 			)}
 		</>
 	)
