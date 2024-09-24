@@ -1,0 +1,66 @@
+export const menuItems = [
+	{ to: '/', title: 'Home' },
+	{
+		to: '/Swood',
+		title: 'Swood',
+		children: [
+			{ to: '/SwoodPerformance', title: 'How to Enhance Swood Performance', postDate: '18/09/2024' },
+			{ to: '/SwoodRX', title: 'How to create a Swood RX', postDate: '23/09/2024' },
+			{ to: '/SwoodCompatibility', title: 'Swood Compatibility' },
+			{ to: '/ScriptParameters', title: 'List of Swood Script Parameters', updateDate: '23/09/2024' },
+			{ to: '/SwoodDataDirectory', title: 'How to find the Swood Data Directory' },
+			{ to: '/SwoodTab', title: 'How to Reset Swood Tabs' },
+			{ to: '/FileName', title: 'Issues with long file names' },
+		],
+	},
+	{
+		to: '/SwoodReport',
+		title: 'Swood Report',
+		children: [
+			{ to: '/SwoodReportQuickStart', title: 'Swood Report QuickStart' },
+			{ to: '/SwoodLicensing', title: 'Swood Report Licensing' },
+			{ to: '/ReportCompatibility', title: 'Swood Report Compatibility' },
+			{ to: '/SwoodReportReleaseNotes', title: 'Swood Report Release Notes' },
+			{ to: '/SwoodReportMatrix', title: 'Swood Report Matrix' },
+			{ to: '/SwoodReportProperties', title: 'List of Swood Report Properties', postDate: '18/09/2024' },
+			{ to: '/MaterialExtendedProperties', title: 'List of Swood Material Extended Properties', postDate: '18/09/2024' },
+			{ to: '/PanelsAndStocks', title: 'Difference between Panels and Stocks List', postDate: '18/09/2024' },
+			{ to: '/CustomProperties', title: 'How to display Custom Properties', pro: false, postDate: '19/09/2024' },
+			{ to: '/ConcatenateProperties', title: 'How to concatenate/evaluate properties', pro: true, postDate: '18/09/2024' },
+			{ to: '/ProjectName', title: 'How to Change the Report Project Name', postDate: '23/09/2024' },
+			{ to: '/ProjectQuantity', title: 'How to Change the Report Project Quantity', postDate: '23/09/2024' },
+			{ to: '/SimpleReport', title: 'How to Generate a Simple Report', postDate: '24/09/2024' },
+			{
+				title: 'Frames',
+				children: [
+					{ to: '/Frames', title: 'How to define a component as a Frame', pro: true },
+					{ to: '/FrameType', title: 'How to group Frames by Type', pro: true, postDate: '18/09/2024' },
+				],
+			},
+			{ to: '/CuttingPattern', title: 'How to generate a Cutting Pattern', postDate: '18/09/2024' },
+			{ to: '/NestedCuttingPattern', title: 'How to Define Panels as Nested or Beam Sawed (Cutting Pattern)', postDate: '18/09/2024' },
+			{
+				title: 'Hardware',
+				children: [
+					{ to: '/Hardware', title: 'How to define a component as Hardware' },
+					{ to: '/HardwareLength', title: 'How to display the length of a Hardware component' },
+					{ to: '/HardwareType', title: 'How to group Hardware by Type', pro: true },
+				],
+			},
+			{ to: '/BeamSaw', title: 'How to define a panel as Beam Saw', pro: true },
+			{ to: '/SaveToPDF', title: 'How to automatically save Drawings to PDF', postDate: '18/09/2024' },
+			{ to: '/Exclude', title: 'How to exclude a component from the Report' },
+			{ to: '/MaterialType', title: 'How to group materials by Type', pro: true },
+		],
+	},
+	{
+		to: '/SwoodEditor',
+		title: 'Swood Editor',
+		children: [
+			{ to: '/SwoodLicensing', title: 'Swood Editor licensing' },
+			{ to: '/SwoodEditorReleaseNotes', title: 'Swood Editor Release Notes' },
+			{ to: '/CreatingDATBackups', title: 'How to backup Report Settings' },
+		],
+	},
+	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils Release Notes' }] },
+]

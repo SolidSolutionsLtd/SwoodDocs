@@ -12,7 +12,7 @@ const isNew = (dateStr: string) => {
 }
 
 interface Props {
-	to: string
+	to?: string
 	title: string
 	pro?: boolean
 	beta?: boolean
@@ -21,12 +21,17 @@ interface Props {
 }
 
 export const IndexItem: React.FC<Props> = ({ to, title, pro, beta, postDate, updateDate }) => {
-	return (
-		<li>
+	return to ? (
+		<>
 			<NavLink to={to}>
 				{title} {pro && <ProChip />}
 				{beta && <BetaChip />} {postDate && isNew(postDate) && <NewChip />} {updateDate && isNew(updateDate) && <UpdatedChip />}
 			</NavLink>
-		</li>
+		</>
+	) : (
+		<>
+			{title} {pro && <ProChip />}
+			{beta && <BetaChip />} {postDate && isNew(postDate) && <NewChip />} {updateDate && isNew(updateDate) && <UpdatedChip />}
+		</>
 	)
 }

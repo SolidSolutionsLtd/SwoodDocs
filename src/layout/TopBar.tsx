@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useLocation } from 'react-router-dom'
 
 const drawerWidth = 350
 
@@ -38,18 +37,6 @@ interface TopBarProps {
 
 const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 	const [pageTitle, setPageTitle] = useState('')
-
-	const location = useLocation()
-
-	console.log(location.pathname)
-
-	// useEffect(() => {
-	// 	// Fetch the text content of the first element with the class "PageTitle"
-	// 	const titleElement = document.querySelector('.PageTitle')
-	// 	if (titleElement) {
-	// 		setPageTitle(titleElement.textContent || '')
-	// 	}
-	// }, [location]) // Empty dependency array to run this effect only once after the initial render
 
 	useEffect(() => {
 		// Function to observe changes in the DOM

@@ -5,16 +5,16 @@ import Drawer from '@mui/material/Drawer'
 import CssBaseline from '@mui/material/CssBaseline'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { makeStyles } from '@mui/styles'
 import Menu from '../layout/Menu'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
 import { Outlet } from 'react-router-dom'
 import Loading from '../components/Loading'
 import TopBar from './TopBar'
+import { SearchInput } from '../components/SearchInput'
+import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 
-const drawerWidth = 350
+const drawerWidth = 340
 
 const useStyles = makeStyles(() => ({
 	drawerPaper: {
@@ -70,6 +70,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const Layout = () => {
 	const theme = useTheme()
 	const [open, setOpen] = useState(true)
+	const [filter, setFilter] = useState<string>('')
+
+	console.log('filter: ', filter)
 
 	const handleDrawerOpen = () => setOpen(true)
 
@@ -99,10 +102,11 @@ const Layout = () => {
 			>
 				{/* Menu */}
 				<DrawerHeader>
-					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <ChevronLeftIcon color="primary" /> : <ChevronRightIcon color="primary" />}</IconButton>
+					<SearchInput setFilter={setFilter} />
+					<IconButton onClick={handleDrawerClose}>{theme.direction === 'ltr' ? <MenuOpenIcon color="primary" /> : <MenuOpenIcon color="primary" />}</IconButton>
 				</DrawerHeader>
 				<Divider />
-				<Menu />
+				<Menu filter={filter} />
 			</Drawer>
 
 			{/* Main Content */}
