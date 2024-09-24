@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
+import { SectionCard } from '../components/SectionCard'
 
 const Home = () => {
 	return (
@@ -8,38 +9,29 @@ const Home = () => {
 
 		<Box sx={{ padding: '20px' }}>
 			{/* Title */}
-			<PageTitle title="Welcome to the SwoodDocs!" />
+			<PageTitle title="Welcome to SwoodDocs!" />
 
 			{/* Introduction Text */}
-			<Typography variant="body1" paragraph>
-				This site is designed to be your comprehensive guide for all things SWOOD. Whether you're looking to optimize performance, navigate compatibility issues, or take full advantage of SWOOD's reporting and editing capabilities, we’ve gathered all the essential information to help you master your workflow.
-			</Typography>
-
-			{/* Section Heading */}
-			<Typography variant="h5" gutterBottom style={{ fontWeight: 'bold', marginTop: '30px', marginBottom: '30px' }}>
-				Explore Key Sections:
-			</Typography>
-
-			<Typography variant="h6">SWOOD</Typography>
-			<Typography>Discover best practices to enhance SWOOD performance, find solutions to compatibility issues, and explore tools like script parameters and tab resets.</Typography>
+			<Typography>This site is designed to be your comprehensive guide for all things SWOOD. Whether you're looking to optimize performance or take full advantage of SWOOD's reporting capabilities, we’ve gathered all the essential information to help you master your workflow.</Typography>
+			<Typography>Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of SWOOD.</Typography>
 
 			<SectionDivider />
+			<Box
+				sx={{
+					display: 'grid',
+					gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+					gap: 2,
+					justifyContent: 'center',
+				}}
+			>
+				<SectionCard to="/Swood" title="Swood" content="Discover best practices to enhance Swood performance, find how to gather support files with Swood RX and explore the script parameters." />
 
-			{/* SWOOD Report Section */}
-			<Typography variant="h6">SWOOD Report</Typography>
-			<Typography>Learn how to effectively use SWOOD's reporting features, including working with extended material properties, and defining complex components like hardware or frames.</Typography>
+				<SectionCard to="/SwoodReport" title="Swood Report" content="Learn how to effectively use Swood's reporting features, including working with extended material properties, and defining complex components like hardware or frames." />
 
-			<SectionDivider />
+				<SectionCard to="/SwoodEditor" title="Swood Editor" content="Access essential licensing information and learn how to efficiently manage and back up your report settings." />
 
-			{/* SWOOD Editor Section */}
-			<Typography variant="h6">SWOOD Editor</Typography>
-			<Typography>Access essential licensing information and learn how to efficiently manage and back up your report settings.</Typography>
-
-			<SectionDivider />
-			{/* Closing Statement */}
-			<Typography variant="body1" paragraph>
-				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of SWOOD.
-			</Typography>
+				<SectionCard to="/SwoodUtils" title="SwoodUtils" content="SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface." />
+			</Box>
 		</Box>
 	)
 }
