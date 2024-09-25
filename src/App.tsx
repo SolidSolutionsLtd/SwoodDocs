@@ -26,6 +26,7 @@ const MaterialExtendedProperties = lazy(() => import('./pages/SwoodReport/Materi
 const ProjectName = lazy(() => import('./pages/SwoodReport/ProjectName'))
 const ProjectQuantity = lazy(() => import('./pages/SwoodReport/ProjectQuantity'))
 const SimpleReport = lazy(() => import('./pages/SwoodReport/SimpleReport'))
+const MergeReports = lazy(() => import('./pages/SwoodReport/MergeReports'))
 const PanelsAndStocks = lazy(() => import('./pages/SwoodReport/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/SwoodReport/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/SwoodReport/ConcatenateProperties'))
@@ -82,6 +83,7 @@ export const App = () => {
 					<Route path="/ProjectName" element={<ProjectName />} />
 					<Route path="/ProjectQuantity" element={<ProjectQuantity />} />
 					<Route path="/SimpleReport" element={<SimpleReport />} />
+					<Route path="/MergeReports" element={<MergeReports />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />

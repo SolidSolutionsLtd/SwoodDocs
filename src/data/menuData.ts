@@ -30,6 +30,7 @@ export const menuItems = [
 			{ to: '/ProjectName', title: 'How to Change the Report Project Name', postDate: '23/09/2024' },
 			{ to: '/ProjectQuantity', title: 'How to Change the Report Project Quantity', postDate: '23/09/2024' },
 			{ to: '/SimpleReport', title: 'How to Generate a Simple Report', postDate: '24/09/2024' },
+			// { to: '/MergeReports', title: 'How to Merge Nest and Design Reports', pro: true, beta: true },
 			{
 				title: 'Frames',
 				children: [
