@@ -19,7 +19,7 @@ const drawerWidth = 340
 
 const useStyles = makeStyles(() => ({
 	drawerPaper: {
-		width: drawerWidth,
+		width: 240,
 		boxSizing: 'border-box',
 		// Custom scrollbar styles
 		'&::-webkit-scrollbar': {
@@ -66,10 +66,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 	// necessary for content to be below app bar
 	...theme.mixins.toolbar,
 	justifyContent: 'flex-end',
-	position: 'sticky',
-	top: 0,
-	backgroundColor: theme.palette.background.paper, // Ensure the header has a background color
-	zIndex: 100, // Ensure the header is above other content
 }))
 
 const Layout = () => {

@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 
-const drawerWidth = 350
+const drawerWidth = 340
 
 interface AppBarProps extends MuiAppBarProps {
 	open?: boolean
@@ -91,24 +91,16 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 	return (
 		<AppBar position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
 			<Toolbar>
-				<IconButton
-					color="inherit"
-					aria-label="open drawer"
-					onClick={handleDrawerOpen}
-					edge="start"
-					sx={[
-						{
-							mr: 2,
-						},
-						open && { display: 'none' },
-					]}
-				>
+				<IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" sx={[{ mr: 2 }, open && { display: 'none' }]}>
 					<MenuIcon color="primary" />
 				</IconButton>
-				<Typography variant="h5" noWrap component="div" color="primary" paddingRight="5px">
+				<Typography variant="h5" noWrap component="div" color="primary" paddingRight="5px" margin="0px">
 					<strong>SwoodDocs</strong>
 				</Typography>
-				<Typography color="textDisabled"> &gt; {pageTitle}</Typography>
+				<Typography color="textDisabled" marginTop="6px">
+					{' '}
+					&gt; {pageTitle}
+				</Typography>
 			</Toolbar>
 		</AppBar>
 	)
