@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { menuItems } from '../data/menuData'
-import { ArrowDropDown, ArrowRight, ExpandLess, ExpandMore } from '@mui/icons-material'
+import { ArrowDropDown, ArrowRight } from '@mui/icons-material'
 import { ListItem, Collapse, List, ListSubheader } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
 

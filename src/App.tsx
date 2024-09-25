@@ -52,6 +52,9 @@ const CreatingDATBackups = lazy(() => import('./pages/SwoodEditor/CreatingDATBac
 const SwoodUtils = lazy(() => import('./pages/SwoodUtils/SwoodUtils'))
 const SwoodUtilsReleaseNotes = lazy(() => import('./pages/SwoodUtils/SwoodUtilsReleaseNotes'))
 
+// SwoodServer imports
+const SwoodServer = lazy(() => import('./pages/SwoodServer/SwoodServer'))
+
 export const App = () => {
 	return (
 		<BrowserRouter basename="/SwoodDocs">
@@ -103,6 +106,8 @@ export const App = () => {
 					<Route path="/SwoodUtils" element={<SwoodUtils />} />
 					<Route path="/html/SwoodUtils.html" element={<SwoodUtils />} />
 					<Route path="/SwoodUtilsReleaseNotes" element={<SwoodUtilsReleaseNotes />} />
+
+					<Route path="/SwoodServer" element={<SwoodServer />} />
 
 					<Route path="/Loading" element={<Loading />} />
 				</Route>

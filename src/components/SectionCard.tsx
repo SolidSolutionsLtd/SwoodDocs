@@ -2,13 +2,13 @@ import { Card, CardActionArea, CardContent, Divider, Typography } from '@mui/mat
 import { NavLink } from 'react-router-dom'
 
 interface SectionProps {
-	to: string
+	to?: string
 	title: string
 	content: string
 }
 
 export const SectionCard: React.FC<SectionProps> = ({ to, title, content }) => {
-	return (
+	return to ? (
 		<NavLink to={to}>
 			<Card sx={{ borderRadius: 2 }}>
 				<CardActionArea>
@@ -24,5 +24,19 @@ export const SectionCard: React.FC<SectionProps> = ({ to, title, content }) => {
 				</CardActionArea>
 			</Card>
 		</NavLink>
+	) : (
+		<Card sx={{ borderRadius: 2 }}>
+			<CardActionArea>
+				<CardContent>
+					<Typography gutterBottom variant="h5" marginTop="5px" color="primary">
+						<strong>{title}</strong>
+					</Typography>
+					<Divider />
+					<Typography variant="body2" sx={{ color: 'text.secondary' }}>
+						{content}
+					</Typography>
+				</CardContent>
+			</CardActionArea>
+		</Card>
 	)
 }
