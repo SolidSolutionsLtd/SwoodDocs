@@ -15,6 +15,29 @@ const ScrollToSection = () => {
 		}
 	}, [location]) // Re-run the effect whenever the location changes
 
+	// code to add TopBar offset when scrolling down to section
+	useEffect(() => {
+		const handleHashChange = () => {
+			const yOffset = -150 // Adjust this value to match the height of your fixed top bar
+			const element = document.getElementById(window.location.hash.substring(1))
+			if (element) {
+				const y = element.getBoundingClientRect().top + window.scrollY + yOffset
+				window.scrollTo({ top: y, behavior: 'smooth' })
+			}
+		}
+
+		window.addEventListener('hashchange', handleHashChange)
+
+		// Call handleHashChange on initial load if there's a hash in the URL
+		if (window.location.hash) {
+			handleHashChange()
+		}
+
+		return () => {
+			window.removeEventListener('hashchange', handleHashChange)
+		}
+	}, [])
+
 	return null
 }
 

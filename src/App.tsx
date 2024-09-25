@@ -1,7 +1,6 @@
 import { lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import ScrollToSection from './helper/ScrollToSection'
 import PageNotFound from './pages/PageNotFound'
 import Layout from './layout/Layout'
 import Sandbox from './pages/Sandbox'
@@ -58,7 +57,6 @@ const SwoodServer = lazy(() => import('./pages/SwoodServer/SwoodServer'))
 export const App = () => {
 	return (
 		<BrowserRouter basename="/SwoodDocs">
-			<ScrollToSection />
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />

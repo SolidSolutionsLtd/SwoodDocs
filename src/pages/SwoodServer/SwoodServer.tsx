@@ -18,7 +18,7 @@ const SwoodServer = () => {
 						<a href="#KeyFeatures">Key Features</a>
 					</li>
 					<li>
-						<a href="#AddressedChallenges">Addressed Challenges</a>
+						<a href="#ChallengesAddressed">Challenges Addressed</a>
 					</li>
 					<li>
 						<a href="#PotentialCapabilities">Potential Capabilities</a>
@@ -57,7 +57,7 @@ const SwoodServer = () => {
 							primary="Main Portal"
 							secondary={
 								<>
-									The <span className="highlight">SwoodServer Main Portal</span> serves as the central access point for all projects, offering a comprehensive overview and quick navigation to their corresponding Swood Reports. This streamlined interface enhances user experience by allowing team members to efficiently manage and monitor project statuses at a glance.
+									The <span className="highlight">SwoodServer</span> provides a <span className="highlight">Main Portal</span> which serves as the central access point for all projects, offering a comprehensive overview and quick navigation to their corresponding <span className="highlight">Swood Reports</span>. This streamlined interface enhances user experience by allowing team members to efficiently manage and monitor project statuses at a glance.
 								</>
 							}
 						/>
@@ -84,13 +84,51 @@ const SwoodServer = () => {
 						<ListItemText
 							secondary={
 								<>
-									The example below demonstrates how projects are transitioned between these sections. It also shows how three different users interact with the <span className="highlight">SwoodServer Portal</span> in real-time.
+									The following example illustrates the transition of projects between different categories. It also highlights how three distinct users interact with the <span className="highlight">SwoodServer Portal</span> in real-time.
 								</>
 							}
 						/>
 					</ListItem>
 
-					<ImageComponent source="./images/SwoodServer/SwoodServerProjects.gif" size="500px" />
+					<Box
+						display="flex"
+						justifyContent="center"
+						className="imageBox"
+						sx={{
+							display: 'grid',
+							gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+							gap: 2,
+							justifyContent: 'center',
+						}}
+					>
+						<img
+							src="./images/SwoodServer/SwoodServerProjects.gif"
+							style={{
+								height: '500px',
+								width: '340px',
+								objectFit: 'cover', // 'cover' will crop the image, 'contain' will fit the image within the box
+								objectPosition: 'left', // Center the image within the box
+							}}
+						/>
+						<img
+							src="./images/SwoodServer/SwoodServerProjects.gif"
+							style={{
+								height: '500px',
+								width: '340px',
+								objectFit: 'cover', // 'cover' will crop the image, 'contain' will fit the image within the box
+								objectPosition: 'center', // Center the image within the box
+							}}
+						/>
+						<img
+							src="./images/SwoodServer/SwoodServerProjects.gif"
+							style={{
+								height: '500px',
+								width: '340px',
+								objectFit: 'cover', // 'cover' will crop the image, 'contain' will fit the image within the box
+								objectPosition: 'right', // Center the image within the box
+							}}
+						/>
+					</Box>
 
 					<ListItem>
 						<ListItemText primary="Project Statistics" secondary={<>Gain insights into the project's progress through detailed visualizations of various components, including panels, programs, and frames. This feature enables users to track performance metrics, identify trends, and make informed decisions to optimize production workflows.</>} />
@@ -107,11 +145,12 @@ const SwoodServer = () => {
 							}
 						/>
 					</ListItem>
-					<ImageComponent source="./images/SwoodServer/login.png" size="500px" />
+					<ImageComponent source="./images/SwoodServer/login.png" size="400px" />
 
 					<ListItem>
-						<ListItemText primary="Mark Items as Completed" secondary={<>Quickly access SwoodReports to mark specific items, such as panels, programs, or sheets, as completed. This feature ensures accurate tracking of manufacturing progress and enhances accountability among team members.</>} />
+						<ListItemText primary="Mark Items as Completed" secondary={<>Quickly access SwoodReports to mark specific items, such as panels, programs, or sheets, as completed. This feature ensures accurate tracking of manufacturing progress and enhances accountability among team members. Items can be marked manually or using a barcode scanner.</>} />
 					</ListItem>
+
 					<ImageComponent source="./images/SwoodServer/MarkAsComplete.gif" size="400px" />
 
 					<ListItem>
@@ -124,11 +163,13 @@ const SwoodServer = () => {
 							primary="Real-Time Tracking"
 							secondary={
 								<>
-									<span className="highlight">SwoodServer</span> provides real-time status updates on projects, enabling managers and operators to monitor progress, quickly identify bottlenecks, and make informed decisions. This leads to greater production efficiency and improved overall responsiveness. The example below illustrates how changes made on one client machine are instantly reflected on other connected machines, ensuring that all users see the most up-to-date
-									information. Additionally, any changes are also reflected on the Project Stats page for a comprehensive view of project's progress.
+									<span className="highlight">SwoodServer</span> provides real-time status updates on projects, enabling managers and operators to monitor progress, quickly identify bottlenecks, and make informed decisions. This leads to greater production efficiency and improved overall responsiveness.
 								</>
 							}
 						/>
+					</ListItem>
+					<ListItem>
+						<ListItemText secondary={<>The example below illustrates how changes made on one client machine are instantly reflected on other connected machines, ensuring that all users see the most up-to-date information. Additionally, any changes are also reflected on the Project Stats page for a comprehensive view of project's progress.</>} />
 					</ListItem>
 					<ImageComponent source="./images/SwoodServer/SwoodServer.gif" size="600px" />
 
@@ -147,19 +188,26 @@ const SwoodServer = () => {
 				</List>
 			</Section>
 
-			<Section id="AddressedChallenges" title="Addressed Challenges">
+			<Section id="ChallengesAddressed" title="Challenges Addressed">
 				<Typography>
 					<span className="highlight">SwoodServer</span> tackles a variety of challenges faced by woodworking manufacturers, particularly in digitizing production data and reducing reliance on outdated, paper-based processes. By offering real-time transparency into job statuses, it promotes a more organized and efficient workflow.
 				</Typography>
 				<List>
 					<ListItem>
-						<ListItemText primary="Non-Modifiable Reports" secondary={<>Currently, once the Swood Report is generated, it cannot be altered. Manufacturers often need to add notes or make adjustments after the fact, but this is not possible. Some clients resort to using Excel-based reports, which are easier to modify but pose limitations in team collaboration.</>} />
+						<ListItemText
+							primary="Non-Modifiable Reports"
+							secondary={
+								<>
+									Currently, once the <span className="highlight">Swood Report</span> is generated, it cannot be altered. Manufacturers often need to add notes or make adjustments after the fact, but this is not possible. Some clients resort to using spreadsheet-based reports, which are easier to modify but pose limitations in team collaboration.
+								</>
+							}
+						/>
 					</ListItem>
 					<ListItem>
 						<ListItemText primary="Replacing Paper-Based Processes" secondary={<>Many manufacturers still rely on printed reports to track production, manually marking off panels that have been manufactured. This method lacks traceability and does not provide a clear, real-time overview of the production progress.</>} />
 					</ListItem>
 					<ListItem>
-						<ListItemText primary="Limited Collaboration Across Departments" secondary={<>Without a centralized digital system, departments like production planning, manufacturing, and quality control may struggle to collaborate effectively, leading to miscommunication and delayed responses.</>} />
+						<ListItemText primary="Limited Collaboration Across Departments" secondary={<>Without a centralized digital system, departments like production planning, manufacturing, picking, and quality control may struggle to collaborate effectively, leading to miscommunication and delayed responses.</>} />
 					</ListItem>
 					<ListItem>
 						<ListItemText primary="Difficulty in Managing Material Inventory" secondary={<>Paper-based systems make it challenging to accurately track material usage and manage inventory, leading to overstocking, understocking, or material shortages that can disrupt production.</>} />
@@ -203,28 +251,20 @@ const SwoodServer = () => {
 						<ListItemText primary="Mark Parts for Rework" secondary={<>Possible ability to easily flag parts for rework and generate a new nesting project based on these items. This feature streamlines the rework process, allowing for seamless reintegration into the production workflow, ensuring controlled and efficient handling of reworked components.</>} />
 					</ListItem>
 					<ListItem>
-						<ListItemText
-							primary="Panel Progress Tracking"
-							secondary={
-								<>
-									<span className="highlight">SwoodServer</span> may use of barcode labels and scanners to track panel progress throughout the production process, improving visibility and accountability.
-								</>
-							}
-						/>
-					</ListItem>
-					<ListItem>
-						<ListItemText
-							primary="Use Barcodes to mark Processed Panels"
-							secondary={
-								<>
-									<span className="highlight">SwoodServer</span> may leverage barcode labels and scanners to monitor panels throughout the production process.
-								</>
-							}
-						/>
-					</ListItem>
-
-					<ListItem>
 						<ListItemText primary="Combine Reports" secondary={<>Merge multiple reports into a single comprehensive document to obtain a consolidated view of total quantities. This feature simplifies the reporting process, providing a clear summary across multiple projects or production runs.</>} />
+					</ListItem>
+					<ListItem>
+						<ListItemText primary="Alerts and Notifications System" secondary={<>Implementing an alert system would greatly enhance user experience by notifying users of various project statuses. This system could send notifications for new projects, stagnant projects that require attention, and critical projects that need immediate action. Such a feature ensures timely updates, improves workflow efficiency, and helps maintain project momentum.</>} />
+					</ListItem>
+					<ListItem>
+						<ListItemText
+							primary="Deploy SwoodServer on AWS"
+							secondary={
+								<>
+									<span className="highlight">SwoodServer</span> can be deployed on Amazon Web Services, providing a cloud-based solution for clients without a physical server. Note that this will involve additional costs.
+								</>
+							}
+						/>
 					</ListItem>
 					<ListItem>
 						<ListItemText primary="Enhanced Reporting Tools" secondary={<>Develop custom reporting tools that allow users to create tailored reports and dashboards for specific manufacturing needs.</>} />
@@ -265,6 +305,7 @@ const SwoodServer = () => {
 						<ListItemText primary="NodeJS" secondary={<>NodeJS is a cross-platform JavaScript runtime environment, it’s built on Chrome’s V8 engine to run JavaScript code outside the browser, to easily building fast and scalable applications. The main purpose of NodeJS is simple, it allows us to write our backend in JavaScript, saving us the trouble of learning a new programming language capable of running the backend.</>} />
 					</ListItem>
 				</List>
+
 				<Typography>Popular Web Apps built with the full or partial MERN stack</Typography>
 
 				<ul>

@@ -13,6 +13,7 @@ import Loading from '../components/Loading'
 import TopBar from './TopBar'
 import { SearchInput } from '../components/SearchInput'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen'
+import ScrollToSection from '../helper/ScrollToSection'
 
 const drawerWidth = 340
 
@@ -112,6 +113,7 @@ const Layout = () => {
 			{/* Main Content */}
 			<Main open={open}>
 				<Suspense fallback={<Loading />}>
+					<ScrollToSection />
 					<Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: `${drawerWidth}px`, m: 0 }}>
 						<ScrollToTopButton />
 						<Outlet />

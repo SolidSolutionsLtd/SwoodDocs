@@ -15,6 +15,8 @@ export const PremiumChip = ({ big }: { big?: boolean }) => {
 				position: 'relative',
 				top: big ? '-10px' : '-5px', // Raises the chip slightly
 				fontWeight: 'bold',
+				color: '#ff7777', // Text color
+				borderColor: '#ff7777', // Border color
 			}}
 		/>
 	)
