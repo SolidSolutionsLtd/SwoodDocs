@@ -76,7 +76,7 @@ const filterMenuItems = (items: MenuItemType[], filter: string): MenuItemType[] 
 }
 
 const Menu = ({ filter }: { filter: string }) => {
-	console.log('filter menu: ' + filter)
+	// console.log('filter menu: ' + filter)
 
 	// Create a new array by filtering the original array
 	const filteredData = filterMenuItems(menuItems, filter.toLowerCase())

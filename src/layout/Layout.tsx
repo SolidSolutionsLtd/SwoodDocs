@@ -77,7 +77,7 @@ const Layout = () => {
 	const [open, setOpen] = useState(true)
 	const [filter, setFilter] = useState<string>('')
 
-	console.log('filter: ', filter)
+	// console.log('filter: ', filter)
 
 	const handleDrawerOpen = () => setOpen(true)
 
