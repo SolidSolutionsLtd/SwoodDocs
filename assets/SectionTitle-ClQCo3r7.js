@@ -1,0 +1,1 @@
+import{j as t,O as e,T as i,c as o}from"./index-D1vYfics.js";const a=({title:r,pro:s})=>t.jsxs(e,{direction:"row",alignItems:"center",spacing:2,style:{marginBottom:"20px"},children:[t.jsx(i,{variant:"h4",style:{fontWeight:"bold"},children:r}),s&&t.jsx(o,{big:!0})]});export{a as S};
