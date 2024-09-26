@@ -37,7 +37,7 @@ const MergeReports = () => {
 				<Typography>
 					To address this, a new <span className="highlight">MergeReports</span> application has been developed to consolidate the data from Design and Nesting projects into a single report. Please read further to understand its workflow, FAQs, and setup.
 				</Typography>
-				<Typography>It is important to note that this application is currently in the beta stage.</Typography>
+				<Typography>It is important to note that this application is currently in the beta stage. As such, it may contain errors and bugs. We appreciate your understanding and encourage you to report any issues you encounter to help us improve the application.</Typography>
 			</Section>
 
 			<Section id="Workflow" title="Workflow">
@@ -49,7 +49,7 @@ const MergeReports = () => {
 					<li>Create a Swood Nesting Project using the Swood Design Projects as source files.</li>
 					<li>Generate the Swood Nesting Report.</li>
 					<li>
-						The <span className="highlight">MergeReports</span> application will automatically generate a merged report after the previous step.
+						The <span className="highlight">MergeReports</span> application will automatically generate a merged report.
 					</li>
 				</ol>
 				<ImageComponent source="./images/MergeReportWorkflow.png" size="600px" />
@@ -69,9 +69,9 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergedReportOpen.png" size="200px" />
+				<ImageComponent source="./images/MergeReportsOpen.png" size="200px" />
 				<ListItem>
-					<ListItemText primary="Where is the merged report saved?" secondary="The merged report is saved in the same directory as the nested report." />
+					<ListItemText primary="Where is the merged report saved?" secondary="The merged report is saved in the same directory as the nested report. This cannot be changed." />
 				</ListItem>
 				<ListItem>
 					<ListItemText
@@ -83,43 +83,68 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
+
 				<ListItem>
-					<ListItemText primary="What should I do if any of the models change?" secondary="If a model changes, run the associated Design report and then the Nesting report to regenerate the merged report." />
+					<ListItemText primary="What should I do if any of the models change?" secondary="If a model changes, generate all associated Design reports followed by the Nesting report. This will automatically regenerate the merged report with the updated data." />
 				</ListItem>
+
 				<ListItem>
 					<ListItemText primary="Can I merge with older report versions?" secondary="No, all reports must be version 2.10.3 or newer." />
 				</ListItem>
 				<ListItem>
 					<ListItemText primary="Can I merge multiple Design projects without a Nest project?" secondary="This is not supported at the moment." />
 				</ListItem>
-				<ListItem>
-					<ListItemText primary="Can I merge multiple Design projects without a Nest project?" secondary="This is not supported at the moment." />
-				</ListItem>
+
 				<ListItem>
 					<ListItemText primary="Can I merge multiple Nest projects?" secondary="This is not supported at the moment." />
 				</ListItem>
 				<ListItem>
 					<ListItemText primary="Are cutting patterns re-optimised in the merged report?" secondary="The merged report does not re-optimise cutting patterns from the Design projects. The original cutting patterns are retained, which may not be the most efficient solution." />
 				</ListItem>
+
 				<ListItem>
 					<ListItemText
-						primary="What will happen if the source files do not have a design report?"
+						primary="What happens if not all of the source files have a design report?"
 						secondary={
 							<>
-								The MergeReport application will not generate any files and you will notice the message below when clicking on <span className=" param">Documents &gt; Home Merged Report</span>
+								The <span className="highlight">MergeReport</span> application will only merge the available data from existing reports. As a result, some information such as hardware, frames, and unnested panels may be missing in the merged report.
 							</>
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergedReportError.png" size="300px" />
 				<ListItem>
-					<ListItemText primary="How can I identify the merged reports?" secondary="At present, there is no interface to display this information. However, you can use the Raw Data Viewer to view the merged data." />
+					<ListItemText primary="Is the merged data output folder deleted the the nest report is run again?" secondary="Yes." />
 				</ListItem>
-				<ImageComponent source="./images/MergedReportData.gif" size="600px" />
+				<ListItem>
+					<ListItemText
+						primary="What happens if none of the source files have a design report?"
+						secondary={
+							<>
+								The <span className="highlight">MergeReport</span> application will not generate any files. You will also notice the message below when clicking on <span className="param">Documents &gt; Home Merged Report</span>.
+							</>
+						}
+					/>
+				</ListItem>
+				<ImageComponent source="./images/MergeReportsError.png" size="300px" />
+
+				<ListItem>
+					<ListItemText primary="How can I identify what reports have been merged?" secondary="At present, there is no interface to display this information. However, you can use the Raw Data Viewer to view the merged data." />
+				</ListItem>
+				<ImageComponent source="./images/MergeReportsData.gif" size="600px" />
+
+				<ListItem>
+					<ListItemText primary="What image will the merged report display on the home page?" secondary="The report will display the image from one of the nest source files. It is not possible to specify which source file's image will be used." />
+				</ListItem>
+
+				<ListItem>
+					<ListItemText primary="Should I tick the 'Insert Not Nested Parts' option in the nest settings?" secondary="No, it is best to leave this un-ticked as it will only introduce a single instance of the unnested part." />
+				</ListItem>
+				<ImageComponent source="./images/MergeReportsNotNestedOption.png" size="350px" />
 
 				<ListItem>
 					<ListItemText primary="Why can I see source reports in the merged report folder?" secondary="These files are remnants of the merge process and are not required after the merge is completed." />
 				</ListItem>
+
 				<ListItem>
 					<ListItemText
 						primary="How can I provide feedback, suggestions, or report bugs?"
@@ -147,6 +172,9 @@ const MergeReports = () => {
 						</li>
 						<li>
 							<strong>Termination</strong>: We reserve the right to stop all development or to terminate your access to the beta software at any time, with or without cause or notice.
+						</li>
+						<li>
+							<strong>Support</strong>: Issues or bugs will not be prioritised on support.
 						</li>
 					</ul>
 					<p>By using the beta software, you agree to these terms and conditions.</p>
@@ -176,7 +204,7 @@ const MergeReports = () => {
 					<li>
 						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the Unblock option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
-					<ImageComponent source="./images/MergedReportUnblock.gif" size="450px" />
+					<ImageComponent source="./images/MergeReportsUnblock.gif" size="450px" />
 					<li>
 						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the SWOOD Data Directory.
 					</li>
@@ -219,7 +247,7 @@ const MergeReports = () => {
 		]]`}
 					/>
 					<Typography>The end result should look something like this:</Typography>
-					<ImageComponent source="./images/MergedReportCFG.png" size="600px" />
+					<ImageComponent source="./images/MergeReportsCFG.png" size="600px" />
 					<li>
 						Save the <span className="highlight">Report.cfg</span> file and restart SolidWorks.
 					</li>
