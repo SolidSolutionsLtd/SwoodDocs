@@ -1,0 +1,1 @@
+import{j as e,ai as o}from"./index-t2CCJUxl.js";const i=({source:s,size:t})=>e.jsx(o,{display:"flex",justifyContent:"center",className:"imageBox",children:e.jsx("img",{src:s,style:{height:t}})});export{i as I};
