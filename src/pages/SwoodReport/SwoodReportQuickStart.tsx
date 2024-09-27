@@ -1,10 +1,23 @@
-import { Typography, Link } from '@mui/material'
+import { Typography, Button, Box } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { NavLink } from 'react-router-dom'
 import { Section } from '../../components/Section'
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
+import { RegisterDownload } from '../../components/RegisterDownload'
 
 const SwoodReportQuickStart = () => {
+	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.01.exe'
+	const handleDownload = async () => {
+		try {
+			await RegisterDownload('SwoodEditorDownloads', '1.2.0')
+			// Trigger the download after registration is complete
+			window.location.href = downloadLink
+		} catch (error) {
+			console.error('Error during registration: ', error)
+		}
+	}
+
 	return (
 		<>
 			<PageTitle title="Swood Report Quickstart" />
@@ -35,13 +48,20 @@ const SwoodReportQuickStart = () => {
 
 			<Section id="Editor" title="Swood Editor App">
 				<Typography>
-					To set up the <span className="highlight">Swood Report</span>, start by downloading and installing the <span className="highlight">Swood Editor</span> app by clicking{' '}
-					<Link href="https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.01.exe" target="_blank">
-						here
-					</Link>
-					. If the download doesn't start, please copy and paste the following link into a new tab:
-					<span style={{ textDecoration: 'underline' }}>https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.01.exe</span>
+					To set up the <span className="highlight">Swood Report</span>, start by downloading and installing the <span className="highlight">Swood Editor</span>.
 				</Typography>
+
+				<Box display="flex" justifyContent="center" className="imageBox">
+					<Button variant="outlined" size="large" color="info" onClick={handleDownload} endIcon={<CloudDownloadIcon />}>
+						Download SwoodEditor v1.2.0
+					</Button>
+				</Box>
+
+				<Typography>If the download doesn't start, please copy and paste the following link into a new tab:</Typography>
+				<Typography>
+					<span style={{ textDecoration: 'underline' }}>{downloadLink}</span>
+				</Typography>
+
 				<Typography>
 					The <span className="highlight">Swood Editor</span> app allows you to modify report settings, such as columns, sorting orders, and output location, as well as change default Swood settings.
 				</Typography>

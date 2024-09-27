@@ -228,8 +228,9 @@ const MergeReports = () => {
 			<Section id="Setup" title="How to Set Up the MergeReports Application">
 				<ol>
 					<li>
-						Download <span className="highlight">MergeReportPost.exe</span> by clicking <DownloadMergeReports />.
+						Download <span className="highlight">MergeReportPost.exe</span>.
 					</li>
+					<DownloadMergeReports />
 					<li>
 						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
