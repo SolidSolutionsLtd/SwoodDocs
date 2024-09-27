@@ -3,15 +3,17 @@ import { useState } from 'react'
 import { BetaDisclaimer } from './BetaDisclaimer'
 import { initializeApp } from 'firebase/app'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
+const apiKey = import.meta.env.VITE_API_KEY
+const appId = import.meta.env.VITE_APP_ID
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: 'AIzaSyBXxHPvT6zKTtRCoX9Ut43KUeVIt7vRGzY',
+	apiKey,
 	authDomain: 'swooddocs.firebaseapp.com',
 	projectId: 'swooddocs',
 	storageBucket: 'swooddocs.appspot.com',
 	messagingSenderId: '482898010102',
-	appId: '1:482898010102:web:2ca83778d58ff4c5ae71d7',
+	appId,
 }
 
 const RegisterEmail = (email: string) => {
@@ -33,6 +35,7 @@ const RegisterEmail = (email: string) => {
 			const registrationData = {
 				email,
 				ipAddress: ipData.ip,
+				version: '0.0.0',
 				deviceInfo,
 			}
 
