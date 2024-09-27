@@ -1,4 +1,4 @@
-export const menuItems = [
+export const menuItems: IMenuItem[] = [
 	{ to: '/', title: 'Home' },
 	{
 		to: '/Swood',
@@ -22,10 +22,10 @@ export const menuItems = [
 			{ to: '/ReportCompatibility', title: 'Swood Report Compatibility' },
 			{ to: '/SwoodReportReleaseNotes', title: 'Swood Report Release Notes' },
 			{ to: '/SwoodReportMatrix', title: 'Swood Report Matrix' },
-			{ to: '/SwoodReportProperties', title: 'List of Swood Report Properties', postDate: '18/09/2024' },
+			{ to: '/SwoodReportProperties', title: 'List of Swood Report Properties', updateDate: '18/09/2024' },
 			{ to: '/MaterialExtendedProperties', title: 'List of Swood Material Extended Properties', postDate: '18/09/2024' },
 			{ to: '/PanelsAndStocks', title: 'Difference between Panels and Stocks List', postDate: '18/09/2024' },
-			{ to: '/CustomProperties', title: 'How to display Custom Properties', pro: false, postDate: '19/09/2024' },
+			{ to: '/CustomProperties', title: 'How to display Custom Properties in the Report', pro: false, postDate: '19/09/2024' },
 			{ to: '/ConcatenateProperties', title: 'How to concatenate/evaluate properties', pro: true, postDate: '18/09/2024' },
 			{ to: '/ProjectName', title: 'How to Change the Report Project Name', postDate: '23/09/2024' },
 			{ to: '/ProjectQuantity', title: 'How to Change the Report Project Quantity', postDate: '23/09/2024' },
@@ -63,5 +63,5 @@ export const menuItems = [
 			{ to: '/CreatingDATBackups', title: 'How to backup Report Settings' },
 		],
 	},
-	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils Release Notes' }] },
+	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, postDate: '18/09/2024', children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils Release Notes' }] },
 ]

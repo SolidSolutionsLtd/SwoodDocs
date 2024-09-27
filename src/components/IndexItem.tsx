@@ -1,15 +1,9 @@
 import { NavLink } from 'react-router-dom'
-import { differenceInDays, parse } from 'date-fns'
 import { ProChip } from './ProChip'
 import { NewChip } from './NewChip'
 import { UpdatedChip } from './UpdatedChip'
 import { BetaChip } from './BetaChip'
-
-const isNew = (dateStr: string) => {
-	const today = new Date()
-	const parsedDate = parse(dateStr, 'dd/MM/yyyy', new Date())
-	return differenceInDays(today, parsedDate) < 30
-}
+import { isNew } from '../helper/dateHelper'
 
 interface Props {
 	to?: string

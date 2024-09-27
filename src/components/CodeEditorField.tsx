@@ -40,7 +40,6 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(props,
 })
 
 const CodeEditorField = ({ text }: { text: string }) => {
-	console.log(text)
 	const [code] = useState<string>(text)
 
 	const [open, setOpen] = useState<boolean>(false)

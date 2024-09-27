@@ -5,6 +5,8 @@ import { Section } from '../../components/Section'
 import CodeEditorField from '../../components/CodeEditorField'
 import { NavLink } from 'react-router-dom'
 import { ProChip } from '../../components/ProChip'
+import { BetaDisclaimer } from '../../components/BetaDisclaimer'
+import DownloadMergeReports from '../../components/DownloadMergeReports'
 
 const MergeReports = () => {
 	return (
@@ -28,10 +30,10 @@ const MergeReports = () => {
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Disclaimer">Merged Reports Disclaimer</a>
+						<a href="#Disclaimer">MergeReports Disclaimer</a>
 					</li>
 					<li>
-						<a href="#Setup">How to Setup Merged Reports</a>
+						<a href="#Setup">How to Set Up the MergeReports Application</a>
 					</li>
 				</ul>
 			</nav>
@@ -102,7 +104,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsOpen.png" size="200px" />
+				<ImageComponent source="./images/MergeReportsOpen.png" size="150px" />
 				<ListItem>
 					<ListItemText primary="Where is the merged report saved?" secondary="The merged report is saved in the same directory as the nested report. This cannot be changed." />
 				</ListItem>
@@ -134,6 +136,21 @@ const MergeReports = () => {
 				<ListItem>
 					<ListItemText primary="Are cutting patterns re-optimised in the merged report?" secondary="The merged report does not re-optimise cutting patterns from the Design projects. The original cutting patterns are retained, which may not be the most efficient solution." />
 				</ListItem>
+				<ListItem>
+					<ListItemText
+						primary="Can I use the Project Quantity Custom Property?"
+						secondary={
+							<>
+								This is not supported at the moment. However, you can learn how it’s beneficial when projects are not merged <NavLink to="/ProjectQuantity">here</NavLink>.
+							</>
+						}
+					/>
+				</ListItem>
+
+				<ListItem>
+					<ListItemText primary="Can I use the Quantity option in the nest project settings?" secondary="Yes. Keep in mind that in the merged report, the panel quantities from the nest project will take precedence." />
+				</ListItem>
+				<ImageComponent source="./images/MergeReportsNestQuantity.png" size="200px" />
 
 				<ListItem>
 					<ListItemText
@@ -145,9 +162,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ListItem>
-					<ListItemText primary="Is the merged data output folder deleted the the nest report is run again?" secondary="Yes." />
-				</ListItem>
+
 				<ListItem>
 					<ListItemText
 						primary="What happens if none of the source files have a design report?"
@@ -161,6 +176,10 @@ const MergeReports = () => {
 				<ImageComponent source="./images/MergeReportsError.png" size="300px" />
 
 				<ListItem>
+					<ListItemText primary="Will the merged report folder be deleted when the nest report is run again?" secondary="Yes, all files in the existing merged report folder will be deleted before the merge process begins. This behavior is consistent whether you run a design or nest report. However, you will not be prompted to choose a different folder." />
+				</ListItem>
+
+				<ListItem>
 					<ListItemText primary="How can I identify what reports have been merged?" secondary="At present, there is no interface to display this information. However, you can use the Raw Data Viewer to view the merged data." />
 				</ListItem>
 				<ImageComponent source="./images/MergeReportsData.gif" size="600px" />
@@ -170,12 +189,12 @@ const MergeReports = () => {
 				</ListItem>
 
 				<ListItem>
-					<ListItemText primary="Should I tick the 'Insert Not Nested Parts' option in the nest settings?" secondary="No, it is best to leave this un-ticked as it will only introduce a single instance of the unnested part." />
+					<ListItemText primary="Should I disable the 'Insert Not Nested Parts' option in the nest settings?" secondary="Yes. Enabling this option will insert a single instance of un-nested parts, which can result in incorrect quantity values." />
 				</ListItem>
 				<ImageComponent source="./images/MergeReportsNotNestedOption.png" size="350px" />
 
 				<ListItem>
-					<ListItemText primary="Why can I see source reports in the merged report folder?" secondary="These files are remnants of the merge process and are not required after the merge is completed." />
+					<ListItemText primary="Why are there original copies of the nest and design reports in the merged report folder?" secondary="These files are remnants of the merge process and are no longer needed once the merge is complete. Future developments may enable referencing these reports." />
 				</ListItem>
 
 				<ListItem>
@@ -200,44 +219,21 @@ const MergeReports = () => {
 				</ol>
 			</Section>
 
-			<Box className="red" sx={{ color: 'r' }}>
-				<Section id="Disclaimer" title="Merged Reports Disclaimer">
-					<ul>
-						<li>
-							<strong>Pre-Release Software</strong>: This beta version is pre-release software and is provided "as is" without any warranties, express or implied. It may contain bugs, errors, and other issues that could cause system failures or data loss.
-						</li>
-						<li>
-							<strong>Feedback</strong>: Your participation in the Beta Program is voluntary, and we appreciate your feedback. By providing feedback, you grant us the right to use, modify, and incorporate your feedback into our products without any obligation to you.
-						</li>
-
-						<li>
-							<strong>No Liability</strong>: We are not liable for any damages, including but not limited to, direct, indirect, incidental, or consequential damages, arising out of the use or inability to use the beta software.
-						</li>
-						<li>
-							<strong>Termination</strong>: We reserve the right to stop all development or to terminate your access to the beta software at any time, with or without cause or notice.
-						</li>
-						<li>
-							<strong>Support</strong>: Issues or bugs will not be prioritised on support.
-						</li>
-					</ul>
-					<p>By using the beta software, you agree to these terms and conditions.</p>
+			<Box className="red">
+				<Section id="Disclaimer" title="MergeReports Disclaimer">
+					<BetaDisclaimer />
 				</Section>
 			</Box>
 
-			<Section id="Setup" title="How to Set Up Merged Reports">
+			<Section id="Setup" title="How to Set Up the MergeReports Application">
 				<ol>
 					<li>
-						Download <span className="highlight">MergeReportPost.exe</span> by clicking
-						<a href="https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReportPost.exe" download>
-							{' '}
-							here
-						</a>
-						.
+						Download <span className="highlight">MergeReportPost.exe</span> by clicking <DownloadMergeReports />.
 					</li>
 					<li>
-						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the Unblock option is not present, it means the file has not been blocked, and you can skip this step.
+						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
-					<ImageComponent source="./images/MergeReportsUnblock.gif" size="450px" />
+					<ImageComponent source="./images/MergeReportsUnblock.png" size="500px" />
 					<li>
 						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the SWOOD Data Directory.
 					</li>

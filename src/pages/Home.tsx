@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
+import LatestSwoodDocs from '../components/LatestSwoodDocs'
 
 const Home = () => {
 	return (
@@ -32,6 +33,8 @@ const Home = () => {
 
 				<SectionCard to="/SwoodUtils" title="SwoodUtils" content="SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface." />
 			</Box>
+
+			<LatestSwoodDocs />
 		</Box>
 	)
 }

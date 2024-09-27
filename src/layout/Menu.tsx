@@ -4,18 +4,8 @@ import { ArrowDropDown, ArrowRight } from '@mui/icons-material'
 import { ListItem, Collapse, List, ListSubheader } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
 
-interface MenuItemType {
-	to?: string
-	title: string
-	postDate?: string
-	updateDate?: string
-	pro?: boolean
-	beta?: boolean
-	children?: MenuItemType[]
-}
-
 interface MenuItemProps {
-	item: MenuItemType
+	item: IMenuItem
 	filter: string
 }
 
@@ -59,7 +49,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, filter }) => {
 	)
 }
 
-const filterMenuItems = (items: MenuItemType[], filter: string): MenuItemType[] => {
+const filterMenuItems = (items: IMenuItem[], filter: string): IMenuItem[] => {
 	return items
 		.map(item => {
 			if (item.children) {
@@ -72,7 +62,7 @@ const filterMenuItems = (items: MenuItemType[], filter: string): MenuItemType[] 
 			}
 			return null
 		})
-		.filter(item => item !== null) as MenuItemType[]
+		.filter(item => item !== null) as IMenuItem[]
 }
 
 const Menu = ({ filter }: { filter: string }) => {
