@@ -51,6 +51,8 @@ const SwoodReportQuickStart = () => {
 					To set up the <span className="highlight">Swood Report</span>, start by downloading and installing the <span className="highlight">Swood Editor</span>.
 				</Typography>
 
+				<Typography className="red">Please note that your eligibility for this version depends on your Subscription Renewal Date.</Typography>
+
 				<Box display="flex" justifyContent="center" className="imageBox">
 					<Button variant="outlined" size="large" color="info" onClick={handleDownload} endIcon={<CloudDownloadIcon />}>
 						Download SwoodEditor v1.2.0
