@@ -1,0 +1,1 @@
+import{j as e,B as o}from"./index-Poo1hu1A.js";const r=({source:s,size:t})=>e.jsx(o,{display:"flex",justifyContent:"center",className:"imageBox",children:e.jsx("img",{src:s,style:{height:t}})});export{r as I};
