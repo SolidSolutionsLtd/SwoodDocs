@@ -1,1 +1,0 @@
-import{j as e,B as o}from"./index-ruLO08eR.js";const r=({source:s,size:t})=>e.jsx(o,{display:"flex",justifyContent:"center",className:"imageBox",children:e.jsx("img",{src:s,style:{height:t}})});export{r as I};
