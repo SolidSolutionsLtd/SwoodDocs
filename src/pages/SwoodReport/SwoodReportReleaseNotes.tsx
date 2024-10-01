@@ -32,6 +32,10 @@ const SwoodReportReleaseNotes = () => {
 						<li>Fixed bug where Program details would not show tool list</li>
 						<li>Fixed printing issue with Cutting Pattern</li>
 					</ul>
+					<Typography variant="h6">Known Bugs</Typography>
+					<ul>
+						<li>Reference issues/missing images in home page when using a custom Home Tab name</li>
+					</ul>
 				</ul>
 			</Release>
 
@@ -495,9 +499,9 @@ const SwoodReportReleaseNotes = () => {
 					<li>
 						Multibody dimensions like <span className="param">LengthWithEB</span> and <span className="param">LengthWithoutEB</span> are now the panel's Length dimension. Same for Width and Thickness
 					</li>
-					<li>
+					{/* <li>
 						Ability to group Hardware by reference property <span className="param">GroupHardwareByReference</span>=true. Used for Handed Hardware
-					</li>
+					</li> */}
 				</ul>
 			</Release>
 

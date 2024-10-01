@@ -268,16 +268,13 @@ const MergeReports = () => {
 			TEMPLATESRC = <APP.USERPATH>\\DAT\\Documents\\WEB\\Sheets.html
 		]]
 
-    [Home Merged Report]
+	[Home Merged Report]
 		PROCESSON = REPORT
-		FORCED_STORAGE_TYPE = 1
+		PATH = <REPORTPATH>\\..\\Merged - <AssemblyName>\\Home_Merged - <AssemblyName>.html
 		CONDITION = REPORT_ISNESTINGPROJECT
-		TYPEDOCUMENT = URI
 		AUTOPROCESS = 1
 		HIDDEN = 0
-		[[URI
-			ADDRESSTEMPLATE = "<REPORTPATH>\\..\\Merged - <AssemblyName>\\Home_Merged - <AssemblyName>.html"
-		]]`}
+`}
 					/>
 					<Typography>The end result should look something like this:</Typography>
 					<ImageComponent source="./images/MergeReportsCFG.png" size="600px" />

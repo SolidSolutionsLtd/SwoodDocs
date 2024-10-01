@@ -7,10 +7,11 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import { RegisterDownload } from '../../components/RegisterDownload'
 
 const SwoodReportQuickStart = () => {
-	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.01.exe'
+	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.1.exe'
+	const appVersion = '1.2.1'
 	const handleDownload = async () => {
 		try {
-			await RegisterDownload('SwoodEditorDownloads', '1.2.0')
+			await RegisterDownload('SwoodEditorDownloads', appVersion)
 			// Trigger the download after registration is complete
 			window.location.href = downloadLink
 		} catch (error) {
@@ -55,7 +56,7 @@ const SwoodReportQuickStart = () => {
 
 				<Box display="flex" justifyContent="center" className="imageBox">
 					<Button variant="outlined" size="large" color="info" onClick={handleDownload} endIcon={<CloudDownloadIcon />}>
-						Download SwoodEditor v1.2.0
+						Download SwoodEditor v{appVersion}
 					</Button>
 				</Box>
 
