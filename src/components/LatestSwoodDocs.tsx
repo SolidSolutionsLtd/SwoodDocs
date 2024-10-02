@@ -20,7 +20,6 @@ const flattenMenuItems = (items: IMenuItem[]): IMenuItem[] => {
 	const sortedMenuItems = result.sort((a, b) => {
 		const dateA = new Date(parseDate(a.postDate) || parseDate(a.updateDate) || 0)
 		const dateB = new Date(parseDate(b.postDate) || parseDate(b.updateDate) || 0)
-		console.log(dateA)
 		return dateB.getTime() - dateA.getTime()
 	})
 
