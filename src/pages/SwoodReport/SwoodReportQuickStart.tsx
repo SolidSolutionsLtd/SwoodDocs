@@ -11,7 +11,7 @@ const SwoodReportQuickStart = () => {
 	const appVersion = '1.2.1'
 	const handleDownload = async () => {
 		try {
-			await RegisterDownload('SwoodEditorDownloads', appVersion)
+			await RegisterDownload('SwoodEditorDownloads', appVersion, 'download_SwoodEditor')
 			// Trigger the download after registration is complete
 			window.location.href = downloadLink
 		} catch (error) {

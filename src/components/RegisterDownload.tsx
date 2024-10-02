@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import { getAnalytics, logEvent } from 'firebase/analytics'
 const apiKey = import.meta.env.VITE_API_KEY
 const appId = import.meta.env.VITE_APP_ID
 
@@ -13,10 +14,11 @@ const firebaseConfig = {
 	appId,
 }
 
-export const RegisterDownload = async (collectionName: string, version: string) => {
+export const RegisterDownload = async (collectionName: string, version: string, event: string) => {
 	// Initialize Firebase
 	const app = initializeApp(firebaseConfig)
 	const db = getFirestore(app)
+	const analytics = getAnalytics(app)
 
 	const colRef = collection(db, collectionName)
 
@@ -44,6 +46,7 @@ export const RegisterDownload = async (collectionName: string, version: string) 
 
 	try {
 		await addDoc(colRef, registrationData)
+		logEvent(analytics, event, registrationData)
 	} catch (error) {
 		console.error('Error adding registration: ', error)
 	}

@@ -20,7 +20,7 @@ const DownloadMergeReportsRegister = () => {
 		setOpen(false)
 
 		try {
-			await RegisterDownload('MergeReportsDownloads', appVersion)
+			await RegisterDownload('MergeReportsDownloads', appVersion, 'download_MergeReports')
 			// Trigger the download after registration is complete
 			window.location.href = downloadLink
 		} catch (error) {
