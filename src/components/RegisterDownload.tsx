@@ -3,6 +3,7 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import { getAnalytics, logEvent } from 'firebase/analytics'
 const apiKey = import.meta.env.VITE_API_KEY
 const appId = import.meta.env.VITE_APP_ID
+const measurementId = import.meta.env.VITE_MEASUREMENT_ID
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -12,6 +13,7 @@ const firebaseConfig = {
 	storageBucket: 'swooddocs.appspot.com',
 	messagingSenderId: '482898010102',
 	appId,
+	measurementId,
 }
 
 export const RegisterDownload = async (collectionName: string, version: string, event: string) => {
