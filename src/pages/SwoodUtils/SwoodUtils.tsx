@@ -3,6 +3,7 @@ import { ImageComponent } from '../../components/ImageComponent'
 import { NavLink } from 'react-router-dom'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
+import { SolidWorksTag, SwoodUtilsTag } from '../../components/NameTags'
 
 const SwoodUtils = () => {
 	return (
@@ -73,9 +74,11 @@ const SwoodUtils = () => {
 
 			<Section id="Overview" title="Overview">
 				<Typography variant="body1">
-					SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface. It also identifies identical panels, removing the need for the <span className="highlight">Combine Panels</span> macro.
+					<SwoodUtilsTag /> streamlines the ID assignment process for panels and frames, providing a user-friendly interface. It also identifies identical panels, removing the need for the <span className="highlight">Combine Panels</span> macro.
 				</Typography>
-				<Typography variant="body1">Please note that SwoodUtils is currently in its Beta stage.</Typography>
+				<Typography variant="body1">
+					Please note that <SwoodUtilsTag /> is currently in its Beta stage.
+				</Typography>
 			</Section>
 
 			<Section id="Features" title="Features">
@@ -87,7 +90,7 @@ const SwoodUtils = () => {
 						<ListItemText primary="Detect identical panels and automatically assign a shared ID." />
 					</li>
 					<li>
-						<ListItemText primary="Customizable ID Settings: Adjust various options within SwoodUtils to suit your workflow preferences." />
+						<ListItemText primary="Customizable ID Settings: Adjust various options within <SwoodUtilsTag/> to suit your workflow preferences." />
 					</li>
 					<li>
 						<ListItemText primary="Manage Custom Properties: Modify settings like Frame, SubFrame, Hardware, and Exclude to control panel numbering behavior." />
@@ -104,17 +107,27 @@ const SwoodUtils = () => {
 						</Link>
 						. If the download doesn’t start automatically, copy and paste the following URL into a new browser tab: <span style={{ textDecoration: 'underline' }}>https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.1.0.exe</span>.
 					</li>
-					<li>Close SolidWorks before proceeding.</li>
-					<li>Run the installer and follow the on-screen instructions to complete the installation.</li>
-					<li>Once the installation is complete, open SolidWorks.</li>
-					<li>Activate the SwoodUtils Add-in from the Add-ins menu.</li>
 					<li>
-						Navigate to the <span className="highlight">SwoodUtils</span> tab in the SolidWorks Command Manager and click on <span className="highlight">Open SwoodUtils</span> to start using the tool.
+						Close <SolidWorksTag /> before proceeding.
+					</li>
+					<li>Run the installer and follow the on-screen instructions to complete the installation.</li>
+					<li>
+						Once the installation is complete, open <SolidWorksTag />.
+					</li>
+					<li>
+						Activate the <SwoodUtilsTag /> Add-in from the Add-ins menu.
+					</li>
+					<li>
+						Navigate to the <SwoodUtilsTag /> tab in the <SolidWorksTag /> Command Manager and click on{' '}
+						<span className="highlight">
+							Open <SwoodUtilsTag />
+						</span>{' '}
+						to start using the tool.
 					</li>
 					<ImageComponent source="./images/SwoodUtils/CommandManagerTabs.png" size="250px" />
 
 					<li>
-						When you run <span className="highlight">SwoodUtils</span> for the first time, you’ll need to activate your license. Simply copy and paste the provided license key into the field shown below.
+						When you run <SwoodUtilsTag /> for the first time, you’ll need to activate your license. Simply copy and paste the provided license key into the field shown below.
 					</li>
 
 					<ImageComponent source="./images/SwoodUtils/ActivateLicense.png" size="255px" />
@@ -123,7 +136,7 @@ const SwoodUtils = () => {
 
 			<Section id="Licensing" title="Licensing">
 				<Typography variant="body1">
-					SwoodUtils uses the same licensing scheme as the <span className="highlight">SwoodEditor</span>, for more information click <NavLink to="/SwoodLicensing">here</NavLink>
+					<SwoodUtilsTag /> uses the same licensing scheme as the <span className="highlight">SwoodEditor</span>, for more information click <NavLink to="/SwoodLicensing">here</NavLink>
 				</Typography>
 			</Section>
 
@@ -131,16 +144,23 @@ const SwoodUtils = () => {
 				<ol>
 					<li>Open the assembly containing the panels you want to assign IDs to.</li>
 					<li>
-						Enable the SwoodUtils Add-in. Go to the Swood Utils Tab and click on <span className="highlight">Open SwoodUtils</span>
+						Enable the <SwoodUtilsTag /> Add-in. Go to the SwoodUtils Tab and click on{' '}
+						<span className="highlight">
+							Open <SwoodUtilsTag />
+						</span>
 					</li>
 					<li>
-						Click the <span className="highlight">Refresh Data</span> button to load models into SwoodUtils.
+						Click the <span className="highlight">Refresh Data</span> button to load models into <SwoodUtilsTag />.
 					</li>
-					<li>Once the data is loaded, SwoodUtils will automatically assign TempIDs to each panel based on your settings. These TempIDs act as a preview and are not yet saved to the model.</li>
+					<li>
+						Once the data is loaded, <SwoodUtilsTag /> will automatically assign TempIDs to each panel based on your settings. These TempIDs act as a preview and are not yet saved to the model.
+					</li>
 					<li>
 						Review the assigned TempIDs, then click <span className="highlight">Save TempIDs</span> to store them as custom properties.
 					</li>
-					<li>Finally, save the assembly in SolidWorks.</li>
+					<li>
+						Finally, save the assembly in <SolidWorksTag />.
+					</li>
 				</ol>
 			</Section>
 
@@ -151,7 +171,9 @@ const SwoodUtils = () => {
 					<Typography variant="h6" id="RefreshData">
 						1. Refresh Data
 					</Typography>
-					<Typography>Updates data from SolidWorks, typically used after adding new components to an assembly or switching the active model.</Typography>
+					<Typography>
+						Updates data from <SolidWorksTag />, typically used after adding new components to an assembly or switching the active model.
+					</Typography>
 
 					<Typography variant="h6" id="TempIDs">
 						2. Generate TempIDs
@@ -180,7 +202,9 @@ const SwoodUtils = () => {
 			</Section>
 
 			<Section id="Types" title="Types of IDs">
-				<Typography>SwoodUtils supports two ID schemas: Flat and Nested.</Typography>
+				<Typography>
+					<SwoodUtilsTag /> supports two ID schemas: Flat and Nested.
+				</Typography>
 
 				<Box className="SubSection">
 					<Typography variant="h6" id="Flat">
@@ -229,7 +253,9 @@ const SwoodUtils = () => {
 					<li>
 						<span className="FrameID tooltip">Frame ID</span>
 					</li>
-					<Typography>Number or letter generated by SwoodUtils for each Frame.</Typography>
+					<Typography>
+						Number or letter generated by <SwoodUtilsTag /> for each Frame.
+					</Typography>
 
 					<li>
 						<span className="Prefix tooltip">Panel Prefix</span>
@@ -239,7 +265,9 @@ const SwoodUtils = () => {
 					<li>
 						<span className="ModelID tooltip">Panel ID</span>
 					</li>
-					<Typography>Number generated by SwoodUtils for each Panel.</Typography>
+					<Typography>
+						Number generated by <SwoodUtilsTag /> for each Panel.
+					</Typography>
 				</ul>
 			</Section>
 
@@ -531,7 +559,9 @@ const SwoodUtils = () => {
 			<Section id="AppSettings" title="App Settings">
 				<Box className="SubSection">
 					<Typography variant="h6">Automatic Refresh</Typography>
-					<Typography>Automatically update the data when changes are made to the active SolidWorks model.</Typography>
+					<Typography>
+						Automatically update the data when changes are made to the active <SolidWorksTag /> model.
+					</Typography>
 
 					<Typography variant="h6">Confirmation prompt when Adding IDs</Typography>
 					<Typography>Display a confirmation prompt when adding IDs.</Typography>
@@ -652,7 +682,12 @@ const SwoodUtils = () => {
 			<Section id="CopySettings" title="Copy Settings between Users">
 				<Typography>Settings are stored locally on each machine, they cannot be placed on a server.</Typography>
 				<Typography>
-					To share settings between users, simply copy the files in <span className="highlight">C:\ProgramData\Solid Solutions\SwoodUtils</span> and paste them into the same directory on the second user's system.
+					To share settings between users, simply copy the files in{' '}
+					<span className="highlight">
+						C:\ProgramData\Solid Solutions\
+						<SwoodUtilsTag />
+					</span>{' '}
+					and paste them into the same directory on the second user's system.
 				</Typography>
 			</Section>
 
@@ -670,7 +705,9 @@ const SwoodUtils = () => {
 
 				<Box className="SubSection">
 					<ul>
-						<li>Integrate SwoodUtils into the SolidWorks Task Pane with a simplified interface, with the option to "Pop Out" into a separate window for full functionality.</li>
+						<li>
+							Integrate <SwoodUtilsTag /> into the <SolidWorksTag /> Task Pane with a simplified interface, with the option to "Pop Out" into a separate window for full functionality.
+						</li>
 						<li>Enable persistent IDs for nested components.</li>
 						<li>Ability to copy settings between users through the UI.</li>
 						<li>Ability to save settings to a server.</li>

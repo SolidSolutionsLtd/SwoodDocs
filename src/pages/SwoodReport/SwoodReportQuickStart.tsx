@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import { Section } from '../../components/Section'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import { RegisterDownload } from '../../components/RegisterDownload'
+import { SolidSolutionsLicenseManagerTag, SolidWorksTag, SwoodDataDirectoryTag, SwoodEditorTag, SwoodReportTag } from '../../components/NameTags'
 
 const SwoodReportQuickStart = () => {
 	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.1.exe'
@@ -21,7 +22,7 @@ const SwoodReportQuickStart = () => {
 
 	return (
 		<>
-			<PageTitle title="Swood Report Quickstart" />
+			<PageTitle title="Swood Report QuickStart" />
 			<nav>
 				<ul>
 					<li>
@@ -49,7 +50,7 @@ const SwoodReportQuickStart = () => {
 
 			<Section id="Editor" title="Swood Editor App">
 				<Typography>
-					To set up the <span className="highlight">Swood Report</span>, start by downloading and installing the <span className="highlight">Swood Editor</span>.
+					To set up the <SwoodReportTag />, start by downloading and installing the <SwoodEditorTag />.
 				</Typography>
 
 				<Typography className="red">Please note that your eligibility for this version depends on your Subscription Renewal Date.</Typography>
@@ -66,34 +67,36 @@ const SwoodReportQuickStart = () => {
 				</Typography>
 
 				<Typography>
-					The <span className="highlight">Swood Editor</span> app allows you to modify report settings, such as columns, sorting orders, and output location, as well as change default Swood settings.
+					The <SwoodEditorTag /> app allows you to modify report settings, such as columns, sorting orders, and output location, as well as change default Swood settings.
 				</Typography>
 				<Typography>
-					The Swood Editor installation manager will also install the <span className="highlight">Solid Solutions License Manager</span> as a prerequisite. This application is needed to activate the provided license key.
+					The Swood Editor installation manager will also install the <SolidSolutionsLicenseManagerTag /> as a prerequisite. This application is needed to activate the provided license key.
 				</Typography>
 				<Typography>
-					Please note that the <span className="highlight">Swood Editor</span> app uses the same license as the <span className="highlight">Swood Report</span>, so ensure that your license is active before creating a report.
+					Please note that the <SwoodEditorTag /> app uses the same license as the <SwoodReportTag />, so ensure that your license is active before creating a report.
 				</Typography>
 			</Section>
 
 			<Section id="License" title="Solid Solutions License Manager">
 				<Typography>
-					To activate the provided license, launch the <span className="highlight">Solid Solutions License Manager</span> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
+					To activate the provided license, launch the <SolidSolutionsLicenseManagerTag /> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
 				</Typography>
 				<ImageComponent source="./images/Licensing1.png" size="400px" />
 			</Section>
 
 			<Section id="Setup" title="Setup the Swood Report">
 				<Typography>
-					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <span className="highlight">Swood Data Directory</span>. <NavLink to="/SwoodDataDirectory">Learn More.</NavLink>
+					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <SwoodDataDirectoryTag />. <NavLink to="/SwoodDataDirectory">Learn More.</NavLink>
 				</Typography>
 				<Typography>
-					Launch the <span className="highlight">Swood Editor</span> app and ensure that the <span className="highlight">DAT</span> folder is within your <span className="highlight">Swood Data Directory</span> <span className="red">(1)</span>. The app will automatically search for the <span className="highlight">DAT</span> folder, but you can also manually define it by clicking or dragging and dropping the folder into the specified field <span className="red">(2)</span>.
+					Launch the <SwoodEditorTag /> app and ensure that the <span className="highlight">DAT</span> folder is within your <SwoodDataDirectoryTag /> <span className="red">(1)</span>. The app will automatically search for the <span className="highlight">DAT</span> folder, but you can also manually define it by clicking or dragging and dropping the folder into the specified field <span className="red">(2)</span>.
 				</Typography>
 				<Typography>
 					You can then click the <span className="highlight">Reset Report</span> <span className="red">(3)</span> option to install a fresh instance of the report, or select <span className="highlight">Update Report</span> <span className="red">(4)</span> to keep your previous settings. In both cases, the app will create a backup of your current <span className="highlight">DAT</span> folder.
 				</Typography>
-				<Typography>Please make sure to restart SolidWorks for the changes to take effect.</Typography>
+				<Typography>
+					Please make sure to restart <SolidWorksTag /> for the changes to take effect.
+				</Typography>
 
 				<ImageComponent source="./images/ReportQuickStart.png" size="400px" />
 			</Section>

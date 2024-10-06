@@ -2,6 +2,7 @@ import { Link, Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SwoodReportTag, SwoodEditorTag, SolidSolutionsLicenseManagerTag } from '../../components/NameTags'
 
 export const SwoodLicensing = () => {
 	return (
@@ -33,7 +34,7 @@ export const SwoodLicensing = () => {
 
 			<Section id="Licensing" title="Licensing">
 				<Typography>
-					All versions of the <span className="highlight">Swood Report</span> and <span className="highlight">Swood Editor</span> are licensed. Both <span className="highlight">Swood Report</span> and <span className="highlight">Swood Editor</span> use the same license. Please note that only one license of the Swood Report can be activated on a machine at any time. See{' '}
+					All versions of the <SwoodReportTag /> and <SwoodEditorTag /> are licensed. Both <SwoodReportTag /> and <SwoodEditorTag /> use the same license. Please note that only one license of the Swood Report can be activated on a machine at any time. See{' '}
 					<a href="#Transfer">
 						<span className="highlight">Transfer License</span>
 					</a>{' '}
@@ -43,7 +44,7 @@ export const SwoodLicensing = () => {
 
 			<Section id="Download" title="Install Solid Solutions License Manager">
 				<Typography>
-					The <span className="highlight">Swood Report</span> and <span className="highlight">Swood Editor</span> licenses are managed by the <span className="highlight">Solid Solutions License Manager</span>. Please download and install the <span className="highlight">Solid Solutions License Manager</span> by clicking{' '}
+					The <SwoodReportTag /> and <SwoodEditorTag /> licenses are managed by the <SolidSolutionsLicenseManagerTag />. Please download and install the <SolidSolutionsLicenseManagerTag /> by clicking{' '}
 					<Link href="https://development.solidsolutions.co.uk/solidsolutionslicensing/downloads/Solid Solutions Licensing-3.0.6649.0.exe" target="_blank">
 						here
 					</Link>

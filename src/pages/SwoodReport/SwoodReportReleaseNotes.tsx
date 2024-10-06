@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ProChip } from '../../components/ProChip'
 import { Release } from '../../components/Release'
+import { SolidWorksTag, SwoodTag } from '../../components/NameTags'
 
 const SwoodReportReleaseNotes = () => {
 	return (
@@ -53,7 +54,9 @@ const SwoodReportReleaseNotes = () => {
 					</ul>
 					<Typography variant="h6">Improvements</Typography>
 					<ul>
-						<li>Profiles are now Weldments to keep in line with the SolidWorks terminology</li>
+						<li>
+							Profiles are now Weldments to keep in line with the <SolidWorksTag /> terminology
+						</li>
 						<li>Grain property is now HasGrain</li>
 					</ul>
 					<Typography variant="h6">Bug Fixes</Typography>
@@ -380,7 +383,9 @@ const SwoodReportReleaseNotes = () => {
 							Edgeband quantity calculation is wrong when using <span className="param">ProjectQuantity</span> property
 						</li>
 						<li>Print is blank when only printing Sheet Details</li>
-						<li>Error message when nesting when using Swood 2023</li>
+						<li>
+							Error message when nesting when using <SwoodTag /> 2023
+						</li>
 					</ul>
 				</ul>
 			</Release>
@@ -472,7 +477,9 @@ const SwoodReportReleaseNotes = () => {
 				</ul>
 			</Release>
 			<Release version="2.8.1" ReleaseDate="">
-				<Typography variant="subtitle1">Requirements: Swood 2022 SP1.2</Typography>
+				<Typography variant="subtitle1">
+					Requirements: <SwoodTag /> 2022 SP1.2
+				</Typography>
 				<ul>
 					<li>Format Tweaks</li>
 					<li>Machining cost for nested projects excludes panels with Z+</li>

@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
+import { SwoodTag } from '../../components/NameTags'
 
 const Hardware = () => {
 	return (
@@ -26,7 +27,8 @@ const Hardware = () => {
 
 			<Section id="Define" title="How to Define Hardware">
 				<Typography>
-					A component will be classified as <span className="highlight">Hardware</span> if its filepath contains <span className="red">/Hardwares/</span>. This means that a component will be defined as <span className="highlight">Hardware</span> if it is saved inside a folder (or any of its subfolders) called <span className="red">Hardwares</span>. Note that by default, Swood saves all hardware components in ".../Swood Data Directory/SWOODDesign<span className="red">/Hardwares/</span>
+					A component will be classified as <span className="highlight">Hardware</span> if its filepath contains <span className="red">/Hardwares/</span>. This means that a component will be defined as <span className="highlight">Hardware</span> if it is saved inside a folder (or any of its subfolders) called <span className="red">Hardwares</span>. Note that by default, <SwoodTag /> saves all hardware components in ".../Swood Data Directory/SWOODDesign
+					<span className="red">/Hardwares/</span>
 					".
 				</Typography>
 				<Typography>

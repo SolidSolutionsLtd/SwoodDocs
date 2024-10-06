@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SwoodEditorTag } from '../../components/NameTags'
 
 const CuttingPattern = () => {
 	return (
@@ -38,7 +39,7 @@ const CuttingPattern = () => {
 
 			<Section id="Define" title="How to Generate a Cutting Pattern">
 				<Typography>
-					To generate a Cutting Pattern, start by enabling the option in the <span className="highlight">Swood Editor</span> as seen below.
+					To generate a Cutting Pattern, start by enabling the option in the <SwoodEditorTag /> as seen below.
 				</Typography>
 				<ImageComponent source="./images/CuttingPatternEnable.png" size="400px" />
 

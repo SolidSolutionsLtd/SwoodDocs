@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
 import DownloadMergeReports from '../../components/DownloadMergeReports'
+import { SolidWorksTag } from '../../components/NameTags'
 
 const MergeReports = () => {
 	return (
@@ -279,7 +280,7 @@ const MergeReports = () => {
 					<Typography>The end result should look something like this:</Typography>
 					<ImageComponent source="./images/MergeReportsCFG.png" size="600px" />
 					<li>
-						Save the <span className="highlight">Report.cfg</span> file and restart SolidWorks.
+						Save the <span className="highlight">Report.cfg</span> file and restart <SolidWorksTag />.
 					</li>
 					<li>
 						Follow the steps outlined in <a href="#Workflow">Workflow</a> to create your first merged report.

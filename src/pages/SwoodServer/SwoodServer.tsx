@@ -3,6 +3,7 @@ import { ImageComponent } from '../../components/ImageComponent'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { SectionCard } from '../../components/SectionCard'
+import { SwoodReportTag, SwoodTag } from '../../components/NameTags'
 
 const SwoodServer = () => {
 	return (
@@ -198,7 +199,7 @@ const SwoodServer = () => {
 							primary="Non-Modifiable Reports"
 							secondary={
 								<>
-									Currently, once the <span className="highlight">Swood Report</span> is generated, it cannot be altered. Manufacturers often need to add notes or make adjustments after the fact, but this is not possible. Some clients resort to using spreadsheet-based reports, which are easier to modify but pose limitations in team collaboration.
+									Currently, once the <SwoodReportTag /> is generated, it cannot be altered. Manufacturers often need to add notes or make adjustments after the fact, but this is not possible. Some clients resort to using spreadsheet-based reports, which are easier to modify but pose limitations in team collaboration.
 								</>
 							}
 						/>
@@ -236,7 +237,7 @@ const SwoodServer = () => {
 							primary="Swood Center Services Integration"
 							secondary={
 								<>
-									With the aim of fully integrating with the SWOOD ecosystem, <span className="highlight">SwoodServer</span> may be capable of connecting with Swood Center Services to automatically generate new models and reports of common library elements.
+									With the aim of fully integrating with the <SwoodTag /> ecosystem, <span className="highlight">SwoodServer</span> may be capable of connecting with Swood Center Services to automatically generate new models and reports of common library elements.
 								</>
 							}
 						/>

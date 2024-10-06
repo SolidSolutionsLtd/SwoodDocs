@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SolidWorksTag } from '../../components/NameTags'
 
 const MaterialType = () => {
 	return (
@@ -34,7 +35,9 @@ const MaterialType = () => {
 				<Typography>
 					To create the <span className="highlight">Material Type</span> property, go to the <span className="highlight">Extended Properties</span> in the <span className="highlight">Swood Materials Library</span>. Create a new property by filling in the blank row in the Name column. The property should be a <span className="highlight">String</span> Type with a default value of <span className="highlight">Core</span>.
 				</Typography>
-				<Typography>Note that adding a Material Extended Property requires restarting SolidWorks.</Typography>
+				<Typography>
+					Note that adding a Material Extended Property requires restarting <SolidWorksTag />.
+				</Typography>
 				<ImageComponent source="./images/Extended Properties.png" size="400px" />
 			</Section>
 			<Section id="Defining" title="How to Define a Material Type">

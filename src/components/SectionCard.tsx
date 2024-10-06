@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 interface SectionProps {
 	to?: string
 	title: string
-	content: string
+	content: React.ReactNode
 }
 
 export const SectionCard: React.FC<SectionProps> = ({ to, title, content }) => {

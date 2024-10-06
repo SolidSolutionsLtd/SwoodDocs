@@ -3,6 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
+import { SolidWorksTag, SwoodEditorTag, SwoodTag } from '../../components/NameTags'
 
 const SaveToPDF = () => {
 	return (
@@ -32,11 +33,15 @@ const SaveToPDF = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>Swood can automatically save the associated SolidWorks drawings of models as PDFs. This process is enabled by adding specific custom properties to the model and then running the Swood Report.</Typography>
+				<Typography>
+					<SwoodTag /> can automatically save the associated <SolidWorksTag /> drawings of models as PDFs. This process is enabled by adding specific custom properties to the model and then running the Swood Report.
+				</Typography>
 			</Section>
 
 			<Section id="AssociatedDrawings" title="What Is a SolidWorks Associated Drawing?">
-				<Typography>Only SolidWorks associated drawings can be automatically saved as PDFs. To qualify as an associated drawing, a SolidWorks drawing must meet the following criteria:</Typography>
+				<Typography>
+					Only <SolidWorksTag /> associated drawings can be automatically saved as PDFs. To qualify as an associated drawing, a <SolidWorksTag /> drawing must meet the following criteria:
+				</Typography>
 				<ul>
 					<li>The drawing file name must match the model file name.</li>
 					<li>The drawing must be saved in the same location as the model.</li>
@@ -85,7 +90,7 @@ const SaveToPDF = () => {
 					In the<span className="highlight">Swood Report Pro</span>, you can view the saved PDF drawings by clicking the PDF icons.
 				</Typography>
 				<Typography>
-					To display the PDF icons, use the <span className="highlight">Swood Editor</span> to add a column with the property <span className="highlight">PDFRelativePath</span>, as shown in the example below:
+					To display the PDF icons, use the <SwoodEditorTag /> to add a column with the property <span className="highlight">PDFRelativePath</span>, as shown in the example below:
 				</Typography>
 				<Typography>This property can be added to the Frames, Panels, and Hardware tables.</Typography>
 				<ImageComponent source="./images/PDFProperty.png" size="150px" />

@@ -3,6 +3,7 @@ import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
 import LatestSwoodDocs from '../components/LatestSwoodDocs'
+import { SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 
 const Home = () => {
 	return (
@@ -13,8 +14,13 @@ const Home = () => {
 			<PageTitle title="Welcome to SwoodDocs!" />
 
 			{/* Introduction Text */}
-			<Typography>This site is designed to be your comprehensive guide for all things SWOOD. Whether you're looking to optimize performance or take full advantage of SWOOD's reporting capabilities, we’ve gathered all the essential information to help you master your workflow.</Typography>
-			<Typography>Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of SWOOD.</Typography>
+			<Typography>
+				This site is designed to be your comprehensive guide for all things <SwoodTag />. Whether you're looking to optimize performance or take full advantage of <SwoodTag />
+				's reporting capabilities, we’ve gathered all the essential information to help you master your workflow.
+			</Typography>
+			<Typography>
+				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of <SwoodTag />.
+			</Typography>
 
 			<SectionDivider />
 			<Box
@@ -25,13 +31,38 @@ const Home = () => {
 					justifyContent: 'center',
 				}}
 			>
-				<SectionCard to="/Swood" title="Swood" content="Discover best practices to enhance Swood performance, find how to gather support files with Swood RX and explore the script parameters." />
+				<SectionCard
+					to="/Swood"
+					title="Swood"
+					content={
+						<>
+							Discover best practices to enhance <SwoodTag /> performance, find how to gather support files with <SwoodRXTag /> and explore the script parameters.
+						</>
+					}
+				/>
 
-				<SectionCard to="/SwoodReport" title="Swood Report" content="Learn how to effectively use Swood's reporting features, including working with extended material properties, and defining complex components like hardware or frames." />
+				<SectionCard
+					to="/SwoodReport"
+					title="SwoodReport"
+					content={
+						<>
+							Learn how to effectively use <SwoodTag />
+							's reporting features, including working with extended material properties, and defining complex components like hardware or frames.
+						</>
+					}
+				/>
 
-				<SectionCard to="/SwoodEditor" title="Swood Editor" content="Access essential licensing information and learn how to efficiently manage and back up your report settings." />
+				<SectionCard to="/SwoodEditor" title="SwoodEditor" content="Access essential licensing information and learn how to efficiently manage and back up your report settings." />
 
-				<SectionCard to="/SwoodUtils" title="SwoodUtils" content="SwoodUtils streamlines the ID assignment process for panels and frames, providing a user-friendly interface." />
+				<SectionCard
+					to="/SwoodUtils"
+					title="SwoodUtils"
+					content={
+						<>
+							<SwoodUtilsTag /> streamlines the ID assignment process for panels and frames, providing a user-friendly interface.
+						</>
+					}
+				/>
 			</Box>
 
 			<LatestSwoodDocs />

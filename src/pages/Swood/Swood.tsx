@@ -1,6 +1,7 @@
 import { List, ListItem, ListItemText, Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { SectionDivider } from '../../components/SectionDivider'
+import { EficadTag, SolidWorksTag, SwoodTag } from '../../components/NameTags'
 
 const Swood = () => {
 	return (
@@ -9,7 +10,11 @@ const Swood = () => {
 			<SectionDivider />
 
 			<Typography>
-				<span className="highlight">Swood</span> is a suite of software solutions developed by <span className="highlight">EFICAD</span> and fully integrated into <span className="highlight">SOLIDWORKS</span>. It is designed for woodworking professionals, offering tools to streamline the design, manufacturing, and production of furniture and wood-based products. SWOOD includes modules for cabinet design, panel processing, woodworking machining, and managing CNC operations.
+				<SwoodTag /> is a suite of software solutions developed by <EficadTag /> and fully integrated into{' '}
+				<span className="highlight">
+					<SolidWorksTag />
+				</span>
+				. It is designed for woodworking professionals, offering tools to streamline the design, manufacturing, and production of furniture and wood-based products. <SwoodTag /> includes modules for cabinet design, panel processing, woodworking machining, and managing CNC operations.
 			</Typography>
 
 			<List>

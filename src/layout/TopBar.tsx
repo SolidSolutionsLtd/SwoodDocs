@@ -99,7 +99,7 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 				</Typography>
 				<Typography color="textDisabled" marginTop="6px">
 					{' '}
-					&gt; {pageTitle}
+					/ {pageTitle}
 				</Typography>
 			</Toolbar>
 		</AppBar>

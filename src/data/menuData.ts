@@ -15,7 +15,7 @@ export const menuItems: IMenuItem[] = [
 	},
 	{
 		to: '/SwoodReport',
-		title: 'Swood Report',
+		title: 'SwoodReport',
 		children: [
 			{ to: '/SwoodReportQuickStart', title: 'Swood Report QuickStart' },
 			{ to: '/SwoodLicensing', title: 'Swood Report Licensing' },
@@ -56,7 +56,7 @@ export const menuItems: IMenuItem[] = [
 	},
 	{
 		to: '/SwoodEditor',
-		title: 'Swood Editor',
+		title: 'SwoodEditor',
 		children: [
 			{ to: '/SwoodLicensing', title: 'Swood Editor licensing' },
 			{ to: '/SwoodEditorReleaseNotes', title: 'Swood Editor Release Notes' },

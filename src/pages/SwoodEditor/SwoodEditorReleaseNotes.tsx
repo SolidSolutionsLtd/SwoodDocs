@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ProChip } from '../../components/ProChip'
 import { Release } from '../../components/Release'
+import { SwoodTag, SolidWorksTag } from '../../components/NameTags'
 
 const SwoodEditorReleaseNotes = () => {
 	return (
@@ -36,7 +37,9 @@ const SwoodEditorReleaseNotes = () => {
 			</Release>
 
 			<Release version="1.2.0" ReleaseDate="20/08/2024">
-				<Typography variant="subtitle1">Requirements: Swood 2024 SP0.0 or newer</Typography>
+				<Typography variant="subtitle1">
+					Requirements: <SwoodTag /> 2024 SP0.0 or newer
+				</Typography>
 				<Typography variant="subtitle1" className="red">
 					Warning: This version introduces breaking changes for reports that save labels to image files. Please contact support before upgrading.
 				</Typography>
@@ -54,7 +57,9 @@ const SwoodEditorReleaseNotes = () => {
 					<Typography variant="h6">Improvements</Typography>
 					<ul>
 						<li>CSV process on Hardware</li>
-						<li>Updates Report.cfg version according to the installed Swood Version</li>
+						<li>
+							Updates Report.cfg version according to the installed <SwoodTag /> Version
+						</li>
 						<li>Removed Database.js import</li>
 						<li>BoardEstimation settings have been removed</li>
 						<li>Ability to change ShowPanelID and ShowPanelIDPrograms in Detailed Pages</li>
@@ -67,7 +72,9 @@ const SwoodEditorReleaseNotes = () => {
 					<li>Includes Report v2.9.2</li>
 					<li>Installs the SSM License manager as a pre-requisite</li>
 					<li>Now requires .net 8.0</li>
-					<li>Changed order and names in Nesting page to match Swood</li>
+					<li>
+						Changed order and names in Nesting page to match <SwoodTag />
+					</li>
 					<li>Added "Part Distance Type" to Nesting page</li>
 					<li>Added SORTMODE "Enable Holding Strategy" in Nesting Page</li>
 					<li>Added properties to Program Details page: ProgramDetailsShowLayers, ProgramDetailsShowLaminates, ProgramDetailsShowEdgebands, ProgramDetailsShowPanelProcess</li>
@@ -157,7 +164,9 @@ const SwoodEditorReleaseNotes = () => {
 			<Release version="0.0.1" ReleaseDate="5/12/2022">
 				<ul>
 					<li>Improvement to how data is imported</li>
-					<li>Notification when Dat folder being edited is different to the one specified in SolidWorks</li>
+					<li>
+						Notification when Dat folder being edited is different to the one specified in <SolidWorksTag />
+					</li>
 					<li>Changes to user interface when selecting tick & cross</li>
 					<li>Ability to define Program Images</li>
 					<li>Ability to define pages to print in the report</li>

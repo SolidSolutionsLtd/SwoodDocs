@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SwoodEditorTag } from '../../components/NameTags'
 
 const CreatingDATBackups = () => {
 	return (
@@ -23,7 +24,7 @@ const CreatingDATBackups = () => {
 
 			<Section id="Overview" title="Overview">
 				<Typography>
-					The <span className="highlight">Swood Editor</span> allows you to create backups of your <span className="highlight">DAT</span> folder, which contains all the settings used by the report.
+					The <SwoodEditorTag /> allows you to create backups of your <span className="highlight">DAT</span> folder, which contains all the settings used by the report.
 				</Typography>
 			</Section>
 
