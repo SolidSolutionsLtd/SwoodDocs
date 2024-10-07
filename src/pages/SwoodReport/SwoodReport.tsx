@@ -8,7 +8,7 @@ import { SolidSolutionsTag, SwoodCAMTag, SwoodDesignTag, SwoodReportTag, SwoodTa
 const SwoodReport = () => {
 	return (
 		<>
-			<PageTitle title="Swood Report" />
+			<PageTitle title="SwoodReport" />
 
 			<SectionDivider />
 

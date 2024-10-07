@@ -1,4 +1,4 @@
-import { Box, Button, Tooltip, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
@@ -8,22 +8,6 @@ import { SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 const Home = () => {
 	return (
 		<Box sx={{ padding: '20px' }}>
-			<Tooltip
-				title="Tooltip text"
-				placement="top"
-				PopperProps={{
-					modifiers: [
-						{
-							name: 'offset',
-							options: {
-								offset: [60, 0], // Adjust the offset as needed
-							},
-						},
-					],
-				}}
-			>
-				<Button>Hover me</Button>
-			</Tooltip>
 			<PageTitle title="Welcome to SwoodDocs!" />
 			<Typography variant="subtitle2" color="textDisabled" sx={{ marginTop: '1px' }}>
 				by Solid Solutions

@@ -14,7 +14,7 @@ const SwoodDataDirectory = lazy(() => import('./pages/Swood/SwoodDataDirectory')
 const SwoodTab = lazy(() => import('./pages/Swood/SwoodTab'))
 const FileName = lazy(() => import('./pages/Swood/FileName'))
 
-// Swood Report imports
+// SwoodReport imports
 const Swood = lazy(() => import('./pages/Swood/Swood'))
 const SwoodReport = lazy(() => import('./pages/SwoodReport/SwoodReport'))
 const SwoodReportQuickStart = lazy(() => import('./pages/SwoodReport/SwoodReportQuickStart'))

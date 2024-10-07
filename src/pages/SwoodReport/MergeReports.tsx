@@ -250,7 +250,7 @@ const MergeReports = () => {
 			<Section id="Requirements" title="Requirements">
 				<ol>
 					<li>
-						Swood Report Pro
+						SwoodReport Pro
 						<ProChip /> version 2.10.3 or newer
 					</li>
 					<li>Swood 2024 SP0.0 or newer</li>

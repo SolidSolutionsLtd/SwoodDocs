@@ -7,7 +7,7 @@ import { SwoodReportTag, SwoodEditorTag, SolidSolutionsLicenseManagerTag } from 
 export const SwoodLicensing = () => {
 	return (
 		<>
-			<PageTitle title="Swood Report & Editor Licensing" />
+			<PageTitle title="SwoodReport & SwoodEditor Licensing" />
 
 			<nav>
 				<ul>
