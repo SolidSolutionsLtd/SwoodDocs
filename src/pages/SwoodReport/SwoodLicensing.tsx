@@ -34,7 +34,7 @@ export const SwoodLicensing = () => {
 
 			<Section id="Licensing" title="Licensing">
 				<Typography>
-					All versions of the <SwoodReportTag /> and <SwoodEditorTag /> are licensed. Both <SwoodReportTag /> and <SwoodEditorTag /> use the same license. Please note that only one license of the Swood Report can be activated on a machine at any time. See{' '}
+					All versions of the <SwoodReportTag /> and <SwoodEditorTag /> are licensed. Both <SwoodReportTag /> and <SwoodEditorTag /> use the same license. Please note that only one license of the <SwoodReportTag /> can be activated on a machine at any time. See{' '}
 					<a href="#Transfer">
 						<span className="highlight">Transfer License</span>
 					</a>{' '}
@@ -76,7 +76,7 @@ export const SwoodLicensing = () => {
 					Typically, it should not be necessary to manually <span className="highlight">Refresh</span> a license. However, it may be needed if a license has been modified and those changes are not reflected on your machine. For example, if you have upgraded a Standard license to a Professional license, a manual Refresh will be necessary to update the license.
 				</Typography>
 				<Typography>
-					To <span className="highlight">Refresh</span> the license, first launch <span className="highlight">Solid Solutions Licensing</span> on your machine, then click <span className="highlight">View</span> on the Swood Report license, followed by <span className="highlight">Refresh</span> in the license details window.
+					To <span className="highlight">Refresh</span> the license, first launch <span className="highlight">Solid Solutions Licensing</span> on your machine, then click <span className="highlight">View</span> on the <SwoodReportTag /> license, followed by <span className="highlight">Refresh</span> in the license details window.
 				</Typography>
 			</Section>
 			<Section id="Troubleshooting" title="Troubleshooting">

@@ -2,12 +2,12 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ProChip } from '../../components/ProChip'
 import { Release } from '../../components/Release'
-import { SolidWorksTag, SwoodTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodDesignTag, SwoodTag } from '../../components/NameTags'
 
 const SwoodReportReleaseNotes = () => {
 	return (
 		<>
-			<PageTitle title="Swood Report Release Notes" />
+			<PageTitle title="SwoodReport Release Notes" />
 
 			<Release version="2.10.3" ReleaseDate="13/09/2024">
 				<ul>
@@ -667,7 +667,7 @@ const SwoodReportReleaseNotes = () => {
 					<li>Frames can now be excluded. Information is now correct and does not break the report</li>
 					<li>Panels defined as Hardware will be treated as Hardware. Panel image will be generated and no panel detailed list will be generated</li>
 					<li>
-						Swood Design Panel size properties are now available in Program object (<span className="param">LengthWithEB</span>, <span className="param">LengthWithoutEB</span>, <span className="param">RoughLength</span>)
+						<SwoodDesignTag /> Panel size properties are now available in Program object (<span className="param">LengthWithEB</span>, <span className="param">LengthWithoutEB</span>, <span className="param">RoughLength</span>)
 					</li>
 					<li>Fixed bug wrong Frame Quantity calculation in Frame Details when using Project Quantity</li>
 					<li>Fixed bug where PanelData was getting processed twice in Frame Details</li>

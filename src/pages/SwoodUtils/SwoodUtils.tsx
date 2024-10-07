@@ -3,7 +3,9 @@ import { ImageComponent } from '../../components/ImageComponent'
 import { NavLink } from 'react-router-dom'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
-import { SolidWorksTag, SwoodUtilsTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodReportTag, SwoodUtilsTag } from '../../components/NameTags'
+import { BetaDisclaimer } from '../../components/BetaDisclaimer'
+import DownloadSwoodUtils from '../../components/DownloadSwoodUtils'
 
 const SwoodUtils = () => {
 	return (
@@ -98,14 +100,20 @@ const SwoodUtils = () => {
 				</ul>
 			</Section>
 
+			<Box className="red">
+				<Section id="Disclaimer" title="SwoodUtils Disclaimer">
+					<BetaDisclaimer />
+				</Section>
+			</Box>
+
 			<Section id="Installation" title="Installation">
 				<ol>
 					<li>
-						Begin by downloading the installer from this{' '}
+						Download <SwoodUtilsTag />
 						<Link href="https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.3.0.exe" target="_blank">
 							link
 						</Link>
-						. If the download doesn’t start automatically, copy and paste the following URL into a new browser tab: <span style={{ textDecoration: 'underline' }}>https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.1.0.exe</span>.
+						<DownloadSwoodUtils />
 					</li>
 					<li>
 						Close <SolidWorksTag /> before proceeding.
@@ -712,7 +720,9 @@ const SwoodUtils = () => {
 						<li>Ability to copy settings between users through the UI.</li>
 						<li>Ability to save settings to a server.</li>
 						<li>Provide the capability to generate consecutive IDs globally using a database.</li>
-						<li>Add a button to run the Swood Report.</li>
+						<li>
+							Add a button to run the <SwoodReportTag />.
+						</li>
 					</ul>
 				</Box>
 			</Section>

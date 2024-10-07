@@ -42,7 +42,7 @@ const SwoodRX = () => {
 
 			<Section id="SwoodRXOpen" title="How to Open the Swood RX Tool">
 				<Typography>
-					The <SwoodRXTag /> tool is installed with SWOOD and can be launched by searching for "<SwoodRXTag />" in the Windows search bar.
+					The <SwoodRXTag /> tool is installed with <SwoodTag /> and can be launched by searching for "Swood RX" in the Windows search bar.
 				</Typography>
 			</Section>
 

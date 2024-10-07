@@ -58,7 +58,7 @@ const SwoodServer = () => {
 							primary="Main Portal"
 							secondary={
 								<>
-									The <span className="highlight">SwoodServer</span> provides a <span className="highlight">Main Portal</span> which serves as the central access point for all projects, offering a comprehensive overview and quick navigation to their corresponding <span className="highlight">Swood Reports</span>. This streamlined interface enhances user experience by allowing team members to efficiently manage and monitor project statuses at a glance.
+									The <span className="highlight">SwoodServer</span> provides a <span className="highlight">Main Portal</span> which serves as the central access point for all projects, offering a comprehensive overview and quick navigation to their corresponding <SwoodReportTag />. This streamlined interface enhances user experience by allowing team members to efficiently manage and monitor project statuses at a glance.
 								</>
 							}
 						/>

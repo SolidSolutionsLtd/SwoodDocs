@@ -3,6 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
+import { SwoodReportTag } from '../../components/NameTags'
 
 const CustomProperties = () => {
 	return (
@@ -30,11 +31,15 @@ const CustomProperties = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>The Swood Report enables users to display custom properties of models. These properties can originate from panels, programs, frames, or projects.</Typography>
+				<Typography>
+					The <SwoodReportTag /> enables users to display custom properties of models. These properties can originate from panels, programs, frames, or projects.
+				</Typography>
 			</Section>
 
 			<Section id="CustomPropertyTypes" title="Types of custom properties">
-				<Typography>The Swood Report allows users to display custom properties of models in the report, these properties can come from panels, programs, frames or projects.</Typography>
+				<Typography>
+					The <SwoodReportTag /> allows users to display custom properties of models in the report, these properties can come from panels, programs, frames or projects.
+				</Typography>
 				<ul>
 					<li>String: A property that contains text.</li>
 					<li>Boolean: A property that can be either true or false.</li>

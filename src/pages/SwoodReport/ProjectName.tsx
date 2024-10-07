@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SwoodReportTag } from '../../components/NameTags'
 
 const ProjectName = () => {
 	return (
@@ -23,7 +24,9 @@ const ProjectName = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>By default, the SWOOD Report uses the model's name as the project name. However, this can be changed to reference a custom property in the model.</Typography>
+				<Typography>
+					By default, the <SwoodReportTag /> uses the model's name as the project name. However, this can be changed to reference a custom property in the model.
+				</Typography>
 			</Section>
 
 			<Section id="ProjectNameCustomProperty" title="Adding a Custom Project Name Property">

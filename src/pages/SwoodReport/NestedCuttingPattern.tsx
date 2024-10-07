@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
+import { SwoodNestingTag } from '../../components/NameTags'
 
 const NestedCuttingPattern = () => {
 	return (
@@ -29,7 +30,9 @@ const NestedCuttingPattern = () => {
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>In some workflows, users may want to categorize panels into two main groups: Nested or Beam Sawed. Nested panels are processed using Swood Nesting, while Beam Sawed panels are optimized in the Cutting Pattern process.</Typography>
+				<Typography>
+					In some workflows, users may want to categorize panels into two main groups: Nested or Beam Sawed. Nested panels are processed using <SwoodNestingTag />, while Beam Sawed panels are optimized in the Cutting Pattern process.
+				</Typography>
 
 				<Typography>This behavior can be controlled by assigning a custom property to the model, which defines how the panels will be processed.</Typography>
 			</Section>

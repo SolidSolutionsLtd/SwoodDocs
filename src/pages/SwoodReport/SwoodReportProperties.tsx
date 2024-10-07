@@ -14,7 +14,7 @@ const columns = [
 const SwoodReportProperties = () => {
 	return (
 		<>
-			<PageTitle title="Swood Report Properties" />
+			<PageTitle title="SwoodReport Properties" />
 
 			<nav>
 				<ul>

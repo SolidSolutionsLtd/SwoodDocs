@@ -1,3 +1,6 @@
+// import { Tooltip, Zoom } from '@mui/material'
+
+// export const EficadTag = () => <ToolTipElement text="Eficad" tooltip="Eficad" />
 export const EficadTag = () => <span className="highlight">Eficad</span>
 
 export const SwoodTag = () => <span className="highlight">Swood</span>
@@ -5,6 +8,12 @@ export const SwoodTag = () => <span className="highlight">Swood</span>
 export const SolidWorksTag = () => <span className="highlight">SolidWorks</span>
 
 export const SwoodReportTag = () => <span className="highlight">SwoodReport</span>
+
+export const SwoodDesignTag = () => <span className="highlight">Swood Design</span>
+
+export const SwoodCAMTag = () => <span className="highlight">Swood CAM</span>
+
+export const SwoodNestingTag = () => <span className="highlight">Swood Nesting</span>
 
 export const SwoodEditorTag = () => <span className="highlight">SwoodEditor</span>
 
@@ -19,3 +28,23 @@ export const SolidSolutionsTag = () => <span className="highlight">Solid Solutio
 export const SolidSolutionsLicenseManagerTag = () => <span className="highlight">Solid Solutions License Manager</span>
 
 export const SolidWorksRXTag = () => <span className="highlight">SolidWorks RX</span>
+
+// const ToolTipElement = ({ text, tooltip }: { text: string; tooltip: string }) => (
+// 	<Tooltip
+// 		title={tooltip}
+// 		placement="top-end"
+// 		TransitionComponent={Zoom}
+// 		PopperProps={{
+// 			modifiers: [
+// 				{
+// 					name: 'offset',
+// 					options: {
+// 						offset: [175, 0], // Adjust the offset as needed
+// 					},
+// 				},
+// 			],
+// 		}}
+// 	>
+// 		<span className="highlight">{text}</span>
+// 	</Tooltip>
+// )

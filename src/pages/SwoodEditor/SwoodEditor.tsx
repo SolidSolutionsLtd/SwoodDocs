@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { SectionDivider } from '../../components/SectionDivider'
-import { SwoodEditorTag, SwoodTag } from '../../components/NameTags'
+import { SolidSolutionsTag, SwoodEditorTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
 
 const SwoodEditor = () => {
 	return (
@@ -10,7 +10,7 @@ const SwoodEditor = () => {
 			<SectionDivider />
 
 			<Typography>
-				The <SwoodEditorTag /> app, developed by <span className="highlight">Solid Solutions</span>, offers a powerful tool for customizing and managing SWOOD report settings. It allows users to modify various aspects of report generation, such as adjusting columns, setting sorting orders, and specifying the output location for reports.
+				The <SwoodEditorTag /> app, developed by <SolidSolutionsTag />, offers a powerful tool for customizing and managing <SwoodReportTag /> settings. It allows users to modify various aspects of report generation, such as adjusting columns, setting sorting orders, and specifying the output location for reports.
 			</Typography>
 
 			<Typography>

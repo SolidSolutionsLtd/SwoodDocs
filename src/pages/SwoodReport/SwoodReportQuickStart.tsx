@@ -22,7 +22,7 @@ const SwoodReportQuickStart = () => {
 
 	return (
 		<>
-			<PageTitle title="Swood Report QuickStart" />
+			<PageTitle title="SwoodReport QuickStart" />
 			<nav>
 				<ul>
 					<li>
@@ -35,7 +35,7 @@ const SwoodReportQuickStart = () => {
 						<a href="#License">Solid Solutions License Manager</a>
 					</li>
 					<li>
-						<a href="#Setup">Setup the Swood Report</a>
+						<a href="#Setup">Setup the SwoodReport</a>
 					</li>
 				</ul>
 			</nav>
@@ -84,7 +84,7 @@ const SwoodReportQuickStart = () => {
 				<ImageComponent source="./images/Licensing1.png" size="400px" />
 			</Section>
 
-			<Section id="Setup" title="Setup the Swood Report">
+			<Section id="Setup" title="Setup the SwoodReport">
 				<Typography>
 					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <SwoodDataDirectoryTag />. <NavLink to="/SwoodDataDirectory">Learn More.</NavLink>
 				</Typography>

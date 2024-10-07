@@ -13,7 +13,7 @@ const columns = [
 const SwoodReportMatrix = () => {
 	return (
 		<>
-			<PageTitle title="Swood Report Matrix" />
+			<PageTitle title="SwoodReport Matrix" />
 			<SectionDivider />
 
 			<BasicTable columns={columns} data={MatrixVariables} />

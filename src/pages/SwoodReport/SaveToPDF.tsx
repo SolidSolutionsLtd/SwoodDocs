@@ -3,7 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
-import { SolidWorksTag, SwoodEditorTag, SwoodTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodEditorTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
 
 const SaveToPDF = () => {
 	return (
@@ -34,7 +34,7 @@ const SaveToPDF = () => {
 
 			<Section id="Overview" title="Overview">
 				<Typography>
-					<SwoodTag /> can automatically save the associated <SolidWorksTag /> drawings of models as PDFs. This process is enabled by adding specific custom properties to the model and then running the Swood Report.
+					<SwoodTag /> can automatically save the associated <SolidWorksTag /> drawings of models as PDFs. This process is enabled by adding specific custom properties to the model and then running the <SwoodReportTag />.
 				</Typography>
 			</Section>
 
@@ -87,7 +87,7 @@ const SaveToPDF = () => {
 
 			<Section id="ReportLinks" title="Viewing the PDF Drawings in the Report" pro={true}>
 				<Typography>
-					In the<span className="highlight">Swood Report Pro</span>, you can view the saved PDF drawings by clicking the PDF icons.
+					In the <SwoodReportTag /> <ProChip /> , you can view the saved PDF drawings by clicking the PDF icons.
 				</Typography>
 				<Typography>
 					To display the PDF icons, use the <SwoodEditorTag /> to add a column with the property <span className="highlight">PDFRelativePath</span>, as shown in the example below:

@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
-import { SolidWorksTag, SwoodTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodCAMTag, SwoodDesignTag, SwoodTag } from '../../components/NameTags'
 
 const SwoodTab = () => {
 	return (
@@ -39,7 +39,7 @@ const SwoodTab = () => {
 					<ImageComponent source="./images/DeleteTabs.png" />
 
 					<li>
-						Add the <SwoodTag /> Tabs by clicking the <span className="highlight">New Tab</span> button and then select both Swood Design and Swood Cam options.
+						Add the <SwoodTag /> Tabs by clicking the <span className="highlight">New Tab</span> button and then select both <SwoodDesignTag /> and <SwoodCAMTag /> options.
 					</li>
 					<ImageComponent source="./images/AddTabs.png" />
 

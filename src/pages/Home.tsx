@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Tooltip, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
@@ -7,12 +7,27 @@ import { SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 
 const Home = () => {
 	return (
-		// import { Typography, Box, List, ListItem, ListItemText, Divider } from '@mui/material';
-
 		<Box sx={{ padding: '20px' }}>
-			{/* Title */}
+			<Tooltip
+				title="Tooltip text"
+				placement="top"
+				PopperProps={{
+					modifiers: [
+						{
+							name: 'offset',
+							options: {
+								offset: [60, 0], // Adjust the offset as needed
+							},
+						},
+					],
+				}}
+			>
+				<Button>Hover me</Button>
+			</Tooltip>
 			<PageTitle title="Welcome to SwoodDocs!" />
-
+			<Typography variant="subtitle2" color="textDisabled" sx={{ marginTop: '1px' }}>
+				by Solid Solutions
+			</Typography>
 			{/* Introduction Text */}
 			<Typography>
 				This site is designed to be your comprehensive guide for all things <SwoodTag />. Whether you're looking to optimize performance or take full advantage of <SwoodTag />
@@ -21,7 +36,6 @@ const Home = () => {
 			<Typography>
 				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of <SwoodTag />.
 			</Typography>
-
 			<SectionDivider />
 			<Box
 				sx={{
@@ -64,7 +78,6 @@ const Home = () => {
 					}
 				/>
 			</Box>
-
 			<LatestSwoodDocs />
 		</Box>
 	)

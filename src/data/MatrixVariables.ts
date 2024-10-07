@@ -14,7 +14,7 @@ export const MatrixVariables = [
 	{ Name: 'Frame Detail Page', Stn: false, Pro: true, Description: 'Further information of frames like detailed list of panes and hardware used in each cabinet' },
 	{ Name: 'Frame Labels', Stn: false, Pro: true, Description: 'Creates dedicated labels for Frames' },
 	{ Name: 'Cutting Pattern Page', Stn: false, Pro: true, Description: 'Creates Cutting Pattern pages' },
-	{ Name: 'Profile Page', Stn: false, Pro: true, Description: 'List of SOLIDWORKS Weldments Profiles used in projects' },
+	{ Name: 'Profile Page', Stn: false, Pro: true, Description: 'List of SolidWorks Weldments Profiles used in projects' },
 	{ Name: 'Save table as Excel', Stn: false, Pro: true, Description: 'Allows the download of the formatted HTML table as an EXCEL document.' },
 	{ Name: 'Group by Material Type', Stn: false, Pro: true, Description: 'Group panels list by material types such as glass and solid surfaces' },
 	{ Name: 'Group by Frames', Stn: false, Pro: true, Description: 'Group panels lists by Frames' },

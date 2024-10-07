@@ -3,6 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
 import { ImageComponent } from '../../components/ImageComponent'
+import { SwoodReportTag } from '../../components/NameTags'
 
 const PanelsAndStocks = () => {
 	return (
@@ -35,7 +36,7 @@ const PanelsAndStocks = () => {
 
 			<Section id="Overview" title="Overview">
 				<Typography>
-					By default, the Swood Report displays a <span className="highlight">Panels</span> and a <span className="highlight">Stocks</span> list. These lists present panels in different ways, which can be advantageous depending on your workflow.
+					By default, the <SwoodReportTag /> displays a <span className="highlight">Panels</span> and a <span className="highlight">Stocks</span> list. These lists present panels in different ways, which can be advantageous depending on your workflow.
 				</Typography>
 			</Section>
 

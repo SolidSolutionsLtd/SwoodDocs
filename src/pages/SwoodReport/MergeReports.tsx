@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
 import DownloadMergeReports from '../../components/DownloadMergeReports'
-import { SolidWorksTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodDataDirectoryTag, SwoodDesignTag, SwoodNestingTag } from '../../components/NameTags'
 
 const MergeReports = () => {
 	return (
@@ -39,7 +39,9 @@ const MergeReports = () => {
 				</ul>
 			</nav>
 			<Section id="Overview" title="Overview">
-				<Typography>When using Swood Design and Swood Nesting, users must manage multiple assemblies: one or more design assemblies and the nesting assembly. This separation often leads to issues with reports due to the division of data. For example, nesting projects may not include all project components (such as hardware) or information about the frames used. Conversely, design projects lack details about the nested sheets.</Typography>
+				<Typography>
+					When using <SwoodDesignTag /> and <SwoodNestingTag />, users must manage multiple assemblies: one or more design assemblies and the nesting assembly. This separation often leads to issues with reports due to the division of data. For example, nesting projects may not include all project components (such as hardware) or information about the frames used. Conversely, design projects lack details about the nested sheets.
+				</Typography>
 				<Typography>
 					To address this, a new <span className="highlight">MergeReports</span> application has been developed to consolidate the data from Design and Nesting projects into a single report. Please read further to understand its workflow, FAQs, and setup.
 				</Typography>
@@ -49,16 +51,44 @@ const MergeReports = () => {
 			<Section id="Terminology" title="Terminology">
 				<Typography>Below is a list of the terminology used throughout this article:</Typography>
 				<ListItem>
-					<ListItemText primary="Design Project" secondary="A project or file created using Swood Design, such as a panel, frame, or layout assembly." />
+					<ListItemText
+						primary="Design Project"
+						secondary={
+							<>
+								A project or file created using <SwoodDesignTag />, such as a panel, frame, or layout assembly.
+							</>
+						}
+					/>
 				</ListItem>
 				<ListItem>
-					<ListItemText primary="Design Report" secondary="A report generated from a Swood Design project." />
+					<ListItemText
+						primary="Design Report"
+						secondary={
+							<>
+								A report generated from a <SwoodDesignTag /> project.
+							</>
+						}
+					/>
 				</ListItem>
 				<ListItem>
-					<ListItemText primary="Nesting Project" secondary="A project or file created using Swood Nesting." />
+					<ListItemText
+						primary="Nesting Project"
+						secondary={
+							<>
+								A project or file created using <SwoodNestingTag />.
+							</>
+						}
+					/>
 				</ListItem>
 				<ListItem>
-					<ListItemText primary="Nesting Report" secondary="A report generated from a Swood Nesting project." />
+					<ListItemText
+						primary="Nesting Report"
+						secondary={
+							<>
+								A report generated from a <SwoodNestingTag /> project.
+							</>
+						}
+					/>
 				</ListItem>
 				<ListItem>
 					<ListItemText
@@ -71,7 +101,14 @@ const MergeReports = () => {
 					/>
 				</ListItem>
 				<ListItem>
-					<ListItemText primary="Nesting Source Files" secondary="Projects or files added as Source Files to the Swood Nesting project." />
+					<ListItemText
+						primary="Nesting Source Files"
+						secondary={
+							<>
+								Projects or files added as Source Files to the <SwoodNestingTag /> project.
+							</>
+						}
+					/>
 				</ListItem>
 				<ImageComponent source="./images/MergeReportsSourceFilesNest.png" size="400px" />
 			</Section>
@@ -240,7 +277,7 @@ const MergeReports = () => {
 					</li>
 					<ImageComponent source="./images/MergeReportsUnblock.png" size="500px" />
 					<li>
-						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the SWOOD Data Directory.
+						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the <SwoodDataDirectoryTag />.
 					</li>
 					<li>
 						Open the following file with any text editor (e.g., Notepad): <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Report.cfg</span>.

@@ -4,9 +4,9 @@ import { BetaDisclaimer } from './BetaDisclaimer'
 import { RegisterDownload } from './RegisterDownload'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 
-const DownloadMergeReports = () => {
-	const downloadLink = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReportPost.exe'
-	const appVersion = '0.0.0'
+const DownloadSwoodUtils = () => {
+	const downloadLink = 'https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.3.0.exe'
+	const appVersion = '0.1.3.0'
 
 	const [open, setOpen] = useState(false)
 	// const [email, setEmail] = useState('')
@@ -20,7 +20,7 @@ const DownloadMergeReports = () => {
 		setOpen(false)
 
 		try {
-			await RegisterDownload('MergeReportsDownloads', appVersion, 'download_MergeReports')
+			await RegisterDownload('SwoodUtilsDownloads', appVersion, 'download_SwoodUtils')
 			// Trigger the download after registration is complete
 			window.location.href = downloadLink
 		} catch (error) {
@@ -32,11 +32,11 @@ const DownloadMergeReports = () => {
 		<>
 			<Box display="flex" justifyContent="center" className="imageBox">
 				<Button variant="outlined" size="large" color="info" onClick={handleClickOpen} endIcon={<CloudDownloadIcon />}>
-					Download MergeReportPost v{appVersion}
+					Download SwoodUtils v{appVersion}
 				</Button>
 			</Box>
 			<Dialog open={open} onClose={handleClose}>
-				<DialogTitle>MergeReports Disclaimer</DialogTitle>
+				<DialogTitle>SwoodUtils Disclaimer</DialogTitle>
 				<DialogContent>
 					<BetaDisclaimer />
 				</DialogContent>
@@ -53,4 +53,4 @@ const DownloadMergeReports = () => {
 	)
 }
 
-export default DownloadMergeReports
+export default DownloadSwoodUtils
