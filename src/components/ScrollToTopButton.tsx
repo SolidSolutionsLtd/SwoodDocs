@@ -29,6 +29,7 @@ export const ScrollToTopButton = () => {
 
 	return (
 		<Fab
+			className="no-print"
 			color="info"
 			aria-label="scroll back to top"
 			onClick={scrollToTop}

@@ -89,7 +89,7 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 	}, [])
 
 	return (
-		<AppBar position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
+		<AppBar className="no-print" position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
 			<Toolbar>
 				<IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" sx={[{ mr: 2 }, open && { display: 'none' }]}>
 					<MenuIcon color="primary" />

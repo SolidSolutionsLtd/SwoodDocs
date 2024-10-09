@@ -703,7 +703,6 @@ const SwoodUtils = () => {
 				<Box className="SubSection">
 					<ul>
 						<li>Unable to manually change the feature tree order by dragging and dropping the rows.</li>
-						<li>Changing the Frame Id Format also changes the Panel Id Format.</li>
 					</ul>
 				</Box>
 			</Section>

@@ -7,6 +7,15 @@ const SwoodUtilsReleaseNotes = () => {
 		<>
 			<PageTitle title="SwoodUtils Release Notes" />
 
+			<Release version="0.1.4.0" ReleaseDate="09/10/2024">
+				<ul>
+					<Typography variant="h6">Bug Fixes</Typography>
+					<ul>
+						<li>Fixed inability to change Panel Id format setting</li>
+					</ul>
+				</ul>
+			</Release>
+
 			<Release version="0.1.3.0" ReleaseDate="13/09/2024">
 				<ul>
 					<Typography variant="h6">Bug Fixes</Typography>

@@ -13,6 +13,7 @@ const ScriptParameters = lazy(() => import('./pages/Swood/ScriptParameters'))
 const SwoodDataDirectory = lazy(() => import('./pages/Swood/SwoodDataDirectory'))
 const SwoodTab = lazy(() => import('./pages/Swood/SwoodTab'))
 const FileName = lazy(() => import('./pages/Swood/FileName'))
+const AutoPanelDrawings = lazy(() => import('./pages/Swood/AutoPanelDrawings'))
 
 // SwoodReport imports
 const Swood = lazy(() => import('./pages/Swood/Swood'))
@@ -70,6 +71,7 @@ export const App = () => {
 					<Route path="/SwoodDataDirectory" element={<SwoodDataDirectory />} />
 					<Route path="/SwoodTab" element={<SwoodTab />} />
 					<Route path="/FileName" element={<FileName />} />
+					<Route path="/AutoPanelDrawings" element={<AutoPanelDrawings />} />
 
 					<Route path="/SwoodReport" element={<SwoodReport />} />
 					<Route path="/SwoodReportQuickStart" element={<SwoodReportQuickStart />} />

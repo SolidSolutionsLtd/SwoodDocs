@@ -92,6 +92,7 @@ const Layout = () => {
 			{/* Top Bar */}
 			<TopBar open={open} handleDrawerOpen={handleDrawerOpen} />
 			<Drawer
+				className="no-print"
 				sx={{
 					width: drawerWidth,
 					flexShrink: 0,
