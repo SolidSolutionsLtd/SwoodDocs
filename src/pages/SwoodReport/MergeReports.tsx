@@ -8,6 +8,7 @@ import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
 import DownloadMergeReports from '../../components/DownloadMergeReports'
 import { SolidWorksTag, SwoodDataDirectoryTag, SwoodDesignTag, SwoodNestingTag } from '../../components/NameTags'
+import MergeReportDiagram from '../../Flow Diagrams/MergeReportDiagram'
 
 const MergeReports = () => {
 	return (
@@ -125,7 +126,7 @@ const MergeReports = () => {
 						The <span className="highlight">MergeReports</span> application will automatically generate a merged report.
 					</li>
 				</ol>
-				<ImageComponent source="./images/MergeReportWorkflow.png" size="600px" />
+				<MergeReportDiagram />
 			</Section>
 			<Section id="FAQs" title="FAQs">
 				<ListItem>

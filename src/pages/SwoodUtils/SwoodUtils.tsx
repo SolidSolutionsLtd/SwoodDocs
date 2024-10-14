@@ -1,4 +1,4 @@
-import { Typography, Box, ListItemText, Link } from '@mui/material'
+import { Typography, Box, ListItemText } from '@mui/material'
 import { ImageComponent } from '../../components/ImageComponent'
 import { NavLink } from 'react-router-dom'
 import { PageTitle } from '../../components/PageTitle'
@@ -110,9 +110,6 @@ const SwoodUtils = () => {
 				<ol>
 					<li>
 						Download <SwoodUtilsTag />
-						<Link href="https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.3.0.exe" target="_blank">
-							link
-						</Link>
 						<DownloadSwoodUtils />
 					</li>
 					<li>

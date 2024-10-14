@@ -12,3 +12,7 @@ a {
 a:hover {
 	color: rgb(21, 101, 192);
 }
+
+.react-flow__attribution {
+	display: none;
+}
