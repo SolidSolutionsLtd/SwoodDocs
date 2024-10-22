@@ -1,0 +1,1 @@
+import{j as s,z as n}from"./index-Br3K1neW.js";const x=({source:e,size:t,sx:o})=>s.jsx(n,{display:"flex",justifyContent:"center",className:"imageBox",sx:{...o},children:s.jsx("img",{src:e,style:{height:t}})});export{x as I};
