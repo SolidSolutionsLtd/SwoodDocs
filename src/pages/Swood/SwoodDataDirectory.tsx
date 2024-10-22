@@ -7,14 +7,14 @@ import { SolidWorksTag, SwoodDataDirectoryTag, SwoodTag } from '../../components
 const SwoodDataDirectory = () => {
 	return (
 		<>
-			<PageTitle title="Swood Data Directory" />
+			<PageTitle title="Swood data directory" />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#FindSDD">How to Find Your Swood Data Directory</a>
+						<a href="#FindSDD">How to find your Swood data directory</a>
 					</li>
 				</ul>
 			</nav>
@@ -26,7 +26,7 @@ const SwoodDataDirectory = () => {
 				<Typography variant="body1">Note that this location is customizable and can be defined locally or pointed to a mapped server directory.</Typography>
 			</Section>
 
-			<Section id="FindSDD" title="How to Find Your Swood Data Directory">
+			<Section id="FindSDD" title="How to find your Swood data directory">
 				<Typography>
 					You can find the location of the <SwoodDataDirectoryTag /> by opening <SolidWorksTag />, then using the top menu to navigate to <span className="param">Tools &gt; SWOOD Design &gt; Settings</span>.
 				</Typography>

@@ -8,7 +8,7 @@ import { SwoodReportTag } from '../../components/NameTags'
 const CustomProperties = () => {
 	return (
 		<>
-			<PageTitle title="How to display SolidWorks Custom Properties in the Report" />
+			<PageTitle title="How to display SolidWorks custom properties in the report" />
 
 			<nav>
 				<ul>
@@ -16,16 +16,16 @@ const CustomProperties = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#CustomPropertyTypes">Types of Custom Properties</a>
+						<a href="#CustomPropertyTypes">Types of custom properties</a>
 					</li>
 					<li>
-						<a href="#CustomPropertyLevels">Levels of Custom Properties</a>
+						<a href="#CustomPropertyLevels">Levels of custom properties</a>
 					</li>
 					<li>
-						<a href="#CustomPropertyCapture">Capturing a Custom Properties</a>
+						<a href="#CustomPropertyCapture">Capturing a custom properties</a>
 					</li>
 					<li>
-						<a href="#CustomPropertyDisplay">Displaying a Custom Property in the Report</a>
+						<a href="#CustomPropertyDisplay">Displaying a custom property in the report</a>
 					</li>
 				</ul>
 			</nav>
@@ -48,7 +48,7 @@ const CustomProperties = () => {
 					<li>Integer: A property representing a whole number without decimals</li>
 				</ul>
 			</Section>
-			<Section id="CustomPropertyLevels" title="Levels of Custom Properties">
+			<Section id="CustomPropertyLevels" title="Levels of custom properties">
 				<Typography>Custom properties can be read from various levels of the project, including the top level, panels, hardware, and more. Refer to the list below for the different available levels:</Typography>
 				<ul>
 					<li>Project: Properties added to the top-level assembly (the one used to run the report).</li>
@@ -73,7 +73,7 @@ const CustomProperties = () => {
 				<ImageComponent source="./images/CustomPropertyDefinition.png" size="500px" />
 			</Section>
 
-			<Section id="CustomPropertyDisplay" title="Displaying a Custom Property in the Report">
+			<Section id="CustomPropertyDisplay" title="Displaying a custom property in the report">
 				<Typography>Captured properties can be displayed in various parts of the report, with a common example being a table column.</Typography>
 
 				<Typography>

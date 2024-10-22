@@ -6,14 +6,14 @@ import { Section } from '../../components/Section'
 const FrameType = () => {
 	return (
 		<>
-			<PageTitle title="Group Frames by Type" pro={true} />
+			<PageTitle title="Group frames by type" pro={true} />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to group Frames by Type</a>
+						<a href="#Define">How to define a Frames Type</a>
 					</li>
 				</ul>
 			</nav>

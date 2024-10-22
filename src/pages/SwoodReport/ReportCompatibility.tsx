@@ -12,10 +12,10 @@ const columns = [
 const ReportCompatibility = () => {
 	return (
 		<>
-			<PageTitle title="Report Compatibility" />
+			<PageTitle title="Report compatibility" />
 			<SectionDivider />
 
-			<BasicTable columns={columns} data={ReportCompatibilityData} width={600} />
+			<BasicTable columns={columns} data={ReportCompatibilityData} width={700} />
 		</>
 	)
 }

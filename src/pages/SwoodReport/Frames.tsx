@@ -13,7 +13,7 @@ const Frames = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to Define a Frame</a>
+						<a href="#Define">How to define a frame</a>
 					</li>
 				</ul>
 			</nav>
@@ -25,7 +25,7 @@ const Frames = () => {
 				<Typography>The Frames tab will appear if there are one or more frames in a project.</Typography>
 			</Section>
 
-			<Section id="Define" title="How to Define a Frame">
+			<Section id="Define" title="How to define a frame">
 				<Typography>
 					To define a <span className="highlight">Frame</span>, add the custom property <span className="red">Frame</span> and set the value to <span className="red">Yes</span>.
 				</Typography>

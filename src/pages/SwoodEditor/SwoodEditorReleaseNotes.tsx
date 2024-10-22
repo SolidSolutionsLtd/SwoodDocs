@@ -7,10 +7,10 @@ import { SwoodTag, SolidWorksTag } from '../../components/NameTags'
 const SwoodEditorReleaseNotes = () => {
 	return (
 		<>
-			<PageTitle title="Swood Editor Release Notes" />
+			<PageTitle title="Swood Editor release notes" />
 
 			<Release version="1.2.1" ReleaseDate="13/09/2024">
-				<Typography variant="h6">New Features</Typography>
+				<Typography variant="h6">New features</Typography>
 				<ul>
 					<li>Includes report v2.10.3</li>
 					<li>Ability to modify DAT backup name</li>
@@ -28,7 +28,7 @@ const SwoodEditorReleaseNotes = () => {
 					<li>Label tables automatically increase height depending on content</li>
 					<li>Added formatting space between equal sign when saving .cfg</li>
 				</ul>
-				<Typography variant="h6">Bug Fixes</Typography>
+				<Typography variant="h6">Bug fixes</Typography>
 				<ul>
 					<li>Fixed tables horizontal header scroll issue</li>
 					<li>Fixed issue where labels page would intermittently would go blank, or would trigger a "Save Settings" flag without any changes</li>
@@ -45,7 +45,7 @@ const SwoodEditorReleaseNotes = () => {
 				</Typography>
 
 				<ul>
-					<Typography variant="h6">New Features</Typography>
+					<Typography variant="h6">New features</Typography>
 					<ul>
 						<li>Includes Report v2.10.0</li>
 						<li>New Label Layout Configurator</li>

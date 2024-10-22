@@ -13,7 +13,7 @@ import MergeReportDiagram from '../../Flow Diagrams/MergeReportDiagram'
 const MergeReports = () => {
 	return (
 		<>
-			<PageTitle title="How to Merge Nest and Design Reports" pro={true} beta={true} />
+			<PageTitle title="How to merge nest and design reports" pro={true} beta={true} />
 			<nav>
 				<ul>
 					<li>
@@ -32,10 +32,10 @@ const MergeReports = () => {
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Disclaimer">MergeReports Disclaimer</a>
+						<a href="#Disclaimer">MergeReports disclaimer</a>
 					</li>
 					<li>
-						<a href="#Setup">How to Set Up the MergeReports Application</a>
+						<a href="#Setup">How to set up the MergeReports application</a>
 					</li>
 				</ul>
 			</nav>
@@ -259,12 +259,12 @@ const MergeReports = () => {
 			</Section>
 
 			<Box className="red">
-				<Section id="Disclaimer" title="MergeReports Disclaimer">
+				<Section id="Disclaimer" title="MergeReports disclaimer">
 					<BetaDisclaimer />
 				</Section>
 			</Box>
 
-			<Section id="Setup" title="How to Set Up the MergeReports Application">
+			<Section id="Setup" title="How to set up the MergeReports application">
 				<ol>
 					<li>
 						Download <span className="highlight">MergeReportPost.exe</span>.

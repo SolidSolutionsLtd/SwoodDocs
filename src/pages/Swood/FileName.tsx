@@ -7,25 +7,21 @@ import { SwoodTag, SwoodDataDirectoryTag } from '../../components/NameTags'
 const FileName = () => {
 	return (
 		<>
-			<PageTitle title="Issues with Long File Names" />
+			<PageTitle title="Issues with long file names" />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
+
 					<li>
-						<a href="#">Ways to Approach the Problem</a>
-						<ul>
-							<li>
-								<a href="#RemovePath">Rename or Move DAT Folder</a>
-							</li>
-							<li>
-								<a href="#SimpleName">Define a Simplified Naming Convention</a>
-							</li>
-							<li>
-								<a href="#AutoNumber">Swood Automatic Numbering System</a>
-							</li>
-						</ul>
+						<a href="#RemovePath">Rename or move the Swood data directory folder</a>
+					</li>
+					<li>
+						<a href="#SimpleName">Define a simplified naming convention</a>
+					</li>
+					<li>
+						<a href="#AutoNumber">Swood automatic numbering system</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,25 +36,25 @@ const FileName = () => {
 
 			<ul>
 				<li>
-					<a href="#RemovePath">Rename or Move DAT Folder</a>
+					<a href="#RemovePath">Rename or move the Swood data directory folder</a>
 				</li>
 				<li>
-					<a href="#SimpleName">Define a Simplified Naming Convention</a>
+					<a href="#SimpleName">Define a simplified naming convention</a>
 				</li>
 				<li>
 					<a href="#AutoNumber">
-						Use the Automatic Numbering System from <SwoodTag />
+						Use the automatic numbering system from <SwoodTag />
 					</a>
 				</li>
 			</ul>
 
-			<Section id="RemovePath" title="Rename or Move DAT Folder">
+			<Section id="RemovePath" title="Rename or move the Swood data directory folder">
 				<Typography>
 					Rename or move the <SwoodDataDirectoryTag /> folder closer to the root folder of your PC to avoid unnecessary nested directories.
 				</Typography>
 			</Section>
 
-			<Section id="SimpleName" title="Define a Simplified Naming Convention">
+			<Section id="SimpleName" title="Define a simplified naming convention">
 				<Typography>Create a simplified naming convention for Parts and Assemblies, something comprised of a couple of letters and numbers.</Typography>
 				<Typography>As a simple example, “HC1_DR1_T” instead of “High Cabinet Type 1_Drawer Runner Type 1_Top”.</Typography>
 				<Typography>
@@ -66,7 +62,7 @@ const FileName = () => {
 				</Typography>
 			</Section>
 
-			<Section id="AutoNumber" title="Swood Automatic Numbering System">
+			<Section id="AutoNumber" title="Swood automatic numbering system">
 				<h3>Limitations</h3>
 				<ul>
 					<li>

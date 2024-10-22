@@ -6,14 +6,14 @@ import { SwoodTag } from '../../components/NameTags'
 const Hardware = () => {
 	return (
 		<>
-			<PageTitle title="Define Component as Hardware" />
+			<PageTitle title="Define component as hardware" />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to Define Hardware</a>
+						<a href="#Define">How to define hardware</a>
 					</li>
 				</ul>
 			</nav>
@@ -25,7 +25,7 @@ const Hardware = () => {
 				<Typography>The Hardware tab will appear if there are one or more hardware components in a project.</Typography>
 			</Section>
 
-			<Section id="Define" title="How to Define Hardware">
+			<Section id="Define" title="How to define hardware">
 				<Typography>
 					A component will be classified as <span className="highlight">Hardware</span> if its filepath contains <span className="red">/Hardwares/</span>. This means that a component will be defined as <span className="highlight">Hardware</span> if it is saved inside a folder (or any of its subfolders) called <span className="red">Hardwares</span>. Note that by default, <SwoodTag /> saves all hardware components in ".../Swood Data Directory/SWOODDesign
 					<span className="red">/Hardwares/</span>

@@ -7,7 +7,7 @@ import { SwoodReportTag, SwoodEditorTag, SolidSolutionsLicenseManagerTag } from 
 export const SwoodLicensing = () => {
 	return (
 		<>
-			<PageTitle title="SwoodReport & SwoodEditor Licensing" />
+			<PageTitle title="SwoodReport & SwoodEditor licensing" />
 
 			<nav>
 				<ul>
@@ -15,16 +15,16 @@ export const SwoodLicensing = () => {
 						<a href="#Licensing">Licensing</a>
 					</li>
 					<li>
-						<a href="#Download">Install Solid Solutions License Manager</a>
+						<a href="#Download">Install Solid Solutions license manager</a>
 					</li>
 					<li>
 						<a href="#Activation">Activation</a>
 					</li>
 					<li>
-						<a href="#Transfer">Transfer License</a>
+						<a href="#Transfer">Transfer license</a>
 					</li>
 					<li>
-						<a href="#Refresh">Refresh License</a>
+						<a href="#Refresh">Refresh license</a>
 					</li>
 					<li>
 						<a href="#Troubleshooting">Troubleshooting</a>
@@ -36,13 +36,13 @@ export const SwoodLicensing = () => {
 				<Typography>
 					All versions of the <SwoodReportTag /> and <SwoodEditorTag /> are licensed. Both <SwoodReportTag /> and <SwoodEditorTag /> use the same license. Please note that only one license of the <SwoodReportTag /> can be activated on a machine at any time. See{' '}
 					<a href="#Transfer">
-						<span className="highlight">Transfer License</span>
+						<span className="highlight">Transfer license</span>
 					</a>{' '}
 					below to return a license before activating another.
 				</Typography>
 			</Section>
 
-			<Section id="Download" title="Install Solid Solutions License Manager">
+			<Section id="Download" title="Install Solid Solutions license manager">
 				<Typography>
 					The <SwoodReportTag /> and <SwoodEditorTag /> licenses are managed by the <SolidSolutionsLicenseManagerTag />. Please download and install the <SolidSolutionsLicenseManagerTag /> by clicking{' '}
 					<Link href="https://development.solidsolutions.co.uk/solidsolutionslicensing/downloads/Solid Solutions Licensing-3.0.6649.0.exe" target="_blank">
@@ -64,14 +64,14 @@ export const SwoodLicensing = () => {
 				<Typography>Your license key should now appear in the list of licenses.</Typography>
 				<ImageComponent source="./images/Licensing3.png" size="400px" />
 			</Section>
-			<Section id="Transfer" title="Transfer License">
+			<Section id="Transfer" title="Transfer license">
 				<Typography>Licenses are linked to a machine when activated. Therefore, it is necessary to return a license if you wish to activate it on another machine.</Typography>
 				<Typography>
 					To transfer a license, launch the <span className="highlight">Solid Solutions Licensing</span> app. The licenses on your machine will be displayed. Click <span className="highlight">View</span> on a license, or double-click it to view more information. You can return a license by clicking <span className="highlight">Return</span>.
 				</Typography>
 				<ImageComponent source="./images/Licensing4.png" size="400px" />
 			</Section>
-			<Section id="Refresh" title="Refresh License">
+			<Section id="Refresh" title="Refresh license">
 				<Typography>
 					Typically, it should not be necessary to manually <span className="highlight">Refresh</span> a license. However, it may be needed if a license has been modified and those changes are not reflected on your machine. For example, if you have upgraded a Standard license to a Professional license, a manual Refresh will be necessary to update the license.
 				</Typography>

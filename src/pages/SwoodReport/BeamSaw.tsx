@@ -12,7 +12,7 @@ const BeamSaw = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to Define a Beam Saw Panel</a>
+						<a href="#Define">How to define a beam saw panel</a>
 					</li>
 				</ul>
 			</nav>
@@ -29,7 +29,7 @@ const BeamSaw = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Define" title="How to Define a Beam Saw Panel">
+			<Section id="Define" title="How to define a beam saw panel">
 				<Typography>
 					To define a Beam Saw Panel, add the custom property <span className="red">Beam Saw</span> and set the value to <span className="red">Yes</span>.
 				</Typography>

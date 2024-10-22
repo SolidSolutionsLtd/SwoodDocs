@@ -5,7 +5,7 @@ import { Section } from '../../components/Section'
 const Exclude = () => {
 	return (
 		<>
-			<PageTitle title="Exclude Components from Report" />
+			<PageTitle title="Exclude components from report" />
 
 			<nav>
 				<ul>
@@ -13,7 +13,7 @@ const Exclude = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to define a Hardware</a>
+						<a href="#Define">How to define an excluded component</a>
 					</li>
 				</ul>
 			</nav>
@@ -28,9 +28,9 @@ const Exclude = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Define" title="How to Exclude a Component">
+			<Section id="Define" title="How to define an excluded component">
 				<Typography>
-					To exclude a component from the report, add the custom property <span className="red">Exclude</span> and set the value to <span className="red">Yes</span>
+					To exclude a component from the report, add the custom property <span className="red">Exclude</span> and set the value to <span className="red">Yes</span>.
 				</Typography>
 			</Section>
 		</>

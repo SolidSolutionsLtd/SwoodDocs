@@ -21,6 +21,9 @@ const SwoodUtils = () => {
 						<a href="#Features">Features</a>
 					</li>
 					<li>
+						<a href="#Disclaimer">SwoodUtils disclaimer</a>
+					</li>
+					<li>
 						<a href="#Installation">Installation</a>
 					</li>
 					<li>
@@ -30,7 +33,7 @@ const SwoodUtils = () => {
 						<a href="#Workflow">Workflow</a>
 					</li>
 					<li>
-						<a href="#Controls">Main Controls</a>
+						<a href="#Controls">Main controls</a>
 					</li>
 					<li>
 						<a href="#Types">Types of IDs</a>
@@ -39,37 +42,37 @@ const SwoodUtils = () => {
 						<a href="#IDElements">Elements of an ID</a>
 					</li>
 					<li>
-						<a href="#IDFormat">Flat ID Format</a>
+						<a href="#IDFormat">Flat ID format</a>
 					</li>
 					<li>
-						<a href="#IDFormatNested">Nested ID Format</a>
+						<a href="#IDFormatNested">Nested ID format</a>
 					</li>
 					<li>
-						<a href="#Property">ID Custom Property</a>
+						<a href="#Property">ID custom property</a>
 					</li>
 					<li>
-						<a href="#Colours">Table Row Colours</a>
+						<a href="#Colours">Table row colours</a>
 					</li>
 					<li>
-						<a href="#WarningIcons">Warning Icons</a>
+						<a href="#WarningIcons">Warning icons</a>
 					</li>
 					<li>
-						<a href="#CustomProperties">How to Modify Custom Properties</a>
+						<a href="#CustomProperties">How to modify custom properties</a>
 					</li>
 					<li>
-						<a href="#AppSettings">App Settings</a>
+						<a href="#AppSettings">Application settings</a>
 					</li>
 					<li>
-						<a href="#IDSettings">ID Settings</a>
+						<a href="#IDSettings">ID settings</a>
 					</li>
 					<li>
-						<a href="#CopySettings">Copy Settings between Users</a>
+						<a href="#CopySettings">Copy settings between users</a>
 					</li>
 					<li>
-						<a href="#KnownBugs">Known Bugs</a>
+						<a href="#KnownBugs">Known bugs</a>
 					</li>
 					<li>
-						<a href="#FutureDevelopment">Future Development</a>
+						<a href="#FutureDevelopment">Future development</a>
 					</li>
 				</ul>
 			</nav>
@@ -92,7 +95,7 @@ const SwoodUtils = () => {
 						<ListItemText primary="Detect identical panels and automatically assign a shared ID." />
 					</li>
 					<li>
-						<ListItemText primary="Customizable ID Settings: Adjust various options within <SwoodUtilsTag/> to suit your workflow preferences." />
+						<ListItemText primary="Customizable ID settings: Adjust various options within <SwoodUtilsTag/> to suit your workflow preferences." />
 					</li>
 					<li>
 						<ListItemText primary="Manage Custom Properties: Modify settings like Frame, SubFrame, Hardware, and Exclude to control panel numbering behavior." />
@@ -101,7 +104,7 @@ const SwoodUtils = () => {
 			</Section>
 
 			<Box className="red">
-				<Section id="Disclaimer" title="SwoodUtils Disclaimer">
+				<Section id="Disclaimer" title="SwoodUtils disclaimer">
 					<BetaDisclaimer />
 				</Section>
 			</Box>
@@ -169,12 +172,12 @@ const SwoodUtils = () => {
 				</ol>
 			</Section>
 
-			<Section id="Controls" title="Main Controls">
+			<Section id="Controls" title="Main controls">
 				<ImageComponent source="./images/SwoodUtils/Controls.png" size="75px" />
 
 				<Box>
 					<Typography variant="h6" id="RefreshData">
-						1. Refresh Data
+						1. Refresh data
 					</Typography>
 					<Typography>
 						Updates data from <SolidWorksTag />, typically used after adding new components to an assembly or switching the active model.
@@ -188,17 +191,17 @@ const SwoodUtils = () => {
 					</Typography>
 
 					<Typography variant="h6" id="SaveTempIDs">
-						3. Save TempIDs to Models
+						3. Save TempIDs to models
 					</Typography>
 					<Typography>Stores the TempIDs as custom properties within the models.</Typography>
 
 					<Typography variant="h6" id="RemoveIDs">
-						4. Remove IDs from Models
+						4. Remove IDs from models
 					</Typography>
 					<Typography>Deletes the ID custom properties from all models.</Typography>
 
 					<Typography variant="h6" id="UpdateViewOrientation">
-						5. Update View Orientation
+						5. Update view orientation
 					</Typography>
 					<Typography>Reorients the view of models where the Front view is not normal to the Z-axis. This option is only applicable when using "CombineIdentical" and when the following warning appears on one or more panels.</Typography>
 
@@ -240,21 +243,25 @@ const SwoodUtils = () => {
 					</li>
 					<Typography>A character or set of characters that separates the elements of an ID, typically a dot or dash.</Typography>
 
+					<br />
 					<li>
 						<span className="TopCustomProperty tooltip">Top-Level Custom Property</span>
 					</li>
 					<Typography>Represents the custom property value of the top-level assembly. This element is optional.</Typography>
 
+					<br />
 					<li>
 						<span className="CustomProperty tooltip">Frame Custom Property</span>
 					</li>
 					<Typography>Represents the custom property value of the frame. This element is optional.</Typography>
 
+					<br />
 					<li>
 						<span className="FramePrefix tooltip">Frame Prefix</span>
 					</li>
 					<Typography>A fixed text value. This element is optional.</Typography>
 
+					<br />
 					<li>
 						<span className="FrameID tooltip">Frame ID</span>
 					</li>
@@ -262,11 +269,13 @@ const SwoodUtils = () => {
 						Number or letter generated by <SwoodUtilsTag /> for each Frame.
 					</Typography>
 
+					<br />
 					<li>
 						<span className="Prefix tooltip">Panel Prefix</span>
 					</li>
 					<Typography>A fixed text value. This element is optional.</Typography>
 
+					<br />
 					<li>
 						<span className="ModelID tooltip">Panel ID</span>
 					</li>
@@ -276,12 +285,12 @@ const SwoodUtils = () => {
 				</ul>
 			</Section>
 
-			<Section id="IDFormat" title="Flat ID Format">
+			<Section id="IDFormat" title="Flat ID format">
 				<Box className="SubSection">
 					<Typography variant="h5">Panels</Typography>
 					<Box className="SubSection">
 						<Typography variant="h6" gutterBottom>
-							Elements Order
+							Elements order
 						</Typography>
 
 						<Typography>
@@ -317,7 +326,7 @@ const SwoodUtils = () => {
 						</Typography>
 
 						<Typography variant="h6" gutterBottom>
-							Example Settings
+							Example settings
 						</Typography>
 
 						<Typography>The following settings have been used in the previous example:</Typography>
@@ -343,7 +352,7 @@ const SwoodUtils = () => {
 					<Typography variant="h5">Frames</Typography>
 					<Box className="SubSection">
 						<Typography variant="h6" gutterBottom>
-							Elements Order
+							Elements order
 						</Typography>
 
 						<Typography>
@@ -379,7 +388,7 @@ const SwoodUtils = () => {
 						</Typography>
 
 						<Typography variant="h6" gutterBottom>
-							Example Settings
+							Example settings
 						</Typography>
 
 						<Typography>The following settings have been used in the previous example:</Typography>
@@ -403,10 +412,10 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="IDFormatNested" title="Nested ID Format">
+			<Section id="IDFormatNested" title="Nested ID format">
 				<Box className="SubSection">
 					<Typography variant="h6" gutterBottom>
-						Elements Order
+						Elements order
 					</Typography>
 
 					<Typography>
@@ -462,7 +471,7 @@ const SwoodUtils = () => {
 					</Typography>
 
 					<Typography variant="h6" gutterBottom>
-						Example Settings
+						Example settings
 					</Typography>
 					<Typography>The following settings have been used in the previous example:</Typography>
 
@@ -490,7 +499,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="Property" title="ID Custom Property">
+			<Section id="Property" title="ID custom property">
 				<Typography>
 					Clicking <span className="highlight">Save TempIDs to Models</span> will save all <span className="highlight">TempIDs</span> to the models under the custom property <span className="highlight">ID</span>.
 				</Typography>
@@ -502,28 +511,28 @@ const SwoodUtils = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Colours" title="Table Row Colours">
+			<Section id="Colours" title="Table row colours">
 				<Typography>Rows are colour coded to easily identify the different types of components. See example below for legend.</Typography>
 				<ImageComponent source="./images/SwoodUtils/Colours.png" size="350px" />
 
 				<Box className="SubSection">
 					<ol>
-						<li>Frame Component</li>
-						<li>Uncategorised Model</li>
-						<li>Panel Component</li>
-						<li>SubFrame Component</li>
-						<li>Model Excluded by Custom Property: Exclude = "Yes". This also applies to the Swood Material Extended Property Exclude</li>
-						<li>Model Excluded by Custom Property: ExcludeID = "Yes". This also applies to the Swood Material Extended Property ExcludeID</li>
-						<li>Suppressed Component</li>
-						<li>Hardware Component</li>
+						<li>Frame component</li>
+						<li>Uncategorised model</li>
+						<li>Panel component</li>
+						<li>SubFrame component</li>
+						<li>Model excluded by custom property: Exclude = "Yes". This also applies to the Swood Material Extended Property Exclude</li>
+						<li>Model excluded by custom property: ExcludeID = "Yes". This also applies to the Swood Material Extended Property ExcludeID</li>
+						<li>Suppressed component</li>
+						<li>Hardware component</li>
 					</ol>
 				</Box>
 			</Section>
 
-			<Section id="WarningIcons" title="Warning Icons">
+			<Section id="WarningIcons" title="Warning icons">
 				<Box className="SubSection">
 					<Box style={{ display: 'flex', alignItems: 'center' }}>
-						<Typography variant="h6">ID Mismatch</Typography>
+						<Typography variant="h6">ID mismatch</Typography>
 
 						<img src="./images/SwoodUtils/IDMismatch.png" style={{ display: 'inline', marginLeft: '15px', borderRadius: '50%', height: '50px' }} />
 					</Box>
@@ -539,7 +548,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="CustomProperties" title="How to Modify Custom Properties">
+			<Section id="CustomProperties" title="How to modify custom properties">
 				<Typography>
 					Custom Properties of models can be modified by double clicking on the value of the table, making the change, and then clicking on the <span className="highlight">Update</span> button. Multiple values can be edited before clicking the <span className="highlight">Update</span> button.
 				</Typography>
@@ -561,7 +570,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="AppSettings" title="App Settings">
+			<Section id="AppSettings" title="Application settings">
 				<Box className="SubSection">
 					<Typography variant="h6">Automatic Refresh</Typography>
 					<Typography>
@@ -579,7 +588,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="IDSettings" title="ID Settings">
+			<Section id="IDSettings" title="ID settings">
 				<Box className="SubSection">
 					<Typography variant="h6">Nested IDs</Typography>
 					<Typography>Select between Nested or Flat IDs.</Typography>
@@ -684,7 +693,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="CopySettings" title="Copy Settings between Users">
+			<Section id="CopySettings" title="Copy settings between users">
 				<Typography>Settings are stored locally on each machine, they cannot be placed on a server.</Typography>
 				<Typography>
 					To share settings between users, simply copy the files in{' '}
@@ -696,7 +705,7 @@ const SwoodUtils = () => {
 				</Typography>
 			</Section>
 
-			<Section id="KnownBugs" title="Known Bugs">
+			<Section id="KnownBugs" title="Known bugs">
 				<Box className="SubSection">
 					<ul>
 						<li>Unable to manually change the feature tree order by dragging and dropping the rows.</li>
@@ -704,7 +713,7 @@ const SwoodUtils = () => {
 				</Box>
 			</Section>
 
-			<Section id="FutureDevelopment" title="Future Development">
+			<Section id="FutureDevelopment" title="Future development">
 				<Typography>Here is a list of ideas/feature that have been considered for future development:</Typography>
 
 				<Box className="SubSection">

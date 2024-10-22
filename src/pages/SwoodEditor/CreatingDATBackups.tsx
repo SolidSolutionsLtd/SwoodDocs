@@ -14,10 +14,10 @@ const CreatingDATBackups = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Create">How to Create a Backup</a>
+						<a href="#Create">How to create a backup</a>
 					</li>
 					<li>
-						<a href="#Restore">How to Restore a Backup</a>
+						<a href="#Restore">How to restore a backup</a>
 					</li>
 				</ul>
 			</nav>
@@ -28,14 +28,14 @@ const CreatingDATBackups = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Create" title="How to Create a Backup">
+			<Section id="Create" title="How to create a backup">
 				<Typography>
 					To create a backup of your current <span className="highlight">DAT</span> folder, click the button shown below. This button is located in the Main section of the app.
 				</Typography>
 				<ImageComponent source="./images/CreateBackup.png" />
 			</Section>
 
-			<Section id="Restore" title="How to Restore a Backup">
+			<Section id="Restore" title="How to restore a backup">
 				<Typography>
 					To restore a backed-up <span className="highlight">DAT</span> folder, go to the <span className="highlight">DAT Backups</span> section of the app and click the button shown below to restore the specified backup.
 				</Typography>

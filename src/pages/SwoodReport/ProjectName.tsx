@@ -7,7 +7,7 @@ import { SwoodReportTag } from '../../components/NameTags'
 const ProjectName = () => {
 	return (
 		<>
-			<PageTitle title="How to Change the Report Project Name" />
+			<PageTitle title="How to change the report project name" />
 
 			<nav>
 				<ul>
@@ -15,10 +15,10 @@ const ProjectName = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#ProjectNameCustomProperty">Adding a Custom Project Name Property</a>
+						<a href="#ProjectNameCustomProperty">Adding a custom project name property</a>
 					</li>
 					<li>
-						<a href="#ProjectNameCustomDisplay">Displaying the Project Name</a>
+						<a href="#ProjectNameCustomDisplay">Displaying the project name</a>
 					</li>
 				</ul>
 			</nav>
@@ -29,14 +29,14 @@ const ProjectName = () => {
 				</Typography>
 			</Section>
 
-			<Section id="ProjectNameCustomProperty" title="Adding a Custom Project Name Property">
+			<Section id="ProjectNameCustomProperty" title="Adding a custom project name property">
 				<Typography>
 					To specify a custom project name, add a custom property called <span className="highlight">Project Name</span> to the top-level assembly (the one used to generate the report).
 					<ImageComponent source="./images/ProjectNameCustomProperty.png" size="200px" />
 				</Typography>
 			</Section>
 
-			<Section id="ProjectNameCustomDisplay" title="Displaying the Project Name">
+			<Section id="ProjectNameCustomDisplay" title="Displaying the project name">
 				<Typography>
 					Once set, the <span className="highlight">Project Name</span> will appear at the top of the report and in the print header, as shown in the examples below.
 				</Typography>

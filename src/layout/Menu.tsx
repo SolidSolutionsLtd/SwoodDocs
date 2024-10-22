@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { menuItems } from '../data/menuData'
 import { ArrowDropDown, ArrowRight } from '@mui/icons-material'
-import { ListItem, Collapse, List, ListSubheader } from '@mui/material'
+import { ListItem, Collapse, List, ListSubheader, Typography } from '@mui/material'
 import { IndexItem } from '../components/IndexItem'
 
 interface MenuItemProps {
@@ -54,10 +54,10 @@ const filterMenuItems = (items: IMenuItem[], filter: string): IMenuItem[] => {
 		.map(item => {
 			if (item.children) {
 				const filteredChildren = filterMenuItems(item.children, filter)
-				if (filteredChildren.length > 0 || item.title.toLowerCase().includes(filter)) {
+				if (filteredChildren.length > 0 || item.title?.toLowerCase().includes(filter)) {
 					return { ...item, children: filteredChildren }
 				}
-			} else if (item.title.toLowerCase().includes(filter)) {
+			} else if (item.title?.toLowerCase().includes(filter)) {
 				return item
 			}
 			return null
@@ -70,6 +70,13 @@ const Menu = ({ filter }: { filter: string }) => {
 
 	// Create a new array by filtering the original array
 	const filteredData = filterMenuItems(menuItems, filter.toLowerCase())
+
+	if (filteredData.length === 0)
+		return (
+			<Typography color="textDisabled" sx={{ marginLeft: '20px' }}>
+				No matches found.
+			</Typography>
+		)
 
 	return (
 		<List>

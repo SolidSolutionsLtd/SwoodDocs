@@ -7,7 +7,7 @@ import { SwoodNestingTag } from '../../components/NameTags'
 const NestedCuttingPattern = () => {
 	return (
 		<>
-			<PageTitle title="Nested or Beam Sawed" />
+			<PageTitle title="Nested or beam sawed" />
 
 			<nav>
 				<ul>
@@ -15,16 +15,16 @@ const NestedCuttingPattern = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#CustomProperty">Defining the Activating Custom Property</a>
+						<a href="#CustomProperty">Defining the activating custom property</a>
 					</li>
 					<li>
-						<a href="#PlaceholderProperty">Creating the Activating Property</a>
+						<a href="#PlaceholderProperty">Creating the activating property</a>
 					</li>
 					<li>
-						<a href="#DisableCuttingPattern">Excluding Panels from Cutting Pattern</a>
+						<a href="#DisableCuttingPattern">Excluding panels from cutting pattern</a>
 					</li>
 					<li>
-						<a href="#EnableNesting">Enabling Panels in Nesting</a>
+						<a href="#EnableNesting">Enabling panels in nesting</a>
 					</li>
 				</ul>
 			</nav>
@@ -37,14 +37,14 @@ const NestedCuttingPattern = () => {
 				<Typography>This behavior can be controlled by assigning a custom property to the model, which defines how the panels will be processed.</Typography>
 			</Section>
 
-			<Section id="CustomProperty" title="Defining the Activating Custom Property">
+			<Section id="CustomProperty" title="Defining the activating custom property">
 				<Typography>
 					Define the custom property that will control whether a panel is nested. For example, a property called <span className="highlight">Nested</span> could be used. If the property is set to "Yes" the panel will be nested; if set to "No" it will be sent to the Cutting Pattern.
 				</Typography>
 				<Typography>By default, if this property is not defined, the panel will be processed using the Cutting Pattern. This default behavior cannot be changed.</Typography>
 			</Section>
 
-			<Section id="PlaceholderProperty" title="Creating the Activating Property">
+			<Section id="PlaceholderProperty" title="Creating the activating property">
 				<Typography>To define the property that enables nesting, follow these steps:</Typography>
 				<ol>
 					<li>
@@ -64,7 +64,7 @@ const NestedCuttingPattern = () => {
 				<ImageComponent source="./images/NestedOrBeamSawDefinePlaceholder.png" size="600px" />
 			</Section>
 
-			<Section id="DisableCuttingPattern" title="Excluding Panels from Cutting Pattern">
+			<Section id="DisableCuttingPattern" title="Excluding panels from cutting pattern">
 				<Typography>By default, all panels are sent to the Cutting Pattern unless the custom property is set to "Yes" for nesting. Follow these steps to exclude panels from the Cutting Pattern:</Typography>
 				<ol>
 					<li>
@@ -78,7 +78,7 @@ const NestedCuttingPattern = () => {
 				<ImageComponent source="./images/NestedOrBeamSawDisableCuttingPattern.png" size="500px" />
 			</Section>
 
-			<Section id="EnableNesting" title="Enabling Panels in Nesting">
+			<Section id="EnableNesting" title="Enabling panels in nesting">
 				<Typography>Panels with the custom property set to "Yes" will be processed using nesting. To enable this, follow these steps:</Typography>
 				<ol>
 					<li>Open the SWOODCAM.cfg file in a text editor, located in the DAT folder.</li>

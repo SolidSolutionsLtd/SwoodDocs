@@ -29,10 +29,10 @@ const SwoodReportQuickStart = () => {
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Editor">Swood Editor App</a>
+						<a href="#Editor">Swood Editor application</a>
 					</li>
 					<li>
-						<a href="#License">Solid Solutions License Manager</a>
+						<a href="#License">Solid Solutions license manager</a>
 					</li>
 					<li>
 						<a href="#Setup">Setup the SwoodReport</a>
@@ -48,7 +48,7 @@ const SwoodReportQuickStart = () => {
 				</ul>
 			</Section>
 
-			<Section id="Editor" title="Swood Editor App">
+			<Section id="Editor" title="Swood Editor application">
 				<Typography>
 					To set up the <SwoodReportTag />, start by downloading and installing the <SwoodEditorTag />.
 				</Typography>
@@ -77,7 +77,7 @@ const SwoodReportQuickStart = () => {
 				</Typography>
 			</Section>
 
-			<Section id="License" title="Solid Solutions License Manager">
+			<Section id="License" title="Solid Solutions license manager">
 				<Typography>
 					To activate the provided license, launch the <SolidSolutionsLicenseManagerTag /> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
 				</Typography>

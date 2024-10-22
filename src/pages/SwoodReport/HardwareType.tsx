@@ -6,14 +6,14 @@ import { Section } from '../../components/Section'
 const HardwareType = () => {
 	return (
 		<>
-			<PageTitle title="Group Hardware by Type" pro={true} />
+			<PageTitle title="Group hardware by type" pro={true} />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to group Hardware by Type</a>
+						<a href="#Define">How to define a hardware type</a>
 					</li>
 				</ul>
 			</nav>
@@ -23,7 +23,7 @@ const HardwareType = () => {
 					The report enables users to classify hardware components by <span className="highlight">Type</span>, providing a clearer breakdown by grouping different types into separate tables.
 				</Typography>
 			</Section>
-			<Section id="Define" title="How to define a Hardware Type">
+			<Section id="Define" title="How to define a hardware type">
 				<Typography>
 					To define a Hardware Type, add the custom property <span className="red">Hardware Type</span> and set the value, such as, Handle, Connector, Hinge, Miscellaneous, etc.
 				</Typography>

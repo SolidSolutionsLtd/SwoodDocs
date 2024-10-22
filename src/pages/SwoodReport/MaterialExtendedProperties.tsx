@@ -14,7 +14,7 @@ const columns = [
 const MaterialExtendedProperties = () => {
 	return (
 		<>
-			<PageTitle title="Swood Material Extended Properties" />
+			<PageTitle title="Swood material extended properties" />
 
 			<nav>
 				<ul>
@@ -22,23 +22,23 @@ const MaterialExtendedProperties = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#PanelProperties">Panel/Laminate Extended Properties</a>
+						<a href="#PanelProperties">Panel/laminate extended properties</a>
 					</li>
 					<li>
-						<a href="#EdgebandProperties">Edgeband Extended Properties</a>
+						<a href="#EdgebandProperties">Edgeband extended properties</a>
 					</li>
 				</ul>
 			</nav>
 
 			<Section id="Overview" title="Overview">
-				<Typography>Material Extended Properties refer to additional attributes assigned to materials used within the Report. These extended properties allow users to define specific characteristics for materials beyond the basic properties.</Typography>
+				<Typography>material extended properties refer to additional attributes assigned to materials used within the Report. These extended properties allow users to define specific characteristics for materials beyond the basic properties.</Typography>
 			</Section>
 
-			<Section id="PanelProperties" title="Panel/Laminate Extended Properties">
+			<Section id="PanelProperties" title="Panel/laminate extended properties">
 				<BasicTable columns={columns} data={PanelLaminateProperties} />
 			</Section>
 
-			<Section id="EdgebandProperties" title="Edgeband Extended Properties">
+			<Section id="EdgebandProperties" title="Edgeband extended properties">
 				<BasicTable columns={columns} data={EdgebandProperties} />
 			</Section>
 		</>

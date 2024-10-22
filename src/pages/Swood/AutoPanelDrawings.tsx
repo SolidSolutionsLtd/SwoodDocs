@@ -7,7 +7,7 @@ import { ImageComponent } from '../../components/ImageComponent'
 const AutoPanelDrawing = () => {
 	return (
 		<>
-			<PageTitle title="How to Automatically Generate Panel Drawings" pro={true} beta={true} />
+			<PageTitle title="How to automatically generate panel drawings" pro={true} beta={true} />
 			<nav>
 				<ul>
 					<li>
@@ -20,25 +20,25 @@ const AutoPanelDrawing = () => {
 						<a href="#FAQs">FAQs</a>
 					</li>
 					<li>
-						<a href="#DocumentSettings">Document Settings</a>
+						<a href="#DocumentSettings">Document settings</a>
 					</li>
 					<li>
-						<a href="#PanelDrawingSettings">Panel Drawing Settings</a>
+						<a href="#PanelDrawingSettings">Panel drawing settings</a>
 					</li>
 					<li>
-						<a href="#GrooveParameters">Groove Parameters</a>
+						<a href="#GrooveParameters">Groove parameters</a>
 					</li>
 					<li>
-						<a href="#HoleParameters">Hole Parameters</a>
+						<a href="#HoleParameters">Hole parameters</a>
 					</li>
 					<li>
-						<a href="#EdgebandAndGrainDirectionParameters">Edgeband and Grain Direction Parameters</a>
+						<a href="#EdgebandAndGrainDirectionParameters">Edgeband and grain direction parameters</a>
 					</li>
 					<li>
-						<a href="#LayerParameters">Layer Parameters</a>
+						<a href="#LayerParameters">Layer parameters</a>
 					</li>
 					<li>
-						<a href="#SavingOptions">Saving Options</a>
+						<a href="#SavingOptions">Saving options</a>
 					</li>
 				</ul>
 			</nav>
@@ -112,7 +112,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="DocumentSettings" title="Document Settings">
+			<Section id="DocumentSettings" title="Document settings">
 				<ListItem>
 					<ListItemText primary="AutoDrawing Document" secondary="AutoDrawing setup name." />
 				</ListItem>
@@ -141,7 +141,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="PanelDrawingSettings" title="Panel Drawing Settings">
+			<Section id="PanelDrawingSettings" title="Panel drawing settings">
 				<ListItem>
 					<ListItemText
 						primary="Redefine Panel Orientation"
@@ -169,7 +169,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="GrooveParameters" title="Groove Parameters">
+			<Section id="GrooveParameters" title="Groove parameters">
 				<ListItem>
 					<ListItemText primary="Show Groove Dimensions" secondary="Show or hide groove width and depth." />
 				</ListItem>
@@ -184,7 +184,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="HoleParameters" title="Hole Parameters">
+			<Section id="HoleParameters" title="Hole parameters">
 				<ListItem>
 					<ListItemText primary="Show Hole Tables" secondary="Show or hide the list of panel holes in a table." />
 				</ListItem>
@@ -205,7 +205,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="EdgebandAndGrainDirectionParameters" title="Edgeband and Grain Direction Parameters">
+			<Section id="EdgebandAndGrainDirectionParameters" title="Edgeband and grain direction parameters">
 				<ListItem>
 					<ListItemText primary="Show Grain" secondary="Show or hide the grain direction of the panel." />
 				</ListItem>
@@ -229,7 +229,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="LayerParameters" title="Layer Parameters">
+			<Section id="LayerParameters" title="Layer parameters">
 				<ListItem>
 					<ListItemText primary="Hole Annotation Layer Name" secondary="Name of the drawing layer displaying hole information." />
 				</ListItem>
@@ -247,7 +247,7 @@ const AutoPanelDrawing = () => {
 				</ListItem>
 			</Section>
 
-			<Section id="SavingOptions" title="Saving Options">
+			<Section id="SavingOptions" title="Saving options">
 				<ListItem>
 					<ListItemText primary="Save Drawing Document" secondary="Option to save the .slddrw file." />
 				</ListItem>

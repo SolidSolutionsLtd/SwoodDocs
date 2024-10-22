@@ -10,7 +10,7 @@ const PageNotFound = () => {
 	return (
 		<Box style={{ textAlign: 'center', padding: '50px' }}>
 			<Typography variant="h4" style={{ fontWeight: 'bold', paddingBottom: '50px' }}>
-				404 - Page Not Found
+				404 - Page not found
 			</Typography>
 
 			<Typography variant="h6" style={{ paddingBottom: '30px' }}>

@@ -12,7 +12,7 @@ const columns = [
 const SwoodCompatibility = () => {
 	return (
 		<>
-			<PageTitle title="Swood Compatibility" />
+			<PageTitle title="Swood compatibility" />
 			<SectionDivider />
 
 			<BasicTable columns={columns} data={SwoodCompatibilityData} width={700} />

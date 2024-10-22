@@ -7,14 +7,14 @@ import { SolidWorksTag, SwoodCAMTag, SwoodDesignTag, SwoodTag } from '../../comp
 const SwoodTab = () => {
 	return (
 		<>
-			<PageTitle title="Reset Swood Tabs" />
+			<PageTitle title="Reset Swood tabs" />
 			<nav>
 				<ul>
 					<li>
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Reset">How to Reset the Swood Tabs</a>
+						<a href="#Reset">How to reset the Swood tabs</a>
 					</li>
 				</ul>
 			</nav>
@@ -25,7 +25,7 @@ const SwoodTab = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Reset" title="How to Reset the Swood Tabs">
+			<Section id="Reset" title="How to reset the Swood tabs">
 				<ol>
 					<li>
 						Open a part file in <SolidWorksTag />.

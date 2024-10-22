@@ -7,7 +7,7 @@ import { SolidWorksTag, SwoodDesignTag, SwoodTag } from '../../components/NameTa
 const SwoodReportReleaseNotes = () => {
 	return (
 		<>
-			<PageTitle title="SwoodReport Release Notes" />
+			<PageTitle title="SwoodReport release notes" />
 
 			<Release version="2.10.3" ReleaseDate="13/09/2024">
 				<ul>
@@ -28,12 +28,12 @@ const SwoodReportReleaseNotes = () => {
 						</li>
 						<li>Minor changes to Menu format</li>
 					</ul>
-					<Typography variant="h6">Bug Fixes</Typography>
+					<Typography variant="h6">Bug fixes</Typography>
 					<ul>
 						<li>Fixed bug where Program details would not show tool list</li>
 						<li>Fixed printing issue with Cutting Pattern</li>
 					</ul>
-					<Typography variant="h6">Known Bugs</Typography>
+					<Typography variant="h6">Known bugs</Typography>
 					<ul>
 						<li>Reference issues/missing images in home page when using a custom Home Tab name</li>
 					</ul>
@@ -59,7 +59,7 @@ const SwoodReportReleaseNotes = () => {
 						</li>
 						<li>Grain property is now HasGrain</li>
 					</ul>
-					<Typography variant="h6">Bug Fixes</Typography>
+					<Typography variant="h6">Bug fixes</Typography>
 					<ul>
 						<li>Fixed issue where grouping frames by Frame Type would replace parent properties with child properties</li>
 					</ul>
@@ -78,7 +78,7 @@ const SwoodReportReleaseNotes = () => {
 						<li>Added ID property to Nested Panels</li>
 						<li>Updater now removes Board Estimation data from Report.cfg</li>
 					</ul>
-					<Typography variant="h6">Bug Fixes</Typography>
+					<Typography variant="h6">Bug fixes</Typography>
 					<ul>
 						<li>Fixed issue with Frame Details page if name contains ^, &lt;, &gt;, "</li>
 						<li>Fixed issue where updater removes label image</li>
@@ -259,7 +259,7 @@ const SwoodReportReleaseNotes = () => {
 							Added to Database - <span className="param">ParentPath</span>
 						</li>
 					</ul>
-					<Typography variant="h6">Bug Fixes</Typography>
+					<Typography variant="h6">Bug fixes</Typography>
 					<ul>
 						<li>Fixed ProgramNameList not displaying correctly</li>
 						<li>Fixed ProgramFileNameList not displaying correctly</li>
@@ -327,7 +327,7 @@ const SwoodReportReleaseNotes = () => {
 						Toggle option to hide/show 3D model for Panels and Sheets <ProChip />
 					</li>
 
-					<Typography variant="h6">Known Bugs</Typography>
+					<Typography variant="h6">Known bugs</Typography>
 					<ul>
 						<li>
 							Print is blank randomly when using Print All button <ProChip />
@@ -377,7 +377,7 @@ const SwoodReportReleaseNotes = () => {
 					<li>Added FrameID to Panel Variables</li>
 					<li>Changes to Label so that the first property can use Type:TopLevel</li>
 
-					<Typography variant="h6">Known Bugs</Typography>
+					<Typography variant="h6">Known bugs</Typography>
 					<ul>
 						<li>
 							Edgeband quantity calculation is wrong when using <span className="param">ProjectQuantity</span> property
@@ -402,7 +402,7 @@ const SwoodReportReleaseNotes = () => {
 					</li>
 					<li>Added default settings to Labels.js</li>
 
-					<Typography variant="h6">Known Bugs</Typography>
+					<Typography variant="h6">Known bugs</Typography>
 					<ul>
 						<li>Incorrect Profile quantity calculation when using multiple instances</li>
 						<li>Incorrect material quantity calculation when using Unit cost type and multiple instances</li>

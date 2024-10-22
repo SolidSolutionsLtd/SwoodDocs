@@ -8,7 +8,7 @@ import { SolidWorksTag, SwoodEditorTag, SwoodReportTag, SwoodTag } from '../../c
 const SaveToPDF = () => {
 	return (
 		<>
-			<PageTitle title="Saving Drawings to PDF" />
+			<PageTitle title="Saving drawings to PDF" />
 
 			<nav>
 				<ul>
@@ -16,17 +16,17 @@ const SaveToPDF = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#AssociatedDrawings">Associated Drawings</a>
+						<a href="#AssociatedDrawings">What is a SolidWorks associated drawing?</a>
 					</li>
 					<li>
-						<a href="#ActivatingProperties">Activating Custom Properties</a>
+						<a href="#ActivatingProperties">Activating custom properties</a>
 					</li>
 					<li>
-						<a href="#PDFSaved">Where Are the PDFs Saved?</a>
+						<a href="#PDFSaved">Where are the PDFs saved?</a>
 					</li>
 					<li>
 						<a href="#ReportLinks">
-							Viewing the PDF Drawings in the Report <ProChip />
+							Viewing the PDF drawings in the report <ProChip />
 						</a>
 					</li>
 				</ul>
@@ -38,7 +38,7 @@ const SaveToPDF = () => {
 				</Typography>
 			</Section>
 
-			<Section id="AssociatedDrawings" title="What Is a SolidWorks Associated Drawing?">
+			<Section id="AssociatedDrawings" title="What is a SolidWorks associated drawing?">
 				<Typography>
 					Only <SolidWorksTag /> associated drawings can be automatically saved as PDFs. To qualify as an associated drawing, a <SolidWorksTag /> drawing must meet the following criteria:
 				</Typography>
@@ -48,7 +48,7 @@ const SaveToPDF = () => {
 				</ul>
 			</Section>
 
-			<Section id="ActivatingProperties" title="Activating Custom Properties">
+			<Section id="ActivatingProperties" title="Activating custom properties">
 				<Typography>By default, the option to save drawings as PDFs is disabled. Since generating PDFs can take extra time and might not be needed initially, users must add specific custom properties to the file where the report will be run to enable this feature.</Typography>
 				<Typography>Add any of the following properties to enable the corresponding PDF generation:</Typography>
 				<ul>
@@ -67,7 +67,7 @@ const SaveToPDF = () => {
 				</ul>
 			</Section>
 
-			<Section id="PDFSaved" title="Where Are the PDFs Saved?">
+			<Section id="PDFSaved" title="Where are the PDFs saved?">
 				<Typography>By default, PDFs are saved in the following locations, depending on the model type:</Typography>
 				<ul>
 					<li>
@@ -85,7 +85,7 @@ const SaveToPDF = () => {
 				</ul>
 			</Section>
 
-			<Section id="ReportLinks" title="Viewing the PDF Drawings in the Report" pro={true}>
+			<Section id="ReportLinks" title="Viewing the PDF drawings in the report" pro={true}>
 				<Typography>
 					In the <SwoodReportTag /> <ProChip /> , you can view the saved PDF drawings by clicking the PDF icons.
 				</Typography>

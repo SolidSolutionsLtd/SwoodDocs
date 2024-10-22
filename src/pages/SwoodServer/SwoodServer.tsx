@@ -16,19 +16,19 @@ const SwoodServer = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#KeyFeatures">Key Features</a>
+						<a href="#KeyFeatures">Key features</a>
 					</li>
 					<li>
-						<a href="#ChallengesAddressed">Challenges Addressed</a>
+						<a href="#ChallengesAddressed">Challenges addressed</a>
 					</li>
 					<li>
-						<a href="#PotentialCapabilities">Potential Capabilities</a>
+						<a href="#PotentialCapabilities">Potential capabilities</a>
 					</li>
 					<li>
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Architecture">SwoodServer Architecture</a>
+						<a href="#Architecture">SwoodServer architecture</a>
 					</li>
 				</ul>
 			</nav>
@@ -51,7 +51,7 @@ const SwoodServer = () => {
 				</Typography>
 			</Section>
 
-			<Section id="KeyFeatures" title="Key Features">
+			<Section id="KeyFeatures" title="Key features">
 				<List>
 					<ListItem>
 						<ListItemText
@@ -189,7 +189,7 @@ const SwoodServer = () => {
 				</List>
 			</Section>
 
-			<Section id="ChallengesAddressed" title="Challenges Addressed">
+			<Section id="ChallengesAddressed" title="Challenges addressed">
 				<Typography>
 					<span className="highlight">SwoodServer</span> tackles a variety of challenges faced by woodworking manufacturers, particularly in digitizing production data and reducing reliance on outdated, paper-based processes. By offering real-time transparency into job statuses, it promotes a more organized and efficient workflow.
 				</Typography>
@@ -219,7 +219,7 @@ const SwoodServer = () => {
 				</List>
 			</Section>
 
-			<Section id="PotentialCapabilities" title="Potential Capabilities">
+			<Section id="PotentialCapabilities" title="Potential capabilities">
 				<Typography>The following is a list of potential features that could be implemented with further development. Future enhancements may include:</Typography>
 				<List>
 					<ListItem>
@@ -285,7 +285,7 @@ const SwoodServer = () => {
 				</Typography>
 			</Section>
 
-			<Section id="Architecture" title="SwoodServer Architecture">
+			<Section id="Architecture" title="SwoodServer architecture">
 				<Typography>
 					<span className="highlight">SwoodServer</span> is built on the MERN Stack architecture, a powerful JavaScript framework for rapid deployment of full-stack web applications. Comprising MongoDB, Express, React, and Node.js, this stack simplifies development by enabling a seamless three-tier architecture (frontend, backend, and database) using JavaScript.
 				</Typography>

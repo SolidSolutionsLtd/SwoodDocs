@@ -8,7 +8,7 @@ import { SwoodRXTag, SolidWorksTag, SwoodTag, EficadTag } from '../../components
 const SwoodRX = () => {
 	return (
 		<>
-			<PageTitle title="How to Create a Swood RX" />
+			<PageTitle title="How to create a Swood RX" />
 
 			<nav>
 				<ul>
@@ -16,13 +16,13 @@ const SwoodRX = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#SwoodRXOpen">How to Open the Swood RX Tool</a>
+						<a href="#SwoodRXOpen">How to open the Swood RX tool</a>
 					</li>
 					<li>
-						<a href="#SwoodRXCreate">How to Package Files Using the Swood RX Tool</a>
+						<a href="#SwoodRXCreate">How to package files using the Swood RX tool</a>
 					</li>
 					<li>
-						<a href="#NextSteps">Next Steps</a>
+						<a href="#NextSteps">Next steps</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,13 +40,13 @@ const SwoodRX = () => {
 				</Typography>
 			</Section>
 
-			<Section id="SwoodRXOpen" title="How to Open the Swood RX Tool">
+			<Section id="SwoodRXOpen" title="How to open the Swood RX tool">
 				<Typography>
 					The <SwoodRXTag /> tool is installed with <SwoodTag /> and can be launched by searching for "Swood RX" in the Windows search bar.
 				</Typography>
 			</Section>
 
-			<Section id="SwoodRXCreate" title="How to Package Files Using the Swood RX Tool">
+			<Section id="SwoodRXCreate" title="How to package files using the Swood RX tool">
 				<Typography>To package files for support, follow these steps:</Typography>
 
 				<ol>
@@ -70,7 +70,7 @@ const SwoodRX = () => {
 				<ImageComponent source="./images/SwoodRX.png" size="700px" />
 			</Section>
 
-			<Section id="NextSteps" title="Next Steps">
+			<Section id="NextSteps" title="Next steps">
 				<Typography>
 					Once your <SwoodRXTag /> package is saved, a .zip file will be generated. Please send your support request and the .zip file to <a href="mailto:Support@SolidSolutions.co.uk">Support@SolidSolutions.co.uk</a>, and we will investigate the issue further.
 				</Typography>

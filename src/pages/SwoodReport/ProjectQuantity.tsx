@@ -6,7 +6,7 @@ import { Section } from '../../components/Section'
 const ProjectQuantity = () => {
 	return (
 		<>
-			<PageTitle title="How to Change the Report Project Quantity" />
+			<PageTitle title="How to change the report project quantity" />
 
 			<nav>
 				<ul>
@@ -14,10 +14,10 @@ const ProjectQuantity = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#ProjectQuantityCustomProperty">Adding a Project Quantity Property</a>
+						<a href="#ProjectQuantityCustomProperty">Adding a project quantity property</a>
 					</li>
 					<li>
-						<a href="#ProjectQuantityCustomDisplay">Displaying the Project Quantity</a>
+						<a href="#ProjectQuantityCustomDisplay">Displaying the project quantity</a>
 					</li>
 				</ul>
 			</nav>
@@ -29,14 +29,14 @@ const ProjectQuantity = () => {
 				</Typography>
 			</Section>
 
-			<Section id="ProjectQuantityCustomProperty" title="Adding a Project Quantity Property">
+			<Section id="ProjectQuantityCustomProperty" title="Adding a project quantity property">
 				<Typography>
 					To define a project quantity, add a custom property named <span className="highlight">Project Quantity</span> to the top-level assembly (the one used to generate the report).
 					<ImageComponent source="./images/ProjectQuantityCustomProperty.png" size="300px" />
 				</Typography>
 			</Section>
 
-			<Section id="ProjectQuantityCustomDisplay" title="Displaying the Project Quantity">
+			<Section id="ProjectQuantityCustomDisplay" title="Displaying the project quantity">
 				<Typography>
 					Once set, the <span className="highlight">Project Quantity</span> will be shown on the report's home screen and will multiply all item quantities in the tables and on the <span className="highlight">Summary Page</span>.
 				</Typography>

@@ -5,7 +5,7 @@ import { Section } from '../../components/Section'
 const SimpleReport = () => {
 	return (
 		<>
-			<PageTitle title="How to Generate a Simple Report" />
+			<PageTitle title="How to generate a simple report" />
 
 			<nav>
 				<ul>
@@ -13,7 +13,7 @@ const SimpleReport = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#SimpleReportCustomProperty">Adding a the Simple Report Property</a>
+						<a href="#SimpleReportCustomProperty">Adding a the Simple Report property</a>
 					</li>
 				</ul>
 			</nav>
@@ -23,7 +23,7 @@ const SimpleReport = () => {
 				<Typography>One of the longest stages in report generation is the creation of images, such as panels, programs, and frames. To address this, we have introduced a custom property that disables image generation, significantly reducing report creation times.</Typography>
 			</Section>
 
-			<Section id="SimpleReportCustomProperty" title="Adding a the Simple Report Property">
+			<Section id="SimpleReportCustomProperty" title="Adding a the Simple Report property">
 				<Typography>
 					To create a Simple Report, add a custom property named <span className="highlight">Simple Report</span> to the top-level assembly (the one used to generate the report) and set its value to <span className="red">Yes</span>.
 				</Typography>

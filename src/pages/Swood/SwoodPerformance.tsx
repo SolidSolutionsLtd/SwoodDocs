@@ -8,7 +8,7 @@ import { SwoodTag, SolidWorksTag, SwoodRXTag, SwoodDataDirectoryTag, SolidWorksR
 const SwoodPerformance = () => {
 	return (
 		<>
-			<PageTitle title="How to Enhance Swood Performance" />
+			<PageTitle title="How to enhance Swood performance" />
 
 			<nav>
 				<ul>
@@ -16,37 +16,37 @@ const SwoodPerformance = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#SWOODPerformanceChecklist">Swood Performance Checklist:</a>
+						<a href="#SWOODPerformanceChecklist">Swood performance checklist:</a>
 					</li>
 					<li>
-						<a href="#CheckingForWindowsUpdates">Checking for Windows Updates</a>
+						<a href="#CheckingForWindowsUpdates">Checking for Windows updates</a>
 					</li>
 					<li>
 						<a href="#SolidWorksRX">SolidWorks RX</a>
 					</li>
 					<li>
-						<a href="#SolidWorksSettings">SolidWorks Settings</a>
+						<a href="#SolidWorksSettings">SolidWorks settings</a>
 					</li>
 					<li>
-						<a href="#SWOODSettings">Swood Settings</a>
+						<a href="#SWOODSettings">Swood settings</a>
 					</li>
 					<li>
-						<a href="#SolidWorksPerformanceEvaluation">SolidWorks Performance Evaluation</a>
+						<a href="#SolidWorksPerformanceEvaluation">SolidWorks performance evaluation</a>
 					</li>
 					<li>
-						<a href="#SwoodPerformanceAnalyzer">Swood Performance Analyzer</a>
+						<a href="#SwoodPerformanceAnalyzer">Swood erformance analyzer</a>
 					</li>
 					<li>
-						<a href="#RebuildModes">Rebuild Modes</a>
+						<a href="#RebuildModes">Rebuild modes</a>
 					</li>
 					<li>
-						<a href="#WorkingOverANetwork">Working Over a Network</a>
+						<a href="#WorkingOverANetwork">Working over a network</a>
 					</li>
 					<li>
-						<a href="#HardwareRecommendations">Hardware Recommendations</a>
+						<a href="#HardwareRecommendations">Hardware recommendations</a>
 					</li>
 					<li>
-						<a href="#NextSteps">Next Steps</a>
+						<a href="#NextSteps">Next steps</a>
 					</li>
 				</ul>
 			</nav>
@@ -57,7 +57,7 @@ const SwoodPerformance = () => {
 				</Typography>
 			</Section>
 
-			<Section id="SWOODPerformanceChecklist" title="Swood Performance Checklist:">
+			<Section id="SWOODPerformanceChecklist" title="Swood performance checklist:">
 				<ul>
 					<li>Windows Updates: Ensure all Windows updates are installed.</li>
 					<li>
@@ -68,7 +68,7 @@ const SwoodPerformance = () => {
 						</ul>
 					</li>
 					<li>
-						SolidWorks Settings:
+						SolidWorks settings:
 						<ul>
 							<li>Automatically load components as lightweight.</li>
 							<li>Adjust large assembly settings.</li>
@@ -76,7 +76,7 @@ const SwoodPerformance = () => {
 						</ul>
 					</li>
 					<li>
-						Swood Settings:
+						Swood settings:
 						<ul>
 							<li>Manage referenced documents.</li>
 							<li>Remove unnecessary file locations.</li>
@@ -84,7 +84,7 @@ const SwoodPerformance = () => {
 						</ul>
 					</li>
 					<li>
-						SolidWorks Performance Evaluation:
+						SolidWorks performance evaluation:
 						<ul>
 							<li>Analyze part opening times.</li>
 							<li>Update old version files.</li>
@@ -94,14 +94,14 @@ const SwoodPerformance = () => {
 							<li>Assess component quantity.</li>
 						</ul>
 					</li>
-					<li>Swood Performance Analyzer: Use this tool to monitor rebuild times.</li>
-					<li>Rebuild Modes: Optimize rebuilds for better performance.</li>
+					<li>Swood erformance analyzer: Use this tool to monitor rebuild times.</li>
+					<li>Rebuild modes: Optimize rebuilds for better performance.</li>
 					<li>Network Usage: Avoid working over a network if possible.</li>
-					<li>Hardware Recommendations: Ensure your system meets recommended specifications.</li>
-					<li>Next Steps: Contact support if issues persist.</li>
+					<li>Hardware recommendations: Ensure your system meets recommended specifications.</li>
+					<li>Next steps: Contact support if issues persist.</li>
 				</ul>
 			</Section>
-			<Section id="CheckingForWindowsUpdates" title="Checking for Windows Updates">
+			<Section id="CheckingForWindowsUpdates" title="Checking for Windows updates">
 				<Typography>To ensure that your system is not hindered by pending updates, it’s important to regularly check for and install all available Windows updates. If you’re unsure, consult your IT department for further guidance.</Typography>
 			</Section>
 			<Section id="SolidWorksRX" title="SolidWorks RX">
@@ -140,7 +140,7 @@ const SwoodPerformance = () => {
 					If graphical issues persist, you can rule out graphics card or driver issues by reopening SolidWorks in <strong>OpenGL Safe Mode</strong> through <SwoodRXTag /> located in the <strong>Home</strong> tab.
 				</Typography>
 			</Section>
-			<Section id="SolidWorksSettings" title="SolidWorks Settings">
+			<Section id="SolidWorksSettings" title="SolidWorks settings">
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Automatically Load Components as Lightweight
 				</Typography>
@@ -164,7 +164,7 @@ const SwoodPerformance = () => {
 				</Typography>
 				<ImageComponent source="./images/PerformanceReferences.png" size="300px" />
 			</Section>
-			<Section id="SWOODSettings" title="Swood Settings">
+			<Section id="SWOODSettings" title="Swood settings">
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Referenced Documents
 				</Typography>
@@ -199,7 +199,7 @@ const SwoodPerformance = () => {
 					<ImageComponent source="./images/PerformanceConnectorRebuild.png" size="200px" />
 				</ol>
 			</Section>
-			<Section id="SolidWorksPerformanceEvaluation" title="SolidWorks Performance Evaluation">
+			<Section id="SolidWorksPerformanceEvaluation" title="SolidWorks performance evaluation">
 				<Typography>
 					The <SolidWorksTag /> Performance Evaluation tool provides insights and suggestions to enhance performance. For <SwoodTag />, some suggestions may need to be disregarded (e.g., using Lightweight Mode), but others can be critical.
 				</Typography>
@@ -236,13 +236,13 @@ const SwoodPerformance = () => {
 					</li>
 				</ul>
 			</Section>
-			<Section id="SwoodPerformanceAnalyzer" title="Swood Performance Analyzer">
+			<Section id="SwoodPerformanceAnalyzer" title="Swood erformance analyzer">
 				<Typography>
-					The <SwoodTag /> Performance Analyzer can assess model performance during rebuilds, helping you identify the elements contributing to long rebuild times.
+					The <SwoodTag /> erformance analyzer can assess model performance during rebuilds, helping you identify the elements contributing to long rebuild times.
 				</Typography>
 
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
-					To use the Performance Analyzer:
+					To use the erformance analyzer:
 				</Typography>
 				<ol>
 					<li>
@@ -261,7 +261,7 @@ const SwoodPerformance = () => {
 
 				<ImageComponent source="./images/PerformanceSwoodPerformanceAnalyser.png" size="300px" />
 			</Section>
-			<Section id="RebuildModes" title="Rebuild Modes">
+			<Section id="RebuildModes" title="Rebuild modes">
 				<Typography>
 					<SwoodDesignTag /> offers several rebuild modes to manage performance by temporarily disabling the rebuild of specific elements. For instance, you can disable rebuilds of connectors or layouts, allowing for smoother design changes when working with large assemblies.
 				</Typography>
@@ -280,7 +280,7 @@ const SwoodPerformance = () => {
 
 				<Typography>Use the appropriate mode to control rebuilds, such as locking all Swood boxes or connectors.</Typography>
 			</Section>
-			<Section id="WorkingOverANetwork" title="Working Over a Network">
+			<Section id="WorkingOverANetwork" title="Working over a network">
 				<Typography>Working locally is always faster than working over a network, as network operations introduce additional steps. If your team relies on networked files, consider benchmarking your network’s performance against local setups. If local performance is significantly better, consult your IT department for possible improvements.</Typography>
 
 				<Typography>
@@ -296,7 +296,7 @@ const SwoodPerformance = () => {
 					If you notice a significant improvement in performance when working locally, consult your IT department to explore ways to enhance network efficiency. The ideal solution is to implement a data management system like <strong>SolidWorks PDM</strong>. This system allows files to be copied locally for editing while seamlessly syncing changes back to the network, ensuring optimal performance without disrupting workflows or losing file references.
 				</Typography>
 			</Section>
-			<Section id="HardwareRecommendations" title="Hardware Recommendations">
+			<Section id="HardwareRecommendations" title="Hardware recommendations">
 				<Typography>Hardware plays a critical role in performance. Compare your system against the following high-performance setup:</Typography>
 
 				<ul>
@@ -325,7 +325,7 @@ const SwoodPerformance = () => {
 					.
 				</Typography>
 			</Section>
-			<Section id="NextSteps" title="Next Steps">
+			<Section id="NextSteps" title="Next steps">
 				<Typography>If you’ve followed these steps and are still experiencing performance issues, please reach out to Solid Solutions support. When contacting us, include the following:</Typography>
 
 				<ol>

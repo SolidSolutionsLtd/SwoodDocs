@@ -18,7 +18,7 @@ const CuttingPattern = () => {
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Define">How to Generate a Cutting Pattern</a>
+						<a href="#Define">How to generate a cutting pattern</a>
 					</li>
 				</ul>
 			</nav>
@@ -37,9 +37,9 @@ const CuttingPattern = () => {
 				</ul>
 			</Section>
 
-			<Section id="Define" title="How to Generate a Cutting Pattern">
+			<Section id="Define" title="How to generate a cutting pattern">
 				<Typography>
-					To generate a Cutting Pattern, start by enabling the option in the <SwoodEditorTag /> as seen below.
+					To generate a <span className="highlight">Cutting Pattern</span>, start by enabling the option in the <SwoodEditorTag /> as seen below.
 				</Typography>
 				<ImageComponent source="./images/CuttingPatternEnable.png" size="400px" />
 
