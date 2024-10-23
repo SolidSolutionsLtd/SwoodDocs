@@ -1,7 +1,7 @@
 import { SectionDivider } from '../../components/SectionDivider'
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { ReportCompatibilityData } from '../../data/Compatibility'
+import { ReportCompatibilityData } from '../../data/compatibility'
 
 const columns = [
 	{ header: 'Report Version', property: 'ReportVersion', width: '30%' },

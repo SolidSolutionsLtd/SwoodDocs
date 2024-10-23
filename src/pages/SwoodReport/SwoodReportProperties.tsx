@@ -1,10 +1,10 @@
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { EdgebandProperties, FrameProperties, HardwareProperties, LaminateProperties, LayerProperties, NestedPanelsProperties, PanelProperties, ProgramProperties, ProjectProperties, SheetProperties, SummaryProperties, ToolProperties } from '../../data/VariableList'
 import { Section } from '../../components/Section'
 import { useCallback, useMemo, useState } from 'react'
 import { SearchInput } from '../../components/SearchInput'
 import { debounce, Typography } from '@mui/material'
+import { ProjectProperties, FrameProperties, EdgebandProperties, PanelProperties, LaminateProperties, LayerProperties, ProgramProperties, ToolProperties, HardwareProperties, SheetProperties, NestedPanelsProperties, SummaryProperties } from '../../data/VariableList'
 
 const columns = [
 	{ header: 'Name', property: 'Name', width: '20%' },

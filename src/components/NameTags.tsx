@@ -15,6 +15,8 @@ export const SwoodCAMTag = () => <span className="highlight">Swood CAM</span>
 
 export const SwoodNestingTag = () => <span className="highlight">Swood Nesting</span>
 
+export const SwoodCenterServicesTag = () => <span className="highlight">Swood Center Services</span>
+
 export const SwoodEditorTag = () => <span className="highlight">SwoodEditor</span>
 
 export const SwoodRXTag = () => <span className="highlight">Swood RX</span>

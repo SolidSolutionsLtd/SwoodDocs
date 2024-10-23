@@ -29,7 +29,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item, filter }) => {
 					<ListSubheader component="div" sx={{ position: 'sticky', top: 60, zIndex: 1, bgcolor: 'background.paper', p: 0, m: 0 }}>
 						<ListItem onClick={handleClick} component="li" sx={{ fontSize: 16 }}>
 							<IndexItem to={item.to} title={item.title} pro={item.pro} beta={item.beta} postDate={item.postDate} updateDate={item.updateDate} />
-							{item.children ? open ? <ArrowDropDown color="info" /> : <ArrowRight /> : null}
+							{item.children ? open ? <ArrowDropDown color="info" /> : <ArrowRight color="disabled" /> : null}
 						</ListItem>
 					</ListSubheader>
 					<Collapse in={open} timeout="auto" unmountOnExit>

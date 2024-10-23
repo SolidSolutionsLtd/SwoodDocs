@@ -1,8 +1,21 @@
-import { Box } from '@mui/material'
+import { Box, SxProps, Theme } from '@mui/material'
 
-export const ImageComponent = ({ source, size }: { source: string; size?: string }) => {
+interface ImageComponentProps {
+	source: string
+	size?: string
+	sx?: SxProps<Theme>
+}
+
+export const ImageComponent: React.FC<ImageComponentProps> = ({ source, size, sx }) => {
 	return (
-		<Box display="flex" justifyContent="center" className="imageBox">
+		<Box
+			display="flex"
+			justifyContent="center"
+			className="imageBox"
+			sx={{
+				...sx,
+			}}
+		>
 			<img src={source} style={{ height: size }} />
 		</Box>
 	)

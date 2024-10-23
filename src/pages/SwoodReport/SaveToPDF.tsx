@@ -53,16 +53,16 @@ const SaveToPDF = () => {
 				<Typography>Add any of the following properties to enable the corresponding PDF generation:</Typography>
 				<ul>
 					<li>
-						<span className="highlight">PDFProject = Yes</span> Saves the project's drawing.
+						<span className="highlight">PDFProject = Yes</span> saves the project's drawing.
 					</li>
 					<li>
-						<span className="highlight">PDFFrames = Yes</span> Saves all frame drawings.
+						<span className="highlight">PDFFrames = Yes</span> saves all frame drawings.
 					</li>
 					<li>
-						<span className="highlight">PDFPanels = Yes</span> Saves all panel drawings.
+						<span className="highlight">PDFPanels = Yes</span> saves all panel drawings.
 					</li>
 					<li>
-						<span className="highlight">PDFHardware = Yes</span> Saves all hardware drawings.
+						<span className="highlight">PDFHardware = Yes</span> saves all hardware drawings.
 					</li>
 				</ul>
 			</Section>

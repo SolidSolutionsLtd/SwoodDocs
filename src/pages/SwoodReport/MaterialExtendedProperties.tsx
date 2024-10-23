@@ -1,6 +1,6 @@
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { PanelLaminateProperties, EdgebandProperties } from '../../data/MaterialExtendedPropertiesData'
+import { PanelLaminateProperties, EdgebandProperties } from '../../data/materialExtendedProperties'
 import { Section } from '../../components/Section'
 import { Typography } from '@mui/material'
 

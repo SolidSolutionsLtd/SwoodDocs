@@ -26,7 +26,7 @@ const MaterialType = () => {
 				</ul>
 			</nav>
 
-			<Section id="#Overview" title="Overview">
+			<Section id="Overview" title="Overview">
 				<Typography>
 					Materials can be grouped using the Material's Extended Custom Property <span className="highlight">Material Type</span>. This grouping provides a clearer breakdown of your panels in the report and summary.
 				</Typography>

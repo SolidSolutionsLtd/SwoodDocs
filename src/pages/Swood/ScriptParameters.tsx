@@ -1,6 +1,6 @@
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { ArithmeticalFunctions, BooleanFunctions, ScriptVariableTypes, SwoodFunctions, TextFunctions } from '../../data/ScriptData'
+import { ArithmeticalFunctions, BooleanFunctions, ScriptVariableTypes, SwoodFunctions, TextFunctions } from '../../data/scriptParameters'
 import { Section } from '../../components/Section'
 import { debounce, Typography } from '@mui/material'
 import { SearchInput } from '../../components/SearchInput'

@@ -25,7 +25,7 @@ const ProjectQuantity = () => {
 			<Section id="Overview" title="Overview">
 				<Typography>Users can modify the Project Quantity by adding a custom property. Changing this value will cause the report to multiply all item quantities by the specified Project Quantity. This is especially useful when the same project needs to be accounted for multiple times.</Typography>
 				<Typography>
-					<span className="red">Note: This option is not recommended for nesting projects, as the nesting optimization will not account for the adjusted quantities.</span>
+					<span className="red">Note: This option is not recommended for nesting projects or cutting patterns, as the optimization will not account for the adjusted quantities.</span>
 				</Typography>
 			</Section>
 

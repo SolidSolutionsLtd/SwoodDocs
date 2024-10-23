@@ -22,11 +22,14 @@ const SwoodReportQuickStart = lazy(() => import('./pages/SwoodReport/SwoodReport
 const SwoodLicensing = lazy(() => import('./pages/SwoodReport/SwoodLicensing'))
 const ReportCompatibility = lazy(() => import('./pages/SwoodReport/ReportCompatibility'))
 const SwoodReportMatrix = lazy(() => import('./pages/SwoodReport/SwoodReportMatrix'))
+const SwoodReportPro = lazy(() => import('./pages/SwoodReport/SwoodReportPro'))
 const SwoodReportProperties = lazy(() => import('./pages/SwoodReport/SwoodReportProperties'))
 const MaterialExtendedProperties = lazy(() => import('./pages/SwoodReport/MaterialExtendedProperties'))
 const ProjectName = lazy(() => import('./pages/SwoodReport/ProjectName'))
 const ProjectQuantity = lazy(() => import('./pages/SwoodReport/ProjectQuantity'))
 const SimpleReport = lazy(() => import('./pages/SwoodReport/SimpleReport'))
+const DisplayComments = lazy(() => import('./pages/SwoodReport/DisplayComments'))
+const EdgebandImage = lazy(() => import('./pages/SwoodReport/EdgebandImage'))
 const MergeReports = lazy(() => import('./pages/SwoodReport/MergeReports'))
 const PanelsAndStocks = lazy(() => import('./pages/SwoodReport/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/SwoodReport/CustomProperties'))
@@ -80,11 +83,14 @@ export const App = () => {
 					<Route path="/ReportCompatibility" element={<ReportCompatibility />} />
 					<Route path="/SwoodReportReleaseNotes" element={<SwoodReportReleaseNotes />} />
 					<Route path="/SwoodReportMatrix" element={<SwoodReportMatrix />} />
+					<Route path="/SwoodReportPro" element={<SwoodReportPro />} />
 					<Route path="/SwoodReportProperties" element={<SwoodReportProperties />} />
 					<Route path="/MaterialExtendedProperties" element={<MaterialExtendedProperties />} />
 					<Route path="/ProjectName" element={<ProjectName />} />
 					<Route path="/ProjectQuantity" element={<ProjectQuantity />} />
 					<Route path="/SimpleReport" element={<SimpleReport />} />
+					<Route path="/DisplayComments" element={<DisplayComments />} />
+					<Route path="/EdgebandImage" element={<EdgebandImage />} />
 					<Route path="/MergeReports" element={<MergeReports />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />

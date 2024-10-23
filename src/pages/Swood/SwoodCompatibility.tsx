@@ -1,7 +1,7 @@
 import { SectionDivider } from '../../components/SectionDivider'
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { SwoodCompatibilityData } from '../../data/Compatibility'
+import { SwoodCompatibilityData } from '../../data/compatibility'
 
 const columns = [
 	{ header: 'Swood Version', property: 'SwoodVersion', width: '20%' },

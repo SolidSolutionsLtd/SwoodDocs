@@ -7,3 +7,10 @@ interface IMenuItem {
 	beta?: boolean
 	children?: IMenuItem[]
 }
+
+interface IDirectoryItem {
+	label: string
+	children?: IDirectoryItem[]
+	info?: React.ReactNode
+	icon?: React.ReactNode
+}
