@@ -149,7 +149,7 @@ const EdgebandImage = () => {
 					To display all edgebands, open <SwoodEditorTag />, navigate to <span className="param">Images &gt; Panel Image</span>, then disable <span className="highlight">Edgeband Visible</span> and enable <span className="highlight">All Edgeband Visible</span>.
 				</Typography>
 
-				<ImageComponent source="./images/EB-enable-alledgebands.png" size="600px" />
+				<ImageComponent source="./images/EB-enable-alledgebands.png" size="800px" />
 			</Section>
 		</>
 	)

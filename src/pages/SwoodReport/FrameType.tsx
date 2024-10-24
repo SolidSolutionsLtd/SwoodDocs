@@ -27,11 +27,11 @@ const FrameType = () => {
 				<Typography>
 					To define a Frames Type, add the custom property <span className="red">Frames Type</span> and set the value, such as, Floor Cabinets, Wall Cabinets, etc.
 				</Typography>
-				<ImageComponent source="./images/FrameTypeCustomProperty.png" size="250px" />
+				<ImageComponent source="./images/FrameTypeCustomProperty.png" size="600px" />
 				<Typography>
 					When Frames Types are present in a project, you can use the <span className="highlight">Type</span> toggle to group the different Frames types into separate tables, as shown below.
 				</Typography>
-				<ImageComponent source="./images/FrameType.png" size="500px" />
+				<ImageComponent source="./images/FrameType.png" size="800px" />
 			</Section>
 		</>
 	)

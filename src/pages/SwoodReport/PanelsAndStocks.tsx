@@ -49,7 +49,7 @@ const PanelsAndStocks = () => {
 				<Typography>
 					To enable combined stocks, use the <span className="highlight">SwoodEditor</span> and navigate to <span className="param">Tables &gt; Stocks</span>, and enable the <span className="highlight">Combine Stocks</span> option.
 				</Typography>
-				<ImageComponent source="./images/CombinedStock.png" size="150px" />
+				<ImageComponent source="./images/CombinedStock.png" size="1200px" />
 			</Section>
 
 			<Section id="Panels" title="Panels list">
@@ -62,7 +62,7 @@ const PanelsAndStocks = () => {
 					To achieve this, a macro must be run to identify identical panels. For further information, please contact <a href="mailto:SwoodApps@solidsolutions.co.uk">SwoodApps@solidsolutions.co.uk</a>.
 				</Typography>
 
-				<ImageComponent source="./images/CombinedPanel.png" size="250px" />
+				<ImageComponent source="./images/CombinedPanel.png" size="1200px" />
 			</Section>
 		</>
 	)

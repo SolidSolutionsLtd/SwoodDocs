@@ -1,7 +1,7 @@
 import { SectionDivider } from '../../components/SectionDivider'
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { MatrixVariables } from '../../data/MatrixVariables'
+import { MatrixVariables } from '../../data/matrixVariables'
 
 const columns = [
 	{ header: '', property: 'Name', width: '30%' },

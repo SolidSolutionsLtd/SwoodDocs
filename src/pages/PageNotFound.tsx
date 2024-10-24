@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import { messages404Page } from '../data/Messages404Page'
+import { messages404Page } from '../data/messages404Page'
 
 const randomMessage = () => {
 	return messages404Page[Math.floor(Math.random() * messages404Page.length)]

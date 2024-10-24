@@ -27,11 +27,11 @@ const HardwareType = () => {
 				<Typography>
 					To define a Hardware Type, add the custom property <span className="red">Hardware Type</span> and set the value, such as, Handle, Connector, Hinge, Miscellaneous, etc.
 				</Typography>
-				<ImageComponent source="./images/HardwareTypeCustomProperty.png" size="250px" />
+				<ImageComponent source="./images/HardwareTypeCustomProperty.png" size="600px" />
 				<Typography>
 					When Hardware Types are present in a project, you can use the <span className="highlight">Type</span> toggle to group the different hardware types into separate tables, as shown below.
 				</Typography>
-				<ImageComponent source="./images/HardwareType.png" size="500px" />
+				<ImageComponent source="./images/HardwareType.png" size="1000px" />
 			</Section>
 		</>
 	)

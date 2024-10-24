@@ -34,7 +34,7 @@ const SwoodPerformance = () => {
 						<a href="#SolidWorksPerformanceEvaluation">SolidWorks performance evaluation</a>
 					</li>
 					<li>
-						<a href="#SwoodPerformanceAnalyzer">Swood erformance analyzer</a>
+						<a href="#SwoodPerformanceAnalyzer">Swood performance analyzer</a>
 					</li>
 					<li>
 						<a href="#RebuildModes">Rebuild modes</a>
@@ -94,7 +94,7 @@ const SwoodPerformance = () => {
 							<li>Assess component quantity.</li>
 						</ul>
 					</li>
-					<li>Swood erformance analyzer: Use this tool to monitor rebuild times.</li>
+					<li>Swood performance analyzer: Use this tool to monitor rebuild times.</li>
 					<li>Rebuild modes: Optimize rebuilds for better performance.</li>
 					<li>Network Usage: Avoid working over a network if possible.</li>
 					<li>Hardware recommendations: Ensure your system meets recommended specifications.</li>
@@ -147,14 +147,14 @@ const SwoodPerformance = () => {
 				<Typography>
 					When using <SwoodTag />, it's best to avoid lightweight mode, as it limits the ability to update <SwoodTag /> features, which can negatively impact performance. Instead, utilize the <strong>Rebuild Mode Toolbar</strong> in <SwoodTag /> to control rebuilds of unnecessary components.
 				</Typography>
-				<ImageComponent source="./images/PerformanceLightweight.png" size="300px" />
+				<ImageComponent source="./images/PerformanceLightweight.png" size="500px" />
 
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Large Assembly Settings
 				</Typography>
 				<Typography>Adjust these settings to handle larger assemblies more efficiently.</Typography>
 
-				<ImageComponent source="./images/PerformanceLargeDesign.png" size="300px" />
+				<ImageComponent source="./images/PerformanceLargeDesign.png" size="500px" />
 
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Managing Referenced Documents
@@ -162,15 +162,15 @@ const SwoodPerformance = () => {
 				<Typography>
 					Ensure that referenced documents are correctly managed and unnecessary file locations are removed from your <SolidWorksTag /> settings.
 				</Typography>
-				<ImageComponent source="./images/PerformanceReferences.png" size="300px" />
+				<ImageComponent source="./images/PerformanceReferences.png" size="500px" />
 			</Section>
 			<Section id="SWOODSettings" title="Swood settings">
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					Referenced Documents
 				</Typography>
 				<Typography>Remove unnecessary referenced document locations to improve performance.</Typography>
-				<ImageComponent source="./images/PerformanceReferencedDocuments.png" size="300px" />
-				<ImageComponent source="./images/PerformanceReferencedDocuments2.png" size="300px" />
+				<ImageComponent source="./images/PerformanceReferencedDocuments.png" size="500px" />
+				<ImageComponent source="./images/PerformanceReferencedDocuments2.png" size="500px" />
 
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
 					"UseFastRebuild" Setting
@@ -195,8 +195,8 @@ const SwoodPerformance = () => {
 						Save the file and restart <SolidWorksTag /> for the changes to take effect.
 					</li>
 
-					<ImageComponent source="./images/PerformanceSwoodboxRebuild.png" size="200px" />
-					<ImageComponent source="./images/PerformanceConnectorRebuild.png" size="200px" />
+					<ImageComponent source="./images/PerformanceSwoodboxRebuild.png" size="400px" />
+					<ImageComponent source="./images/PerformanceConnectorRebuild.png" size="400px" />
 				</ol>
 			</Section>
 			<Section id="SolidWorksPerformanceEvaluation" title="SolidWorks performance evaluation">
@@ -236,13 +236,13 @@ const SwoodPerformance = () => {
 					</li>
 				</ul>
 			</Section>
-			<Section id="SwoodPerformanceAnalyzer" title="Swood erformance analyzer">
+			<Section id="SwoodPerformanceAnalyzer" title="Swood performance analyzer">
 				<Typography>
-					The <SwoodTag /> erformance analyzer can assess model performance during rebuilds, helping you identify the elements contributing to long rebuild times.
+					The <SwoodTag /> performance analyzer can assess model performance during rebuilds, helping you identify the elements contributing to long rebuild times.
 				</Typography>
 
 				<Typography variant="h6" style={{ marginTop: '10px', marginBottom: '10px' }}>
-					To use the erformance analyzer:
+					To use the performance analyzer:
 				</Typography>
 				<ol>
 					<li>
@@ -259,7 +259,7 @@ const SwoodPerformance = () => {
 				</Typography>
 				<Typography>Errors in your project can cause multiple recalculations, slowing down rebuild times.</Typography>
 
-				<ImageComponent source="./images/PerformanceSwoodPerformanceAnalyser.png" size="300px" />
+				<ImageComponent source="./images/PerformanceSwoodPerformanceAnalyser.png" size="400px" />
 			</Section>
 			<Section id="RebuildModes" title="Rebuild modes">
 				<Typography>

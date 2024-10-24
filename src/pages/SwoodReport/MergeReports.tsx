@@ -111,7 +111,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsSourceFilesNest.png" size="400px" />
+				<ImageComponent source="./images/MergeReportsSourceFilesNest.png" size="600px" />
 			</Section>
 
 			<Section id="Workflow" title="Workflow">
@@ -143,7 +143,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsOpen.png" size="150px" />
+				<ImageComponent source="./images/MergeReportsOpen.png" size="400px" />
 				<ListItem>
 					<ListItemText primary="Where is the merged report saved?" secondary="The merged report is saved in the same directory as the nested report. This cannot be changed." />
 				</ListItem>
@@ -189,7 +189,7 @@ const MergeReports = () => {
 				<ListItem>
 					<ListItemText primary="Can I use the Quantity option in the nest project settings?" secondary="Yes. Keep in mind that in the merged report, the panel quantities from the nest project will take precedence." />
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsNestQuantity.png" size="200px" />
+				<ImageComponent source="./images/MergeReportsNestQuantity.png" size="600px" />
 
 				<ListItem>
 					<ListItemText
@@ -212,7 +212,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsError.png" size="300px" />
+				<ImageComponent source="./images/MergeReportsError.png" size="600px" />
 
 				<ListItem>
 					<ListItemText primary="Will the merged report folder be deleted when the nest report is run again?" secondary="Yes, all files in the existing merged report folder will be deleted before the merge process begins. This behavior is consistent whether you run a design or nest report. However, you will not be prompted to choose a different folder." />
@@ -221,7 +221,7 @@ const MergeReports = () => {
 				<ListItem>
 					<ListItemText primary="How can I identify what reports have been merged?" secondary="At present, there is no interface to display this information. However, you can use the Raw Data Viewer to view the merged data." />
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsData.gif" size="600px" />
+				<ImageComponent source="./images/MergeReportsData.gif" size="800px" />
 
 				<ListItem>
 					<ListItemText primary="What image will the merged report display on the home page?" secondary="The report will display the image from one of the nest source files. It is not possible to specify which source file's image will be used." />
@@ -230,7 +230,7 @@ const MergeReports = () => {
 				<ListItem>
 					<ListItemText primary="Should I disable the 'Insert Not Nested Parts' option in the nest settings?" secondary="Yes. Enabling this option will insert a single instance of un-nested parts, which can result in incorrect quantity values." />
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsNotNestedOption.png" size="350px" />
+				<ImageComponent source="./images/MergeReportsNotNestedOption.png" size="600px" />
 
 				<ListItem>
 					<ListItemText primary="Why are there original copies of the nest and design reports in the merged report folder?" secondary="These files are remnants of the merge process and are no longer needed once the merge is complete. Future developments may enable referencing these reports." />
@@ -276,7 +276,7 @@ const MergeReports = () => {
 					<li>
 						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
-					<ImageComponent source="./images/MergeReportsUnblock.png" size="500px" />
+					<ImageComponent source="./images/MergeReportsUnblock.png" size="300px" />
 					<li>
 						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the <SwoodDataDirectoryTag />.
 					</li>

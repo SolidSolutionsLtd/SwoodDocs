@@ -38,7 +38,7 @@ const MaterialType = () => {
 				<Typography>
 					Note that adding a Material Extended Property requires restarting <SolidWorksTag />.
 				</Typography>
-				<ImageComponent source="./images/Extended Properties.png" size="400px" />
+				<ImageComponent source="./images/Extended Properties.png" size="600px" />
 			</Section>
 			<Section id="Defining" title="How to define a Material Type">
 				<Typography>
@@ -50,17 +50,17 @@ const MaterialType = () => {
 				<Typography>
 					Note that <span className="highlight">Material Type</span> names are case-sensitive
 				</Typography>
-				<ImageComponent source="./images/Materials Library.png" size="400px" />
+				<ImageComponent source="./images/Materials Library.png" size="600px" />
 			</Section>
 			<Section id="DesignReport" title="Grouping by material type in the report">
 				<Typography>
 					When two or more <span className="highlight">Material Types</span> are present in the report, a toggle option will appear in the top right corner of the <span className="highlight">Panel</span> and <span className="highlight">Stock</span>. Using this toggle will group the panels by their corresponding <span className="highlight">Material Types</span>, as shown below.
 				</Typography>
-				<ImageComponent source="./images/Material Type Panels.png" size="400px" />
+				<ImageComponent source="./images/Material Type Panels.png" size="800px" />
 				<Typography>
 					<span className="highlight">Material Types</span> also controls grouping on the <span className="highlight">Summary</span>, displaying the total costs for the different <span className="highlight">Material Types</span>.
 				</Typography>
-				<ImageComponent source="./images/Material Type Summary.png" size="400px" />
+				<ImageComponent source="./images/Material Type Summary.png" size="800px" />
 			</Section>
 		</>
 	)

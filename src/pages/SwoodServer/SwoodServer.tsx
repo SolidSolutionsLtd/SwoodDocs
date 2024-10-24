@@ -63,7 +63,7 @@ const SwoodServer = () => {
 							}
 						/>
 					</ListItem>
-					<ImageComponent source="./images/SwoodServer/SwoodServerHome.png" size="420px" />
+					<ImageComponent source="./images/SwoodServer/SwoodServerHome.png" size="1200px" />
 
 					<ListItem>
 						<ListItemText primary="Project Classification" secondary={<>Projects are categorized into three main sections: Under Review, Active Projects, and Archived Projects. This classification streamlines project management and enhances visibility across the production pipeline.</>} />
@@ -152,12 +152,12 @@ const SwoodServer = () => {
 						<ListItemText primary="Mark Items as Completed" secondary={<>Quickly access SwoodReports to mark specific items, such as panels, programs, or sheets, as completed. This feature ensures accurate tracking of manufacturing progress and enhances accountability among team members. Items can be marked manually or using a barcode scanner.</>} />
 					</ListItem>
 
-					<ImageComponent source="./images/SwoodServer/MarkAsComplete.gif" size="400px" />
+					<ImageComponent source="./images/SwoodServer/MarkAsComplete.gif" size="1000px" />
 
 					<ListItem>
 						<ListItemText primary="Add Comments to Items" secondary={<>Add comments visible to all team members on individual items like panels, programs, sheets, or entire projects. This fosters real-time communication, improving collaboration and project transparency.</>} />
 					</ListItem>
-					<ImageComponent source="./images/SwoodServer/AddComment.gif" size="400px" />
+					<ImageComponent source="./images/SwoodServer/AddComment.gif" size="1000px" />
 
 					<ListItem>
 						<ListItemText
@@ -172,7 +172,7 @@ const SwoodServer = () => {
 					<ListItem>
 						<ListItemText secondary={<>The example below illustrates how changes made on one client machine are instantly reflected on other connected machines, ensuring that all users see the most up-to-date information. Additionally, any changes are also reflected on the Project Stats page for a comprehensive view of project's progress.</>} />
 					</ListItem>
-					<ImageComponent source="./images/SwoodServer/SwoodServer.gif" size="600px" />
+					<ImageComponent source="./images/SwoodServer/SwoodServer.gif" size="1200px" />
 
 					<ListItem>
 						<ListItemText
@@ -290,7 +290,7 @@ const SwoodServer = () => {
 					<span className="highlight">SwoodServer</span> is built on the MERN Stack architecture, a powerful JavaScript framework for rapid deployment of full-stack web applications. Comprising MongoDB, Express, React, and Node.js, this stack simplifies development by enabling a seamless three-tier architecture (frontend, backend, and database) using JavaScript.
 				</Typography>
 
-				<ImageComponent source="./images/SwoodServer/mern.png" size="250px" />
+				<ImageComponent source="./images/SwoodServer/mern.png" size="600px" />
 
 				<List>
 					<ListItem>

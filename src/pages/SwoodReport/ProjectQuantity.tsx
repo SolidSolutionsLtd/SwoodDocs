@@ -32,7 +32,7 @@ const ProjectQuantity = () => {
 			<Section id="ProjectQuantityCustomProperty" title="Adding a project quantity property">
 				<Typography>
 					To define a project quantity, add a custom property named <span className="highlight">Project Quantity</span> to the top-level assembly (the one used to generate the report).
-					<ImageComponent source="./images/ProjectQuantityCustomProperty.png" size="300px" />
+					<ImageComponent source="./images/ProjectQuantityCustomProperty.png" size="600px" />
 				</Typography>
 			</Section>
 
@@ -41,7 +41,7 @@ const ProjectQuantity = () => {
 					Once set, the <span className="highlight">Project Quantity</span> will be shown on the report's home screen and will multiply all item quantities in the tables and on the <span className="highlight">Summary Page</span>.
 				</Typography>
 				<ImageComponent source="./images/ProjectQuantityHome.png" size="600px" />
-				<ImageComponent source="./images/ProjectQuantityTable.png" size="300px" />
+				<ImageComponent source="./images/ProjectQuantityTable.png" size="1200px" />
 			</Section>
 		</>
 	)

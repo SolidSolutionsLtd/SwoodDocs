@@ -70,7 +70,7 @@ const CustomProperties = () => {
 					For example, to capture a <span className="highlight">String</span> property at the panel level, use the first available <span className="highlight">String</span> <span className="red">(1)</span> placeholder and note the <span className="highlight">Placeholder Name</span> <span className="red">(2)</span>. Continue adding the required properties, considering their types.
 				</Typography>
 
-				<ImageComponent source="./images/CustomPropertyDefinition.png" size="500px" />
+				<ImageComponent source="./images/CustomPropertyDefinition.png" size="800px" />
 			</Section>
 
 			<Section id="CustomPropertyDisplay" title="Displaying a custom property in the report">
@@ -80,7 +80,7 @@ const CustomProperties = () => {
 					In this case, we want to display the <span className="highlight">Part_STR_1</span> placeholder property in the panel's table. To do this, navigate to <span className="param">Report &gt; Panels</span>, click on <span className="highlight">Add Column</span> <span className="red">(1)</span>, and then define the property using the placeholder name <span className="red">(2)</span>.
 				</Typography>
 
-				<ImageComponent source="./images/CustomPropertyColumn.png" size="500px" />
+				<ImageComponent source="./images/CustomPropertyColumn.png" size="800px" />
 			</Section>
 		</>
 	)

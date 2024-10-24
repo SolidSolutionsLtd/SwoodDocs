@@ -81,7 +81,7 @@ const SwoodReportQuickStart = () => {
 				<Typography>
 					To activate the provided license, launch the <SolidSolutionsLicenseManagerTag /> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
 				</Typography>
-				<ImageComponent source="./images/Licensing1.png" size="400px" />
+				<ImageComponent source="./images/Licensing1.png" size="700px" />
 			</Section>
 
 			<Section id="Setup" title="Setup the SwoodReport">
@@ -98,7 +98,7 @@ const SwoodReportQuickStart = () => {
 					Please make sure to restart <SolidWorksTag /> for the changes to take effect.
 				</Typography>
 
-				<ImageComponent source="./images/ReportQuickStart.png" size="400px" />
+				<ImageComponent source="./images/ReportQuickStart.png" size="1000px" />
 			</Section>
 		</>
 	)

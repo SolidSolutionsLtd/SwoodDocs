@@ -63,7 +63,7 @@ const AutoPanelDrawing = () => {
 				<Typography>
 					See the example below for a panel drawing generated automatically by <SwoodTag />.
 				</Typography>
-				<ImageComponent source="./images/AutoPanelDrawing/AutoPanelDrawingExample.png" size="600px" />
+				<ImageComponent source="./images/AutoPanelDrawing/AutoPanelDrawingExample.png" size="900px" />
 			</Section>
 
 			<Section id="Requirements" title="Requirements">

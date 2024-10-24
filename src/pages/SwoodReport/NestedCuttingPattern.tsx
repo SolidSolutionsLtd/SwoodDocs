@@ -61,7 +61,7 @@ const NestedCuttingPattern = () => {
 						Take note of the placeholder name, for example, <span className="highlight">Part_BOO_1</span>.
 					</li>
 				</ol>
-				<ImageComponent source="./images/NestedOrBeamSawDefinePlaceholder.png" size="600px" />
+				<ImageComponent source="./images/NestedOrBeamSawDefinePlaceholder.png" size="800px" />
 			</Section>
 
 			<Section id="DisableCuttingPattern" title="Excluding panels from cutting pattern">
@@ -75,7 +75,7 @@ const NestedCuttingPattern = () => {
 					</li>
 					<li>Save your settings.</li>
 				</ol>
-				<ImageComponent source="./images/NestedOrBeamSawDisableCuttingPattern.png" size="500px" />
+				<ImageComponent source="./images/NestedOrBeamSawDisableCuttingPattern.png" size="800px" />
 			</Section>
 
 			<Section id="EnableNesting" title="Enabling panels in nesting">
@@ -92,7 +92,7 @@ const NestedCuttingPattern = () => {
 						Ensure there is no semicolon (;) before the <span className="highlight">CUSTOM PROPERTY ACTIVATION</span> entry. If present, remove it.
 					</li>
 				</ol>
-				<ImageComponent source="./images/NestedOrBeamSawNestingActivate.png" size="200px" />
+				<ImageComponent source="./images/NestedOrBeamSawNestingActivate.png" size="400px" />
 			</Section>
 		</>
 	)

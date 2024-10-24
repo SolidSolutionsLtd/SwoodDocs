@@ -93,10 +93,10 @@ const SaveToPDF = () => {
 					To display the PDF icons, use the <SwoodEditorTag /> to add a column with the property <span className="highlight">PDFRelativePath</span>, as shown in the example below:
 				</Typography>
 				<Typography>This property can be added to the Frames, Panels, and Hardware tables.</Typography>
-				<ImageComponent source="./images/PDFProperty.png" size="150px" />
+				<ImageComponent source="./images/PDFProperty.png" size="500px" />
 
 				<Typography>If the report contains saved PDFs, it will display a column with the corresponding icons:</Typography>
-				<ImageComponent source="./images/PDFColumn.png" size="250px" />
+				<ImageComponent source="./images/PDFColumn.png" size="400px" />
 			</Section>
 		</>
 	)

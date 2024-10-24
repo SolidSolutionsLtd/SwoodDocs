@@ -16,7 +16,7 @@ export const ImageComponent: React.FC<ImageComponentProps> = ({ source, size, sx
 				...sx,
 			}}
 		>
-			<img src={source} style={{ height: size }} />
+			<img src={source} style={{ width: size }} />
 		</Box>
 	)
 }

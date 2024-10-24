@@ -4,7 +4,7 @@ import { Section } from '../../components/Section'
 import { useCallback, useMemo, useState } from 'react'
 import { SearchInput } from '../../components/SearchInput'
 import { debounce, Typography } from '@mui/material'
-import { ProjectProperties, FrameProperties, EdgebandProperties, PanelProperties, LaminateProperties, LayerProperties, ProgramProperties, ToolProperties, HardwareProperties, SheetProperties, NestedPanelsProperties, SummaryProperties } from '../../data/VariableList'
+import { ProjectProperties, FrameProperties, EdgebandProperties, PanelProperties, LaminateProperties, LayerProperties, ProgramProperties, ToolProperties, HardwareProperties, SheetProperties, NestedPanelsProperties, SummaryProperties } from '../../data/variableList'
 
 const columns = [
 	{ header: 'Name', property: 'Name', width: '20%' },

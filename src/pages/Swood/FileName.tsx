@@ -76,12 +76,12 @@ const FileName = () => {
 					The <SwoodTag /> Automatic Numbering System automatically assigns names/numbers to components. The tool lets you define prefixes for three categories: Assemblies, Sub-Assemblies, and Parts. In the example below, we have “Frame”, “SubFrame”, and “Panel” respectively. Each category has its own counter that increments each time a component is created.
 				</Typography>
 				<Typography>You can assign counters to all components when using the "Insert Copy" option for Frames and SwoodBoxes.</Typography>
-				<ImageComponent source="./images/Numbering1.png" size="400px" />
+				<ImageComponent source="./images/Numbering1.png" size="500px" />
 
 				<Typography>
 					Selecting the <span className="highlight">Use Serial Number</span> option will rename each component using the predefined prefix and the next serial number in the sequence. Notice that this method ensures that each component has a unique name, so there is no longer the need to append the assembly name.
 				</Typography>
-				<ImageComponent source="./images/Numbering2.png" size="400px" />
+				<ImageComponent source="./images/Numbering2.png" size="500px" />
 
 				<Typography>
 					To assign a counter to a panel when using the <span className="highlight">Create a New Panel</span> option, use the <span className="highlight">Use EPDM SerialNumber</span> tick option.

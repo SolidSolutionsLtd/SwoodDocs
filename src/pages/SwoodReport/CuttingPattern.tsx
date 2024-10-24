@@ -41,12 +41,12 @@ const CuttingPattern = () => {
 				<Typography>
 					To generate a <span className="highlight">Cutting Pattern</span>, start by enabling the option in the <SwoodEditorTag /> as seen below.
 				</Typography>
-				<ImageComponent source="./images/CuttingPatternEnable.png" size="400px" />
+				<ImageComponent source="./images/CuttingPatternEnable.png" size="800px" />
 
 				<Typography>
 					Then, define a board in the <span className="highlight">Board Library</span> for all materials you which to send to the <span className="highlight">Cutting Pattern</span> and enable <span className="highlight">For Board Estimation</span>.
 				</Typography>
-				<ImageComponent source="./images/CuttingPatternBoard.png" size="400px" />
+				<ImageComponent source="./images/CuttingPatternBoard.png" size="600px" />
 			</Section>
 		</>
 	)

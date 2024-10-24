@@ -32,7 +32,7 @@ const ProjectName = () => {
 			<Section id="ProjectNameCustomProperty" title="Adding a custom project name property">
 				<Typography>
 					To specify a custom project name, add a custom property called <span className="highlight">Project Name</span> to the top-level assembly (the one used to generate the report).
-					<ImageComponent source="./images/ProjectNameCustomProperty.png" size="200px" />
+					<ImageComponent source="./images/ProjectNameCustomProperty.png" size="600px" />
 				</Typography>
 			</Section>
 

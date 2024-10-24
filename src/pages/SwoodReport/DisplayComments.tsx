@@ -121,7 +121,7 @@ const DisplayComments = () => {
 					Program comments are added by modifying the <SwoodTag /> program settings as shown below:
 				</Typography>
 
-				<ImageComponent source="./images/ProgramComments.gif" size="400px" />
+				<ImageComponent source="./images/ProgramComments.gif" size="600px" />
 
 				<Typography variant="h6">Where are the comments displayed?</Typography>
 				<Typography>
@@ -134,7 +134,7 @@ const DisplayComments = () => {
 					Sheet comments are added to nested sheets by modifying the <SwoodTag /> program settings as shown below:
 				</Typography>
 
-				<ImageComponent source="./images/SheetComments.gif" size="400px" />
+				<ImageComponent source="./images/SheetComments.gif" size="600px" />
 
 				<Typography variant="h6">Where are the comments displayed?</Typography>
 				<Typography>
