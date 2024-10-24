@@ -132,13 +132,13 @@ const SwoodUtils = () => {
 						</span>{' '}
 						to start using the tool.
 					</li>
-					<ImageComponent source="./images/SwoodUtils/CommandManagerTabs.png" size="250px" />
+					<ImageComponent source="./images/SwoodUtils/CommandManagerTabs.png" size="500px" />
 
 					<li>
 						When you run <SwoodUtilsTag /> for the first time, you’ll need to activate your license. Simply copy and paste the provided license key into the field shown below.
 					</li>
 
-					<ImageComponent source="./images/SwoodUtils/ActivateLicense.png" size="255px" />
+					<ImageComponent source="./images/SwoodUtils/ActivateLicense.png" size="700px" />
 				</ol>
 			</Section>
 
@@ -173,7 +173,7 @@ const SwoodUtils = () => {
 			</Section>
 
 			<Section id="Controls" title="Main controls">
-				<ImageComponent source="./images/SwoodUtils/Controls.png" size="75px" />
+				<ImageComponent source="./images/SwoodUtils/Controls.png" size="500px" />
 
 				<Box>
 					<Typography variant="h6" id="RefreshData">
@@ -205,7 +205,7 @@ const SwoodUtils = () => {
 					</Typography>
 					<Typography>Reorients the view of models where the Front view is not normal to the Z-axis. This option is only applicable when using "CombineIdentical" and when the following warning appears on one or more panels.</Typography>
 
-					<ImageComponent source="./images/SwoodUtils/ViewOrientation.png" size="200px" />
+					<ImageComponent source="./images/SwoodUtils/ViewOrientation.png" size="500px" />
 				</Box>
 			</Section>
 
@@ -219,17 +219,17 @@ const SwoodUtils = () => {
 						Flat IDs
 					</Typography>
 					<Typography>Flat IDs assign sequential IDs to panels.</Typography>
-					<ImageComponent source="./images/SwoodUtils/Flat.png" size="500px" />
+					<ImageComponent source="./images/SwoodUtils/Flat.png" size="1000px" />
 
 					<Typography>
 						Flat IDs also assign sequential IDs to Frames. To view the table below you must click on the <span className="highlight">Assemblies</span> tab.
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/FlatAssemblies.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/FlatAssemblies.png" size="1000px" />
 
 					<Typography variant="h6" id="Nested">
 						Nested IDs
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/Nested.png" size="500px" />
+					<ImageComponent source="./images/SwoodUtils/Nested.png" size="1000px" />
 					<Typography>Nested IDs also assign sequential IDs, but includes a reference to the parent frame.</Typography>
 				</Box>
 			</Section>
@@ -345,7 +345,7 @@ const SwoodUtils = () => {
 							</ul>
 						</Box>
 
-						<ImageComponent source="./images/SwoodUtils/IDFormatFlatPart.png" size="400px" />
+						<ImageComponent source="./images/SwoodUtils/IDFormatFlatPart.png" size="800px" />
 					</Box>
 				</Box>
 				<Box className="SubSection">
@@ -407,7 +407,7 @@ const SwoodUtils = () => {
 							</ul>
 						</Box>
 
-						<ImageComponent source="./images/SwoodUtils/IDFormatFlatAssembly.png" size="400px" />
+						<ImageComponent source="./images/SwoodUtils/IDFormatFlatAssembly.png" size="800px" />
 					</Box>
 				</Box>
 			</Section>
@@ -495,7 +495,7 @@ const SwoodUtils = () => {
 						</ul>
 					</Box>
 
-					<ImageComponent source="./images/SwoodUtils/IDFormat.png" size="400px" />
+					<ImageComponent source="./images/SwoodUtils/IDFormat.png" size="1000px" />
 				</Box>
 			</Section>
 
@@ -513,7 +513,7 @@ const SwoodUtils = () => {
 
 			<Section id="Colours" title="Table row colours">
 				<Typography>Rows are colour coded to easily identify the different types of components. See example below for legend.</Typography>
-				<ImageComponent source="./images/SwoodUtils/Colours.png" size="350px" />
+				<ImageComponent source="./images/SwoodUtils/Colours.png" size="1200px" />
 
 				<Box className="SubSection">
 					<ol>
@@ -537,14 +537,14 @@ const SwoodUtils = () => {
 						<img src="./images/SwoodUtils/IDMismatch.png" style={{ display: 'inline', marginLeft: '15px', borderRadius: '50%', height: '50px' }} />
 					</Box>
 					<Typography>This warning indicates that there is at least one mismatch between the TempID and the assigned ID for the component. See the example below.</Typography>
-					<ImageComponent source="./images/SwoodUtils/IDMismatchTable.png" size="300px" />
+					<ImageComponent source="./images/SwoodUtils/IDMismatchTable.png" size="800px" />
 
 					<Box style={{ display: 'flex', alignItems: 'center' }}>
 						<Typography variant="h6">Duplicate IDs</Typography>
 						<img src="./images/SwoodUtils/IDDuplicate.png" style={{ display: 'inline', marginLeft: '15px', borderRadius: '50%', height: '50px' }} />
 					</Box>
 					<Typography>This warning indicates that there is at least one duplicate ID in the components. See the example below.</Typography>
-					<ImageComponent source="./images/SwoodUtils/IDDuplicateTable.png" size="300px" />
+					<ImageComponent source="./images/SwoodUtils/IDDuplicateTable.png" size="800px" />
 				</Box>
 			</Section>
 
@@ -553,7 +553,7 @@ const SwoodUtils = () => {
 					Custom Properties of models can be modified by double clicking on the value of the table, making the change, and then clicking on the <span className="highlight">Update</span> button. Multiple values can be edited before clicking the <span className="highlight">Update</span> button.
 				</Typography>
 
-				<ImageComponent source="./images/SwoodUtils/ChangeCustomProperty.gif" size="400px" />
+				<ImageComponent source="./images/SwoodUtils/ChangeCustomProperty.gif" size="800px" />
 
 				<Typography>Only the following Custom Properties can be modified:</Typography>
 
@@ -604,7 +604,7 @@ const SwoodUtils = () => {
 						TempIDs are generated without considering the existing IDs.
 					</Typography>
 
-					<ImageComponent source="./images/SwoodUtils/PersistentOff.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/PersistentOff.png" size="500px" />
 
 					<Typography>
 						<span className="highlight" style={{ fontWeight: 'bold' }}>
@@ -612,7 +612,7 @@ const SwoodUtils = () => {
 						</span>{' '}
 						Panels with existing IDs retain their original values (1, 3, 5). Panels without IDs are assigned the next available IDs (6, 7).
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/PersistentOn.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/PersistentOn.png" size="500px" />
 
 					<Typography variant="h6">Reuse IDs</Typography>
 
@@ -623,7 +623,7 @@ const SwoodUtils = () => {
 						</span>{' '}
 						Panels with existing IDs retain their original values (1, 3, 5). Panels without IDs are assigned the next available IDs (6, 7).
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/PersistentOn.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/PersistentOn.png" size="500px" />
 
 					<Typography>
 						<span className="highlight" style={{ fontWeight: 'bold' }}>
@@ -631,12 +631,12 @@ const SwoodUtils = () => {
 						</span>{' '}
 						Panels with existing IDs retain their original values (1, 3, 5). Panels without IDs are assigned the unused IDs (2, 4).
 					</Typography>
-					<ImageComponent source="./images/SwoodUtils/PersistentOnReuse.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/PersistentOnReuse.png" size="500px" />
 
 					<Typography variant="h6">Combine Identical</Typography>
 					<Typography>This feature consolidates identical panels by evaluating their geometry, material, edgebands, laminates, and grain direction, assigning a shared ID to all matching panels.</Typography>
 					<Typography>Additionally, combined panels are marked with a distinct icon for easy identification in the list.</Typography>
-					<ImageComponent source="./images/SwoodUtils/CombinedPanels.png" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/CombinedPanels.png" size="500px" />
 
 					<Typography variant="h6">Order Type</Typography>
 					<Typography>Specifies how IDs are ordered:</Typography>
@@ -647,7 +647,7 @@ const SwoodUtils = () => {
 					</ul>
 
 					<Typography>The order can also be manually changed by dragging and dropping the rows. See example below.</Typography>
-					<ImageComponent source="./images/SwoodUtils/Reorder.gif" size="350px" />
+					<ImageComponent source="./images/SwoodUtils/Reorder.gif" size="800px" />
 
 					<Typography variant="h6">ID Separator</Typography>
 					<Typography>A character or set of characters that separates the elements of an ID, typically a dot or dash.</Typography>
