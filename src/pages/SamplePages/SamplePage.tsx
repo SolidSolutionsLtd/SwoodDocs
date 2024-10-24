@@ -4,50 +4,55 @@ import { tableSampleData } from '../../data/sampleData'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { ImageComponent } from '../../components/ImageComponent'
+import YouTubeEmbed from '../../components/YouTubeEmbed'
+import { EficadTag, SolidWorksTag, SwoodCAMTag, SwoodTag } from '../../components/NameTags'
 
 const columns = [
 	{ header: 'Swood Version', property: 'SwoodVersion', width: '20%' },
-	{ header: 'SolidWorks Version', property: 'SolidWorksVersion', width: '60%' },
+	{ header: 'SolidWorks Version', property: 'ReportVersion', width: '20%' },
 	{ header: 'Release Date', property: 'ReleaseDate', width: '20%' },
 ]
 
 const SamplePage = () => {
 	return (
 		<>
-			<PageTitle title="Sample Page" pro={true} />
+			<PageTitle title="Sample Page" pro beta />
 
 			<nav>
 				<ul>
 					<li>
-						<a href="#Overview">Overview</a>
+						<a href="#overview">Overview</a>
 					</li>
-					<li>
-						<a href="#Define">How to define a frame</a>
-					</li>
+
 					<li>
 						<a href="#table">Sample Table</a>
 					</li>
 				</ul>
 			</nav>
 
-			<Section id="Overview" title="Overview">
+			<Section id="overview" title="Overview">
+				<Typography>Typography can be used to create a paragraph.</Typography>
+				<Typography>This is another paragraph</Typography>
 				<Typography>
-					The Report allows users to classify Assemblies or Multiple Stock Parts as a <span className="highlight">Frame</span>. The Report will list all frames in an assembly and provide detailed information on the panels, hardware, and programs within the <span className="highlight">Frame</span>.
+					the span element can be used to highlight words. <span className="highlight">Frame</span> <span className="red">Red Text</span>
 				</Typography>
-				<Typography>The Frames tab will appear if there are one or more frames in a project.</Typography>
-			</Section>
-
-			<Section id="Define" title="How to define a frame">
+				<Typography>For commonly used words, use tags instead...</Typography>
 				<Typography>
-					To define a <span className="highlight">Frame</span>, add the custom property <span className="red">Frame</span> and set the value to <span className="red">Yes</span>.
+					These are tags that have been predefined... <EficadTag />, <SolidWorksTag /> ,<SwoodTag />, <SwoodCAMTag />
 				</Typography>
 			</Section>
 
 			<Section id="table" title="Sample Table">
-				<BasicTable columns={columns} data={tableSampleData} width={700} />
+				<BasicTable columns={columns} data={tableSampleData} width={900} />
 			</Section>
 
-			<ImageComponent source="./images/404dino.png" size="1000px" />
+			<Typography variant="h4">Image Element</Typography>
+
+			<ImageComponent source="./images/404dino.png" size="200px" />
+
+			<Typography variant="h4">Embedded YouTube Videos</Typography>
+
+			<YouTubeEmbed url={`https://www.youtube.com/watch?v=W6bm0QKyq5k&list=PLBmglfhN1t8VC6XoAmclrib2nLVvWcboR&index=2`} />
 		</>
 	)
 }
