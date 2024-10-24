@@ -1,4 +1,4 @@
-export const ReportCompatibilityData = [
+export const tableSampleData = [
 	{ ReportVersion: 'v2.10.3', ReleaseDate: '13/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
 	{ ReportVersion: 'v2.10.2', ReleaseDate: '6/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
 	{ ReportVersion: 'v2.10.1', ReleaseDate: '1/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
@@ -36,18 +36,4 @@ export const ReportCompatibilityData = [
 	{ ReportVersion: 'v2.03', ReleaseDate: '', SwoodVersion: 'Swood 2020 SP0.0' },
 	{ ReportVersion: 'v2.02', ReleaseDate: '', SwoodVersion: 'Swood 2020 SP0.0' },
 ]
-export const SwoodCompatibilityData = [
-	{ SwoodVersion: '2024 SP2.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '22/10/2024' },
-	{ SwoodVersion: '2024 SP1.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '08/08/2024' },
-	{ SwoodVersion: '2024 SP0.2', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '18/06/2024' },
-	{ SwoodVersion: '2024 SP0.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '23/05/2024' },
-	{ SwoodVersion: '2023 SP2.1', SolidWorksVersion: 'SolidWorks 2021 SP5.0 up to SolidWorks 2023', ReleaseDate: '27/11/2023' },
-	{ SwoodVersion: '2023 SP2.0', SolidWorksVersion: 'SolidWorks 2021 SP5.0 up to SolidWorks 2023', ReleaseDate: '09/11/2023' },
-	{ SwoodVersion: '2023 SP1.1', SolidWorksVersion: 'SolidWorks 2021 SP5.0 up to SolidWorks 2023', ReleaseDate: '29/08/2023' },
-	{ SwoodVersion: '2023 SP1.0', SolidWorksVersion: 'SolidWorks 2021 SP5.0 up to SolidWorks 2023', ReleaseDate: '23/08/2023' },
-	// { SwoodVersion: '2020', SolidWorksVersion: 'Swood 2024 SP0.0', ReleaseDate: '' },
-	// { SwoodVersion: '2021', SolidWorksVersion: 'Swood 2022 SP1.2', ReleaseDate: '' },
-	// { SwoodVersion: '2022', SolidWorksVersion: 'Swood 2022 SP1.2', ReleaseDate: '' },
-	// { SwoodVersion: '2023', SolidWorksVersion: 'Swood 2022 SP1.2', ReleaseDate: '' },
-	// { SwoodVersion: '2024', SolidWorksVersion: 'Swood 2022 SP1.2', ReleaseDate: '' },
-]
+	

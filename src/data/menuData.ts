@@ -67,4 +67,20 @@ export const menuItems: IMenuItem[] = [
 		],
 	},
 	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, postDate: '18/09/2024', children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils release notes' }] },
+	{
+		title: 'PostProcessor',
+		children: [
+			{ 
+				title: 'BIESSE' ,	
+				children: [
+					{ to: '/AddPostProcessor', title: 'BIESSE post 1' },
+					{ to: '/AddPostProcessor', title: 'BIESSE post 2' },
+				],
+			},
+			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+		],
+	},
 ]

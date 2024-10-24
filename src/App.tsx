@@ -46,6 +46,7 @@ const SaveToPDF = lazy(() => import('./pages/SwoodReport/SaveToPDF'))
 const Exclude = lazy(() => import('./pages/SwoodReport/Exclude'))
 const MaterialType = lazy(() => import('./pages/SwoodReport/MaterialType'))
 const SwoodReportReleaseNotes = lazy(() => import('./pages/SwoodReport/SwoodReportReleaseNotes'))
+const SamplePage = lazy(() => import('./pages/SamplePages/SamplePage'))
 
 // Swood Editor imports
 const SwoodEditor = lazy(() => import('./pages/SwoodEditor/SwoodEditor'))
@@ -58,6 +59,10 @@ const SwoodUtilsReleaseNotes = lazy(() => import('./pages/SwoodUtils/SwoodUtilsR
 
 // SwoodServer imports
 const SwoodServer = lazy(() => import('./pages/SwoodServer/SwoodServer'))
+
+// PostProcessors
+const AddPostProcessor = lazy(() => import('./pages/PostProcessors/AddPostProcessor'))
+
 
 export const App = () => {
 	return (
@@ -116,6 +121,10 @@ export const App = () => {
 					<Route path="/SwoodUtilsReleaseNotes" element={<SwoodUtilsReleaseNotes />} />
 
 					<Route path="/SwoodServer" element={<SwoodServer />} />
+
+					<Route path="/AddPostProcessor" element={<AddPostProcessor />} />
+
+					<Route path="/SamplePage" element={<SamplePage />} />
 
 					<Route path="/Loading" element={<Loading />} />
 				</Route>
