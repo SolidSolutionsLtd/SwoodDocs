@@ -9,7 +9,7 @@ const Home = () => {
 	return (
 		<Box sx={{ padding: '20px' }}>
 			<PageTitle title="Welcome to SwoodDocs!" />
-			<Typography variant="subtitle2" color="textDisabled" sx={{ marginTop: '1px' }}>
+			<Typography variant="subtitle1" color="textDisabled" sx={{ marginTop: '1px' }}>
 				by Solid Solutions
 			</Typography>
 			{/* Introduction Text */}
@@ -20,6 +20,9 @@ const Home = () => {
 			<Typography>
 				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of <SwoodTag />.
 			</Typography>
+
+			<LatestSwoodDocs />
+
 			<SectionDivider />
 			<Box
 				sx={{
@@ -62,7 +65,6 @@ const Home = () => {
 					}
 				/>
 			</Box>
-			<LatestSwoodDocs />
 		</Box>
 	)
 }

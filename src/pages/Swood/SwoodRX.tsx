@@ -2,8 +2,8 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
-import { NavLink } from 'react-router-dom'
 import { SwoodRXTag, SolidWorksTag, SwoodTag, EficadTag } from '../../components/NameTags'
+import YouTubeEmbed from '../../components/YouTubeEmbed'
 
 const SwoodRX = () => {
 	return (
@@ -32,12 +32,9 @@ const SwoodRX = () => {
 					<SwoodRXTag /> is a tool developed by <EficadTag /> to streamline the process of exporting data for support requests. It should be used whenever you need to submit a request, ensuring all the required information is included to help resolve your issue efficiently.
 				</Typography>
 				<Typography>
-					Feel free to watch this video tutorial on generating a <SwoodRXTag /> by clicking{' '}
-					<NavLink to="https://www.youtube.com/watch?v=tomDyCP8w40" target="_blank">
-						here
-					</NavLink>
-					.
+					Feel free to watch this video tutorial on generating a <SwoodRXTag />.
 				</Typography>
+				<YouTubeEmbed url="https://www.youtube.com/watch?v=tomDyCP8w40" />
 			</Section>
 
 			<Section id="SwoodRXOpen" title="How to open the Swood RX tool">

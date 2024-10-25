@@ -22,7 +22,7 @@ export const menuItems: IMenuItem[] = [
 			{ to: '/ReportCompatibility', title: 'SwoodReport compatibility' },
 			{ to: '/SwoodReportReleaseNotes', title: 'SwoodReport release notes' },
 			{ to: '/SwoodReportMatrix', title: 'SwoodReport matrix' },
-			{ to: '/SwoodReportPro', title: 'Explore the benefits of the SwoodReport Pro', pro: true, postDate: '24/10/2024' },
+			{ to: '/SwoodReportPro', title: 'Explore the benefits of SwoodReport Pro', pro: true, postDate: '24/10/2024' },
 			{ to: '/SwoodReportProperties', title: 'List of SwoodReport properties', updateDate: '18/09/2024' },
 			{ to: '/MaterialExtendedProperties', title: 'List of Swood material extended properties', postDate: '18/09/2024' },
 			{ to: '/PanelsAndStocks', title: 'Difference between panels and stocks List', postDate: '18/09/2024' },
@@ -67,20 +67,20 @@ export const menuItems: IMenuItem[] = [
 		],
 	},
 	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, postDate: '18/09/2024', children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils release notes' }] },
-	{
-		title: 'PostProcessor',
-		children: [
-			{ 
-				title: 'BIESSE' ,	
-				children: [
-					{ to: '/AddPostProcessor', title: 'BIESSE post 1' },
-					{ to: '/AddPostProcessor', title: 'BIESSE post 2' },
-				],
-			},
-			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
-			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
-			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
-			{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
-		],
-	},
+	// {
+	// 	title: 'PostProcessor',
+	// 	children: [
+	// 		{
+	// 			title: 'BIESSE' ,
+	// 			children: [
+	// 				{ to: '/AddPostProcessor', title: 'BIESSE post 1' },
+	// 				{ to: '/AddPostProcessor', title: 'BIESSE post 2' },
+	// 			],
+	// 		},
+	// 		{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+	// 		{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+	// 		{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+	// 		{ to: '/AddPostProcessor', title: 'How to add a Post-Processor' },
+	// 	],
+	// },
 ]

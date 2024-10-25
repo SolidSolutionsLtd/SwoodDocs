@@ -32,7 +32,7 @@ const LatestSwoodDocs = () => {
 	return (
 		<>
 			{flattenedMenuItems.length > 0 && (
-				<Section id="WhatsNew" title="Discover the latest updates in SwoodDocs...">
+				<Section id="WhatsNew" title="Latest updates...">
 					<List>
 						{flattenedMenuItems.map((item, index) => (
 							<ListItem key={index}>
