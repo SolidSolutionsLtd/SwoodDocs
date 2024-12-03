@@ -24,3 +24,28 @@ export const darkTheme = createTheme({
 		},
 	},
 })
+
+export const lightTheme = createTheme({
+	palette: {
+		// mode: 'dark', // Switches to dark mode
+		primary: {
+			main: 'rgb(25, 118, 210)',
+		},
+		background: {
+			// default: 'rgb(15, 18, 20)', // Main background color
+			// paper: 'rgb(15, 18, 20)', // Background for paper components
+		},
+		text: {
+			primary: '#ffffff', // Text color
+		},
+	},
+	components: {
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					marginTop: '16px', // Adjust the value as needed
+				},
+			},
+		},
+	},
+})

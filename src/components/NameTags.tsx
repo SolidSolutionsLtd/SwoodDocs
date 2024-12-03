@@ -1,5 +1,7 @@
 // import { Tooltip, Zoom } from '@mui/material'
 
+import { ProChip } from './ProChip'
+
 // export const EficadTag = () => <ToolTipElement text="Eficad" tooltip="Eficad" />
 export const EficadTag = () => <span className="highlight">Eficad</span>
 
@@ -8,6 +10,13 @@ export const SwoodTag = () => <span className="highlight">Swood</span>
 export const SolidWorksTag = () => <span className="highlight">SolidWorks</span>
 
 export const SwoodReportTag = () => <span className="highlight">SwoodReport</span>
+
+export const SwoodReportProTag = () => (
+	<>
+		<SwoodReportTag />
+		<ProChip />
+	</>
+)
 
 export const SwoodDesignTag = () => <span className="highlight">Swood Design</span>
 

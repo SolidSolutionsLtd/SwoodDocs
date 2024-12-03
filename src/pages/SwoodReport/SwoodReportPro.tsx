@@ -1,8 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
-import { SwoodReportTag, SwoodUtilsTag } from '../../components/NameTags'
-import { ProChip } from '../../components/ProChip'
+import { SwoodReportProTag, SwoodUtilsTag } from '../../components/NameTags'
 import { ImageComponent } from '../../components/ImageComponent'
 
 const SwoodReportPro = () => {
@@ -131,7 +130,7 @@ const SwoodReportPro = () => {
 
 			<Section id="Overview" title="Overview">
 				<Typography>
-					The <SwoodReportTag /> <ProChip /> significantly enhances the functionality of the base report, providing advanced tools tailored for effective project management and reporting in woodworking.
+					The <SwoodReportProTag /> significantly enhances the functionality of the base report, providing advanced tools tailored for effective project management and reporting in woodworking.
 				</Typography>
 				<Typography>
 					With features like <strong>searchable and sortable tables</strong>, you can quickly access the information you need, saving valuable time and improving decision-making. The ability to <strong>print grouped or filtered tables</strong> allows you to present data clearly, whether for team discussions or client meetings.
@@ -139,7 +138,7 @@ const SwoodReportPro = () => {
 				<Typography>Additional functionalities, such as 3D modeling of panels and sheets, enable better visualization of your projects, helping you and your team understand complex assemblies at a glance. Enhanced capabilities for grouping materials and hardware ensure optimized resource management, allowing for a smooth workflow.</Typography>
 				<Typography>Crucially, this upgraded reporting system facilitates improved communication with the shop floor. By providing clear, organized reports, you can ensure that your team on the floor has the precise information they need to execute tasks efficiently and accurately.</Typography>
 				<Typography>
-					Upgrading to <SwoodReportTag /> <ProChip /> equips you with the tools necessary for better organization, enhanced clarity, and more effective communication throughout your project lifecycle.
+					Upgrading to <SwoodReportProTag /> equips you with the tools necessary for better organization, enhanced clarity, and more effective communication throughout your project lifecycle.
 				</Typography>
 				<Typography>Explore the sections below to uncover additional benefits and discover how this system can elevate your reporting and project management experience.</Typography>
 			</Section>
@@ -329,8 +328,7 @@ const SwoodReportPro = () => {
 
 			<Section id="next-steps" title="Next steps">
 				<Typography>
-					If you wish to upgrade to the <SwoodReportTag />
-					<ProChip />, please contact our team at <a href="mailto:SwoodApps@solidSolutions.co.uk">SwoodApps@solidSolutions.co.uk</a> for further details.
+					If you wish to upgrade to the <SwoodReportProTag />, please contact our team at <a href="mailto:SwoodApps@solidSolutions.co.uk">SwoodApps@solidSolutions.co.uk</a> for further details.
 				</Typography>
 			</Section>
 		</>

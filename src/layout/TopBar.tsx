@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
+import { ThemeToggle } from '../components/ThemeToggle'
 
 const drawerWidth = 340
 
@@ -101,6 +102,7 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 					{' '}
 					/ {pageTitle}
 				</Typography>
+				<ThemeToggle />
 			</Toolbar>
 		</AppBar>
 	)

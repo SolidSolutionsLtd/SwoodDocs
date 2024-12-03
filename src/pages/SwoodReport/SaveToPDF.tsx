@@ -3,7 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
-import { SolidWorksTag, SwoodEditorTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
+import { SolidWorksTag, SwoodEditorTag, SwoodReportProTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
 
 const SaveToPDF = () => {
 	return (
@@ -49,20 +49,23 @@ const SaveToPDF = () => {
 			</Section>
 
 			<Section id="ActivatingProperties" title="Activating custom properties">
-				<Typography>By default, the option to save drawings as PDFs is disabled. Since generating PDFs can take extra time and might not be needed initially, users must add specific custom properties to the file where the report will be run to enable this feature.</Typography>
-				<Typography>Add any of the following properties to enable the corresponding PDF generation:</Typography>
+				<Typography>By default, the option to save drawings as PDF is disabled. Since generating PDFs can take extra time and might not be needed initially, users must add specific custom properties to the file where the report will be run to enable this feature.</Typography>
+
+				<Typography>
+					Add any of the following custom properties to the <span className="highlight">top-level assembly</span> and set its value to <span className="highlight">Yes</span> to enable the corresponding PDF generation:
+				</Typography>
 				<ul>
 					<li>
-						<span className="highlight">PDFProject = Yes</span> saves the project's drawing.
+						<span className="highlight">PDFProject</span>: saves the project's drawing.
 					</li>
 					<li>
-						<span className="highlight">PDFFrames = Yes</span> saves all frame drawings.
+						<span className="highlight">PDFFrames</span>: saves all frame drawings.
 					</li>
 					<li>
-						<span className="highlight">PDFPanels = Yes</span> saves all panel drawings.
+						<span className="highlight">PDFPanels</span>: saves all panel drawings.
 					</li>
 					<li>
-						<span className="highlight">PDFHardware = Yes</span> saves all hardware drawings.
+						<span className="highlight">PDFHardware</span>: saves all hardware drawings.
 					</li>
 				</ul>
 			</Section>
@@ -87,7 +90,7 @@ const SaveToPDF = () => {
 
 			<Section id="ReportLinks" title="Viewing the PDF drawings in the report" pro={true}>
 				<Typography>
-					In the <SwoodReportTag /> <ProChip /> , you can view the saved PDF drawings by clicking the PDF icons.
+					In the <SwoodReportProTag />, you can view the saved PDF drawings by clicking the PDF icons.
 				</Typography>
 				<Typography>
 					To display the PDF icons, use the <SwoodEditorTag /> to add a column with the property <span className="highlight">PDFRelativePath</span>, as shown in the example below:
@@ -96,7 +99,8 @@ const SaveToPDF = () => {
 				<ImageComponent source="./images/PDFProperty.png" size="500px" />
 
 				<Typography>If the report contains saved PDFs, it will display a column with the corresponding icons:</Typography>
-				<ImageComponent source="./images/PDFColumn.png" size="400px" />
+
+				<ImageComponent source="./images/ReportPro/pdf-links.gif" size="800px" />
 			</Section>
 		</>
 	)
