@@ -7,14 +7,17 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
-import { CssBaseline, ThemeProvider } from '@mui/material'
-import { darkTheme } from './helper/ThemeProvider.tsx'
+// import { CssBaseline, ThemeProvider } from '@mui/material'
+// import { darkTheme } from './helper/ThemeProvider.tsx'
+import { MyThemeProvider } from './providers/MyThemeProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<ThemeProvider theme={darkTheme}>
-			<CssBaseline />
+		<MyThemeProvider>
+			{/* <ThemeProvider theme={darkTheme}> */}
+			{/* <CssBaseline /> */}
 			<App />
-		</ThemeProvider>
+			{/* </ThemeProvider> */}
+		</MyThemeProvider>
 	</StrictMode>
 )

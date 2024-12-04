@@ -7,7 +7,6 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { v4 as uuidv4 } from 'uuid'
 import CheckIcon from '@mui/icons-material/Check'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 type IColumn = {
 	header: string
@@ -30,54 +29,46 @@ const processProperty = (value: string | boolean, propertyName: string) => {
 	return <>{value}</>
 }
 
-const darkTheme = createTheme({
-	palette: {
-		mode: 'dark', // Sets dark mode
-	},
-})
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const BasicTable = ({ columns, data, width }: { columns: IColumn[]; data: any[]; width?: number }) => {
 	return (
-		<ThemeProvider theme={darkTheme}>
-			<TableContainer
-				component={Paper}
-				sx={{
-					width,
-					maxHeight: 800,
-					'&::-webkit-scrollbar': {
-						width: '8px', // Scrollbar width
-					},
-					'&::-webkit-scrollbar-thumb': {
-						backgroundColor: '#888', // Scrollbar color
-						borderRadius: '4px', // Rounded corners
-					},
-					'&::-webkit-scrollbar-thumb:hover': {
-						backgroundColor: '#555', // Color when hovering
-					},
-				}}
-			>
-				<Table stickyHeader sx={{ width }} aria-label="simple table">
-					<TableHead>
-						<TableRow>
+		<TableContainer
+			component={Paper}
+			sx={{
+				width,
+				maxHeight: 800,
+				'&::-webkit-scrollbar': {
+					width: '8px', // Scrollbar width
+				},
+				'&::-webkit-scrollbar-thumb': {
+					backgroundColor: '#888', // Scrollbar color
+					borderRadius: '4px', // Rounded corners
+				},
+				'&::-webkit-scrollbar-thumb:hover': {
+					backgroundColor: '#555', // Color when hovering
+				},
+			}}
+		>
+			<Table stickyHeader sx={{ width }} aria-label="simple table">
+				<TableHead>
+					<TableRow>
+						{columns.map(column => (
+							<TableCell key={uuidv4()}>{column.header}</TableCell>
+						))}
+					</TableRow>
+				</TableHead>
+				<TableBody>
+					{data.map(item => (
+						<TableRow key={uuidv4()} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
 							{columns.map(column => (
-								<TableCell key={uuidv4()}>{column.header}</TableCell>
+								<TableCell sx={{ whiteSpace: 'pre-line', wordBreak: 'break-word', width: column.width }} key={uuidv4()}>
+									{processProperty(item[column.property], column.property)}
+								</TableCell>
 							))}
 						</TableRow>
-					</TableHead>
-					<TableBody>
-						{data.map(item => (
-							<TableRow key={uuidv4()} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-								{columns.map(column => (
-									<TableCell sx={{ whiteSpace: 'pre-line', wordBreak: 'break-word', width: column.width }} key={uuidv4()}>
-										{processProperty(item[column.property], column.property)}
-									</TableCell>
-								))}
-							</TableRow>
-						))}
-					</TableBody>
-				</Table>
-			</TableContainer>
-		</ThemeProvider>
+					))}
+				</TableBody>
+			</Table>
+		</TableContainer>
 	)
 }

@@ -13,12 +13,16 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@babylonjs/core": "^7.37.1",
+		"@babylonjs/loaders": "^7.37.1",
+		"@babylonjs/materials": "^7.37.1",
 		"@emotion/react": "^11.13.3",
 		"@emotion/styled": "^11.13.0",
 		"@fontsource/roboto": "^5.1.0",
 		"@mui/icons-material": "^6.1.0",
 		"@mui/material": "^6.1.0",
 		"@mui/styles": "^6.1.1",
+		"@types/babylonjs": "^2.3.31",
 		"@xyflow/react": "^12.3.2",
 		"date-fns": "^4.1.0",
 		"firebase": "^10.13.2",

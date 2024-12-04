@@ -143,7 +143,7 @@ const MergeReports = () => {
 						}
 					/>
 				</ListItem>
-				<ImageComponent source="./images/MergeReportsOpen.png" size="400px" />
+				<ImageComponent source="./images/MergeReportsOpen.png" size="300px" />
 				<ListItem>
 					<ListItemText primary="Where is the merged report saved?" secondary="The merged report is saved in the same directory as the nested report. This cannot be changed." />
 				</ListItem>

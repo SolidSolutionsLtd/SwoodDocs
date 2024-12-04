@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { ThemeToggle } from '../components/ThemeToggle'
+import { Box } from '@mui/material'
+import { useTheme } from '../providers/MyThemeProvider'
 
 const drawerWidth = 340
 
@@ -38,6 +40,7 @@ interface TopBarProps {
 
 const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 	const [pageTitle, setPageTitle] = useState('')
+	const { isDarkMode } = useTheme()
 
 	useEffect(() => {
 		// Function to observe changes in the DOM
@@ -90,18 +93,24 @@ const TopBar: React.FC<TopBarProps> = ({ open, handleDrawerOpen }) => {
 	}, [])
 
 	return (
-		<AppBar className="no-print" position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
+		// <AppBar className="no-print" position="fixed" open={open} style={{ backgroundColor: 'rgb(1,4,7)' }}>
+		<AppBar className="no-print" position="fixed" open={open}>
 			<Toolbar>
 				<IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" sx={[{ mr: 2 }, open && { display: 'none' }]}>
-					<MenuIcon color="primary" />
+					<MenuIcon
+						sx={{
+							color: isDarkMode ? 'primary.main' : 'white', // Use primary color in dark mode, white otherwise
+						}}
+					/>
 				</IconButton>
-				<Typography variant="h5" noWrap component="div" color="primary" paddingRight="5px" margin="0px">
+				<Typography variant="h5" noWrap component="div" color={isDarkMode ? 'primary' : ''} paddingRight="5px" margin="0px">
 					<strong>SwoodDocs</strong>
 				</Typography>
 				<Typography color="textDisabled" marginTop="6px">
 					{' '}
 					/ {pageTitle}
 				</Typography>
+				<Box sx={{ flexGrow: 1 }} /> {/* Pushes the ThemeToggle to the right */}
 				<ThemeToggle />
 			</Toolbar>
 		</AppBar>

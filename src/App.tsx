@@ -63,6 +63,7 @@ const SwoodServer = lazy(() => import('./pages/SwoodServer/SwoodServer'))
 // PostProcessors
 const AddPostProcessor = lazy(() => import('./pages/PostProcessors/AddPostProcessor'))
 
+const BabylonPage = lazy(() => import('./pages/BabylonPage'))
 
 export const App = () => {
 	return (
@@ -123,6 +124,8 @@ export const App = () => {
 					<Route path="/SwoodServer" element={<SwoodServer />} />
 
 					<Route path="/AddPostProcessor" element={<AddPostProcessor />} />
+
+					<Route path="/BabylonPage" element={<BabylonPage />} />
 
 					<Route path="/SamplePage" element={<SamplePage />} />
 

@@ -17,7 +17,7 @@ interface Props {
 export const IndexItem: React.FC<Props> = ({ to, title, pro, beta, postDate, updateDate }) => {
 	return to ? (
 		<>
-			<NavLink to={to}>
+			<NavLink to={to} style={{ color: 'gray' }}>
 				{title} {pro && <ProChip />}
 				{beta && <BetaChip />} {postDate && isNew(postDate) && <NewChip />} {updateDate && isNew(updateDate) && <UpdatedChip />}
 			</NavLink>
