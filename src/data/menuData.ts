@@ -1,6 +1,11 @@
 export const menuItems: IMenuItem[] = [
 	{ to: '/', title: 'Home' },
 	{
+		to: '/GettingStated',
+		title: 'Getting Started',
+		children: [{ to: '/SwoodReportQuickStart', title: 'SwoodReport QuickStart' }],
+	},
+	{
 		to: '/Swood',
 		title: 'Swood',
 		children: [
@@ -17,7 +22,7 @@ export const menuItems: IMenuItem[] = [
 		to: '/SwoodReport',
 		title: 'SwoodReport',
 		children: [
-			{ to: '/SwoodReportQuickStart', title: 'SwoodReport QuickStart' },
+			// { to: '/SwoodReportQuickStart', title: 'SwoodReport QuickStart' },
 			{ to: '/SwoodLicensing', title: 'SwoodReport licensing' },
 			{ to: '/ReportCompatibility', title: 'SwoodReport compatibility' },
 			{ to: '/SwoodReportReleaseNotes', title: 'SwoodReport release notes' },

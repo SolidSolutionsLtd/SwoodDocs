@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
+import GettingStated from './pages/GettingStated'
 import PageNotFound from './pages/PageNotFound'
 import Layout from './layout/Layout'
 import Sandbox from './pages/Sandbox'
@@ -71,6 +72,7 @@ export const App = () => {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />
+					<Route path="/GettingStated" element={<GettingStated />} />
 					<Route path="/index.html" element={<Home />} />
 					<Route path="/Swood" element={<Swood />} />
 					<Route path="/SwoodPerformance" element={<SwoodPerformance />} />
