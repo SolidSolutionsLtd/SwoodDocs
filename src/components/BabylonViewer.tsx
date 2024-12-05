@@ -1,19 +1,24 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArcRotateCamera, Engine, HemisphericLight, Scene, Vector3, SceneLoader, AxesViewer, TransformNode, Color4 } from '@babylonjs/core'
+import { ArcRotateCamera, Engine, HemisphericLight, Scene, Vector3, SceneLoader, AxesViewer, TransformNode, Color4, StandardMaterial, Color3 } from '@babylonjs/core'
 import { useTheme } from '../providers/MyThemeProvider'
+import BabylonImageLoader from './BabylonImageLoader'
 
 interface IProps {
 	babylonString: string
+	babylonassets?: string
 	height: number
 	width: number
 	depth: number
 }
 
+// const BabylonViewer: React.FC<IProps> = ({ babylonString, babylonassets, height, width, depth }) => {
 const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null)
 	const [, setScene] = useState<Scene | null>(null)
 	const [groupNode, setGroupNode] = useState<TransformNode | null>(null)
 	const { isDarkMode } = useTheme()
+
+	BabylonImageLoader()
 
 	useEffect(() => {
 		const canvas = canvasRef.current
@@ -35,6 +40,10 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }
 		// Light setup
 		new HemisphericLight('light', new Vector3(1, 1, 0), scene)
 
+		// Create a blue material
+		const blueMaterial = new StandardMaterial('blueMaterial', scene)
+		blueMaterial.diffuseColor = new Color3(29 / 255, 79 / 255, 145 / 255) // Blue color
+
 		// Load the mesh
 		SceneLoader.ImportMeshAsync('', '', 'data:' + babylonString, scene).then(() => {
 			console.log('Mesh loaded successfully!')
@@ -44,6 +53,7 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }
 			const groupNode = new TransformNode('groupNode', scene)
 			scene.meshes.forEach(mesh => {
 				mesh.parent = groupNode
+				mesh.material = blueMaterial // Apply blue material to each mesh
 			})
 
 			setGroupNode(groupNode)

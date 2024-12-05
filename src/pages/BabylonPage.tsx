@@ -23,7 +23,7 @@ function BabylonPage() {
 			<Box display="flex" flexDirection="row" gap={2} alignItems="flex-start">
 				{/* BabylonViewer will take up the remaining space, and the sliders will sit next to it */}
 				<Box flex="1">
-					<BabylonViewer babylonString={babylonjson} height={height} width={width} depth={depth} />
+					<BabylonViewer babylonString={babylonjson} babylonassets={babylonassets} height={height} width={width} depth={depth} />
 				</Box>
 
 				{/* The sliders */}
