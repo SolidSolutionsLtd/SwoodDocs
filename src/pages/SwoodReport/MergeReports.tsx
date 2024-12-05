@@ -176,14 +176,7 @@ const MergeReports = () => {
 					<ListItemText primary="Are cutting patterns re-optimised in the merged report?" secondary="The merged report does not re-optimise cutting patterns from the Design projects. The original cutting patterns are retained, which may not be the most efficient solution." />
 				</ListItem>
 				<ListItem>
-					<ListItemText
-						primary="Can I use the Project Quantity Custom Property?"
-						secondary={
-							<>
-								This is not supported at the moment. However, you can learn how it’s beneficial when projects are not merged <NavLink to="/ProjectQuantity">here</NavLink>.
-							</>
-						}
-					/>
+					<ListItemText primary="Can I use the Project Quantity Custom Property?" secondary={<>This is not supported at the moment.</>} />
 				</ListItem>
 
 				<ListItem>
@@ -267,18 +260,18 @@ const MergeReports = () => {
 			<Section id="Setup" title="How to set up the MergeReports application">
 				<ol>
 					<li>
-						Download <span className="highlight">MergeReportPost.exe</span>.
+						Download <span className="highlight">MergeReports.exe</span>.
 					</li>
 
 					<Typography className="red">Please note that your eligibility for this version depends on your Subscription Renewal Date.</Typography>
 
 					<DownloadMergeReports />
 					<li>
-						Ensure that <span className="highlight">MergeReportPost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReportPost.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
+						Ensure that <span className="highlight">MergeReports.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">MergeReports.exe</span> application, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
 					<ImageComponent source="./images/MergeReportsUnblock.png" size="300px" />
 					<li>
-						Place <span className="highlight">MergeReportPost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the <SwoodDataDirectoryTag />.
+						Place <span className="highlight">MergeReports.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the <SwoodDataDirectoryTag />.
 					</li>
 					<li>
 						Open the following file with any text editor (e.g., Notepad): <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Report.cfg</span>.
@@ -297,7 +290,7 @@ const MergeReports = () => {
 		HIDDEN = 1
 		POSTPROCESS_WAITFOREXIT = 1
 		PRIORITY = 1
-		POSTPROCESS = DAT\\Documents\\Report Posts\\MergeReportPost.exe
+		POSTPROCESS = DAT\\Documents\\Report Posts\\MergeReports.exe
 		POSTPROCESSARGS = --DatabasePath "<REPORTPATH>\\Documents\\Database_<AssemblyName>.js"
 		FORCED_STORAGE_TYPE = 1
 		[[TEMPLATE

@@ -71,7 +71,7 @@ const DownloadMergeReportsRegister = () => {
 		try {
 			await RegisterEmail(email)
 			// Trigger the download after registration is complete
-			window.location.href = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReportPost.exe'
+			window.location.href = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReports.exe'
 		} catch (error) {
 			console.error('Error during registration: ', error)
 		}

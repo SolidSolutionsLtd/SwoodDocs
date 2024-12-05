@@ -5,7 +5,7 @@ import { RegisterDownload } from './RegisterDownload'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 
 const DownloadMergeReports = () => {
-	const downloadLink = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReportPost.exe'
+	const downloadLink = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/MergeReports.exe'
 	const appVersion = '0.0.0'
 
 	const [open, setOpen] = useState(false)
@@ -32,7 +32,7 @@ const DownloadMergeReports = () => {
 		<>
 			<Box display="flex" justifyContent="center" className="imageBox">
 				<Button variant="outlined" size="large" color="info" onClick={handleClickOpen} endIcon={<CloudDownloadIcon />}>
-					Download MergeReportPost v{appVersion}
+					Download MergeReports v{appVersion}
 				</Button>
 			</Box>
 			<Dialog open={open} onClose={handleClose}>
