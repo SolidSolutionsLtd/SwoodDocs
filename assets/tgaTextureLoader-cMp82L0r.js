@@ -1,0 +1,1 @@
+import{f as a,g as n}from"./BabylonPage-UdDEcssk.js";import"./index-OyQ-3X8F.js";import"./useSlotProps-CM3RYSSj.js";class h{constructor(){this.supportCascades=!1}loadCubeData(){throw".env not supported in Cube."}loadData(e,t,s){const o=new Uint8Array(e.buffer,e.byteOffset,e.byteLength),r=a(o);s(r.width,r.height,t.generateMipMaps,!1,()=>{n(t,o)})}}export{h as _TGATextureLoader};
