@@ -125,7 +125,7 @@ export const App = () => {
 
 					<Route path="/AddPostProcessor" element={<AddPostProcessor />} />
 
-					<Route path="/BabylonPage" element={<BabylonPage />} />
+					<Route path="/babylon" element={<BabylonPage />} />
 
 					<Route path="/SamplePage" element={<SamplePage />} />
 
