@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArcRotateCamera, Engine, HemisphericLight, Scene, Vector3, SceneLoader, AxesViewer, TransformNode, Color4, StandardMaterial, Color3 } from '@babylonjs/core'
+import { ArcRotateCamera, Engine, HemisphericLight, Scene, Vector3, SceneLoader, AxesViewer, TransformNode, Color4, StandardMaterial, Color3, PositionGizmo, UtilityLayerRenderer, RotationGizmo, ScaleGizmo, PointerEventTypes } from '@babylonjs/core'
 import { useTheme } from '../providers/MyThemeProvider'
 import BabylonImageLoader from './BabylonImageLoader'
 
@@ -34,6 +34,7 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }
 		const camera = new ArcRotateCamera('camera', Math.PI / 2, Math.PI / 3, 2000, Vector3.Zero(), scene)
 		// Set the camera position for an isometric view
 		camera.position = new Vector3(2000, 2000, -2000) // You can tweak these values for different angles
+		camera.position = new Vector3(0, 0, -1500) // You can tweak these values for different angles
 
 		camera.attachControl(canvas, true)
 
@@ -42,12 +43,23 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }
 
 		// Create a blue material
 		const blueMaterial = new StandardMaterial('blueMaterial', scene)
-		blueMaterial.diffuseColor = new Color3(29 / 255, 79 / 255, 145 / 255) // Blue color
+		blueMaterial.diffuseColor = new Color3(29 / 255, 79 / 255, 145 / 255)
+
+		// Create a utility layer for gizmos
+		const utilLayer = new UtilityLayerRenderer(scene)
+
+		// Gizmo instances (reusable for any selected mesh)
+		const positionGizmo = new PositionGizmo(utilLayer)
+		positionGizmo.scaleRatio = 1.5
+		const rotationGizmo = new RotationGizmo(utilLayer)
+		const scaleGizmo = new ScaleGizmo(utilLayer)
+
+		// Keep track of the currently selected mesh
+		let selectedMesh: TransformNode | null = null
 
 		// Load the mesh
 		SceneLoader.ImportMeshAsync('', '', 'data:' + babylonString, scene).then(() => {
 			console.log('Mesh loaded successfully!')
-			camera.zoomOn(scene.meshes)
 
 			// Create a TransformNode to group the meshes
 			const groupNode = new TransformNode('groupNode', scene)
@@ -61,49 +73,59 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth }
 			// Optional: Add axes to the scene
 			new AxesViewer(scene, 100)
 
-			// Calculate the overall bounding box size (in mm)
-			let overallMinX = Infinity,
-				overallMinY = Infinity,
-				overallMinZ = Infinity
-			let overallMaxX = -Infinity,
-				overallMaxY = -Infinity,
-				overallMaxZ = -Infinity
+			// Add pointer event for mesh selection
+			scene.onPointerObservable.add(pointerInfo => {
+				if (pointerInfo.type === PointerEventTypes.POINTERPICK) {
+					const pickResult = pointerInfo.pickInfo
 
-			scene.meshes.forEach(mesh => {
-				const boundingInfo = mesh.getBoundingInfo()
-				const boundingBox = boundingInfo.boundingBox
+					// Ensure pickInfo is valid
+					if (pickResult?.hit && pickResult.pickedMesh) {
+						const pickedMesh = pickResult.pickedMesh
 
-				const sizeX = boundingBox.maximum.x - boundingBox.minimum.x
-				const sizeY = boundingBox.maximum.y - boundingBox.minimum.y
-				const sizeZ = boundingBox.maximum.z - boundingBox.minimum.z
+						// Ensure pickedMesh is a TransformNode or compatible type
+						if (pickedMesh !== selectedMesh) {
+							selectedMesh = pickedMesh as TransformNode
 
-				// Convert to mm
-				const sizeXmm = sizeX
-				const sizeYmm = sizeY
-				const sizeZmm = sizeZ
-
-				console.log(`Mesh: ${mesh.name} Bounding Box Size: X: ${sizeXmm}mm, Y: ${sizeYmm}mm, Z: ${sizeZmm}mm`)
-
-				overallMinX = Math.min(overallMinX, boundingBox.minimum.x)
-				overallMinY = Math.min(overallMinY, boundingBox.minimum.y)
-				overallMinZ = Math.min(overallMinZ, boundingBox.minimum.z)
-
-				overallMaxX = Math.max(overallMaxX, boundingBox.maximum.x)
-				overallMaxY = Math.max(overallMaxY, boundingBox.maximum.y)
-				overallMaxZ = Math.max(overallMaxZ, boundingBox.maximum.z)
+							// Attach gizmos to the selected mesh
+							//@ts-expect-error	error
+							positionGizmo.attachedMesh = selectedMesh
+							//@ts-expect-error	error
+							rotationGizmo.attachedMesh = selectedMesh
+							//@ts-expect-error	error
+							scaleGizmo.attachedMesh = selectedMesh
+						}
+					} else {
+						// Clear gizmos if no valid mesh is picked
+						positionGizmo.attachedMesh = null
+						rotationGizmo.attachedMesh = null
+						scaleGizmo.attachedMesh = null
+						selectedMesh = null
+					}
+				}
 			})
 
-			// Calculate the size of the combined bounding box
-			const overallSizeX = overallMaxX - overallMinX
-			const overallSizeY = overallMaxY - overallMinY
-			const overallSizeZ = overallMaxZ - overallMinZ
+			if (groupNode) {
+				// Calculate the bounding box for the groupNode
+				let overallMin = new Vector3(Infinity, Infinity, Infinity)
+				let overallMax = new Vector3(-Infinity, -Infinity, -Infinity)
 
-			// Convert to mm
-			const overallSizeXmm = overallSizeX
-			const overallSizeYmm = overallSizeY
-			const overallSizeZmm = overallSizeZ
+				groupNode.getChildMeshes().forEach(mesh => {
+					const boundingInfo = mesh.getBoundingInfo()
+					const { minimumWorld, maximumWorld } = boundingInfo.boundingBox
 
-			console.log(`Overall Bounding Box Size: X: ${overallSizeXmm}mm, Y: ${overallSizeYmm}mm, Z: ${overallSizeZmm}mm`)
+					// Update the overall min and max
+					overallMin = Vector3.Minimize(overallMin, minimumWorld)
+					overallMax = Vector3.Maximize(overallMax, maximumWorld)
+				})
+
+				// Calculate the center of the bounding box
+				const center = overallMin.add(overallMax).scale(0.5)
+
+				console.log('GroupNode Center:', center)
+
+				// Optionally move the groupNode to center it at the origin
+				groupNode.position = center.scale(-1)
+			}
 		})
 
 		// Render loop
