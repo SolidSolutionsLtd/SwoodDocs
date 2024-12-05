@@ -4,11 +4,24 @@ import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
 import LatestSwoodDocs from '../components/LatestSwoodDocs'
 import { SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
+import { ImageComponent } from '../components/ImageComponent'
 
 const Home = () => {
 	return (
 		<Box sx={{ padding: '20px' }}>
-			<PageTitle title="Welcome to SwoodDocs!" />
+			<Box sx={{ position: 'relative', display: 'inline-block', mb: 2 }}>
+				<PageTitle title="Welcome to SwoodDocs!" />
+				<Box
+					sx={{
+						position: 'absolute',
+						top: -70,
+						right: 440,
+					}}
+				>
+					<ImageComponent source="./images/christmasHat.png" size="60px" />
+				</Box>
+			</Box>
+
 			<Typography variant="subtitle1" color="textDisabled" sx={{ marginTop: '1px' }}>
 				by Solid Solutions
 			</Typography>
