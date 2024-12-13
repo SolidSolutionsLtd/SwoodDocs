@@ -7,6 +7,15 @@ const SwoodUtilsReleaseNotes = () => {
 		<>
 			<PageTitle title="SwoodUtils release notes" />
 
+			<Release version="0.1.5.0" ReleaseDate="13/12/2024">
+				<ul>
+					<Typography variant="h6">Bug fixes</Typography>
+					<ul>
+						<li>Fixed combine issue when assemblies contained suppressed and unsuppressed instances</li>
+					</ul>
+				</ul>
+			</Release>
+
 			<Release version="0.1.4.0" ReleaseDate="09/10/2024">
 				<ul>
 					<Typography variant="h6">Bug fixes</Typography>

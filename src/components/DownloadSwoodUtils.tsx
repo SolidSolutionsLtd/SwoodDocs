@@ -5,8 +5,8 @@ import { RegisterDownload } from './RegisterDownload'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 
 const DownloadSwoodUtils = () => {
-	const downloadLink = 'https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.4.0.exe'
-	const appVersion = '0.1.4.0'
+	const downloadLink = 'https://development.solidsolutions.co.uk/swoodutils/downloads/SwoodUtils-0.1.5.0.exe'
+	const appVersion = '0.1.5.0'
 
 	const [open, setOpen] = useState(false)
 	// const [email, setEmail] = useState('')

@@ -72,6 +72,7 @@ export const App = () => {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<Home />} />
+					<Route path="/home" element={<Home />} /> {/* Adding this to avoid image references issues like the christmas hat */}
 					<Route path="/GettingStated" element={<GettingStated />} />
 					<Route path="/index.html" element={<Home />} />
 					<Route path="/Swood" element={<Swood />} />
@@ -83,7 +84,6 @@ export const App = () => {
 					<Route path="/SwoodTab" element={<SwoodTab />} />
 					<Route path="/FileName" element={<FileName />} />
 					<Route path="/AutoPanelDrawings" element={<AutoPanelDrawings />} />
-
 					<Route path="/SwoodReport" element={<SwoodReport />} />
 					<Route path="/SwoodReportQuickStart" element={<SwoodReportQuickStart />} />
 					<Route path="/html/SwoodReportQuickstart.html" element={<SwoodReportQuickStart />} />
@@ -114,23 +114,16 @@ export const App = () => {
 					<Route path="/SaveToPDF" element={<SaveToPDF />} />
 					<Route path="/Exclude" element={<Exclude />} />
 					<Route path="/MaterialType" element={<MaterialType />} />
-
 					<Route path="/SwoodEditor" element={<SwoodEditor />} />
 					<Route path="/SwoodEditorReleaseNotes" element={<SwoodEditorReleaseNotes />} />
 					<Route path="/CreatingDATBackups" element={<CreatingDATBackups />} />
-
 					<Route path="/SwoodUtils" element={<SwoodUtils />} />
 					<Route path="/html/SwoodUtils.html" element={<SwoodUtils />} />
 					<Route path="/SwoodUtilsReleaseNotes" element={<SwoodUtilsReleaseNotes />} />
-
 					<Route path="/SwoodServer" element={<SwoodServer />} />
-
 					<Route path="/AddPostProcessor" element={<AddPostProcessor />} />
-
 					<Route path="/babylon" element={<BabylonPage />} />
-
 					<Route path="/SamplePage" element={<SamplePage />} />
-
 					<Route path="/Loading" element={<Loading />} />
 				</Route>
 				<Route path="/sandbox" element={<Sandbox />} />

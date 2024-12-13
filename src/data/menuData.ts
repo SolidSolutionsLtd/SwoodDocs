@@ -1,5 +1,5 @@
 export const menuItems: IMenuItem[] = [
-	{ to: '/', title: 'Home' },
+	{ to: '/home', title: 'Home' },
 	{
 		to: '/GettingStated',
 		title: 'Getting started',

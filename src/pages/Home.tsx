@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
 import LatestSwoodDocs from '../components/LatestSwoodDocs'
-import { SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
-import { ImageComponent } from '../components/ImageComponent'
+import { SwoodEditorTag, SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
+import { Section } from '../components/Section'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
 	return (
@@ -14,11 +16,11 @@ const Home = () => {
 				<Box
 					sx={{
 						position: 'absolute',
-						top: -70,
-						right: 440,
+						top: -20,
+						left: -17,
 					}}
 				>
-					<ImageComponent source="./images/christmasHat.png" size="60px" />
+					<img src={'./images/christmasHat.png'} style={{ width: '60px' }} />
 				</Box>
 			</Box>
 
@@ -33,6 +35,12 @@ const Home = () => {
 			<Typography>
 				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of <SwoodTag />.
 			</Typography>
+
+			{/* <Section id="Overview" title="⚠️ Important Notice">
+				<Typography color="warning">
+					<SwoodEditorTag /> versions v1.2.1 and earlier will no longer receive in-app update notifications. To ensure you have the latest version, please manually download it by following the steps <NavLink to="/SwoodReportQuickStart">here</NavLink>.
+				</Typography>
+			</Section> */}
 
 			<LatestSwoodDocs />
 
