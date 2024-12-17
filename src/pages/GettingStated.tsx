@@ -36,11 +36,11 @@ const GettingStated = () => {
 				Whether you're a seasoned professional or just getting started, this site provides the tools and knowledge to help you streamline your work, troubleshoot issues, and unlock the full potential of <SwoodTag />.
 			</Typography>
 
-			{/* <Section id="Overview" title="⚠️ Important Notice">
-				<Typography color="warning">
+			<Section id="Overview" title="⚠️ Important Notice">
+				<Typography>
 					<SwoodEditorTag /> versions v1.2.1 and earlier will no longer receive in-app update notifications. To ensure you have the latest version, please manually download it by following the steps <NavLink to="/SwoodReportQuickStart">here</NavLink>.
 				</Typography>
-			</Section> */}
+			</Section>
 
 			<LatestSwoodDocs />
 

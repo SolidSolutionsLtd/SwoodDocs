@@ -8,8 +8,8 @@ import { RegisterDownload } from '../../components/RegisterDownload'
 import { SolidSolutionsLicenseManagerTag, SolidWorksTag, SwoodDataDirectoryTag, SwoodEditorTag, SwoodReportTag } from '../../components/NameTags'
 
 const SwoodReportQuickStart = () => {
-	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-1.2.1.exe'
-	const appVersion = '1.2.1'
+	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-2.0.0.exe'
+	const appVersion = '2.0.0'
 	const handleDownload = async () => {
 		try {
 			await RegisterDownload('SwoodEditorDownloads', appVersion, 'download_SwoodEditor')

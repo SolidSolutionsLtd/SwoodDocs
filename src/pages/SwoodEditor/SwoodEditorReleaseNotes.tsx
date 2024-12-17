@@ -9,6 +9,48 @@ const SwoodEditorReleaseNotes = () => {
 		<>
 			<PageTitle title="Swood Editor release notes" />
 
+			<Release version="2.0.0" ReleaseDate="17/12/2024">
+				<Typography variant="h6">New features</Typography>
+				<ul>
+					<li>Includes report v2.11.0</li>
+					<li>Updated SSMLicenseManager to v3.0.6649.0</li>
+					<li>Ability to use temp license</li>
+					<li>Changes to updaters</li>
+					<li>SwoodEditor watches for changes files</li>
+				</ul>
+				<Typography variant="h6">Improvements</Typography>
+				<ul>
+					<li>Added Frame Labels Sorting Order table</li>
+					<li>
+						Added Nest <span className="param">CUSTOM PROPERTY ACTIVATION</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">CUSTOM PROPERTY NAME</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">ONEPROGRAMFORSAMESHEET</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">INSERTNOTNESTEDPARTS</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">IGNORENULLTHICKNESSTOPBOTTOM</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">SHOWRANK</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>
+						Added Nest <span className="param">LANDMIDDLELONGESTSEGMENT</span> property from <span className="param">SWOODCAM.cfg</span>
+					</li>
+					<li>Added Nest Grouping options from SWOODCAM.cfg</li>
+				</ul>
+				<Typography variant="h6">Bug fixes</Typography>
+				<ul>
+					<li>Fixed prerequisites installation order</li>
+					<li>Fixed `SEQUENCEMETHOD` not mapped to the correct value</li>
+				</ul>
+			</Release>
+
 			<Release version="1.2.1" ReleaseDate="13/09/2024">
 				<Typography variant="h6">New features</Typography>
 				<ul>

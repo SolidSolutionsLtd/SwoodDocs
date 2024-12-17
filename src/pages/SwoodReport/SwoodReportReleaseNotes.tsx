@@ -9,6 +9,43 @@ const SwoodReportReleaseNotes = () => {
 		<>
 			<PageTitle title="SwoodReport release notes" />
 
+			<Release version="2.11.0" ReleaseDate="17/12/2024">
+				<ul>
+					<Typography variant="h6">New Features</Typography>
+					<ul>
+						<li>
+							Ability to define number format when evaluating properties <ProChip />
+						</li>
+						<li>Introduction to Room classification</li>
+						<li>Updated links to new SwoodDocs site</li>
+						<li>Edgeband corners</li>
+					</ul>
+					<Typography variant="h6">Improvements</Typography>
+					<ul>
+						<li>
+							<span className="param">SwoodReportVersion</span> is now `SwoodVersion`
+						</li>
+						<li>
+							Frame labels use <span className="param">SortByLabelFrame</span> if <span className="param">SortByFrame</span> is not provided
+						</li>
+						<li>
+							Added <span className="param">Instance</span> property to nested panels
+						</li>
+						<li>Labels now display the information of the individual instance of combined panels, except for the Name property</li>
+					</ul>
+					<Typography variant="h6">Bug fixes</Typography>
+					<ul>
+						<li>Fixed Reference issues/missing images in home page when using a custom Home Tab name</li>
+						<li>Fixed scaling issue in Cutting Pattern page</li>
+						<li>Fixed broken summary if user has not upgraded to Swood 2024</li>
+						<li>Fixed issue where it would only process ProjectName for Pro report</li>
+						<li>Fixed incorrect sorting order for table columns containing decimal numbers</li>
+						<li>Label cell height is now maintained when cell is empty</li>
+						<li>Fixed wrong arrow direction in Cutting Pattern Cut List</li>
+					</ul>
+				</ul>
+			</Release>
+
 			<Release version="2.10.3" ReleaseDate="13/09/2024">
 				<ul>
 					<Typography variant="h6">New Features</Typography>

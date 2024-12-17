@@ -25,7 +25,7 @@ export const menuItems: IMenuItem[] = [
 			// { to: '/SwoodReportQuickStart', title: 'SwoodReport QuickStart' },
 			{ to: '/SwoodLicensing', title: 'SwoodReport licensing' },
 			{ to: '/ReportCompatibility', title: 'SwoodReport compatibility' },
-			{ to: '/SwoodReportReleaseNotes', title: 'SwoodReport release notes' },
+			{ to: '/SwoodReportReleaseNotes', title: 'SwoodReport release notes', updateDate: '17/12/2024' },
 			{ to: '/SwoodReportMatrix', title: 'SwoodReport matrix' },
 			{ to: '/SwoodReportPro', title: 'Explore the benefits of SwoodReport Pro', pro: true, postDate: '24/10/2024' },
 			{ to: '/SwoodReportProperties', title: 'List of SwoodReport properties', updateDate: '18/09/2024' },
@@ -67,7 +67,7 @@ export const menuItems: IMenuItem[] = [
 		title: 'SwoodEditor',
 		children: [
 			{ to: '/SwoodLicensing', title: 'SwoodEditor licensing' },
-			{ to: '/SwoodEditorReleaseNotes', title: 'SwoodEditor release notes' },
+			{ to: '/SwoodEditorReleaseNotes', title: 'SwoodEditor release notes', updateDate: '17/12/2024' },
 			{ to: '/CreatingDATBackups', title: 'How to backup report settings' },
 		],
 	},
