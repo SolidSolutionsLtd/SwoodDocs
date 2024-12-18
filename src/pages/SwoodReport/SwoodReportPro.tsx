@@ -66,7 +66,7 @@ const SwoodReportPro = () => {
 								<a href="#3d-models-panels">3D panels</a>
 							</li>
 							<li>
-								<a href="#3d-sheet-models">3D sheets</a>
+								<a href="#3d-models-sheets">3D sheets</a>
 							</li>
 						</ul>
 					</li>

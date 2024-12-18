@@ -1,4 +1,5 @@
 export const ReportCompatibilityData = [
+	{ ReportVersion: 'v2.11.0', ReleaseDate: '17/12/2024', SwoodVersion: 'Swood 2024 SP0.0' },
 	{ ReportVersion: 'v2.10.3', ReleaseDate: '13/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
 	{ ReportVersion: 'v2.10.2', ReleaseDate: '6/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
 	{ ReportVersion: 'v2.10.1', ReleaseDate: '1/09/2024', SwoodVersion: 'Swood 2024 SP0.0' },
@@ -37,6 +38,7 @@ export const ReportCompatibilityData = [
 	{ ReportVersion: 'v2.02', ReleaseDate: '', SwoodVersion: 'Swood 2020 SP0.0' },
 ]
 export const SwoodCompatibilityData = [
+	{ SwoodVersion: '2024 SP3.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2025', ReleaseDate: '18/12/2024' },
 	{ SwoodVersion: '2024 SP2.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '22/10/2024' },
 	{ SwoodVersion: '2024 SP1.0', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '08/08/2024' },
 	{ SwoodVersion: '2024 SP0.2', SolidWorksVersion: 'SolidWorks 2022 SP5.0 up to SolidWorks 2024', ReleaseDate: '18/06/2024' },

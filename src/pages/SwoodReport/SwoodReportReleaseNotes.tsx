@@ -16,8 +16,9 @@ const SwoodReportReleaseNotes = () => {
 						<li>
 							Ability to define number format when evaluating properties <ProChip />
 						</li>
-						<li>Introduction to Room classification</li>
-						<li>Updated links to new SwoodDocs site</li>
+						<li>
+							Introduction to <span className="param">Room</span> classification
+						</li>
 						<li>Edgeband corners</li>
 					</ul>
 					<Typography variant="h6">Improvements</Typography>

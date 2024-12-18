@@ -4,6 +4,7 @@ import { ProChip } from '../../components/ProChip'
 import { SectionDivider } from '../../components/SectionDivider'
 import { NavLink } from 'react-router-dom'
 import { SolidSolutionsTag, SwoodCAMTag, SwoodDesignTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
+import { ReportPreviewLinks } from '../../components/ReportPreviewLinks'
 
 const SwoodReport = () => {
 	return (
@@ -23,6 +24,10 @@ const SwoodReport = () => {
 				</NavLink>
 				.
 			</Typography>
+
+			<SectionDivider />
+
+			<ReportPreviewLinks />
 		</>
 	)
 }
