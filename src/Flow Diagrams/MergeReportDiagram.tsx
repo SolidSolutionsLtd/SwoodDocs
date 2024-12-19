@@ -112,7 +112,7 @@ const initialNodes: Node[] = [
 			y: 250,
 		},
 		data: {
-			label: 'MergeApplication',
+			label: 'MergeReportPost',
 		},
 		...nodeDefaults,
 	},
@@ -186,7 +186,7 @@ const initialEdges: Edge[] = [
 		source: 'G',
 		target: 'H',
 		id: 'xy-edge__G-H',
-		label: 'Merge application runs automatically',
+		label: 'MergeReportPost runs automatically',
 		...edgeDefaults,
 	},
 	{

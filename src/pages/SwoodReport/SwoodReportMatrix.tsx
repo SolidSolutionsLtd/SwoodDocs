@@ -1,7 +1,7 @@
 import { SectionDivider } from '../../components/SectionDivider'
 import { PageTitle } from '../../components/PageTitle'
 import { BasicTable } from '../../components/BasicTable'
-import { MatrixVariables } from '../../data/matrixVariables'
+import { matrixVariables } from '../../data/matrixVariables'
 import { ReportPreviewLinks } from '../../components/ReportPreviewLinks'
 
 const columns = [
@@ -21,7 +21,7 @@ const SwoodReportMatrix = () => {
 			<ReportPreviewLinks />
 			<SectionDivider />
 
-			<BasicTable columns={columns} data={MatrixVariables} />
+			<BasicTable columns={columns} data={matrixVariables} />
 		</>
 	)
 }

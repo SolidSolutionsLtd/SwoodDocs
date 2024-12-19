@@ -22,7 +22,7 @@ export const ReportPreviewLinks = () => {
 			</Box>
 			<Box display="flex" justifyContent="center">
 				<Typography color="textDisabled" variant="caption">
-					* Report previews have been generated using the <NavLink to="/MergeReports">MergeReports</NavLink> option. Please note that this feature is only available in the Pro Report.
+					* Report previews have been generated using the <NavLink to="/MergeReportPost">MergeReportPost</NavLink> option. Please note that this feature is only available in the Pro Report.
 				</Typography>
 			</Box>
 		</Stack>

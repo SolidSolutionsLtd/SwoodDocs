@@ -3,6 +3,7 @@ import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { SwoodReportProTag, SwoodUtilsTag } from '../../components/NameTags'
 import { ImageComponent } from '../../components/ImageComponent'
+import { ReportPreviewLinkPro } from '../../components/ReportPreviewLinkPro'
 
 const SwoodReportPro = () => {
 	return (
@@ -13,6 +14,9 @@ const SwoodReportPro = () => {
 				<ul>
 					<li>
 						<a href="#overview">Overview</a>
+					</li>
+					<li>
+						<a href="#report-preview">Report Example Preview</a>
 					</li>
 					<li>
 						<a href="#table-functions">Enhanced table functionality</a>
@@ -141,6 +145,10 @@ const SwoodReportPro = () => {
 					Upgrading to <SwoodReportProTag /> equips you with the tools necessary for better organization, enhanced clarity, and more effective communication throughout your project lifecycle.
 				</Typography>
 				<Typography>Explore the sections below to uncover additional benefits and discover how this system can elevate your reporting and project management experience.</Typography>
+			</Section>
+
+			<Section id="report-preview" title="Report Example Preview">
+				<ReportPreviewLinkPro />
 			</Section>
 
 			<Section id="table-functions" title="Enhanced table functionality">

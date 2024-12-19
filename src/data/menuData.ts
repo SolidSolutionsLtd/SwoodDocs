@@ -38,7 +38,7 @@ export const menuItems: IMenuItem[] = [
 			{ to: '/SimpleReport', title: 'How to generate a simple report', postDate: '24/09/2024' },
 			{ to: '/DisplayComments', title: 'How to display comments in the report', postDate: '22/10/2024' },
 			{ to: '/EdgebandImage', title: 'Methods of displaying edgebands on images', postDate: '22/10/2024' },
-			{ to: '/MergeReports', title: 'How to merge Nest and Design reports', pro: true, beta: true, postDate: '05/12/2024' },
+			{ to: '/MergeReportPost', title: 'How to merge Nest and Design reports', pro: true, beta: true, postDate: '05/12/2024' },
 			{
 				title: 'Frames',
 				children: [

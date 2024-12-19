@@ -31,7 +31,7 @@ const ProjectQuantity = lazy(() => import('./pages/SwoodReport/ProjectQuantity')
 const SimpleReport = lazy(() => import('./pages/SwoodReport/SimpleReport'))
 const DisplayComments = lazy(() => import('./pages/SwoodReport/DisplayComments'))
 const EdgebandImage = lazy(() => import('./pages/SwoodReport/EdgebandImage'))
-const MergeReports = lazy(() => import('./pages/SwoodReport/MergeReports'))
+const MergeReportPost = lazy(() => import('./pages/SwoodReport/MergeReportPost'))
 const PanelsAndStocks = lazy(() => import('./pages/SwoodReport/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/SwoodReport/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/SwoodReport/ConcatenateProperties'))
@@ -99,7 +99,7 @@ export const App = () => {
 					<Route path="/SimpleReport" element={<SimpleReport />} />
 					<Route path="/DisplayComments" element={<DisplayComments />} />
 					<Route path="/EdgebandImage" element={<EdgebandImage />} />
-					<Route path="/MergeReports" element={<MergeReports />} />
+					<Route path="/MergeReportPost" element={<MergeReportPost />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />

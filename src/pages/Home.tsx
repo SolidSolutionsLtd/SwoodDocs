@@ -7,6 +7,7 @@ import LatestSwoodDocs from '../components/LatestSwoodDocs'
 import { SwoodEditorTag, SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 import { Section } from '../components/Section'
 import { NavLink } from 'react-router-dom'
+import LatestNews from '../components/LatestNews'
 
 const Home = () => {
 	return (
@@ -41,6 +42,8 @@ const Home = () => {
 					<SwoodEditorTag /> versions v1.2.1 and earlier will no longer receive in-app update notifications. To ensure you have the latest version, please manually download it by following the steps <NavLink to="/SwoodReportQuickStart">here</NavLink>.
 				</Typography>
 			</Section>
+
+			<LatestNews />
 
 			<LatestSwoodDocs />
 
