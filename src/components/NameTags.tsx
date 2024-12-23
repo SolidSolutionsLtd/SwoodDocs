@@ -40,7 +40,9 @@ export const SolidSolutionsLicenseManagerTag = () => <span className="highlight"
 
 export const SolidWorksRXTag = () => <span className="highlight">SolidWorks RX</span>
 
-export const MergeReportPostTag = () => <span className="highlight">MergeReportPost</span>
+export const SwoodMergeTag = () => <span className="highlight">SwoodMerge</span>
+
+export const SwoodMergePostTag = () => <span className="highlight">SwoodMergePost</span>
 
 // const ToolTipElement = ({ text, tooltip }: { text: string; tooltip: string }) => (
 // 	<Tooltip

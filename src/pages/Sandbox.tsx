@@ -1,10 +1,10 @@
 // import React from 'react'
-import MergeReportDiagram from '../Flow Diagrams/MergeReportDiagram'
+import SwoodMergeDiagram from '../Flow Diagrams/SwoodMergeDiagram'
 
 function Sandbox() {
 	return (
 		<>
-			<MergeReportDiagram />
+			<SwoodMergeDiagram />
 		</>
 	)
 }

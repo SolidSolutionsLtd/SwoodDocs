@@ -38,7 +38,7 @@ export const menuItems: IMenuItem[] = [
 			{ to: '/SimpleReport', title: 'How to generate a simple report', postDate: '24/09/2024' },
 			{ to: '/DisplayComments', title: 'How to display comments in the report', postDate: '22/10/2024' },
 			{ to: '/EdgebandImage', title: 'Methods of displaying edgebands on images', postDate: '22/10/2024' },
-			{ to: '/MergeReportPost', title: 'How to merge Nest and Design reports', pro: true, beta: true, postDate: '05/12/2024' },
+			{ to: '/SwoodMergePost', title: 'How to merge Nest and Design reports', pro: true, beta: true, postDate: '05/12/2024' },
 			{
 				title: 'Frames',
 				children: [
@@ -72,6 +72,7 @@ export const menuItems: IMenuItem[] = [
 		],
 	},
 	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, postDate: '18/09/2024', children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils release notes', updateDate: '13/12/2024' }] },
+	// { to: '/SwoodMerge', title: 'SwoodMerge', pro: true, beta: true, postDate: '20/12/2024', children: [{ to: '/SwoodMergeReleaseNotes', title: 'SwoodMerge release notes', updateDate: '20/12/2024' }] },
 	// {
 	// 	title: 'PostProcessor',
 	// 	children: [

@@ -26,10 +26,10 @@ export const ProjectProperties = [
 	{ Name: 'ProjectComments', Type: 'String', Source: 'Swood', Pro: false, Description: 'SolidWorks Comments defined in the Custom Properties Summary Tab' },
 	{ Name: 'ProjectCommentsCP', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'SW custom property <span class="CP">Comments</span>' },
 	{ Name: 'Project_STR_1 to Project_STR_10', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'Series of string placeholders for custom properties' },
-	{ Name: 'Project_BOO_1 to Project_BOO_5', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
-	{ Name: 'Project_REA_1 to Project_REA_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
-	{ Name: 'Project_DIM_1 to Project_DIM_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
-	{ Name: 'Project_INT_1 to Project_INT_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
+	{ Name: 'Project_BOO_1 to Project_BOO_10', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
+	{ Name: 'Project_REA_1 to Project_REA_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
+	{ Name: 'Project_DIM_1 to Project_DIM_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
+	{ Name: 'Project_INT_1 to Project_INT_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
 ]
 
 export const PanelProperties = [
@@ -122,11 +122,12 @@ export const PanelProperties = [
 	{ Name: 'NameTrimEnd', Type: 'String', Source: 'Report', Pro: true, Description: 'Trim the filename until the first underscore. If filename is <span class="CP">Component_SubAssembly_Assembly</span>, result will be <span class="CP">Component</span>' },
 	{ Name: 'ProgramNameList', Type: 'String', Source: 'Report', Pro: true, Description: 'List of program names separated by comas in the format <span class="CP">Top Milling, Bottom Milling, Side Milling</span>' },
 	{ Name: 'ProgramFileNameList', Type: 'String', Source: 'Report', Pro: true, Description: 'List of program file names separated by new line characters in the format <br><span class="CP">Top Milling.cnc<br>Bottom Milling.cnc<br>Side Milling.cnc</span>' },
+	{ Name: 'PanelProcessString', Type: 'String', Source: 'Report', Pro: true, Description: 'List of panel processes separated by commas' },
 	{ Name: 'Part_STR_1 to Part_STR_10', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'Series of string placeholders for custom properties' },
-	{ Name: 'Part_BOO_1 to Part_BOO_5', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
-	{ Name: 'Part_REA_1 to Part_REA_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
-	{ Name: 'Part_DIM_1 to Part_DIM_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
-	{ Name: 'Part_INT_1 to Part_INT_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
+	{ Name: 'Part_BOO_1 to Part_BOO_10', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
+	{ Name: 'Part_REA_1 to Part_REA_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
+	{ Name: 'Part_DIM_1 to Part_DIM_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
+	{ Name: 'Part_INT_1 to Part_INT_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
 ]
 
 export const FrameProperties = [
@@ -151,10 +152,10 @@ export const FrameProperties = [
 	{ Name: 'HardwareCost', Type: 'Number', Source: 'Report', Pro: true, Description: 'Total Frame Hardware Cost' },
 	{ Name: 'LabourCosts', Type: 'String', Source: 'Custom Property', Pro: true, Description: 'SW custom property <span class="CP">Labour Costs</span>' },
 	{ Name: 'Assembly_STR_1 to Assembly_STR_10', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'Series of string placeholders for custom properties' },
-	{ Name: 'Assembly_BOO_1 to Assembly_BOO_5', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
-	{ Name: 'Assembly_REA_1 to Assembly_REA_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
-	{ Name: 'Assembly_DIM_1 to Assembly_DIM_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
-	{ Name: 'Assembly_INT_1 to Assembly_INT_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
+	{ Name: 'Assembly_BOO_1 to Assembly_BOO_10', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
+	{ Name: 'Assembly_REA_1 to Assembly_REA_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
+	{ Name: 'Assembly_DIM_1 to Assembly_DIM_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
+	{ Name: 'Assembly_INT_1 to Assembly_INT_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
 ]
 
 export const LaminateProperties = [
@@ -240,10 +241,10 @@ export const HardwareProperties = [
 	{ Name: 'NameTrimStart', Type: 'String', Source: 'Report', Pro: true, Description: 'Trim the filename from the last underscore. If filename is <span class="CP">Assembly_SubAssembly_Component</span>, result will be <span class="CP">Component</span>' },
 	{ Name: 'NameTrimEnd', Type: 'String', Source: 'Report', Pro: true, Description: 'Trim the filename until the first underscore. If filename is <span class="CP">Component_SubAssembly_Assembly</span>, result will be <span class="CP">Component</span>' },
 	{ Name: 'Hardware_STR_1 to Hardware_STR_10', Type: 'String', Source: 'Custom Property', Pro: false, Description: 'Series of string placeholders for custom properties' },
-	{ Name: 'Hardware_BOO_1 to Hardware_BOO_5', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
-	{ Name: 'Hardware_REA_1 to Hardware_REA_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
-	{ Name: 'Hardware_DIM_1 to Hardware_DIM_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
-	{ Name: 'Hardware_INT_1 to Hardware_INT_5', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
+	{ Name: 'Hardware_BOO_1 to Hardware_BOO_10', Type: 'Boolean', Source: 'Custom Property', Pro: false, Description: 'Series of boolean placeholders for custom properties' },
+	{ Name: 'Hardware_REA_1 to Hardware_REA_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of real placeholders for custom properties' },
+	{ Name: 'Hardware_DIM_1 to Hardware_DIM_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of dimension placeholders for custom properties' },
+	{ Name: 'Hardware_INT_1 to Hardware_INT_10', Type: 'Number', Source: 'Custom Property', Pro: false, Description: 'Series of integer placeholders for custom properties' },
 ]
 
 export const ProgramProperties = [

@@ -31,7 +31,9 @@ const ProjectQuantity = lazy(() => import('./pages/SwoodReport/ProjectQuantity')
 const SimpleReport = lazy(() => import('./pages/SwoodReport/SimpleReport'))
 const DisplayComments = lazy(() => import('./pages/SwoodReport/DisplayComments'))
 const EdgebandImage = lazy(() => import('./pages/SwoodReport/EdgebandImage'))
-const MergeReportPost = lazy(() => import('./pages/SwoodReport/MergeReportPost'))
+const SwoodMerge = lazy(() => import('./pages/SwoodMerge/SwoodMerge'))
+const SwoodMergeReleaseNotes = lazy(() => import('./pages/SwoodMerge/SwoodMergeReleaseNotes'))
+const SwoodMergePost = lazy(() => import('./pages/SwoodReport/SwoodMergePost'))
 const PanelsAndStocks = lazy(() => import('./pages/SwoodReport/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/SwoodReport/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/SwoodReport/ConcatenateProperties'))
@@ -99,7 +101,9 @@ export const App = () => {
 					<Route path="/SimpleReport" element={<SimpleReport />} />
 					<Route path="/DisplayComments" element={<DisplayComments />} />
 					<Route path="/EdgebandImage" element={<EdgebandImage />} />
-					<Route path="/MergeReportPost" element={<MergeReportPost />} />
+					<Route path="/SwoodMerge" element={<SwoodMerge />} />
+					<Route path="/SwoodMergeReleaseNotes" element={<SwoodMergeReleaseNotes />} />
+					<Route path="/SwoodMergePost" element={<SwoodMergePost />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />
