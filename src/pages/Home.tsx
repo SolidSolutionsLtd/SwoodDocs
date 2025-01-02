@@ -14,7 +14,7 @@ const Home = () => {
 		<Box sx={{ padding: '20px' }}>
 			<Box sx={{ position: 'relative', display: 'inline-block', mb: 2 }}>
 				<PageTitle title="Welcome to SwoodDocs!" />
-				<Box
+				{/* <Box
 					sx={{
 						position: 'absolute',
 						top: -20,
@@ -22,7 +22,7 @@ const Home = () => {
 					}}
 				>
 					<img src={'./images/christmasHat.png'} style={{ width: '60px' }} />
-				</Box>
+				</Box> */}
 			</Box>
 
 			<Typography variant="subtitle1" color="textDisabled" sx={{ marginTop: '1px' }}>
