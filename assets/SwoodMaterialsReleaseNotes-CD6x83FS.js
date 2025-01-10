@@ -1,0 +1,1 @@
+import{j as e,P as s}from"./index-DLr4wmry.js";import{R as a}from"./Release-Cgek_Uu6.js";const l=()=>e.jsxs(e.Fragment,{children:[e.jsx(s,{title:"SwoodMaterials release notes"}),e.jsx(a,{version:"0.1.1.0",ReleaseDate:"28/08/2024",children:e.jsx("ul",{children:e.jsx("li",{children:"Beta release"})})})]});export{l as default};
