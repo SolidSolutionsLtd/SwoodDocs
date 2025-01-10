@@ -34,6 +34,7 @@ export const SectionCard: React.FC<SectionProps> = ({ to, title, content, postDa
 				<CardContent>
 					<Typography gutterBottom variant="h5" marginTop="5px" color="primary">
 						<strong>{title}</strong>
+						{postDate && isNew(postDate, 60) && <NewChip />}
 					</Typography>
 					<Divider />
 					<Typography variant="body2" sx={{ color: 'text.secondary' }}>
