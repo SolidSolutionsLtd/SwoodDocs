@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Box, Stack, Typography } from '@mui/material'
+import { Box, Divider, Stack, Typography } from '@mui/material'
 import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
@@ -8,10 +8,11 @@ import { SwoodEditorTag, SwoodMergeTag, SwoodReportsTag, SwoodRXTag, SwoodTag, S
 import { Section } from '../components/Section'
 import LatestNews from '../components/LatestNews'
 import { LinkElement } from '../components/LinkElement'
+import { LatestSwoodVersion } from '../components/LatestSwoodVersion'
 
 const Home = () => {
 	return (
-		<Stack direction={'row'}>
+		<Stack direction={'row'} divider={<Divider orientation="vertical" flexItem />} spacing={2}>
 			<Box sx={{ padding: '20px' }}>
 				<Box sx={{ position: 'relative', display: 'inline-block', mb: 2 }}>
 					<PageTitle title="Welcome to SwoodDocs!" />
@@ -110,9 +111,9 @@ const Home = () => {
 				</Box>
 			</Box>
 
-			<Box sx={{ width: 200 }}>
+			<Box sx={{ width: 500 }}>
+				<LatestSwoodVersion />
 				<LatestNews />
-
 				<LatestSwoodDocs />
 			</Box>
 		</Stack>
