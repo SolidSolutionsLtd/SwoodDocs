@@ -1,11 +1,11 @@
 import { differenceInDays, parse } from 'date-fns'
 
-export const isNew = (dateStr: string | undefined) => {
+export const isNew = (dateStr: string | undefined, days: number = 30) => {
 	if (!dateStr) return false
 
 	const today = new Date()
 	const parsedDate = parseDate(dateStr)
-	return differenceInDays(today, parsedDate) < 30
+	return differenceInDays(today, parsedDate) < days
 }
 
 export const parseDate = (dateStr: string | undefined) => {

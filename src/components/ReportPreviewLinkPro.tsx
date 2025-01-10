@@ -1,5 +1,5 @@
 import { Box, Stack, Button, Typography } from '@mui/material'
-import { LinkElement } from './LinkElement'
+import { SwoodMergePostTag } from './NameTags'
 
 export const ReportPreviewLinkPro = () => {
 	const handlePro = () => (window.location.href = 'https://solidsolutionsltd.github.io/SwoodReportProExample/')
@@ -18,7 +18,7 @@ export const ReportPreviewLinkPro = () => {
 			</Box>
 			<Box display="flex" justifyContent="center">
 				<Typography color="textDisabled" variant="caption">
-					* Report preview have been generated using the <LinkElement to="/MergeReportPost">MergeReportPost</LinkElement> option.
+					* Report preview have been generated using the <SwoodMergePostTag /> option.
 				</Typography>
 			</Box>
 		</Stack>

@@ -12,6 +12,8 @@ export const SolidWorksTag = () => <span className="highlight">SolidWorks</span>
 
 export const SwoodReportTag = () => <span className="highlight">SwoodReport</span>
 
+export const SwoodReportsTag = () => <span className="highlight">SwoodReports</span>
+
 export const SwoodReportProTag = () => (
 	<>
 		<SwoodReportTag />
@@ -61,11 +63,31 @@ export const SolidSolutionsLicenseManagerTag = () => <span className="highlight"
 
 export const SolidWorksRXTag = () => <span className="highlight">SolidWorks RX</span>
 
-export const SwoodMergeTag = () => <span className="highlight">SwoodMerge</span>
+export const SwoodMergeTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="/SwoodMerge">
+				<span className="highlight">SwoodMerge</span>
+			</LinkElement>
+		) : (
+			<span className="highlight">SwoodMerge</span>
+		)}
+	</>
+)
 
 export const SwoodMaterialsTag = () => <span className="highlight">SwoodMaterials</span>
 
-export const SwoodMergePostTag = () => <span className="highlight">SwoodMergePost</span>
+export const SwoodMergePostTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="/SwoodMergePost">
+				<span className="highlight">SwoodMergePost</span>
+			</LinkElement>
+		) : (
+			<span className="highlight">SwoodMergePost</span>
+		)}
+	</>
+)
 
 // const ToolTipElement = ({ text, tooltip }: { text: string; tooltip: string }) => (
 // 	<Tooltip

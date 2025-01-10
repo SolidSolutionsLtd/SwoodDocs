@@ -4,7 +4,7 @@ import { SectionDivider } from '../components/SectionDivider'
 import { PageTitle } from '../components/PageTitle'
 import { SectionCard } from '../components/SectionCard'
 import LatestSwoodDocs from '../components/LatestSwoodDocs'
-import { SwoodEditorTag, SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
+import { SwoodEditorTag, SwoodMergeTag, SwoodReportsTag, SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 import { Section } from '../components/Section'
 import LatestNews from '../components/LatestNews'
 import { LinkElement } from '../components/LinkElement'
@@ -85,6 +85,17 @@ const Home = () => {
 					content={
 						<>
 							<SwoodUtilsTag /> streamlines the ID assignment process for panels and frames, providing a user-friendly interface.
+						</>
+					}
+				/>
+
+				<SectionCard
+					to="/SwoodMerge"
+					title="SwoodMerge"
+					postDate="10/01/2025"
+					content={
+						<>
+							<SwoodMergeTag link={false} /> is a powerful and flexible tool designed to merge multiple <SwoodReportsTag /> into a single, cohesive output.
 						</>
 					}
 				/>

@@ -4,7 +4,7 @@ import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
-import { SwoodCenterServicesTag, SwoodDataDirectoryTag, SwoodMaterialsTag, SwoodMergeTag, SwoodReportTag } from '../../components/NameTags'
+import { SwoodCenterServicesTag, SwoodDataDirectoryTag, SwoodMaterialsTag, SwoodMergePostTag, SwoodMergeTag, SwoodReportsTag } from '../../components/NameTags'
 import SwoodMergeDiagram from '../../Flow Diagrams/SwoodMergeDiagram'
 import DownloadSwoodMerge from '../../components/DownloadSwoodMerge'
 
@@ -18,8 +18,9 @@ const SwoodMerge = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Terminology">Terminology</a>
+						<a href="#why-use-swoodmerge">Why use SwoodMerge?</a>
 					</li>
+
 					<li>
 						<a href="#Workflow">Workflow</a>
 					</li>
@@ -39,17 +40,17 @@ const SwoodMerge = () => {
 			</nav>
 			<Section id="Overview" title="Overview">
 				<Typography>
-					<SwoodMergeTag /> is a powerful and flexible tool designed to merge multiple <SwoodReportTag /> reports into a single, cohesive output. Whether you're combining reports for a single project, or reusing standardized templates, <SwoodMergeTag /> provides a seamless and efficient solution.
+					<SwoodMergeTag link={false} /> is a powerful and flexible tool designed to merge multiple <SwoodReportsTag /> reports into a single, cohesive output. Whether you're combining reports for a single project, or reusing standardized templates, <SwoodMergeTag link={false} /> provides a seamless and efficient solution.
 				</Typography>
 
 				<Typography>
-					Please note that <SwoodMergeTag /> is currently in its beta phase. While we strive for a seamless experience, the application may contain errors or bugs. We appreciate your understanding and encourage you to report any issues you encounter to help us refine and improve the application.
+					Please note that <SwoodMergeTag link={false} /> is currently in its beta phase. While we strive for a seamless experience, the application may contain errors or bugs. We appreciate your understanding and encourage you to report any issues you encounter to help us refine and improve the application.
 				</Typography>
 			</Section>
 
 			<Section id="why-use-swoodmerge" title="Why use SwoodMerge?">
 				<Typography>
-					<SwoodMergeTag /> offers innovative solutions to improve client workflows and project management. Below are a few use case scenarios:
+					<SwoodMergeTag link={false} /> offers innovative solutions to improve client workflows and project management. Below are a few use case scenarios:
 				</Typography>
 
 				<Box ml={2}>
@@ -58,26 +59,26 @@ const SwoodMerge = () => {
 
 					<Typography variant="h5">Subdivide Projects</Typography>
 					<Typography>
-						Large projects can be subdivided into manageable sections — for example, generating separate reports for each room in a building project. These individual reports can then be seamlessly merged using <SwoodMergeTag />.
+						Large projects can be subdivided into manageable sections — for example, generating separate reports for each room in a building project. These individual reports can then be seamlessly merged using <SwoodMergeTag link={false} />.
 					</Typography>
 
 					<Typography variant="h5">Collaborative Reporting</Typography>
 					<Typography>
-						Team members working on different parts of a project can generate separate reports based on their contributions. These reports can then be consolidated into a single, comprehensive report using <SwoodMergeTag />, fostering collaboration and reducing redundant work.
+						Team members working on different parts of a project can generate separate reports based on their contributions. These reports can then be consolidated into a single, comprehensive report using <SwoodMergeTag link={false} />, fostering collaboration and reducing redundant work.
 					</Typography>
 				</Box>
 			</Section>
 
 			<Section id="Workflow" title="Workflow">
 				<Typography>
-					Follow the steps below to merge multiple reports using <SwoodMergeTag />:
+					Follow the steps below to merge multiple reports using <SwoodMergeTag link={false} />:
 				</Typography>
 
 				<ol>
 					<li>Create the individual projects (e.g., Design, CAM, or Nesting).</li>
 					<li>Generate the corresponding reports for each project.</li>
 					<li>
-						Open the <SwoodMergeTag /> application, select all the projects you wish to merge, and initiate the merge process.
+						Open the <SwoodMergeTag link={false} /> application, select all the projects you wish to merge, and initiate the merge process.
 					</li>
 				</ol>
 
@@ -108,6 +109,16 @@ const SwoodMerge = () => {
 						secondary={
 							<>
 								This is not possible. However, this is achievable with <SwoodCenterServicesTag />
+							</>
+						}
+					/>
+				</ListItem>
+				<ListItem>
+					<ListItemText
+						primary="Can I automatically merge a nest report with all of its source files?"
+						secondary={
+							<>
+								This is not possible. However, this is achievable with <SwoodMergePostTag />
 							</>
 						}
 					/>
