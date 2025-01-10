@@ -2,7 +2,7 @@ import { List, ListItem } from '@mui/material'
 import { menuItems } from '../data/menuData'
 import { IndexItem } from './IndexItem'
 import { isNew, parseDate } from '../helper/dateHelper'
-import { Section } from './Section'
+import { SubSection } from './SubSection'
 
 const flattenMenuItems = (items: IMenuItem[]): IMenuItem[] => {
 	const result: IMenuItem[] = []
@@ -32,7 +32,7 @@ const LatestSwoodDocs = () => {
 	return (
 		<>
 			{flattenedMenuItems.length > 0 && (
-				<Section id="WhatsNew" title="Latest updates...">
+				<SubSection id="WhatsNew" title="Latest updates...">
 					<List>
 						{flattenedMenuItems.map((item, index) => (
 							<ListItem key={index}>
@@ -40,7 +40,7 @@ const LatestSwoodDocs = () => {
 							</ListItem>
 						))}
 					</List>
-				</Section>
+				</SubSection>
 			)}
 		</>
 	)

@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton'
 import { makeStyles } from '@mui/styles'
 import Menu from '../layout/Menu'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Loading from '../components/Loading'
 import TopBar from './TopBar'
 import { SearchInput } from '../components/SearchInput'
@@ -74,6 +74,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 const Layout = () => {
 	const theme = useTheme()
+	const location = useLocation()
 	const [open, setOpen] = useState(true)
 	const [filter, setFilter] = useState<string>('')
 
@@ -84,6 +85,10 @@ const Layout = () => {
 	const handleDrawerClose = () => setOpen(false)
 
 	const classes = useStyles()
+
+	// Determine margin based on the current route
+	const marginRight = location.pathname === '/home' || location.pathname === '/GettingStated' ? '0px' : '100px'
+	const paddingRight = location.pathname === '/home' || location.pathname === '/GettingStated' ? 0 : 3
 
 	return (
 		<Box sx={{ display: 'flex' }}>
@@ -119,7 +124,7 @@ const Layout = () => {
 			<Main open={open}>
 				<Suspense fallback={<Loading />}>
 					<ScrollToSection />
-					<Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, ml: `${drawerWidth}px`, m: 0 }}>
+					<Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, pr: paddingRight, margin: '100px', marginRight }}>
 						<ScrollToTopButton />
 						<Outlet />
 					</Box>
