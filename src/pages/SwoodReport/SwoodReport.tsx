@@ -14,13 +14,13 @@ const SwoodReport = () => {
 			<SectionDivider />
 
 			<Typography>
-				The <SwoodReportTag /> is a powerful module within the <SwoodTag /> suite that enables woodworking professionals to generate detailed, customizable production reports from their <SwoodDesignTag /> and <SwoodCAMTag /> projects. These reports streamline communication between design and manufacturing, ensuring efficiency on the shop floor.
+				The <SwoodReportTag link={false} /> is a powerful module within the <SwoodTag /> suite that enables woodworking professionals to generate detailed, customizable production reports from their <SwoodDesignTag /> and <SwoodCAMTag /> projects. These reports streamline communication between design and manufacturing, ensuring efficiency on the shop floor.
 			</Typography>
 
 			<Typography>
 				<SolidSolutionsTag /> has enhanced this module, now offering two distinct versions: the <span className="highlight">Standard</span> and <span className="highlight">Professional</span> report. Throughout this documentation, features exclusive to the Professional version will be marked with the <ProChip /> indicator. For a detailed comparison of both versions, please visit the{' '}
 				<LinkElement to="/SwoodReportMatrix">
-					<SwoodReportTag /> Matrix
+					<SwoodReportTag link={false} /> Matrix
 				</LinkElement>
 				.
 			</Typography>

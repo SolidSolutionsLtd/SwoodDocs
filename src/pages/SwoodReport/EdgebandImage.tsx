@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
-import { SwoodEditorTag, SwoodReportTag, SwoodTag } from '../../components/NameTags'
+import { SwoodEditorTag, SwoodReportsTag, SwoodTag } from '../../components/NameTags'
 import { ImageComponent } from '../../components/ImageComponent'
 
 const EdgebandImage = () => {
@@ -32,7 +32,7 @@ const EdgebandImage = () => {
 
 			<Section id="standard" title="Standard method">
 				<Typography>
-					This is the default approach used by <SwoodReportTag />, designed primarily for simple, rectangular panels. It allows users to showcase basic edge information, such as material, description or order. However, this method is best suited for straightforward designs where all edges are perpendicular, and the panels are uniformly shaped. It might not perform well with more complex or angled geometries. An example is shown below.
+					This is the default approach used by <SwoodReportsTag />, designed primarily for simple, rectangular panels. It allows users to showcase basic edge information, such as material, description or order. However, this method is best suited for straightforward designs where all edges are perpendicular, and the panels are uniformly shaped. It might not perform well with more complex or angled geometries. An example is shown below.
 				</Typography>
 
 				<Typography variant="h6">Rectangular Panel</Typography>

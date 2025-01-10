@@ -4,7 +4,6 @@ import { tableSampleData } from '../../data/sampleData'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { ImageComponent } from '../../components/ImageComponent'
-import { SwoodReportTag } from '../../components/NameTags'
 
 const columns = [
 	{ header: 'Swood Version', property: 'SwoodVersion', width: '20%' },
@@ -15,7 +14,7 @@ const columns = [
 const AddPostProcessor = () => {
 	return (
 		<>
-			<PageTitle title="How to add a Post-Processor?"  />
+			<PageTitle title="How to add a Post-Processor?" />
 
 			<nav>
 				<ul>

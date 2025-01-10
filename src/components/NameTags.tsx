@@ -10,9 +10,29 @@ export const SwoodTag = () => <span className="highlight">Swood</span>
 
 export const SolidWorksTag = () => <span className="highlight">SolidWorks</span>
 
-export const SwoodReportTag = () => <span className="highlight">SwoodReport</span>
+export const SwoodReportTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="/SwoodReport">
+				<span className="highlight">SwoodReport</span>
+			</LinkElement>
+		) : (
+			<span className="highlight">SwoodReport</span>
+		)}
+	</>
+)
 
-export const SwoodReportsTag = () => <span className="highlight">SwoodReports</span>
+export const SwoodReportsTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="/SwoodReport">
+				<span className="highlight">SwoodReports</span>
+			</LinkElement>
+		) : (
+			<span className="highlight">SwoodReports</span>
+		)}
+	</>
+)
 
 export const SwoodReportProTag = () => (
 	<>
