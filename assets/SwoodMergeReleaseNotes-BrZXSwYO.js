@@ -1,0 +1,1 @@
+import{j as e,P as s}from"./index-CdVxdWsg.js";import{R as r}from"./Release-DdIwvRt1.js";const l=()=>e.jsxs(e.Fragment,{children:[e.jsx(s,{title:"SwoodMerge release notes"}),e.jsx(r,{version:"0.0.0",ReleaseDate:"10/01/2025",children:e.jsx("ul",{children:e.jsx("li",{children:"Beta release"})})})]});export{l as default};

@@ -1,1 +1,0 @@
-import{r as s,an as o}from"./index-CI-MJMWe.js";let a=0;function f(t){const[e,u]=s.useState(t),c=t||e;return s.useEffect(()=>{e==null&&(a+=1,u(`mui-${a}`))},[e]),c}const l={...o},n=l.useId;function d(t){if(n!==void 0){const e=n();return t??e}return f(t)}export{d as u};
