@@ -1,11 +1,11 @@
 import { Typography, Box, ListItemText } from '@mui/material'
 import { ImageComponent } from '../../components/ImageComponent'
-import { NavLink } from 'react-router-dom'
 import { PageTitle } from '../../components/PageTitle'
 import { Section } from '../../components/Section'
 import { SolidWorksTag, SwoodReportTag, SwoodUtilsTag } from '../../components/NameTags'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
 import DownloadSwoodUtils from '../../components/DownloadSwoodUtils'
+import { LinkElement } from '../../components/LinkElement'
 
 const SwoodUtils = () => {
 	return (
@@ -81,8 +81,8 @@ const SwoodUtils = () => {
 				<Typography variant="body1">
 					<SwoodUtilsTag /> streamlines the ID assignment process for panels and frames, providing a user-friendly interface. It also identifies identical panels, removing the need for the <span className="highlight">Combine Panels</span> macro.
 				</Typography>
-				<Typography variant="body1">
-					Please note that <SwoodUtilsTag /> is currently in its Beta stage.
+				<Typography>
+					Please note that <SwoodUtilsTag /> is currently in its beta phase. While we strive for a seamless experience, the application may contain errors or bugs. We appreciate your understanding and encourage you to report any issues you encounter to help us refine and improve the application.
 				</Typography>
 			</Section>
 
@@ -144,7 +144,7 @@ const SwoodUtils = () => {
 
 			<Section id="Licensing" title="Licensing">
 				<Typography variant="body1">
-					<SwoodUtilsTag /> uses the same licensing scheme as the <span className="highlight">SwoodEditor</span>, for more information click <NavLink to="/SwoodLicensing">here</NavLink>
+					<SwoodUtilsTag /> uses the same licensing scheme as the <span className="highlight">SwoodEditor</span>, for more information click <LinkElement to="/SwoodLicensing">here</LinkElement>
 				</Typography>
 			</Section>
 
@@ -359,7 +359,7 @@ const SwoodUtils = () => {
 							<span className="TopCustomProperty tooltip">«TopLevel Custom Property»</span>
 							<span className="Separator tooltip">«ID Separator»</span>
 							<span className="FramePrefix tooltip">«Frame Prefix»</span>
-							<span className="ModelID tooltip">«Frame ID»</span>
+							<span className="FrameID tooltip">«Frame ID»</span>
 						</Typography>
 
 						<Typography variant="h6" gutterBottom>
@@ -370,21 +370,21 @@ const SwoodUtils = () => {
 							<span className="TopCustomProperty tooltip">Top Level</span>
 							<span className="Separator tooltip">.</span>
 							<span className="FramePrefix tooltip">Frame-</span>
-							<span className="ModelID tooltip">A</span>
+							<span className="FrameID tooltip">A</span>
 						</Typography>
 
 						<Typography>
 							<span className="TopCustomProperty tooltip">Top Level</span>
 							<span className="Separator tooltip">.</span>
 							<span className="FramePrefix tooltip">Frame-</span>
-							<span className="ModelID tooltip">B</span>
+							<span className="FrameID tooltip">B</span>
 						</Typography>
 
 						<Typography>
 							<span className="TopCustomProperty tooltip">Top Level</span>
 							<span className="Separator tooltip">.</span>
 							<span className="FramePrefix tooltip">Frame-</span>
-							<span className="ModelID tooltip">C</span>
+							<span className="FrameID tooltip">C</span>
 						</Typography>
 
 						<Typography variant="h6" gutterBottom>

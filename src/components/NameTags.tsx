@@ -1,5 +1,6 @@
 // import { Tooltip, Zoom } from '@mui/material'
 
+import { LinkElement } from './LinkElement'
 import { ProChip } from './ProChip'
 
 // export const EficadTag = () => <ToolTipElement text="Eficad" tooltip="Eficad" />
@@ -24,13 +25,33 @@ export const SwoodCAMTag = () => <span className="highlight">Swood CAM</span>
 
 export const SwoodNestingTag = () => <span className="highlight">Swood Nesting</span>
 
-export const SwoodCenterServicesTag = () => <span className="highlight">Swood Center Services</span>
+export const SwoodCenterServicesTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="https://www.solidsolutions.co.uk/manufacturing/swood-center.aspx">
+				<span className="highlight">Swood Center Services</span>
+			</LinkElement>
+		) : (
+			<span>Swood Center Services</span>
+		)}
+	</>
+)
 
 export const SwoodEditorTag = () => <span className="highlight">SwoodEditor</span>
 
 export const SwoodRXTag = () => <span className="highlight">Swood RX</span>
 
-export const SwoodDataDirectoryTag = () => <span className="highlight">Swood Data Directory</span>
+export const SwoodDataDirectoryTag = ({ link = true }: { link?: boolean }) => (
+	<>
+		{link ? (
+			<LinkElement to="/SwoodDataDirectory">
+				<span className="highlight">Swood Data Directory</span>
+			</LinkElement>
+		) : (
+			<span className="highlight">Swood Data Directory</span>
+		)}
+	</>
+)
 
 export const SwoodUtilsTag = () => <span className="highlight">SwoodUtils</span>
 
@@ -41,6 +62,8 @@ export const SolidSolutionsLicenseManagerTag = () => <span className="highlight"
 export const SolidWorksRXTag = () => <span className="highlight">SolidWorks RX</span>
 
 export const SwoodMergeTag = () => <span className="highlight">SwoodMerge</span>
+
+export const SwoodMaterialsTag = () => <span className="highlight">SwoodMaterials</span>
 
 export const SwoodMergePostTag = () => <span className="highlight">SwoodMergePost</span>
 

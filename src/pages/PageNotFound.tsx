@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
-import { NavLink } from 'react-router-dom'
 import { messages404Page } from '../data/messages404Page'
+import { LinkElement } from '../components/LinkElement'
 
 const randomMessage = () => {
 	return messages404Page[Math.floor(Math.random() * messages404Page.length)]
@@ -18,7 +18,7 @@ const PageNotFound = () => {
 			</Typography>
 
 			<Typography>
-				Go back to <NavLink to="/">Home Page</NavLink>.
+				Go back to <LinkElement to="/">Home Page</LinkElement>.
 			</Typography>
 
 			<Box display="flex" justifyContent="center" className="imageBox">

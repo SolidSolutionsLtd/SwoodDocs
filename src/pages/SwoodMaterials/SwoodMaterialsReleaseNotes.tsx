@@ -2,12 +2,12 @@
 import { PageTitle } from '../../components/PageTitle'
 import { Release } from '../../components/Release'
 
-const SwoodMergeReleaseNotes = () => {
+const SwoodMaterialsReleaseNotes = () => {
 	return (
 		<>
-			<PageTitle title="SwoodMerge release notes" />
+			<PageTitle title="SwoodMaterials release notes" />
 
-			<Release version="0.0.0" ReleaseDate="10/01/2025">
+			<Release version="0.1.1.0" ReleaseDate="28/08/2024">
 				<ul>
 					<li>Beta release</li>
 				</ul>
@@ -16,4 +16,4 @@ const SwoodMergeReleaseNotes = () => {
 	)
 }
 
-export default SwoodMergeReleaseNotes
+export default SwoodMaterialsReleaseNotes

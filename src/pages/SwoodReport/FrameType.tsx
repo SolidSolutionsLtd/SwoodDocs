@@ -13,7 +13,7 @@ const FrameType = () => {
 						<a href="#Overview">Overview</a>
 					</li>
 					<li>
-						<a href="#Define">How to define a Frames Type</a>
+						<a href="#Define">How to define a Frame Type</a>
 					</li>
 				</ul>
 			</nav>
@@ -23,9 +23,9 @@ const FrameType = () => {
 					The report enables users to classify Frames components by <span className="highlight">Type</span>, providing a clearer breakdown by grouping different types into separate tables.
 				</Typography>
 			</Section>
-			<Section id="Define" title="How to define a Frames Type">
+			<Section id="Define" title="How to define a Frame Type">
 				<Typography>
-					To define a Frames Type, add the custom property <span className="red">Frames Type</span> and set the value, such as, Floor Cabinets, Wall Cabinets, etc.
+					To define a Frame Type, add the custom property <span className="red">Frame Type</span> and set the value, such as, Floor Cabinets, Wall Cabinets, etc.
 				</Typography>
 				<ImageComponent source="./images/FrameTypeCustomProperty.png" size="600px" />
 				<Typography>

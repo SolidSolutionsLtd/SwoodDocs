@@ -1,5 +1,5 @@
 import { Box, Stack, Button, Typography } from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import { LinkElement } from './LinkElement'
 
 export const ReportPreviewLinkPro = () => {
 	const handlePro = () => (window.location.href = 'https://solidsolutionsltd.github.io/SwoodReportProExample/')
@@ -18,7 +18,7 @@ export const ReportPreviewLinkPro = () => {
 			</Box>
 			<Box display="flex" justifyContent="center">
 				<Typography color="textDisabled" variant="caption">
-					* Report preview have been generated using the <NavLink to="/MergeReportPost">MergeReportPost</NavLink> option.
+					* Report preview have been generated using the <LinkElement to="/MergeReportPost">MergeReportPost</LinkElement> option.
 				</Typography>
 			</Box>
 		</Stack>

@@ -72,7 +72,8 @@ export const menuItems: IMenuItem[] = [
 		],
 	},
 	{ to: '/SwoodUtils', title: 'SwoodUtils', pro: true, beta: true, postDate: '18/09/2024', children: [{ to: '/SwoodUtilsReleaseNotes', title: 'SwoodUtils release notes', updateDate: '13/12/2024' }] },
-	// { to: '/SwoodMerge', title: 'SwoodMerge', pro: true, beta: true, postDate: '20/12/2024', children: [{ to: '/SwoodMergeReleaseNotes', title: 'SwoodMerge release notes', updateDate: '20/12/2024' }] },
+	{ to: '/SwoodMerge', title: 'SwoodMerge', pro: true, beta: true, postDate: '10/01/2025', children: [{ to: '/SwoodMergeReleaseNotes', title: 'SwoodMerge release notes' }] },
+	// { to: '/SwoodMaterials', title: 'SwoodMaterials', pro: true, beta: true, postDate: '20/12/2024', children: [{ to: '/SwoodMaterialsReleaseNotes', title: 'SwoodMaterials release notes', updateDate: '20/12/2024' }] },
 	// {
 	// 	title: 'PostProcessor',
 	// 	children: [

@@ -34,6 +34,8 @@ const EdgebandImage = lazy(() => import('./pages/SwoodReport/EdgebandImage'))
 const SwoodMerge = lazy(() => import('./pages/SwoodMerge/SwoodMerge'))
 const SwoodMergeReleaseNotes = lazy(() => import('./pages/SwoodMerge/SwoodMergeReleaseNotes'))
 const SwoodMergePost = lazy(() => import('./pages/SwoodReport/SwoodMergePost'))
+const SwoodMaterials = lazy(() => import('./pages/SwoodMaterials/SwoodMaterials'))
+const SwoodMaterialsReleaseNotes = lazy(() => import('./pages/SwoodMaterials/SwoodMaterialsReleaseNotes'))
 const PanelsAndStocks = lazy(() => import('./pages/SwoodReport/PanelsAndStocks'))
 const CustomProperties = lazy(() => import('./pages/SwoodReport/CustomProperties'))
 const ConcatenateProperties = lazy(() => import('./pages/SwoodReport/ConcatenateProperties'))
@@ -104,6 +106,8 @@ export const App = () => {
 					<Route path="/SwoodMerge" element={<SwoodMerge />} />
 					<Route path="/SwoodMergeReleaseNotes" element={<SwoodMergeReleaseNotes />} />
 					<Route path="/SwoodMergePost" element={<SwoodMergePost />} />
+					<Route path="/SwoodMaterials" element={<SwoodMaterials />} />
+					<Route path="/SwoodMaterialsReleaseNotes" element={<SwoodMaterialsReleaseNotes />} />
 					<Route path="/PanelsAndStocks" element={<PanelsAndStocks />} />
 					<Route path="/CustomProperties" element={<CustomProperties />} />
 					<Route path="/ConcatenateProperties" element={<ConcatenateProperties />} />

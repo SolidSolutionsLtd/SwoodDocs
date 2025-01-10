@@ -8,7 +8,7 @@ import Paper from '@mui/material/Paper'
 import { v4 as uuidv4 } from 'uuid'
 import CheckIcon from '@mui/icons-material/Check'
 import { Avatar, AvatarGroup, Tooltip } from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import { LinkElement } from './LinkElement'
 
 type IColumn = {
 	header: string
@@ -32,7 +32,7 @@ const processProperty = (value: string | boolean | object, propertyName: string,
 			return (
 				<>
 					{/* @ts-expect-error error */}
-					{value} <NavLink to={item.Link}>learn more</NavLink>
+					{value} <LinkElement to={item.Link}>learn more</LinkElement>
 				</>
 			)
 		}

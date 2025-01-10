@@ -6,7 +6,7 @@ import { SectionCard } from '../components/SectionCard'
 import LatestSwoodDocs from '../components/LatestSwoodDocs'
 import { SwoodEditorTag, SwoodRXTag, SwoodTag, SwoodUtilsTag } from '../components/NameTags'
 import { Section } from '../components/Section'
-import { NavLink } from 'react-router-dom'
+import { LinkElement } from '../components/LinkElement'
 
 const GettingStated = () => {
 	return (
@@ -38,7 +38,7 @@ const GettingStated = () => {
 
 			<Section id="Overview" title="⚠️ Important Notice">
 				<Typography>
-					<SwoodEditorTag /> versions v1.2.1 and earlier will no longer receive in-app update notifications. To ensure you have the latest version, please manually download it by following the steps <NavLink to="/SwoodReportQuickStart">here</NavLink>.
+					<SwoodEditorTag /> versions v1.2.1 and earlier will no longer receive in-app update notifications. To ensure you have the latest version, please manually download it by following the steps <LinkElement to="/SwoodReportQuickStart">here</LinkElement>.
 				</Typography>
 			</Section>
 

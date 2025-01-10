@@ -3,12 +3,12 @@ import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import CodeEditorField from '../../components/CodeEditorField'
-import { NavLink } from 'react-router-dom'
 import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
 import DownloadSwoodMergePost from '../../components/DownloadSwoodMergePost'
 import { SwoodMergePostTag, SolidWorksTag, SwoodDataDirectoryTag, SwoodDesignTag, SwoodNestingTag } from '../../components/NameTags'
 import SwoodMergePostDiagram from '../../Flow Diagrams/SwoodMergePostDiagram'
+import { LinkElement } from '../../components/LinkElement'
 
 const SwoodMergePost = () => {
 	return (
@@ -267,11 +267,11 @@ const SwoodMergePost = () => {
 
 					<DownloadSwoodMergePost />
 					<li>
-						Ensure that <span className="highlight">SwoodMergePost.exe</span> has not been blocked by your machine. Right-click on the <span className="highlight">SwoodMergePost.exe</span> file, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
+						Ensure that the downloaded file has not been blocked by your machine. Right-click on the downloaded file, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
 					</li>
-					<ImageComponent source="./images/MergeReportsUnblock.png" size="300px" />
+					<ImageComponent source="./images/unblock-app.png" size="400px" />
 					<li>
-						Place <span className="highlight">SwoodMergePost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <NavLink to="/SwoodDataDirectory">here</NavLink> to learn how to find the <SwoodDataDirectoryTag />.
+						Place <span className="highlight">SwoodMergePost.exe</span> in the <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Documents\Report Posts</span> folder. Click <LinkElement to="/SwoodDataDirectory">here</LinkElement> to learn how to find the <SwoodDataDirectoryTag />.
 					</li>
 					<li>
 						Open the following file with any text editor (e.g., Notepad): <span className="param">&lt;SWOOD DATA DIRECTORY&gt;\DAT\Report.cfg</span>.

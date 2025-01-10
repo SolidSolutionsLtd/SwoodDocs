@@ -1,11 +1,11 @@
 import { Typography, Button, Box } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
-import { NavLink } from 'react-router-dom'
 import { Section } from '../../components/Section'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import { RegisterDownload } from '../../components/RegisterDownload'
 import { SolidSolutionsLicenseManagerTag, SolidWorksTag, SwoodDataDirectoryTag, SwoodEditorTag, SwoodReportTag } from '../../components/NameTags'
+import { LinkElement } from '../../components/LinkElement'
 
 const SwoodReportQuickStart = () => {
 	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/SwoodEditor-Setup-2.0.0.exe'
@@ -29,7 +29,7 @@ const SwoodReportQuickStart = () => {
 						<a href="#Requirements">Requirements</a>
 					</li>
 					<li>
-						<a href="#Editor">Swood Editor application</a>
+						<a href="#Editor">SwoodEditor application</a>
 					</li>
 					<li>
 						<a href="#License">Solid Solutions license manager</a>
@@ -48,7 +48,7 @@ const SwoodReportQuickStart = () => {
 				</ul>
 			</Section>
 
-			<Section id="Editor" title="Swood Editor application">
+			<Section id="Editor" title="SwoodEditor application">
 				<Typography>
 					To set up the <SwoodReportTag />, start by downloading and installing the <SwoodEditorTag />.
 				</Typography>
@@ -67,10 +67,15 @@ const SwoodReportQuickStart = () => {
 				</Typography>
 
 				<Typography>
+					Ensure that the downloaded file has not been blocked by your machine. Right-click on the downloaded file, then go to <span className="param">Properties &gt; Unblock &gt; OK</span>. If the <span className="param">Unblock</span> option is not present, it means the file has not been blocked, and you can skip this step.
+				</Typography>
+				<ImageComponent source="./images/unblock-app.png" size="400px" />
+
+				<Typography>
 					The <SwoodEditorTag /> app allows you to modify report settings, such as columns, sorting orders, and output location, as well as change default Swood settings.
 				</Typography>
 				<Typography>
-					The Swood Editor installation manager will also install the <SolidSolutionsLicenseManagerTag /> as a prerequisite. This application is needed to activate the provided license key.
+					The SwoodEditor installation manager will also install the <SolidSolutionsLicenseManagerTag /> as a prerequisite. This application is needed to activate the provided license key.
 				</Typography>
 				<Typography>
 					Please note that the <SwoodEditorTag /> app uses the same license as the <SwoodReportTag />, so ensure that your license is active before creating a report.
@@ -79,14 +84,14 @@ const SwoodReportQuickStart = () => {
 
 			<Section id="License" title="Solid Solutions license manager">
 				<Typography>
-					To activate the provided license, launch the <SolidSolutionsLicenseManagerTag /> and press the <span className="highlight">Add License</span> button as shown in the image below. <NavLink to="/SwoodLicensing">Learn More.</NavLink>
+					To activate the provided license, launch the <SolidSolutionsLicenseManagerTag /> and press the <span className="highlight">Add License</span> button as shown in the image below. <LinkElement to="/SwoodLicensing">Learn More.</LinkElement>
 				</Typography>
 				<ImageComponent source="./images/Licensing1.png" size="700px" />
 			</Section>
 
 			<Section id="Setup" title="Setup the SwoodReport">
 				<Typography>
-					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <SwoodDataDirectoryTag />. <NavLink to="/SwoodDataDirectory">Learn More.</NavLink>
+					All report settings are stored within the <span className="highlight">DAT</span> folder, located in the <SwoodDataDirectoryTag />.
 				</Typography>
 				<Typography>
 					Launch the <SwoodEditorTag /> app and ensure that the <span className="highlight">DAT</span> folder is within your <SwoodDataDirectoryTag /> <span className="red">(1)</span>. The app will automatically search for the <span className="highlight">DAT</span> folder, but you can also manually define it by clicking or dragging and dropping the folder into the specified field <span className="red">(2)</span>.

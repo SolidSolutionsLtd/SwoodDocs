@@ -2,8 +2,8 @@ import { Typography } from '@mui/material'
 import { PageTitle } from '../../components/PageTitle'
 import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
-import { NavLink } from 'react-router-dom'
 import { SwoodTag, SolidWorksTag, SwoodRXTag, SwoodDataDirectoryTag, SolidWorksRXTag, SwoodDesignTag } from '../../components/NameTags'
+import { LinkElement } from '../../components/LinkElement'
 
 const SwoodPerformance = () => {
 	return (
@@ -339,7 +339,7 @@ const SwoodPerformance = () => {
 						Include any relevant data:
 						<ul>
 							<li>
-								Multiple <SwoodRXTag /> files. For more information on how to generate them, please click <NavLink to="/SwoodRx">here</NavLink>.
+								Multiple <SwoodRXTag /> files. For more information on how to generate them, please click <LinkElement to="/SwoodRx">here</LinkElement>.
 							</li>
 							<li>Screen recordings of the issue.</li>
 						</ul>
