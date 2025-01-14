@@ -87,8 +87,8 @@ const Layout = () => {
 	const classes = useStyles()
 
 	// Determine margin based on the current route
-	const marginRight = location.pathname === '/home' || location.pathname === '/GettingStated' ? '0px' : '100px'
-	const paddingRight = location.pathname === '/home' || location.pathname === '/GettingStated' ? 0 : 3
+	const marginRight = location.pathname === '/home' || location.pathname === '/GettingStated' || location.pathname === '/' ? '0px' : '100px'
+	const paddingRight = location.pathname === '/home' || location.pathname === '/GettingStated' || location.pathname === '/' ? 0 : 3
 
 	return (
 		<Box sx={{ display: 'flex' }}>

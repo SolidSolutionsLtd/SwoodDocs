@@ -7,7 +7,7 @@ const SwoodMaterialsReleaseNotes = () => {
 		<>
 			<PageTitle title="SwoodMaterials release notes" />
 
-			<Release version="0.1.1.0" ReleaseDate="28/08/2024">
+			<Release version="0.0.0" ReleaseDate="14/01/2025">
 				<ul>
 					<li>Beta release</li>
 				</ul>

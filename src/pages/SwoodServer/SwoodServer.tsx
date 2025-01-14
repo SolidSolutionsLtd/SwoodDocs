@@ -306,22 +306,6 @@ const SwoodServer = () => {
 						<ListItemText primary="NodeJS" secondary={<>NodeJS is a cross-platform JavaScript runtime environment, it’s built on Chrome’s V8 engine to run JavaScript code outside the browser, to easily building fast and scalable applications. The main purpose of NodeJS is simple, it allows us to write our backend in JavaScript, saving us the trouble of learning a new programming language capable of running the backend.</>} />
 					</ListItem>
 				</List>
-
-				<Typography>Popular Web Apps built with the full or partial MERN stack</Typography>
-
-				<ul>
-					<li>Facebook</li>
-					<li>Instagram</li>
-					<li>Microsoft Teams</li>
-					<li>Twitter</li>
-					<li>Airbnb</li>
-					<li>Netflix</li>
-					<li>Amazon</li>
-					<li>WhatsApp</li>
-					<li>eBay</li>
-					<li>Trello</li>
-					<li>Visual Studio Code</li>
-				</ul>
 			</Section>
 		</>
 	)

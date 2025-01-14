@@ -71,13 +71,12 @@ const SwoodMaterials = () => {
 					While <SwoodMaterialsTag /> offers powerful features, there are some limitations to consider:
 				</Typography>
 				<ul>
-					<li style={{ color: 'rgb(255, 72, 72)' }}>Board reusable offcuts and machinings are deleted when processed.</li>
-					<li>Changes to compound materials are not supported; these are excluded from the table by default.</li>
-					<li>Formulas created within the spreadsheet are not saved.</li>
-					<li>All boards are saved to the root path; saving out Board folders is not supported.</li>
-					<li>Defining new compound materials is not currently possible.</li>
-					<li>Extended material properties cannot be modified.</li>
-					<li>Data validation is not automatic; users must ensure data accuracy.</li>
+					<li style={{ color: 'rgb(255, 72, 72)' }}>Board reusable offcuts and machinings get deleted</li>
+					<li>Unable to make changes to compound materials, they will be excluded from the table</li>
+					<li>Formulas created on spreadsheet do not get saved</li>
+					<li>Unable to save out Board folders. All boards will be saved to the root path</li>
+					<li>Data is not validated. User must ensure data is correct</li>
+					<li>Textures are not backed up</li>
 				</ul>
 				<Typography>Some of these limitations are temporary as the tool continues to evolve.</Typography>
 			</Section>
@@ -143,7 +142,6 @@ const SwoodMaterials = () => {
 					<li>Ability to integrate with ERP systems</li>
 					<li>Support for editing and defining compound materials directly within the tool.</li>
 					<li>Enhanced validation mechanisms to ensure data accuracy before import.</li>
-					<li>Improved handling of extended material properties for greater customization.</li>
 				</ul>
 				<Typography>
 					These features aim to expand the functionality of <SwoodMaterialsTag /> while maintaining its user-friendly design. If you have specific suggestions or requirements, we encourage you to share your ideas with us at <a href="mailto:SwoodApps@solidsolutions.co.uk">SwoodApps@solidsolutions.co.uk</a>.

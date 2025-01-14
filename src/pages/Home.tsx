@@ -97,13 +97,11 @@ const Home = () => {
 						}
 					/>
 					<SectionCard
-						// to="/SwoodMaterials"
+						to="/SwoodMaterials"
 						title="SwoodMaterials"
 						postDate="10/01/2025"
 						content={
 							<>
-								Coming soon...
-								<br />
 								A tool designed to simplify the batch import of materials into the <SwoodTag /> materials library.
 							</>
 						}

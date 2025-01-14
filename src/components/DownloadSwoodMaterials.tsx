@@ -5,7 +5,7 @@ import { RegisterDownload } from './RegisterDownload'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 
 const DownloadSwoodMaterials = () => {
-	const downloadLink = 'https://github.com/SolidSolutionsLtd/SwoodDocs/raw/master/public/assets/SwoodMaterials.exe'
+	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/swood-materials-setup-0.0.0.exe'
 	const appVersion = '0.0.0'
 
 	const [open, setOpen] = useState(false)
