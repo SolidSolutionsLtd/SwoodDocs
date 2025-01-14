@@ -12,6 +12,11 @@ interface IProps {
 	radial: number
 }
 
+interface IInitialPositions {
+	name: string
+	position: Vector3
+}
+
 // const BabylonViewer: React.FC<IProps> = ({ babylonString, babylonassets, height, width, depth }) => {
 const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, radial }) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -19,14 +24,14 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 	const [groupNode, setGroupNode] = useState<TransformNode | null>(null)
 	const [meshes, setMeshes] = useState<AbstractMesh[] | null>(null)
 	const { isDarkMode } = useTheme()
+	const initialPositionsRef = useRef<IInitialPositions[] | null | undefined>(null) // Use useRef for immutability
 
 	BabylonImageLoader()
 
 	useEffect(() => {
-		const canvas = canvasRef.current
-		if (!canvas) return
+		if (!canvasRef.current) return
 
-		const engine = new Engine(canvas, true)
+		const engine = new Engine(canvasRef.current, true)
 		const scene = new Scene(engine)
 
 		// Set the background color
@@ -36,9 +41,9 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 		const camera = new ArcRotateCamera('camera', Math.PI / 2, Math.PI / 3, 1000, Vector3.Zero(), scene)
 		// Set the camera position for an isometric view
 		camera.position = new Vector3(1000, 1000, -1000) // You can tweak these values for different angles
-		camera.position = new Vector3(0, 0, -1500) // You can tweak these values for different angles
+		// camera.position = new Vector3(0, 0, -1500) // You can tweak these values for different angles
 
-		camera.attachControl(canvas, true)
+		camera.attachControl(canvasRef.current, true)
 
 		// Light setup
 		new HemisphericLight('light', new Vector3(1, 1, 0), scene)
@@ -73,6 +78,17 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 			})
 
 			setMeshes(scene.meshes)
+
+			// Initialize initialPositions once
+			if (!initialPositionsRef.current) {
+				if (scene.meshes.length > 0) {
+					initialPositionsRef.current = scene.meshes.map(mesh => ({
+						name: mesh.name,
+						position: mesh.position.clone(), // Clone to prevent reference issues
+					}))
+					console.warn('Initial positions SET')
+				}
+			}
 
 			setGroupNode(groupNode)
 
@@ -118,8 +134,9 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 	}, [height, meshes])
 
 	useEffect(() => {
-		ScaleModelWidth(meshes, width)
-	}, [width, meshes])
+		ScaleModelWidth(meshes, width, initialPositionsRef)
+		// }, [meshes, width, initialPositionsRef])
+	}, [width])
 
 	useEffect(() => {
 		moveMeshesRadially(meshes, radial)
@@ -273,22 +290,63 @@ const ScaleModelHeight = (meshes: AbstractMesh[] | null, width: number) => {
 		})
 	}
 }
-const ScaleModelWidth = (meshes: AbstractMesh[] | null, width: number) => {
-	const scaleValue = width / 600
 
-	const distance = width - 600
+const ScaleModelWidth = (meshes: AbstractMesh[] | null, width: number, initialPositionsRef: React.MutableRefObject<IInitialPositions[] | null | undefined>) => {
+	console.log('calling ScaleModelWidth')
+	const initialWidth = 600
+	const scaleValue = width / initialWidth
+	const distance = (width - initialWidth) / 2
+
+	console.log('distance', distance)
+
+	// Use the initial positions from the ref
+	const initialPositions = initialPositionsRef.current
+	if (!initialPositions) {
+		console.warn('Initial positions are not set!')
+		return
+	}
+
 	if (meshes) {
 		meshes.forEach(mesh => {
 			const orientation = getMeshLocalOrientation(mesh as Mesh)
 			if (!orientation) return
 
+			// scaled elements
 			if (orientation.x === 0 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new Vector3(scaleValue, 1, 1)
 			else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new Vector3(scaleValue, 1, 1)
 			else if (orientation.x === 0 && orientation.y === -90 && orientation.z === 90) mesh.scaling = new Vector3(1, 1, scaleValue)
 			else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new Vector3(scaleValue, 1, 1)
 			else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new Vector3(scaleValue, 1, 1)
-			else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += distance
-			else if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -distance
+			// moved elements
+			// else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += distance
+			// else if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -distance
+
+			if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) {
+				// Find the initial position of the mesh by matching its name
+				const initialPos = initialPositions.find(pos => pos.name === mesh.name)?.position
+
+				// Update the mesh's position if an initial position was found
+				if (initialPos) {
+					if (mesh.name === 'body0054') {
+						console.log('found body0054', initialPos.x)
+					}
+					const newPosition = initialPos.x + distance
+					mesh.position.x = newPosition
+				}
+			}
+			if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) {
+				// Find the initial position of the mesh by matching its name
+				const initialPos = initialPositions.find(pos => pos.name === mesh.name)?.position
+
+				// Update the mesh's position if an initial position was found
+				if (initialPos) {
+					if (mesh.name === 'body0054') {
+						console.log('found body0054', initialPos.x)
+					}
+					const newPosition = initialPos.x - distance
+					mesh.position.x = newPosition
+				}
+			}
 		})
 
 		getOverallSize2(meshes)
