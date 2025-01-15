@@ -33,12 +33,10 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 		scene.clearColor = isDarkMode ? new BABYLON.Color4(15 / 255, 18 / 255, 20 / 255, 1) : new BABYLON.Color4(1, 1, 1, 1)
 
 		// Camera setup
-		// const cameraFocus = BABYLON.Vector3.Zero()
-		const cameraFocus = new BABYLON.Vector3(300, 300, 0)
-		const camera = new BABYLON.ArcRotateCamera('camera', Math.PI / 2, Math.PI / 3, 1000, cameraFocus, scene)
+		const camera = new BABYLON.ArcRotateCamera('camera', Math.PI / 2, Math.PI / 3, 1000, BABYLON.Vector3.Zero(), scene)
 		// Set the camera position for an isometric view
-		camera.position = new BABYLON.Vector3(1300, 1300, -1300) // You can tweak these values for different angles
-		// camera.position = new BABYLON.Vector3(0, 0, -1500) // You can tweak these values for different angles
+		// camera.position = new BABYLON.Vector3(1300, 1300, -1300) // You can tweak these values for different angles
+		camera.position = new BABYLON.Vector3(0, 0, -1500) // You can tweak these values for different angles
 
 		camera.attachControl(canvasRef.current, true)
 
@@ -86,20 +84,20 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 
 			enableGizmos(scene, positionGizmo, rotationGizmo, scaleGizmo)
 
-			// if (groupNode) {
-			// 	// Calculate the bounding box for the groupNode
-			// 	const { overallMin, overallMax } = getOverallSize(groupNode)
+			if (groupNode) {
+				// Calculate the bounding box for the groupNode
+				const { overallMin, overallMax } = getOverallSize(groupNode)
 
-			// 	// Calculate the center of the bounding box
-			// 	// const center = overallMin.add(overallMax).scale(0.5)
-			// 	// move the groupNode to center it at the origin
-			// 	// groupNode.position = center.scale(-1)
+				// Calculate the center of the bounding box
+				// const center = overallMin.add(overallMax).scale(0.5)
+				// move the groupNode to center it at the origin
+				// groupNode.position = center.scale(-1)
 
-			// 	// calculate bottom back center point
-			// 	const bottomBackCenter = new BABYLON.Vector3((overallMin.x + overallMax.x) / 2, overallMin.y, overallMax.z)
-			// 	// move mesh to bottom back center point
-			// 	groupNode.position = bottomBackCenter.scale(-1)
-			// }
+				// calculate bottom back center point
+				const bottomBackCenter = new BABYLON.Vector3((overallMin.x + overallMax.x) / 2, overallMin.y, overallMax.z)
+				// move mesh to bottom back center point
+				groupNode.position = bottomBackCenter.scale(-1)
+			}
 		})
 
 		addClickEvent(scene)
@@ -277,7 +275,7 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 			if (!orientation) return
 			if (!mesh.metadata?.scalable) return
 
-			// if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(1, 1, scaleValue)
+			if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(1, 1, scaleValue)
 			// if (orientation.x === 0 && orientation.y === -90 && orientation.z === 90) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
 			// if (orientation.x === -90 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
 			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
@@ -285,16 +283,59 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -40
 
 			if (mesh.metadata.scalable.y) {
-				const pivotPoint = new BABYLON.Vector3(600, 0, 0)
-				drawPoint(scene, pivotPoint)
-				scaleFromPivot2(mesh, pivotPoint, scaleValue, 1, 1)
+				const pivot1 = mesh.getPivotPoint()
 
-				// // Works for depth
-				// const pivotPoint = new BABYLON.Vector3(300, 0, 0)
-				// drawPoint(scene, pivotPoint)
-				// scaleFromPivot(mesh, pivotPoint, 1, 1, scaleValue)
+				// mesh.setPivotPoint(new BABYLON.Vector3(0, 500, 0))
 
-				// mesh.scaling.z = scaleValue
+				const absPosition = mesh.getAbsolutePivotPoint()
+				// mesh.setAbsolutePosition(new BABYLON.Vector3(0, 0, 0))
+				drawPoint(scene, absPosition)
+
+				// mesh.setPivotMatrix(BABYLON.Matrix.Translation(80, 0, 0), false)
+
+				// mesh.setPivotPoint(new BABYLON.Vector3(0, 40, 0), BABYLON.Space.WORLD)
+
+				// // Get the bounding box of the mesh
+				// const boundingInfo = mesh.getBoundingInfo()
+				// const minimum = boundingInfo.boundingBox.minimum
+				// const maximum = boundingInfo.boundingBox.maximum
+
+				// // Calculate the bottom center point
+				// const bottomCenter = new BABYLON.Vector3((minimum.x + maximum.x) / 2, minimum.y, (minimum.z + maximum.z) / 2)
+
+				// // Set the pivot point to the bottom center
+				// mesh.setPivotPoint(bottomCenter)
+
+				// const pivot2 = mesh.getPivotPoint()
+				// drawPoint(scene, pivot2, BABYLON.Color3.Green())
+
+				// const worldPivotPoint = new BABYLON.Vector3(0, 0, 0) // Replace xp, yp, zp with your world space coordinates
+				// const relativePivotPoint = worldPivotPoint.subtract(mesh.position)
+				// mesh.setPivotPoint(relativePivotPoint)
+
+				// const pivot3 = mesh.getPivotPoint()
+
+				// drawPoint(scene, pivot3, BABYLON.Color3.Blue())
+
+				// mesh.scaling = new BABYLON.Vector3(scaleValue, scaleValue, scaleValue)
+
+				// Step 1: Store the original position
+				const originalPosition = mesh.position.clone()
+
+				// Step 2: Set the pivot point
+				const pivotPoint = new BABYLON.Vector3(0, 0, 0) // Replace x, y, z with your desired pivot coordinates
+				mesh.setPivotPoint(pivotPoint)
+
+				// Step 3: Recompute the world matrix
+				mesh.computeWorldMatrix(true)
+
+				// Step 4: Adjust the position
+				const pivotDelta = mesh.getPivotPoint().subtract(pivotPoint)
+				mesh.position = originalPosition.subtract(pivotDelta)
+
+				console.log('Pivot Point Set:', pivotPoint)
+
+				mesh.scaling = new BABYLON.Vector3(scaleValue, scaleValue, scaleValue)
 			}
 
 			if (!mesh.metadata.scalable.y) {
@@ -429,22 +470,12 @@ const classifyMesh = (mesh: BABYLON.AbstractMesh) => {
 	// if (mesh.name === 'body0048' || mesh.name === 'body0001') mesh.metadata.scalable = { x: true, y: false, z: true }
 
 	if (mesh.name === 'body0047') mesh.metadata.scalable = { x: false, y: true, z: true }
-	if (mesh.name === 'body0046') mesh.metadata.scalable = { x: false, y: true, z: true }
-	if (mesh.name === 'body0045') mesh.metadata.scalable = { x: true, y: true, z: false }
-	if (mesh.name === 'body0000') mesh.metadata.scalable = { x: false, y: true, z: true }
-	if (mesh.name === 'body0048') mesh.metadata.scalable = { x: true, y: false, z: true }
-	if (mesh.name === 'body0044') mesh.metadata.scalable = { x: true, y: false, z: true }
-	if (mesh.name === 'body0043') mesh.metadata.scalable = { x: true, y: true, z: true }
-	if (mesh.name === 'body0001') mesh.metadata.scalable = { x: true, y: false, z: true }
-	// if (mesh.name === 'body0042') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0041') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0004') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0003') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0002') mesh.metadata.scalable = { x: false, y: true, z: true }
 
-	// if (mesh.name === 'body0048') mesh.visibility = 0
-	// if (mesh.name === 'body0044') mesh.visibility = 0
-	// if (mesh.name === 'body0043') mesh.visibility = 0
+	// if (mesh.name === 'body0046') mesh.metadata.scalable = { x: false, y: true, z: true }
+
+	if (mesh.name === 'body0048') mesh.visibility = 0
+	if (mesh.name === 'body0044') mesh.visibility = 0
+	if (mesh.name === 'body0043') mesh.visibility = 0
 	if (mesh.name === 'body0042') mesh.visibility = 0
 	if (mesh.name === 'body0041') mesh.visibility = 0
 	if (mesh.name === 'body0004') mesh.visibility = 0
@@ -459,7 +490,7 @@ const drawPoint = (
 ) => {
 	if (!scene) return
 
-	// console.log(`point=> x:${location.x}, y: ${location.y}, z: ${location.z}`)
+	console.log(`point=> x:${location.x}, y: ${location.y}, z: ${location.z}`)
 
 	// Create the helper sphere
 	const pivotHelper = BABYLON.MeshBuilder.CreateSphere('pivotHelper', { diameter: 50 }, scene)
@@ -518,25 +549,5 @@ const scaleFromPivot = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3,
 	const _sy = sy / mesh.scaling.y
 	const _sz = sz / mesh.scaling.z
 	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
-
-	// prettier-ignore
-	mesh.position = new BABYLON.Vector3(
-		pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x),
-		(pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y)),
-		pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z)
-	)
-}
-
-const scaleFromPivot2 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3, sx: number, sy: number, sz: number) => {
-	const _sx = sx / mesh.scaling.x
-	const _sy = sy / mesh.scaling.y
-	const _sz = sz / mesh.scaling.z
-	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
-
-	// prettier-ignore
-	mesh.position = new BABYLON.Vector3(
-		pivotPoint.x + _sy * (mesh.position.x - pivotPoint.x),
-		pivotPoint.y + _sx * (mesh.position.y - pivotPoint.y),
-		pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z)
-	)
+	mesh.position = new BABYLON.Vector3(pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x), pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y), pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z))
 }

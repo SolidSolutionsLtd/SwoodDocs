@@ -1,10 +1,10 @@
 // import React from 'react'
-import SwoodMergeDiagram from '../Flow Diagrams/SwoodMergeDiagram'
+import BabylonSandbox from '../components/BabylonSandbox'
 
 function Sandbox() {
 	return (
 		<>
-			<SwoodMergeDiagram />
+			<BabylonSandbox />
 		</>
 	)
 }
