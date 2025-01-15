@@ -75,7 +75,7 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 				// store original position of mesh
 				mesh.metadata = { originalPosition: mesh.position.clone() }
 
-				classifyMesh(mesh)
+				classifyMesh(mesh, scene)
 			})
 
 			setMeshes(scene.meshes)
@@ -267,6 +267,7 @@ const displayNormals = (mesh: BABYLON.Mesh, scene: BABYLON.Scene) => {
 }
 
 const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number, scene: BABYLON.Scene | null) => {
+	// height = 1000
 	const initialHeight = 800
 	const scaleValue = height / initialHeight
 	const distance = height - initialHeight
@@ -284,7 +285,11 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += 40
 			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -40
 
-			if (mesh.metadata.scalable.y) {
+			if (mesh.metadata.scalable.y && mesh.metadata.scalable.x) {
+				const pivotPoint = new BABYLON.Vector3(300, 0, -100)
+				drawPoint(scene, pivotPoint, BABYLON.Color3.Green())
+				scaleFromPivot3(mesh, pivotPoint, 1, 1, scaleValue)
+			} else if (mesh.metadata.scalable.y) {
 				const pivotPoint = new BABYLON.Vector3(600, 0, 0)
 				drawPoint(scene, pivotPoint)
 				scaleFromPivot2(mesh, pivotPoint, scaleValue, 1, 1)
@@ -423,33 +428,79 @@ const addClickEvent = (scene: BABYLON.Scene) => {
 	}
 }
 
-const classifyMesh = (mesh: BABYLON.AbstractMesh) => {
-	// if (mesh.name === 'body0002') mesh.metadata.isHardware = true
-
-	// if (mesh.name === 'body0048' || mesh.name === 'body0001') mesh.metadata.scalable = { x: true, y: false, z: true }
-
+const classifyMesh = (mesh: BABYLON.AbstractMesh, scene: BABYLON.Scene) => {
 	if (mesh.name === 'body0047') mesh.metadata.scalable = { x: false, y: true, z: true }
 	if (mesh.name === 'body0046') mesh.metadata.scalable = { x: false, y: true, z: true }
-	if (mesh.name === 'body0045') mesh.metadata.scalable = { x: true, y: true, z: false }
 	if (mesh.name === 'body0000') mesh.metadata.scalable = { x: false, y: true, z: true }
+
 	if (mesh.name === 'body0048') mesh.metadata.scalable = { x: true, y: false, z: true }
-	if (mesh.name === 'body0044') mesh.metadata.scalable = { x: true, y: false, z: true }
-	if (mesh.name === 'body0043') mesh.metadata.scalable = { x: true, y: true, z: true }
 	if (mesh.name === 'body0001') mesh.metadata.scalable = { x: true, y: false, z: true }
-	// if (mesh.name === 'body0042') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0041') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0004') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0003') mesh.metadata.scalable = { x: false, y: true, z: true }
-	// if (mesh.name === 'body0002') mesh.metadata.scalable = { x: false, y: true, z: true }
+
+	if (mesh.name === 'body0041') mesh.metadata.scalable = { x: true, y: true, z: false }
+	if (mesh.name === 'body0042') mesh.metadata.scalable = { x: true, y: true, z: false }
+	if (mesh.name === 'body0043') mesh.metadata.scalable = { x: true, y: true, z: false }
+	if (mesh.name === 'body0044') mesh.metadata.scalable = { x: true, y: true, z: false }
+	if (mesh.name === 'body0045') mesh.metadata.scalable = { x: true, y: true, z: false }
 
 	// if (mesh.name === 'body0048') mesh.visibility = 0
+	// if (mesh.name === 'body0046') mesh.visibility = 0
 	// if (mesh.name === 'body0044') mesh.visibility = 0
 	// if (mesh.name === 'body0043') mesh.visibility = 0
-	if (mesh.name === 'body0042') mesh.visibility = 0
-	if (mesh.name === 'body0041') mesh.visibility = 0
-	if (mesh.name === 'body0004') mesh.visibility = 0
-	if (mesh.name === 'body0003') mesh.visibility = 0
-	if (mesh.name === 'body0002') mesh.visibility = 0
+	// if (mesh.name === 'body0042') mesh.visibility = 0
+	// if (mesh.name === 'body0041') mesh.visibility = 0
+
+	// if (mesh.name === 'body0004') mesh.visibility = 0
+	// if (mesh.name === 'body0003') mesh.visibility = 0
+	// if (mesh.name === 'body0002') mesh.visibility = 0
+
+	const hardwareMaterial = new BABYLON.StandardMaterial('hardwareMaterial', scene)
+	hardwareMaterial.diffuseColor = new BABYLON.Color3(1, 0, 0) // Red color
+
+	// hardware
+	if (mesh.name === 'body0002') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0003') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0004') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0005') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0006') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0007') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0008') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0009') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0010') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0011') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0012') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0013') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0014') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0015') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0016') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0017') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0018') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0019') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0020') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0021') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0022') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0023') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0024') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0025') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0026') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0027') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0028') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0029') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0030') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0031') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0032') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0033') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0034') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0035') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0036') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0037') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0038') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0039') addHardwareProperties(mesh, hardwareMaterial)
+	if (mesh.name === 'body0040') addHardwareProperties(mesh, hardwareMaterial)
+}
+
+const addHardwareProperties = (mesh: BABYLON.AbstractMesh, material: BABYLON.StandardMaterial) => {
+	mesh.metadata.scalable = { x: false, y: false, z: false }
+	mesh.material = material
 }
 
 const drawPoint = (
@@ -538,5 +589,27 @@ const scaleFromPivot2 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3
 		pivotPoint.x + _sy * (mesh.position.x - pivotPoint.x),
 		pivotPoint.y + _sx * (mesh.position.y - pivotPoint.y),
 		pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z)
+	)
+}
+
+const scaleFromPivot3 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3, sx: number, sy: number, sz: number) => {
+	const _sz = sz / mesh.scaling.z
+	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
+
+	// if (mesh.name === 'body0043') {
+	// 	console.log('1. scale ', 'sx:', sx, 'sy:', sy, 'sz:', sz)
+	// 	console.log('2. pivot ', '_sx:', pivotPoint.x, '_sy:', pivotPoint.y, '_sz:', pivotPoint.z)
+	// 	console.log('3. scaled', '_sx:', _sx, '_sy:', _sy, '_sz:', _sz)
+	// 	console.log('4. diff  ', 'x:', mesh.position.x - pivotPoint.x, 'y:', mesh.position.y - pivotPoint.y, 'z:', mesh.position.z - pivotPoint.z)
+
+	// 	console.log('mesh position', 'x:', mesh.position.x, 'y:', mesh.position.y, 'z:', mesh.position.z)
+	// 	console.log('new mesh position', 'x:', pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x), 'y:', pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y), 'z:', pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z))
+	// }
+
+	// prettier-ignore
+	mesh.position = new BABYLON.Vector3(
+		mesh.position.x,
+		pivotPoint.y + _sz * (mesh.position.y - pivotPoint.y),
+		mesh.position.z
 	)
 }
