@@ -37,7 +37,8 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 		const cameraFocus = new BABYLON.Vector3(300, 300, 0)
 		const camera = new BABYLON.ArcRotateCamera('camera', Math.PI / 2, Math.PI / 3, 1000, cameraFocus, scene)
 		// Set the camera position for an isometric view
-		camera.position = new BABYLON.Vector3(1300, 1300, -1300) // You can tweak these values for different angles
+		// camera.position = new BABYLON.Vector3(1300, 1300, -1300) // You can tweak these values for different angles
+		camera.position = new BABYLON.Vector3(1300, 1300, 1300) // You can tweak these values for different angles
 		// camera.position = new BABYLON.Vector3(0, 0, -1500) // You can tweak these values for different angles
 
 		camera.attachControl(canvasRef.current, true)
@@ -128,7 +129,7 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 	}, [height, meshes])
 
 	useEffect(() => {
-		// ScaleModelWidth(meshes, width)
+		ScaleModelWidth(meshes, width, scene)
 		// }, [meshes, width, initialPositionsRef])
 	}, [width, meshes])
 
@@ -274,24 +275,21 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 
 	if (meshes) {
 		meshes.forEach(mesh => {
-			const orientation = getMeshLocalOrientation(mesh as BABYLON.Mesh)
-			if (!orientation) return
 			if (!mesh.metadata?.scalable) return
 
-			// if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(1, 1, scaleValue)
-			// if (orientation.x === 0 && orientation.y === -90 && orientation.z === 90) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			// if (orientation.x === -90 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += 40
-			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -40
+			// if (mesh.name === 'body0047') debugger
 
-			if (mesh.metadata.scalable.y && mesh.metadata.scalable.x) {
+			if (mesh.name === 'body0000') {
+				const pivotPoint = new BABYLON.Vector3(600, 0, 0)
+				drawPoint(scene, pivotPoint)
+				scaleFromPivot5(mesh, pivotPoint, scaleValue, 1, 1)
+			} else if (mesh.metadata.scalable.y && mesh.metadata.scalable.x) {
 				const pivotPoint = new BABYLON.Vector3(300, 0, -100)
-				drawPoint(scene, pivotPoint, BABYLON.Color3.Green())
+				// drawPoint(scene, pivotPoint, BABYLON.Color3.Green())
 				scaleFromPivot3(mesh, pivotPoint, 1, 1, scaleValue)
 			} else if (mesh.metadata.scalable.y) {
 				const pivotPoint = new BABYLON.Vector3(600, 0, 0)
-				drawPoint(scene, pivotPoint)
+				// drawPoint(scene, pivotPoint)
 				scaleFromPivot2(mesh, pivotPoint, scaleValue, 1, 1)
 
 				// // Works for depth
@@ -308,7 +306,69 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 				const newPosition = y + distance * scaledDistance
 				mesh.position.y = newPosition
 			}
+		})
+	}
+}
 
+const ScaleModelWidth = (meshes: BABYLON.AbstractMesh[] | null, width: number, scene: BABYLON.Scene | null) => {
+	const initialWidth = 600
+	const scaleValue = width / initialWidth
+	const distance = width - initialWidth
+
+	console.log('distance', distance)
+
+	if (meshes) {
+		meshes.forEach(mesh => {
+			if (!mesh.metadata?.scalable) return
+
+			// if (mesh.metadata.scalable.y && mesh.metadata.scalable.x) {
+			if (mesh.name === 'body0000') {
+				const pivotPoint = new BABYLON.Vector3(0, 0, 0)
+				drawPoint(scene, pivotPoint)
+				scaleFromPivot4(mesh, pivotPoint, 1, 1, scaleValue)
+			} else if (mesh.metadata.scalable.x) {
+				const pivotPoint = new BABYLON.Vector3(0, 0, 0)
+				scaleFromPivot(mesh, pivotPoint, scaleValue, 1, 1)
+
+				// // Works for depth
+				// const pivotPoint = new BABYLON.Vector3(300, 0, 0)
+				// drawPoint(scene, pivotPoint)
+				// scaleFromPivot(mesh, pivotPoint, 1, 1, scaleValue)
+
+				// mesh.scaling.z = scaleValue
+			}
+
+			if (!mesh.metadata.scalable.x) {
+				const { x } = mesh.metadata.originalPosition
+				const scaledDistance = x / initialWidth
+				const newPosition = x + distance * scaledDistance
+				mesh.position.x = newPosition
+			}
+			// const orientation = getMeshLocalOrientation(mesh as BABYLON.Mesh)
+			// if (!orientation) return
+
+			// // scaled elements
+			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
+			// else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
+			// else if (orientation.x === 0 && orientation.y === -90 && orientation.z === 90) mesh.scaling = new BABYLON.Vector3(1, 1, scaleValue)
+			// else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
+			// else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
+			// // moved elements
+			// // else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += distance
+			// // else if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -distance
+
+			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) {
+			// 	const initialPos = mesh.metadata.originalPosition
+
+			// 	// Update the mesh's position if an initial position was found
+			// 	if (initialPos) {
+			// 		if (mesh.name === 'body0054') {
+			// 			console.log('found body0054', initialPos.x)
+			// 		}
+			// 		const newPosition = initialPos.x + distance
+			// 		mesh.position.x = newPosition
+			// 	}
+			// }
 			// if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) {
 			// 	const initialPos = mesh.metadata.originalPosition
 
@@ -322,58 +382,6 @@ const ScaleModelHeight = (meshes: BABYLON.AbstractMesh[] | null, height: number,
 			// 	}
 			// }
 		})
-	}
-}
-
-const ScaleModelWidth = (meshes: BABYLON.AbstractMesh[] | null, width: number) => {
-	const initialWidth = 600
-	const scaleValue = width / initialWidth
-	const distance = (width - initialWidth) / 2
-
-	console.log('distance', distance)
-
-	if (meshes) {
-		meshes.forEach(mesh => {
-			const orientation = getMeshLocalOrientation(mesh as BABYLON.Mesh)
-			if (!orientation) return
-
-			// scaled elements
-			if (orientation.x === 0 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 180) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			else if (orientation.x === 0 && orientation.y === -90 && orientation.z === 90) mesh.scaling = new BABYLON.Vector3(1, 1, scaleValue)
-			else if (orientation.x === -90 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 0) mesh.scaling = new BABYLON.Vector3(scaleValue, 1, 1)
-			// moved elements
-			// else if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) mesh.position.x += distance
-			// else if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) mesh.position.x += -distance
-
-			if (orientation.x === 0 && orientation.y === 0 && orientation.z === 90) {
-				const initialPos = mesh.metadata.originalPosition
-
-				// Update the mesh's position if an initial position was found
-				if (initialPos) {
-					if (mesh.name === 'body0054') {
-						console.log('found body0054', initialPos.x)
-					}
-					const newPosition = initialPos.x + distance
-					mesh.position.x = newPosition
-				}
-			}
-			if (orientation.x === 0 && orientation.y === 0 && orientation.z === -90) {
-				const initialPos = mesh.metadata.originalPosition
-
-				// Update the mesh's position if an initial position was found
-				if (initialPos) {
-					if (mesh.name === 'body0054') {
-						console.log('found body0054', initialPos.x)
-					}
-					const newPosition = initialPos.x - distance
-					mesh.position.x = newPosition
-				}
-			}
-		})
-
-		getOverallSize2(meshes)
 	}
 }
 
@@ -431,11 +439,11 @@ const addClickEvent = (scene: BABYLON.Scene) => {
 const classifyMesh = (mesh: BABYLON.AbstractMesh, scene: BABYLON.Scene) => {
 	if (mesh.name === 'body0047') mesh.metadata.scalable = { x: false, y: true, z: true }
 	if (mesh.name === 'body0046') mesh.metadata.scalable = { x: false, y: true, z: true }
-	if (mesh.name === 'body0000') mesh.metadata.scalable = { x: false, y: true, z: true }
 
 	if (mesh.name === 'body0048') mesh.metadata.scalable = { x: true, y: false, z: true }
 	if (mesh.name === 'body0001') mesh.metadata.scalable = { x: true, y: false, z: true }
 
+	if (mesh.name === 'body0000') mesh.metadata.scalable = { x: true, y: true, z: false }
 	if (mesh.name === 'body0041') mesh.metadata.scalable = { x: true, y: true, z: false }
 	if (mesh.name === 'body0042') mesh.metadata.scalable = { x: true, y: true, z: false }
 	if (mesh.name === 'body0043') mesh.metadata.scalable = { x: true, y: true, z: false }
@@ -573,7 +581,7 @@ const scaleFromPivot = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3,
 	// prettier-ignore
 	mesh.position = new BABYLON.Vector3(
 		pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x),
-		(pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y)),
+		pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y),
 		pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z)
 	)
 }
@@ -583,6 +591,14 @@ const scaleFromPivot2 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3
 	const _sy = sy / mesh.scaling.y
 	const _sz = sz / mesh.scaling.z
 	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
+
+	console.log('1. scale ', 'sx:', sx, 'sy:', sy, 'sz:', sz)
+	console.log('2. pivot ', '_sx:', pivotPoint.x, '_sy:', pivotPoint.y, '_sz:', pivotPoint.z)
+	console.log('3. scaled', '_sx:', _sx, '_sy:', _sy, '_sz:', _sz)
+	console.log('4. diff  ', 'x:', mesh.position.x - pivotPoint.x, 'y:', mesh.position.y - pivotPoint.y, 'z:', mesh.position.z - pivotPoint.z)
+
+	console.log('mesh position', 'x:', mesh.position.x, 'y:', mesh.position.y, 'z:', mesh.position.z)
+	console.log('new mesh position', 'x:', pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x), 'y:', pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y), 'z:', pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z))
 
 	// prettier-ignore
 	mesh.position = new BABYLON.Vector3(
@@ -613,3 +629,49 @@ const scaleFromPivot3 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3
 		mesh.position.z
 	)
 }
+
+const scaleFromPivot4 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3, sx: number, sy: number, sz: number) => {
+	const _sz = sz / mesh.scaling.z
+	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
+
+	// prettier-ignore
+	mesh.position = new BABYLON.Vector3(
+		pivotPoint.x + _sz * (mesh.position.x - pivotPoint.x),
+		mesh.position.y,
+		mesh.position.z
+	)
+}
+
+const scaleFromPivot5 = (mesh: BABYLON.AbstractMesh, pivotPoint: BABYLON.Vector3, sx: number, sy: number, sz: number) => {
+	const _sx = sx / mesh.scaling.x
+	mesh.scaling = new BABYLON.Vector3(sx, sy, sz)
+
+	console.log('1. scale ', 'sx:', sx)
+	console.log('2. pivot ', 'y:', pivotPoint.y)
+	console.log('3. scaled', '_sx:', _sx)
+	console.log('4. diff  ', 'y:', mesh.position.y - pivotPoint.y)
+	console.log('mesh position', 'y:', mesh.position.y)
+	console.log('new mesh position', 'y:', mesh.position.y - _sx * (mesh.position.y - pivotPoint.y))
+
+	// prettier-ignore
+	mesh.position = new BABYLON.Vector3(
+		mesh.position.x,
+		pivotPoint.y + _sx * (mesh.position.y - pivotPoint.y),
+		mesh.position.z
+	)
+}
+
+// 	console.log('1. scale ', 'sx:', sx, 'sy:', sy, 'sz:', sz)
+// 	console.log('2. pivot ', '_sx:', pivotPoint.x, '_sy:', pivotPoint.y, '_sz:', pivotPoint.z)
+// 	console.log('3. scaled', '_sx:', _sx, '_sy:', _sy, '_sz:', _sz)
+// 	console.log('4. diff  ', 'x:', mesh.position.x - pivotPoint.x, 'y:', mesh.position.y - pivotPoint.y, 'z:', mesh.position.z - pivotPoint.z)
+
+// 	console.log('mesh position', 'x:', mesh.position.x, 'y:', mesh.position.y, 'z:', mesh.position.z)
+// 	console.log('new mesh position', 'x:', pivotPoint.x + _sx * (mesh.position.x - pivotPoint.x), 'y:', pivotPoint.y + _sy * (mesh.position.y - pivotPoint.y), 'z:', pivotPoint.z + _sz * (mesh.position.z - pivotPoint.z))
+
+// console.log('1. scale ', 'sx:', sx, 'sy:', sy, 'sz:', sz)
+// console.log('2. pivot ', '_sx:', pivotPoint.x, '_sy:', pivotPoint.y, '_sz:', pivotPoint.z)
+// console.log('3. scaled', '_sx:', _sx)
+// console.log('4. diff  ', 'x:', mesh.position.x - pivotPoint.x, 'y:', mesh.position.y - pivotPoint.y, 'z:', mesh.position.z - pivotPoint.z)
+// console.log('mesh position', 'x:', mesh.position.x, 'y:', mesh.position.y, 'z:', mesh.position.z)
+// console.log('new mesh position', 'y:', mesh.position.y + _sx * (mesh.position.y - pivotPoint.y))
