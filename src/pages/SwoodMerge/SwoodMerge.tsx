@@ -4,7 +4,7 @@ import { ImageComponent } from '../../components/ImageComponent'
 import { Section } from '../../components/Section'
 import { ProChip } from '../../components/ProChip'
 import { BetaDisclaimer } from '../../components/BetaDisclaimer'
-import { SwoodCenterServicesTag, SwoodDataDirectoryTag, SwoodMaterialsTag, SwoodMergePostTag, SwoodMergeTag, SwoodReportsTag } from '../../components/NameTags'
+import { SwoodCenterServicesTag, SwoodDataDirectoryTag, SwoodMergePostTag, SwoodMergeTag, SwoodReportsTag } from '../../components/NameTags'
 import SwoodMergeDiagram from '../../Flow Diagrams/SwoodMergeDiagram'
 import DownloadSwoodMerge from '../../components/DownloadSwoodMerge'
 
@@ -189,7 +189,7 @@ const SwoodMerge = () => {
 
 			<Section id="Setup" title="How to set up SwoodMerge">
 				<Typography>
-					Setting up <SwoodMaterialsTag /> is quick and easy. Follow these steps:
+					Setting up <SwoodMergeTag link={false} /> is quick and easy. Follow these steps:
 				</Typography>
 
 				<ol>
