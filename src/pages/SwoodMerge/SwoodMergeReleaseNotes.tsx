@@ -17,7 +17,7 @@ const SwoodMergeReleaseNotes = () => {
 					</ul>
 					<Typography variant="h6">Bug Fixes</Typography>
 					<ul>
-						<li>Fix bug where nested projects were not selectable</li>
+						<li>Fixed bug where nested projects were not selectable</li>
 					</ul>
 				</ul>
 			</Release>
