@@ -8,6 +8,15 @@ const SwoodMergeReleaseNotes = () => {
 		<>
 			<PageTitle title="SwoodMerge release notes" />
 
+			<Release version="0.0.2" ReleaseDate="16/01/2025">
+				<ul>
+					<Typography variant="h6">Bug Fixes</Typography>
+					<ul>
+						<li>Fixed update link</li>
+					</ul>
+				</ul>
+			</Release>
+
 			<Release version="0.0.1" ReleaseDate="13/01/2025">
 				<ul>
 					<Typography variant="h6">Improvements</Typography>
