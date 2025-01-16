@@ -118,22 +118,20 @@ const BabylonViewer: React.FC<IProps> = ({ babylonString, height, width, depth, 
 
 			enableGizmos(scene, positionGizmo, rotationGizmo, scaleGizmo)
 
-			if (groupNode) {
-				// Calculate the bounding box for the groupNode
-				const { overallMin, overallMax } = getOverallSize(groupNode)
+			// if (groupNode) {
+			// 	// Calculate the bounding box for the groupNode
+			// 	const { overallMin, overallMax } = getOverallSize(groupNode)
 
-				debugger
+			// 	// Calculate the center of the bounding box
+			// 	// const center = overallMin.add(overallMax).scale(0.5)
+			// 	// move the groupNode to center it at the origin
+			// 	// groupNode.position = center.scale(-1)
 
-				// Calculate the center of the bounding box
-				// const center = overallMin.add(overallMax).scale(0.5)
-				// move the groupNode to center it at the origin
-				// groupNode.position = center.scale(-1)
-
-				// calculate bottom back center point
-				const bottomBackCenter = new BABYLON.Vector3((overallMin.x + overallMax.x) / 2, overallMin.y, overallMax.z)
-				// move mesh to bottom back center point
-				groupNode.position = bottomBackCenter.scale(-1)
-			}
+			// 	// calculate bottom back center point
+			// 	const bottomBackCenter = new BABYLON.Vector3((overallMin.x + overallMax.x) / 2, overallMin.y, overallMax.z)
+			// 	// move mesh to bottom back center point
+			// 	groupNode.position = bottomBackCenter.scale(-1)
+			// }
 		})
 
 		addClickEvent(scene)

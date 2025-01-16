@@ -5,8 +5,8 @@ import { RegisterDownload } from './RegisterDownload'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 
 const DownloadSwoodMerge = () => {
-	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/swood-merge-setup-0.0.0.exe'
-	const appVersion = '0.0.0'
+	const downloadLink = 'https://sldwks.com/?AzureURL=https://downloads.solidsolutions.co.uk/swood/swood-merge-setup-0.0.2.exe '
+	const appVersion = '0.0.2'
 
 	const [open, setOpen] = useState(false)
 	// const [email, setEmail] = useState('')
