@@ -5,12 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Redirecting...</title>
 		<script>
-			window.location.href = 'https://swooddocs.web.app'
+				// Get the current path
+				const currentPath = window.location.pathname;
+
+				// Remove domain from the path if it exists
+				const newPath = currentPath.replace("https://solidsolutionsltd.github.io/SwoodDocs", "");
+
+				// Define the new site domain
+				const newDomain = "https://swooddocs.web.app/";
+
+				// Redirect to the new site with the modified path
+				window.location.href = newDomain + newPath;
 		</script>
+		<style>
+			* {
+				background-color: black;
+				color: grey;
+			}
+		</style>
 	</head>
 	<body>
-		<body>
-			<p>If you are not redirected, <a href="https://swooddocs.web.app">click here</a>.</p>
-		</body>
+		<p>Redirecting you to the new site... If not redirected, <a id="redirect-link" href="#">click here</a>.</p>
+		<script>
+			document.getElementById("redirect-link").href = newDomain + newPath;
+		</script>
 	</body>
 </html>
+
